@@ -35,3 +35,7 @@
 ### push
 - Project: https://github.com/Nickersoft/push.js
 - License: [MIT License](https://github.com/Nickersoft/push.js/blob/master/LICENSE.md)
+
+### easylist
+- Project: https://github.com/easylist/easylist
+- License: [GNU General Public License version 3](https://easylist.to/pages/licence.html)
