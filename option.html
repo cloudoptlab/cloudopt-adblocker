@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Cloudopt</title>
+    <link rel="stylesheet" type="text/css" href="lib/mdl/material.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/noty/noty.css" />
+    <link rel="stylesheet" type="text/css" href="lib/icon/icon.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="dns-prefetch" href="//www.cloudopt.net">
+</head>
+
+<body style="background-color:#ececec">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <div id="material-card"></div>
+            <div id="option-main">
+                <img src="image/logo.png" alt="" class="logo">
+
+                <div class="mdl-card mdl-shadow--2dp account-card" id="account">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionAccount">账户</h2>
+                    </div>
+
+                    <span class="mdl-chip mdl-chip--contact mdl-chip--deletable">
+    <img class="mdl-chip__contact head" src="image/avatar.jpg"></img>
+    <span class="mdl-chip__text tips" i18n="optionAccountTips">登录后享受更多功能</span>
+
+                    </span>
+
+
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button-1" i18n="optionAccountLogin" href="https://www.cloudopt.net/account/login" target="_blank">登录</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button-2 hidden evented"></a>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifySafeProtect">安全保护</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">cloud</i>
+                                    <span i18n="optionCloudReputation">云信誉评估</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionCloudReputationDetails">实时拦截危险网站，保护您不受钓鱼、恶意网址的威胁</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="safeCloud" id="safeCloud-label">
+                                        <input type="checkbox" id="safeCloud" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">file_download</i>
+                                    <span i18n="optionFileDownload">下载保护</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionFileDownloadDetails">自动阻止从危险网站上的下载</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="safeDownload" id="safeDownload-label">
+                                        <input type="checkbox" id="safeDownload" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">pan_tool</i>
+                                    <span i18n="optionSafePrivacy">隐私保护</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionSafePrivacyDetails">阻止分析网站对您的网络活动进行跟踪或记录
+                                    </span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="safePrivacy" id="safePrivacy-label">
+                                        <input type="checkbox" id="safePrivacy" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">warning</i>
+                                    <span i18n="optionSafePotential">潜在威胁</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionSafePotentialDetails">开启后将阻止不受欢迎的网站、信誉评估较低的网站
+                                    </span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="safePotential" id="safePotential-label">
+                                        <input type="checkbox" id="safePotential" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">monetization_on</i>
+                                    <span i18n="optionSafeCoin">挖矿脚本拦截</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionSafeCoinDetails">帮助您避免电脑被恶意网站用于挖矿（比特币）</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="safeCoin" id="safeCoin-label">
+                                        <input type="checkbox" id="safeCoin" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyAdblock">广告拦截</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">block</i>
+                                    <span i18n="optionAdblockActivating">自动激活</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionAdblockActivatingDetails">自动阻止页面上的广告的显示</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="adblockActivating" id="adblockActivating-label">
+                                        <input type="checkbox" id="adblockActivating" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">plus_one</i>
+                                    <span i18n="optionAdblockDisplay">显示数量</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionAdblockDisplayDetails">在浏览器扩展图标上显示已拦截广告的数量</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="adblockDisplay" id="adblockDisplay-label">
+                                        <input type="checkbox" id="adblockDisplay" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="follow">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionFollowUs">关注我们</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text" i18n="optionFollowUsText">
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" i18n="optionFollowUsTwitter" target="_blank" href="https://twitter.com/CloudoptLab">
+                            Twitter
+                        </a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="https://m.me/join/AbY0nj0LE7Es8FI8">
+                            Messenger
+                        </a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" i18n="optionFollowUsWeixin" target="_blank" href="https://mp.weixin.qq.com/s/Z0wEFIZwcZvcPTxNBMXy3w">
+                            Weixin
+                        </a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=b3fa96d08e24a64e5fac9745b8e7377194271a4d8425ee315e97d3aeb009df35">
+                            QQ
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="lab">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyLab">实验室</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul class="mdl-list">
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">search</i>
+                                    <span i18n="optionBookmarkSerch">书签搜索</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionBookmarkSerchDetails">您在搜索引擎搜索时自动帮助您检索书签</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="labBookmarkSearch" id="labBookmarkSearch-label">
+                                        <input type="checkbox" id="labBookmarkSearch" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">announcement</i>
+                                    <span i18n="optionSafeTips">安全提示</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionSafeTipsDetails">在访问银行、电商等容易被冒充的网站时弹出安全提示</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="labSafeTips" id="labSafeTips-label">
+                                        <input type="checkbox" id="labSafeTips" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">keyboard</i>
+                                    <span i18n="optionKeyboard">安全键盘</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionKeyboardDetails">开启后会在输入密码时自动弹出虚拟键盘，保护您的输入不被监听</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="labKeyboard" id="labKeyboard-label">
+                                        <input type="checkbox" id="labKeyboard" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">bug_report</i>
+                                    <span i18n="optionDataCollection">数据收集与使用</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionDataCollectionDetails">开启后会在输入密码时自动弹出虚拟键盘，保护您的输入不被监听</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="dataCollection" id="dataCollection-label">
+                                        <input type="checkbox" id="dataCollection" class="mdl-switch__input" />
+                                    </label>
+                                </span>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="speedup">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifySpeedup">优化加速</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul class="mdl-list">
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">dns</i>
+                                    <span i18n="optionDnsSpeed">DNS预加载</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionDnsSpeedDetails">提前对可能会访问的网站进行DNS解析，加速连接网站的速度。</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="dnsSpeed" id="dnsSpeed-label">
+                                        <input type="checkbox" id="dnsSpeed" class="mdl-switch__input" disabled/>
+                                    </label>
+                                </span>
+                            </li>
+
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">toys</i>
+                                    <span i18n="optionWebPrereading">网页预加载</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionWebPrereadingDetails">提前加载可能会访问的页面，提高网页打开速度。</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="webPrereading" id="webPrereading-label">
+                                        <input type="checkbox" id="webPrereading" class="mdl-switch__input" disabled/>
+                                    </label>
+                                </span>
+                            </li>
+
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-avatar">memory</i>
+                                    <span i18n="optionMemoryOptimization">内存优化</span>
+                                <span class="mdl-list__item-sub-title" i18n="optionMemoryOptimizationDetails">自动对长时间不访问的标签页进行内存优化</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-action">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="memoryOptimize" id="memoryOptimize-label">
+                                        <input type="checkbox" id="memoryOptimize" class="mdl-switch__input" disabled/>
+                                    </label>
+                                </span>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="manual">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyManual">自定义过滤器</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 400px;">
+                            <input class="mdl-textfield__input" type="text" id="customRuleInput">
+                            <label class="mdl-textfield__label" for="customRuleInput">Please enter the rules you want to customize...</label>
+                        </div>
+                        <div class="row">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="customRuleAdd" i18n="optionWhiteListAdd">
+                                增加
+                            </button>
+                        </div>
+                    </div>
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">RULE</th>
+                                <th i18n="optionManualOperation">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="manualList">
+
+
+                        </tbody>
+                    </table>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div class="mdl-card mdl-shadow--2dp" id="manual">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionCustomRule">自定义规则列表</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 400px;">
+                            <input class="mdl-textfield__input" type="text" id="customSubscriptionInput">
+                            <label class="mdl-textfield__label" for="customSubscriptionInput">Please enter the address of the subscription file...</label>
+                        </div>
+                        <div class="row">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="customSubscriptionAdd" i18n="optionWhiteListAdd">
+                                增加
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" i18n="optionCustomRuleUrl">订阅地址</th>
+                                <th i18n="optionManualOperation">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customSubscriptionList">
+
+
+                        </tbody>
+                    </table>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="white-list">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyWhiteList">白名单</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 400px;">
+                            <input class="mdl-textfield__input" type="text" id="whiteListInput">
+                            <label class="mdl-textfield__label" for="whiteListInput">Please enter the domain name, www.example.com</label>
+                        </div>
+                        <div class="row">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="whiteListAdd" i18n="optionWhiteListAdd">
+                                增加
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="whiteListDelete" i18n="optionWhiteListDelete">
+                                一键清除
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" i18n="optionWhiteListHost">域名</th>
+                                <th i18n="optionWhiteListOperation">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="whiteListVeiw">
+                        </tbody>
+                    </table>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="black-list">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyBlackList">黑名单</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 400px;">
+                            <input class="mdl-textfield__input" type="text" id="blackListInput">
+                            <label class="mdl-textfield__label" for="blackListInput">Please enter the domain name, www.example.com</label>
+                        </div>
+                        <div class="row">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="blackListAdd" i18n="optionBlackListAdd">
+                                增加
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="blackListDelete" i18n="optionBlackListDelete">
+                                一键清除
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" i18n="optionBlackListHost">域名</th>
+                                <th i18n="optionBlackListOperation">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="blackListVeiw">
+                        </tbody>
+                    </table>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="statistics">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionStatistics">数据统计</h2>
+                    </div>
+
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <th class="mdl-data-table__cell--non-numeric" i18n="optionStatisticalName">统计名称</th>
+                            <th>总计</th>
+                        </thead>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" i18n="optionTotalAdBlockCount">恶意广告和挖矿脚本拦截总数</th>
+                                <td id="totalAdBlockCount">0</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" i18n="optionTotalSiteBlockCount">恶意网站拦截总数</th>
+                                <td id="totalSiteBlockCount">0</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" i18n="optionTotalPrerender">网页加速总数</th>
+                                <td id="totalPrerender">0</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" i18n="optionTodayAdBlockCount">今日恶意广告和挖矿脚本拦截次数</th>
+                                <td id="todayAdBlockCount">0</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" i18n="optionTodaySiteBlockCount">今日恶意网站拦截次数</th>
+                                <td id="todaySiteBlockCount">0</td>
+                            </tr>
+                    </table>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="private">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyHelp">帮助我们改进</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text" i18n="optionClassifyHelpText">
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" i18n="optionClickFeedback" href="https://www.cloudopt.net/support" target="_blank">
+                            反馈问题
+                        </a>
+                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/cloudoptlab/cloudopt-adblocker" target="_blank">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script type="text/javascript" src="lib/polyfill.min.js"></script>
+<script src="lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/mdl/material.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/noty/noty.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/purify.min.js" type="text/javascript " charset="utf-8"></script>
+<script src="js/cloudopt-core.js" type="text/javascript " charset="utf-8"></script>
+<script src="js/cloudopt-i18n.js" type="text/javascript " charset="utf-8"></script>
+<script src="js/cloudopt-adblock.js" type="text/javascript " charset="utf-8"></script>
+<script src="js/cloudopt-statistics.js" type="text/javascript " charset="utf-8"></script>
+<script src="js/cloudopt-option.js" type="text/javascript " charset="utf-8"></script>

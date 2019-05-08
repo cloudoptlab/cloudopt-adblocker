@@ -1,0 +1,445 @@
+{
+  "infoName": {
+    "message": "Cloudopt  AdBlocker",
+    "description": "확장 이름"
+  },
+  "infoDescription": {
+    "message": "동반구, 당신의 안전을 위해 강력한 보안 플러그인 실시간 보호 될 수 추적 방지, 악성 도메인 이름, 배너 광고, 팝업 광고 및 동영상 광고를 필터링.",
+    "description": "확장 설명"
+  },
+  "bankSafeTips": {
+    "message": "당신이 Cloudopt 당신을 보호 할 은행의 웹 사이트에 액세스하는 것을 감지!"
+  },
+  "gameSafeTips": {
+    "message": "당신이 게임 사이트를 방문하는 것은, Cloudopt 당신을 보호 할 수 있음을 감지!"
+  },
+  "shopSafeTips": {
+    "message": "당신이 쇼핑 사이트를 방문하는 것은, Cloudopt 당신을 보호 할 수 있음을 감지!"
+  },
+  "hospitalSafeTips": {
+    "message": "당신은 지금 병원에 인지되었습니다 방문한 웹 Cloudopt 는 당신 을 보호하고 배려할 것이다!"
+  },
+  "ominiboxTips": {
+    "message": "전화 번호를 입력하거나 보안을 신속하게 식별 할 URL"
+  },
+  "dangWebsiteTips": {
+    "message": "이 사이트는 당신을 보호하기 위해 Cloudopt 매우 위험합니다!"
+  },
+  "dangDownTitle": {
+    "message": "당신은 차단 다운로드왔다"
+  },
+  "dangDownTips": {
+    "message": "당신이 위험한 웹 사이트에서 파일을 다운로드하는 것을 감지, Cloudopt 당신을 돕기 위해 차단되었습니다."
+  },
+  "popupAddWhiteList": {
+    "message": "화이트리스트에 추가"
+  },
+  "popupAddBlackList": {
+    "message": "블랙리스트에 추가"
+  },
+  "popupCleanCache": {
+    "message": "캐시를 지우"
+  },
+  "popupCleanPrivacy": {
+    "message": "개인 정보 보호 정리"
+  },
+  "popupReport": {
+    "message": "위험한 웹 사이트 신고"
+  },
+  "popupEvaluation": {
+    "message": "평가하다 확장"
+  },
+  "popupLogout": {
+    "message": "로그"
+  },
+  "popupRealTimeProtection": {
+    "message": "보안."
+  },
+  "popupRealTimeProtectionSpan": {
+    "message": "당신의 온라인 보안에 대한 실시간 보호."
+  },
+  "popupAdBlocking": {
+    "message": "광고 차단"
+  },
+  "popupAdBlockingSpan": {
+    "message": "강력한 광고 괴롭힘 차단"
+  },
+  "popupLab": {
+    "message": "실험실"
+  },
+  "popupLabSpan": {
+    "message": "최신의 가장 흥미로운 기능을 체험 해"
+  },
+  "popupFeedback": {
+    "message": "피드백 추천"
+  },
+  "popupFeedbackSpan": {
+    "message": "개선하는 데 도움이."
+  },
+  "popupScoreButton": {
+    "message": "사용자 리뷰보기."
+  },
+  "popupMark": {
+    "message": "서브"
+  },
+  "optionTipsDontDuplicate": {
+    "message": "추가 반복하지 마십시오"
+  },
+  "optionTipsAddWhiteListSuccess": {
+    "message": "화이트리스트가 성공적으로 추가되었습니다"
+  },
+  "optionTipsAddBlackListSuccess": {
+    "message": "블랙리스트가 성공적으로 추가되었습니다"
+  },
+  "optionTipsInputUrlisNull": {
+    "message": "입력 한 도메인이 비어있는 입력을 확인하시기 바랍니다."
+  },
+  "optionTipsInputUrlisError": {
+    "message": "입력 한 도메인이 잘못 입력을 확인하시기 바랍니다."
+  },
+  "optionClassifySafeProtect": {
+    "message": "보안."
+  },
+  "optionCloudReputation": {
+    "message": "클라우드 신용 평가"
+  },
+  "optionCloudReputationDetails": {
+    "message": "실시간으로 위험한 사이트를 차단하고, 악의적 인 웹 사이트의 위협을 피싱으로부터 보호."
+  },
+  "optionFileDownload": {
+    "message": "보호를 다운로드"
+  },
+  "optionFileDownloadDetails": {
+    "message": "자동으로 웹 사이트에서 다운로드 위험 차단"
+  },
+  "optionSafeCoin": {
+    "message": "광업 스크립트 차단"
+  },
+  "optionSafeCoinDetails": {
+    "message": "악의적 인 웹 사이트에서 컴퓨터를 사용하여 광업 (bitcoin)을 사용하는 것을 방지합니다."
+  },
+  "optionSafePrivacy": {
+    "message": "개인 정보 보호."
+  },
+  "optionSafePrivacyDetails": {
+    "message": "당신의 웹 사이트 활동 추적 또는 기록의 분석을 중지합니다."
+  },
+  "optionSafePotential": {
+    "message": "잠재적 인 위협"
+  },
+  "optionSafePotentialDetails": {
+    "message": "하위 사이트의 신뢰성을 평가, 블록 원치 않는 사이트를 열 것"
+  },
+  "optionClassifyAdblock": {
+    "message": "광고 차단"
+  },
+  "optionAdblockActivating": {
+    "message": "자동 활성화"
+  },
+  "optionAdblockActivatingDetails": {
+    "message": "자동으로 페이지에 광고의 표시를 차단합니다."
+  },
+  "optionAdblockDisplay": {
+    "message": "의 수를 보여줍니다"
+  },
+  "optionAdblockDisplayDetails": {
+    "message": "브라우저 확장 아이콘 '에서 차단 광고의 수를 표시"
+  },
+  "optionAdblockHeuristic": {
+    "message": "영감 엔진 (베타)"
+  },
+  "optionAdblockHeuristicDetails": {
+    "message": "효과적으로 몇 가지 잠재적 인 광고를 차단할 수 있도록, 일반 사용자가 열리지 않습니다."
+  },
+  "optionAdblockLight": {
+    "message": "Cloudopt 라이트 기술"
+  },
+  "optionAdblockLightDetails": {
+    "message": "악의적 인 광고를 차단할 수 있습니다 나쁜 네트워크의 경우에 당신을 도울 수 있습니다."
+  },
+  "optionClassifyWhiteList": {
+    "message": "화이트리스트"
+  },
+  "optionWhiteListAdd": {
+    "message": "추가"
+  },
+  "optionWhiteListDelete": {
+    "message": "삭제할 키"
+  },
+  "optionWhiteListHost": {
+    "message": "도메인"
+  },
+  "optionWhiteListOperation": {
+    "message": "조작"
+  },
+  "optionClassifyBlackList": {
+    "message": "블랙리스트에"
+  },
+  "optionStatistics": {
+    "message": "데이터 통계"
+  },
+  "optionStatisticalName": {
+    "message": "통계 이름"
+  },
+  "optionTotalAdBlockCount": {
+    "message": "악의적 인 광고 및 마이닝 스크립트 차단"
+  },
+  "optionTotalSiteBlockCount": {
+    "message": "악의적 인 웹 사이트 차단"
+  },
+  "optionTotalPrerender": {
+    "message": "페이지 가속도"
+  },
+  "optionTodayAdBlockCount": {
+    "message": "악성 광고 및 마이닝 스크립트 요격"
+  },
+  "optionTodaySiteBlockCount": {
+    "message": "오늘 악의적 인 웹 사이트 가로 채기"
+  },
+  "optionBlackListAdd": {
+    "message": "추가"
+  },
+  "optionBlackListDelete": {
+    "message": "삭제할 키"
+  },
+  "optionBlackListHost": {
+    "message": "도메인"
+  },
+  "optionBlackListOperation": {
+    "message": "조작"
+  },
+  "optionClassifySync": {
+    "message": "클라우드 동기화"
+  },
+  "optionSyncLockinTime": {
+    "message": "최근에 시간을 동기화"
+  },
+  "optionSyncLockinTimeDetails": {
+    "message": "당신은 시간을 동기화 마지막으로."
+  },
+  "optionSyncBookmark": {
+    "message": "북마크 동기화"
+  },
+  "optionSyncBookmarkDetails": {
+    "message": "클라우드로 브라우저 북마크를 동기화 할 수 있습니다."
+  },
+  "optionSyncHistory": {
+    "message": "검색 기록 동기화"
+  },
+  "optionSyncHistoryDetails": {
+    "message": "클라우드로 동기화 브라우저 기록."
+  },
+  "optionSyncPriority": {
+    "message": "동기화 우선 순위"
+  },
+  "optionSyncPriorityDetails": {
+    "message": "로컬 또는 우선 순위로 클라우드 버전을 동기화 할 때 선택할 수 있습니다."
+  },
+  "optionSyncCloud": {
+    "message": "구름"
+  },
+  "optionSyncLocal": {
+    "message": "로컬"
+  },
+  "optionClickView": {
+    "message": "클릭"
+  },
+  "optionClickFeedback": {
+    "message": "피드백"
+  },
+  "optionSyncSavedContent": {
+    "message": "동기화 된 내용"
+  },
+  "optionSyncSavedContentDetails": {
+    "message": "클라우드로 동기화 한 내용을보고 버튼을 클릭합니다."
+  },
+  "optionClassifyLab": {
+    "message": "실험실"
+  },
+  "optionBookmarkSerch": {
+    "message": "즐겨 찾기"
+  },
+  "optionBookmarkSerchDetails": {
+    "message": "당신은 자동으로 검색 엔진에 책갈피를 검색 할 수 있도록"
+  },
+  "optionSafeTips": {
+    "message": "안전 수칙"
+  },
+  "optionSafeTipsDetails": {
+    "message": "사이트를 방문 팝업 안전 팁 쉽게 은행, 전기 공급 업체 및 기타 행세를 할 수있다"
+  },
+  "optionKeyboard": {
+    "message": "보안 키보드"
+  },
+  "optionKeyboardDetails": {
+    "message": "당신이 당신의 입력이 수신되지 않는 보호하기 위해 암호를 입력 할 때 가상 키보드가 자동으로 나타납니다."
+  },
+  "optionMemoryOptimization": {
+    "message": "메모리 최적화"
+  },
+  "optionMemoryOptimizationDetails": {
+    "message": "시스템 메모리 사용량이 80 % 이상인 경우 탭의 메모리를 자동으로 최적화합니다"
+  },
+  "optionClassifyHelp": {
+    "message": "우리가 개선에 도움"
+  },
+  "optionClassifyHelpText": {
+    "message": "당신이 평가의 신뢰성을 흐리게 켜면 우리가 더 많은 사람을 보호하기 위해 익명의 기본 보안 관련 정보를 제출하도록 허용됩니다 물론, 이러한 데이터는 개인 정보를 포함하지 않는, 그들은 도움이 될 수 있습니다 안심하실 수 있습니다. 우리는 더 나은 클라우드를 구축 할 수 있습니다. 당신은 더 많은 것을 배울 수있는 개인 정보 보호 정책을 볼 수 있습니다. "
+  },
+  "optionDataCollection": {
+    "message": "사용자 경험 프로그램 가입"
+  },
+  "optionDataCollectionDetails": {
+    "message": "더 나은 서비스를 제공하기 위해 Cloudopt는 일부 기술 정보 및 대화 형 데이터를 제공 할 수 있습니다. <a href='https://www.cloudopt.net/policy/privacy' target='_blank'> 개인 정보 취급 방침 </a>"
+  },
+  "bookmarkSearch": {
+    "message": "즐겨 찾기"
+  },
+  "optionClassifyManual": {
+    "message": "사용자 필터"
+  },
+  "optionManualAdd": {
+    "message": "증가"
+  },
+  "optionManualName": {
+    "message": "미리 보기"
+  },
+  "optionManualOperation": {
+    "message": "조작"
+  },
+  "optionManualTips": {
+    "message": "Cloudopt 구름 보안 센터 에 제출 견본"
+  },
+  "updateTipsTitle": {
+    "message": "자동 업데이트 성공"
+  },
+  "updateTips1": {
+    "message": "Cloudopt 성공 업그레이드 까지 "
+  },
+  "updateTips2": {
+    "message": " 업데이트 역사, 방문 공식 블로그 볼 수 있다."
+  },
+  "updateConfigFailure": {
+    "message": "구성 업데이트 실패"
+  },
+  "contextMenus1": {
+    "message": "가입 화이트 리스트"
+  },
+  "contextMenus2": {
+    "message": "안전 보고서 보기"
+  },
+  "contextMenus3": {
+    "message": "수동 차단 악의적으로 광고(BETA)"
+  },
+  "contextMenus4": {
+    "message": "가입 블랙 리스트"
+  },
+  "manualTips": {
+    "message": "마우스 왼쪽 버튼 선택 원하는 무시할 요소, 마우스 오른쪽 단추를 수동 모드 끝내기"
+  },
+  "optionManualSave": {
+    "message": "저장"
+  },
+  "manualSaveTips1": {
+    "message": "저장 실패, 형식이 올바른 확인해 주십시오"
+  },
+  "adblockInitTitle": {
+    "message": "업데이트 중"
+  },
+  "adblockInitTips": {
+    "message": "악의적 인 광고 차단 엔진이 초기화되는 중입니다. 단 몇 분 만에 초기화 중에 브라우저를 닫지 마십시오."
+  },
+  "optionFollowUs": {
+    "message": "우리를 따르라"
+  },
+  "optionFollowUsText": {
+    "message": "Twitter 또는 WeChat 계정 번호를 따라 Cloudopt 제품에 대한 실시간 업데이트를 얻고 업계의 최신 보안 뉴스를 확인하십시오."
+  },
+  "optionFollowUsTwitter": {
+    "message": "Twitter"
+  },
+  "optionFollowUsWeixin": {
+    "message": "Weixin"
+  },
+  "weixinDialogText": {
+    "message": "Wechat을 사용하여 QR 코드를 스캔하십시오."
+  },
+  "optionCustomRule": {
+    "message": "자기 정의로 규칙을 정한다<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+  },
+  "optionTipsAddCustomRuleSuccess": {
+    "message": "추가 완료"
+  },
+  "optionTipsAddCustomRuleFailure": {
+    "message": "추가 실패"
+  },
+  "optionCustomRuleUrl": {
+    "message": "주소지"
+  },
+  "optionCustomRuleUpdateTime": {
+    "message": "요즘 시간을 갱신하는 시간"
+  },
+  "optionAccount": {
+    "message": "계정 계좌"
+  },
+  "optionAccountTips": {
+    "message": "로그인 한 후 더 많은 기능을 즐기고 모든 구성을 자동으로 동기화하십시오. 로그인 후에이 페이지를 새로 고침하십시오."
+  },
+  "optionAccountWeixin": {
+    "message": "WEIXIN"
+  },
+  "optionAccountFacebook": {
+    "message": "FACEBOOK"
+  },
+  "optionAccountLogin": {
+    "message": "로그인"
+  },
+  "optionAccountLogedTips": {
+    "message": "Cloudop 에 오신 것을 환영합니다, ##"
+  },
+  "optionAccountProfile": {
+    "message": "개인 센터"
+  },
+  "optionAccountLogout": {
+    "message": "로그인을 탈퇴하다"
+  },
+  "mustLogedTips": {
+    "message": "로그인 해 주세요. 계속 사용하세요"
+  },
+  "urlErrorTips": {
+    "message": "정확한 주소를 입력하십시오"
+  },
+  "waitSubscribe": {
+    "message": "규칙 파일을 다운로드하고 있습니다. 잠시 후에 주십시오"
+  },
+  "optionClassifySpeedup": {
+    "message": "우화 및 가속<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+  },
+  "optionDnsSpeed": {
+    "message": "DNS 가재"
+  },
+  "optionDnsSpeedDetails": {
+    "message": "가능한 방문할 수 있는 사이트에 대해 DNS 해석, 연결연결 사이트의 속도를 미리 실시한다."
+  },
+  "optionWebPrereading": {
+    "message": "웹 페이지를 미리 불러옵니다"
+  },
+  "optionWebPrereadingDetails": {
+    "message": "우선 방문할 수 있는 페이지를 미리 불러옵니다, 웹 페이지를 높여 속도를 올립니다."
+  },
+  "optionCleanCacheBrowserNotSupported": {
+    "message": "브라우저는 현재 자동 캐시 정리를 지원하지 않습니다."
+  },
+  "memoryOptimizedIcon": {
+    "message": "⏸"
+  },
+  "memoryOptimized": {
+    "message": "이 탭은 최적화되었습니다"
+  },
+  "memoryOptimizedSub": {
+    "message": "Cloudopt AdBlocker는 메모리 조건에 따라 웹 페이지를 지능적으로 최적화하고 아래 버튼을 클릭하여 페이지로 돌아갑니다"
+  },
+  "memoryOptimizedReturn": {
+    "message": "지금 복원"
+  }
+}

@@ -1,0 +1,249 @@
+.mdl-card {
+    min-height: 0px;
+}
+
+.mdl-chip {
+    margin-left: 10px;
+}
+
+.mdl-list__item-avatar.material-icons {
+    font-size: 30px;
+    color: #757575;
+    background-color: inherit;
+}
+
+.popup {
+    width: 270px;
+    height: 470px;
+    background-color: #feffff;
+}
+
+.popup header .mdl-textfield--expandable .mdl-button--icon {
+    top: 0px;
+}
+
+.popup header .mdl-textfield .mdl-button {
+    bottom: 0px;
+    position: relative;
+}
+
+.popup .mdl-button .material-icons {
+    font-size: 18px;
+}
+
+.popup table {
+    width: 100%;
+    height: 100%;
+}
+
+.popup .mdl-data-table td {
+    text-align: left;
+}
+
+.popup .score {
+    margin: 10px auto 0px auto;
+}
+
+.popup .score-button {
+    margin-top: 10px;
+}
+
+.popup .score h1 {
+    display: inline-block;
+    font-weight: 100;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.popup .score pre {
+    display: inline-block;
+    font-weight: 100;
+    font-size: 8px;
+}
+
+.popup .mdl-button {
+    color: #ffffff;
+}
+
+.popup .score-button {
+    margin: -15px auto;
+    background: #ffffff;
+    color: #3f51b5;
+    border-radius: 50px;
+}
+
+.popup .mdl-list li {
+    height: 60px;
+}
+
+.popup .mdl-list {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.popup .mdl-list__item-avatar.material-icons {
+    color: #ffffff;
+    margin-top: 3px;
+    font-size: 24px;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+}
+
+.popup .mdl-list .title {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.popup .mdl-list .title.mdl-list__item-sub-title {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.popup .mdl-list li {
+    border-bottom: 1px solid #f8f9fa;
+    cursor: pointer;
+}
+
+.popup .mdl-list li:hover {
+    background-color: #eeeeee;
+}
+
+.popup .color1 {
+    background-color: #008ff4
+}
+
+.popup .color2 {
+    background-color: #1761f0
+}
+
+.popup .color3 {
+    background-color: #4b4ad4
+}
+
+.popup .color4 {
+    background-color: #5933c6
+}
+
+.popup .mdl-layout__header-row {
+    padding-left: 20px;
+}
+
+#material-card {
+    height: 500px;
+    width: 100%;
+    z-index: -1;
+    background-color: #3f51b5;
+    position: absolute;
+}
+
+.popup .mdl-layout-title img {
+    width: 80px;
+}
+
+.mdl-layout-title img {
+    width: 100px;
+}
+
+#option-main {
+    max-width: 800px;
+    margin: auto;
+}
+
+#option-main .logo {
+    margin-top: 20px;
+    width: 100px;
+}
+
+#option-main .mdl-card:first-of-type {
+    margin-top: 20px;
+}
+
+#option-main .mdl-card {
+    width: 100%;
+    margin-top: 50px;
+}
+
+#white-list，#black-list {
+    width: 100%;
+}
+
+#white-list .mdl-card__title-text, #black-list .mdl-card__title-text {
+    width: 100%;
+    padding: 0px;
+}
+
+.mdl-data-table {
+    width: 100%;
+    border: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.whiteListDelete, .blackListDelete, .manualDelete, .customSubscriptionDelete {
+    cursor: pointer;
+}
+
+table .mdl-list__item-avatar.material-icons {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+    max-width: 600px;
+}
+
+.mdl-checkbox__tick-outline {
+    -webkit-mask: none;
+    mask: none;
+}
+
+.mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
+    text-align: left;
+    max-width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#follow .mdl-card__title {
+    min-height: 300px;
+    background-image: url('/image/followCard.jpg');
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mdl-dialog__content img {
+    width: 100%;
+}
+
+.account-card .mdl-chip {
+    padding: 16px;
+    background-color: inherit;
+}
+
+.account-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .popup .mdl-layout__header {
+        height: 230px;
+    }
+    .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+        display: none;
+    }
+    .mdl-list__item--two-line .mdl-list__item-primary-content {
+        line-height: 27px;
+    }
+    #option-main .logo {
+        margin-left: 20px;
+    }
+    .mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
+        max-width: 100px;
+    }
+}

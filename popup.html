@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi">
+    <title>Cloudopt</title>
+    <link rel="stylesheet" type="text/css" href="lib/mdl/material.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/icon/icon.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <style>
+        @media screen and (max-width: 700px) {
+            .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <!--menu-->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title"><img src="image/logo.png" alt=""></span>
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+
+                        <label class="mdl-button mdl-js-button mdl-button--icon">
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="more"><i class="material-icons">more_vert</i>
+                        </button>
+                    </label>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="more">
+                            <li class="mdl-menu__item" i18n="popupAddWhiteList" id="addWhiteList">添加到白名单</li>
+                            <li class="mdl-menu__item" i18n="popupAddBlackList" id="addBlackList">添加到黑名单</li>
+                            <li class="mdl-menu__item" id="cleanCache" i18n="popupCleanCache">清理缓存</li>
+                            <li class="mdl-menu__item" id="report" i18n="popupReport">举报</li>
+                            <li class="mdl-menu__item" id="evaluation" i18n="popupEvaluation">评价扩展</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="score">
+                    <h1>0</h1>
+                    <pre i18n="popupMark">分</pre>
+                </div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect score-button" i18n="popupScoreButton">
+                查看网友评价
+            </button>
+            </header>
+            <main class="mdl-layout__content">
+                <ul class="mdl-list">
+                    <li class="mdl-list__item mdl-list__item--two-line" id="listSafe">
+                        <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar color1">check</i>
+      <span class="title" i18n="popupRealTimeProtection">安全保护</span>
+                        <span class="mdl-list__item-sub-title title" i18n="PopupRealTimeProtectionSpan">实时保护您的上网安全</span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content"></span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--two-line" id="listAdblock">
+                        <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar color2">priority_high</i>
+      <span class="title" i18n="popupAdBlocking">广告拦截</span>
+                        <span class="mdl-list__item-sub-title title" i18n="PopupAdBlockingSpan">强力拦截骚扰广告</span>
+                        </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--two-line" id="listSync">
+                        <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar color3">code</i>
+      <span class="title" i18n="popupLab">实验室</span>
+                        <span class="mdl-list__item-sub-title title" i18n="popupLabSpan">体验最新最有趣的功能</span>
+                        </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--two-line" id="listFeedBack">
+                        <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar color4">format_quote</i>
+      <span class="title" i18n="popupFeedback">建议反馈</span>
+                        <span class="mdl-list__item-sub-title title" i18n="PopupFeedbackSpan">帮助我们更好地改进</span>
+                        </span>
+                    </li>
+                </ul>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="lib/polyfill.min.js"></script>
+<script src="lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/mdl/material.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cloudopt-core.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cloudopt-popup.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cloudopt-i18n.js" type="text/javascript" charset="utf-8"></script>

@@ -1,0 +1,41 @@
+.cloudopt-bookmark-head {
+    color: #9ba3af;
+}
+
+.cloudopt-bookmark-head img {
+    float: right;
+    width: 70px;
+}
+
+#cloudopt-bookmark {
+    width: 100%;
+    padding: 16px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    margin-bottom: 16px;
+}
+
+#cloudopt-bookmark .cloudopt-bookmark-li {
+    padding: 16px;
+}
+
+#cloudopt-bookmark .cloudopt-bookmark-li p {
+    font-size: 13px;
+    color: #006d21;
+    margin: 0px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#cloudopt-bookmark .cloudopt-bookmark-li a {
+    display: block;
+    font-size: 16px;
+    color: #001ba0;
+    margin-bottom: 5px;
+}
+
+.cloudopt-bookmark-head .cloudopt-icon {
+    float: inherit;
+    width: 10px;
+    margin-left: 10px;
+}

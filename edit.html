@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Cloudopt</title>
+    <link rel="stylesheet" type="text/css" href="lib/mdl/material.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/noty/noty.css" />
+    <link rel="stylesheet" type="text/css" href="lib/icon/icon.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+</head>
+
+<body style="background-color:#ececec">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <div id="material-card"></div>
+            <div id="option-main">
+                <img src="image/logo.png" alt="" class="logo">
+
+
+                <div class="mdl-card mdl-shadow--2dp" id="manual">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyManual">自定义过滤器</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield" style="width:100%;max-width:600px;">
+                            <textarea class="mdl-textfield__input" type="text" rows="3" id="manualInput" style="width:100%;max-width:600px;min-height:300px" value=""></textarea>
+                            <label class="mdl-textfield__label" for="manualInput" style="width:100%;"></label>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="submitToCloudopt">
+                                            <input type="checkbox" id="submitToCloudopt" class="mdl-checkbox__input" checked>
+                                            <span class="mdl-checkbox__label" i18n="optionManualTips">提交样本</span>
+                                          </label>
+                        </div>
+
+                        <div class="row">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="manualAdd" i18n="optionManualSave" id="manualSave">
+                            SAVE
+                        </button>
+                        </div>
+
+
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                        <i class="material-icons">help</i>
+                    </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script src="lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/mdl/material.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/noty/noty.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/json3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cloudopt-core.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cloudopt-edit.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cloudopt-i18n.js" type="text/javascript" charset="utf-8"></script>
