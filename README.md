@@ -92,7 +92,7 @@ After the build is complete, the file will be stored in the dist directory, whic
 
 ## Chinese Vesion
 
-[点击阅读中文版](https://github.com/cloudoptlab/cloudopt-adblocker/blob/master/README_ZH_.md)
+[点击阅读中文版](https://github.com/cloudoptlab/cloudopt-adblocker/blob/master/README_ZH.md)
 
 ----
 
