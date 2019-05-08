@@ -1,0 +1,33 @@
+{
+  "name": "cloudopt-extension",
+  "version": "1.3.0",
+  "repository": "https://github.com/cloudoptlab/cloudopt-adblocker",
+  "author": "Baby",
+  "license": "MIT",
+  "description": "For most of users, visiting unsafe websites is the major cause for the access to Trojan Virus and compromised accounts. The majority of these attacks and fraud can be stopped from the outset by using Cloudopt.",
+  "scripts": {
+    "build": "rm -fr dist/* && ./node_modules/.bin/gulp"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-polyfill": "^6.26.0",
+    "gulp": "^4.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "readable-stream": "^3.3.0"
+  },
+  "dependencies": {
+    "dompurify": "^1.0.10",
+    "jq-keyboard": "1.0.0",
+    "jquery": "3.2.1",
+    "jquery-ui-dist": "^1.12.1",
+    "json3": "^3.3.2",
+    "material-design-lite": "1.3.0",
+    "noty": "3.1.3",
+    "push.js": "^1.0.9",
+    "underscore": "^1.9.1"
+  }
+}

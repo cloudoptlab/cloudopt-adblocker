@@ -1,0 +1,47 @@
+[
+  {
+    "host": "v.youku.com"
+  },
+  {
+    "host": "www.iqiyi.com"
+  },
+  {
+    "host": "v.qq.com"
+  },
+  {
+    "host": "video.tudou.com"
+  },
+  {
+    "host": "video.sina.com.cn"
+  },
+  {
+    "host": "v.ifeng.com"
+  },
+  {
+    "host": "tv.sohu.com"
+  },
+  {
+    "host": "v.pptv.com"
+  },
+  {
+    "host": "www.kankan.com"
+  },
+  {
+    "host": "www.cctv.com"
+  },
+  {
+    "host": "www.pps.tv"
+  },
+  {
+    "host": "www.mgtv.com"
+  },
+  {
+    "host": "www.wasu.cn"
+  },
+  {
+    "host":"www.le.com"
+  },
+  {
+    "host":"tv.le.com"
+  }
+]
