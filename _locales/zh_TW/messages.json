@@ -79,6 +79,15 @@
   "popupScoreButton": {
     "message": "查看網友評價"
   },
+  "popupEvaluateButton": {
+    "message": "評價此網站"
+  },
+  "popupEvaluateTipsTitle": {
+    "message": "分享您的反饋"
+  },
+  "popupEvaluateTipsSubtitle": {
+    "message": "您的反饋將幫助更多人抵禦危險，釣魚網站。"
+  },
   "popupMark": {
     "message": "分"
   },

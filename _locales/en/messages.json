@@ -76,6 +76,15 @@
   "popupScoreButton": {
     "message": "View online comments"
   },
+  "popupEvaluateButton": {
+    "message": "Comment this site"
+  },
+  "popupEvaluateTipsTitle": {
+    "message": "Share your opinion"
+  },
+  "popupEvaluateTipsSubtitle": {
+    "message": "Your comments will help defend more people against dangerous, phishing sites."
+  },
   "popupMark": {
     "message": "mark"
   },

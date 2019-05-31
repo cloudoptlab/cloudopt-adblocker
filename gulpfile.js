@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var babel = require('gulp-babel');
+var rename = require('gulp-rename');
 var pipeline = require('readable-stream').pipeline;
 
 /**
@@ -38,6 +39,13 @@ gulp.task('vendors', gulp.parallel(
     .pipe(gulp.dest('dist/lib/')),
      
   () => gulp.src('node_modules/babel-polyfill/dist/polyfill.min.js')
+    .pipe(gulp.dest('dist/lib/')),
+     
+  () => gulp.src('node_modules/popper.js/dist/umd/popper.min.js')
+    .pipe(gulp.dest('dist/lib/')),
+       
+  () => gulp.src('node_modules/tippy.js/umd/index.all.min.js')
+    .pipe(rename("tippy.all.min.js"))
     .pipe(gulp.dest('dist/lib/')),
 ));
 
