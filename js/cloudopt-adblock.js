@@ -79,6 +79,10 @@ cloudopt.adblock = (function(cloudopt) {
         if (cloudopt.config.get().safeCoin) {
             configuration.filters[configuration.filters.length] = 242;
         }
+        if (cloudopt.config.get().saveCloud) {
+            configuration.filters[configuration.filters.length] = 208;
+            configuration.filters[configuration.filters.length] = 210;
+        }
         cloudopt.logger.debug("Final filter list: " + configuration.filters);
         return configuration;
     }
