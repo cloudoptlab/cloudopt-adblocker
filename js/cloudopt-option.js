@@ -11,18 +11,6 @@
           $(this).width() > td.width() ? td.width($(this).width()) : $(this).width(td.width());
       });
 
-      $("#speedup").click(function(event) {
-          if (!window.loged) {
-              new Noty({
-                  text: cloudopt.i18n.get("mustLogedTips"),
-                  type: "error",
-                  theme: "mint",
-                  timeout: 3000
-              }).show();
-              return;
-          }
-      });
-
       refresh();
 
       if (cloudopt.getLocation() == "cn") {
@@ -433,8 +421,8 @@
           error: function(XMLHttpRequest, textStatus, errorThrown) {
               cloudopt.config.refresh(function() {
                   var config = cloudopt.config.get();
-                  config["dnsSpeed"] = false;
-                  config["webPrereading"] = false;
+                  config["dnsSpeed"] = true;
+                  config["webPrereading"] = true;
                   config["memoryOptimize"] = false;
                   cloudopt.config.set(config, function() {
                       cloudopt.message.send("refresh-config");
