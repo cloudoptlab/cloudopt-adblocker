@@ -79,6 +79,15 @@
   "popupScoreButton": {
     "message": "사용자 리뷰보기."
   },
+  "popupEvaluateButton": {
+    "message": "이 사이트에 댓글 달기"
+  },
+  "popupEvaluateTipsTitle": {
+    "message": "의견 공유"
+  },
+  "popupEvaluateTipsSubtitle": {
+    "message": "귀하의 의견은 위험한 피싱 사이트로부터 더 많은 사람들을 보호하는 데 도움이 될 것입니다."
+  },
   "popupMark": {
     "message": "서브"
   },

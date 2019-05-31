@@ -79,6 +79,15 @@
   "popupScoreButton": {
     "message": "查看网友评价"
   },
+  "popupEvaluateButton": {
+    "message": "评价此网站"
+  },
+  "popupEvaluateTipsTitle": {
+    "message": "分享您的反馈"
+  },
+  "popupEvaluateTipsSubtitle": {
+    "message": "您的反馈将帮助更多人抵御危险、钓鱼网站。"
+  },
   "popupMark": {
     "message": "分"
   },

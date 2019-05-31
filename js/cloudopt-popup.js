@@ -1,4 +1,25 @@
 cloudopt.onFinish(function() {
+    
+    function _checkEvaluateTips(url) {
+        const key = "evaluate_tip_"+url;
+        cloudopt.store.get(key, function(lastShown) {
+            lastShown = parseInt(lastShown);
+            if (isNaN(lastShown) || Date.now() - lastShown > 28800000 /* 8 hours */ ) {
+                tippy("#popupScoreButton", {
+                    content: $("#evaluateTipsTemplate").html(),
+                    animation: "scale",
+                    arrow: true,
+                    placement: "bottom",
+                    inertia: true,
+                    trigger: "manual",
+                    onShown: function() {
+                        cloudopt.store.set(key, Date.now());
+                    }
+                })
+                document.getElementById("popupScoreButton")._tippy.show();
+            }
+        });
+    }
 
     if (cloudopt.utils.getUa() == "firefox") {
         $(".popup .mdl-list__item-avatar.material-icons").css("padding-top", "6px");
@@ -26,6 +47,8 @@ cloudopt.onFinish(function() {
             if (result.score == 0 && result.safe == 0) {
 
                 $(".score h1").text("?");
+                $('#popupScoreButton').text(cloudopt.i18n.get("popupEvaluateButton"));
+                _checkEvaluateTips(url)
 
             } else if (result.score < 60) {
 
