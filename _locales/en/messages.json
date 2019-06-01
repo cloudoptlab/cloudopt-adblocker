@@ -436,6 +436,12 @@
   "optionCleanCacheBrowserNotSupported": {
     "message": "The browser does not support automatic cache cleanup at this time."
   },
+  "optionFiltersLastUpdatedAt": {
+    "message": "Filter rules updated at"
+  },
+  "filterNotUpdated": {
+    "message": "Filter rules has not been updated"
+  },
   "memoryOptimizedIcon": {
     "message": "⏸"
   },

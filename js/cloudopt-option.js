@@ -28,6 +28,15 @@
 
       }
 
+      cloudopt.store.get("latest_filters_updated_at", function(timestamp) {
+        timestamp = parseInt(timestamp);
+        if (!!timestamp) {
+            $("#filtersLastUpdatedAt").html(cloudopt.i18n.get("optionFiltersLastUpdatedAt") + " " + new Date(timestamp).toLocaleString());
+        } else {
+            $("#filtersLastUpdatedAt").html(cloudopt.i18n.get("filterNotUpdated"));
+        }
+      });
+
       $("#safeCloud").click(function() {
           change("safeCloud");
 
