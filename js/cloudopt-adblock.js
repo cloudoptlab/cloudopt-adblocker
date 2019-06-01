@@ -9,7 +9,7 @@ cloudopt.adblock = (function(cloudopt) {
                 $.get(value, {}, function(data) {
                     var list = data.split("\n");
                     if (list.length <= 1) {
-                        data.split("\r\n");
+                        list = data.split("\r\n");
                     }
                     list.forEach(function(value, index) {
                         if (value.indexOf("!") < 0 && value.indexOf("#%#") < 0) {
@@ -19,6 +19,7 @@ cloudopt.adblock = (function(cloudopt) {
                     adguardApi.configure(adblockConfig, function() {
                         cloudopt.logger.debug('Load the subscription rule file & Finished Adblock re-configuration.');
                     });
+                    cloudopt.store.set("latest_filters_updated_at", Date.now());
                 }, "text");
             });
         });
@@ -79,6 +80,10 @@ cloudopt.adblock = (function(cloudopt) {
         if (cloudopt.config.get().safeCoin) {
             configuration.filters[configuration.filters.length] = 242;
         }
+        if (cloudopt.config.get().saveCloud) {
+            configuration.filters[configuration.filters.length] = 208;
+            configuration.filters[configuration.filters.length] = 210;
+        }
         cloudopt.logger.debug("Final filter list: " + configuration.filters);
         return configuration;
     }
@@ -132,6 +137,10 @@ cloudopt.adblock = (function(cloudopt) {
             tabsBlockCount[details.tabId] = parseInt(tabsBlockCount[details.tabId]) + 1;
             cloudopt.statistics.countEvent("adblock");
             cloudopt.statistics.countEvent("adblock-today");
+        });
+
+        adguardApi.onFilterDownloadSuccess.addListener(function() {
+            cloudopt.store.set("latest_filters_updated_at", Date.now());
         });
 
         adguardApi.start(getConfig(), function() {
