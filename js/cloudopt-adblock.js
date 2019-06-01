@@ -9,7 +9,7 @@ cloudopt.adblock = (function(cloudopt) {
                 $.get(value, {}, function(data) {
                     var list = data.split("\n");
                     if (list.length <= 1) {
-                        data.split("\r\n");
+                        list = data.split("\r\n");
                     }
                     list.forEach(function(value, index) {
                         if (value.indexOf("!") < 0 && value.indexOf("#%#") < 0) {
