@@ -584,8 +584,8 @@ cloudopt.config = (function (cloudopt) {
         labKeyboard: false,
         memoryOptimize: false,
         dataCollection: true,
-        dnsSpeed: false,
-        webPrereading: false,
+        dnsSpeed: true,
+        webPrereading: true,
         customRule: [],
         customSubscription: []
     };

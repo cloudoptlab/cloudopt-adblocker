@@ -79,6 +79,15 @@
   "popupScoreButton": {
     "message": "사용자 리뷰보기."
   },
+  "popupEvaluateButton": {
+    "message": "이 사이트에 댓글 달기"
+  },
+  "popupEvaluateTipsTitle": {
+    "message": "의견 공유"
+  },
+  "popupEvaluateTipsSubtitle": {
+    "message": "귀하의 의견은 위험한 피싱 사이트로부터 더 많은 사람들을 보호하는 데 도움이 될 것입니다."
+  },
   "popupMark": {
     "message": "서브"
   },
@@ -429,6 +438,12 @@
   },
   "optionCleanCacheBrowserNotSupported": {
     "message": "브라우저는 현재 자동 캐시 정리를 지원하지 않습니다."
+  },
+  "optionFiltersLastUpdatedAt": {
+    "message": "필터 규칙 업데이트 시간 :"
+  },
+  "filterNotUpdated": {
+    "message": "필터 규칙이 업데이트되지 않았습니다."
   },
   "memoryOptimizedIcon": {
     "message": "⏸"

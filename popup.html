@@ -45,9 +45,9 @@
                     <h1>0</h1>
                     <pre i18n="popupMark">分</pre>
                 </div>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect score-button" i18n="popupScoreButton">
-                查看网友评价
-            </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect score-button" i18n="popupScoreButton" id="popupScoreButton">
+                    查看网友评价
+                </button>
             </header>
             <main class="mdl-layout__content">
                 <ul class="mdl-list">
@@ -84,12 +84,21 @@
             </main>
         </div>
     </div>
+    <div style="display:none" id="evaluateTipsTemplate">
+        <div>
+            <span class="title"><strong i18n="popupEvaluateTipsTitle">分享您的反馈</strong></span>
+            <br>
+            <span i18n="popupEvaluateTipsSubtitle">您的反馈将帮助更多人抵御危险、钓鱼网站。</span>
+        </div>
+    </div>
 </body>
 
 </html>
 <script type="text/javascript" src="lib/polyfill.min.js"></script>
 <script src="lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/mdl/material.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/popper.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/tippy.all.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/cloudopt-core.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/cloudopt-popup.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/cloudopt-i18n.js" type="text/javascript" charset="utf-8"></script>
