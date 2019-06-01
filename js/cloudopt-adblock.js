@@ -19,6 +19,7 @@ cloudopt.adblock = (function(cloudopt) {
                     adguardApi.configure(adblockConfig, function() {
                         cloudopt.logger.debug('Load the subscription rule file & Finished Adblock re-configuration.');
                     });
+                    cloudopt.store.set("latest_filters_updated_at", Date.now());
                 }, "text");
             });
         });
@@ -136,6 +137,10 @@ cloudopt.adblock = (function(cloudopt) {
             tabsBlockCount[details.tabId] = parseInt(tabsBlockCount[details.tabId]) + 1;
             cloudopt.statistics.countEvent("adblock");
             cloudopt.statistics.countEvent("adblock-today");
+        });
+
+        adguardApi.onFilterDownloadSuccess.addListener(function() {
+            cloudopt.store.set("latest_filters_updated_at", Date.now());
         });
 
         adguardApi.start(getConfig(), function() {

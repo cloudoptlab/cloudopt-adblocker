@@ -439,6 +439,12 @@
   "optionCleanCacheBrowserNotSupported": {
     "message": "該瀏覽器暫不支持自動緩存清理"
   },
+  "optionFiltersLastUpdatedAt": {
+    "message": "廣告攔截規則庫更新於"
+  },
+  "filterNotUpdated": {
+    "message": "廣告攔截規則庫未更新"
+  },
   "memoryOptimizedIcon": {
     "message": "⏸"
   },

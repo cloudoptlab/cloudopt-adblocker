@@ -16850,12 +16850,15 @@
             adguard.localStorage.setItem(FILTERS_STATE_PROP, JSON.stringify(filters));
         };
 
+        var successEventChannel = adguard.utils.channels.newChannel();
+
         // Add event listener to persist filter metadata to local storage
         adguard.listeners.addListener(function (event, filter) {
             switch (event) {
                 case adguard.listeners.SUCCESS_DOWNLOAD_FILTER:
                     updateFilterState(filter);
                     updateFilterVersion(filter);
+                    successEventChannel.notify();
                     break;
                 case adguard.listeners.FILTER_ADD_REMOVE:
                 case adguard.listeners.FILTER_ENABLE_DISABLE:
@@ -16869,7 +16872,8 @@
             getFiltersState: getFiltersState,
             // These methods are used only for migrate from old versions
             updateFilterVersion: updateFilterVersion,
-            updateFilterState: updateFilterState
+            updateFilterState: updateFilterState,
+            onDownloadSuccess: successEventChannel
         };
 
     })(adguard);
@@ -18724,7 +18728,8 @@
              */
             onRequestBlocked: adguard.webRequestService.onRequestBlocked,
             openAssistant: openAssistant,
-            closeAssistant: closeAssistant
+            closeAssistant: closeAssistant,
+            onFilterDownloadSuccess: adguard.filtersState.onDownloadSuccess
         };
 
     })(adguard, window);

@@ -439,6 +439,12 @@
   "optionCleanCacheBrowserNotSupported": {
     "message": "该浏览器暂不支持自动缓存清理"
   },
+  "optionFiltersLastUpdatedAt": {
+    "message": "广告拦截规则库更新于"
+  },
+  "filterNotUpdated": {
+    "message": "广告拦截规则库未更新"
+  },
   "memoryOptimizedIcon": {
     "message": "⏸"
   },

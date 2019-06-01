@@ -439,6 +439,12 @@
   "optionCleanCacheBrowserNotSupported": {
     "message": "브라우저는 현재 자동 캐시 정리를 지원하지 않습니다."
   },
+  "optionFiltersLastUpdatedAt": {
+    "message": "필터 규칙 업데이트 시간 :"
+  },
+  "filterNotUpdated": {
+    "message": "필터 규칙이 업데이트되지 않았습니다."
+  },
   "memoryOptimizedIcon": {
     "message": "⏸"
   },
