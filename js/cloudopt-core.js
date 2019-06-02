@@ -579,6 +579,7 @@ cloudopt.config = (function (cloudopt) {
         adblockDisplay: true,
         whiteList: [],
         blackList: [],
+        whiteListAds: [],
         labBookmarkSearch: true,
         labSafeTips: true,
         labKeyboard: false,
@@ -742,7 +743,7 @@ cloudopt.config = (function (cloudopt) {
 
     /**
      * add list Factory
-     * @param { type } 'whiteList' | 'blackList'
+     * @param { type } 'whiteList' | 'blackList' | 'whiteListAds'
      * @param { tipsMap } { successTips: 'optionTipsAddWhiteListSuccess' | 'optionTipsAddBlackListSuccess' }
      */
     const addListFactory = function (type, tipsMap = { successTips: '' } ) {
@@ -780,6 +781,14 @@ cloudopt.config = (function (cloudopt) {
     }
 
     /**
+     * Add whiteListAds
+     */
+    function fastAddWhiteListAds(url) {
+        cloudopt.config.get().blackList.removeByValue(cloudopt.utils.getHost(url))
+        return addListFactory('whiteListAds', { successTips: 'optionTipsAddWhiteListAdsSuccess'})(url)
+    }
+
+    /**
      * Add blackList
      * @param { url } url
      */
@@ -795,6 +804,7 @@ cloudopt.config = (function (cloudopt) {
         activateEquipment: activateEquipment,
         autoAddWhiteList: autoAddWhiteList,
         fastAddWhiteList: fastAddWhiteList,
+        fastAddWhiteListAds: fastAddWhiteListAds,
         fastAddBlackList: fastAddBlackList,
         asyncRefreshConfig: asyncRefreshConfig,
         asyncSaveConfig: asyncSaveConfig,
