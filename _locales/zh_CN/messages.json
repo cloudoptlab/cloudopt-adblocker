@@ -32,10 +32,10 @@
     "message": "检测到您正在从危险的网站下载文件，Cloudopt已帮您拦截。"
   },
   "popupAddWhiteList": {
-    "message": "添加到白名单"
+    "message": "添加到云安全白名单"
   },
   "popupAddBlackList": {
-    "message": "添加到黑名单"
+    "message": "添加到云安全黑名单"
   },
   "popupCleanCache": {
     "message": "清理缓存"
@@ -79,15 +79,6 @@
   "popupScoreButton": {
     "message": "查看网友评价"
   },
-  "popupEvaluateButton": {
-    "message": "评价此网站"
-  },
-  "popupEvaluateTipsTitle": {
-    "message": "分享您的反馈"
-  },
-  "popupEvaluateTipsSubtitle": {
-    "message": "您的反馈将帮助更多人抵御危险、钓鱼网站。"
-  },
   "popupMark": {
     "message": "分"
   },
@@ -95,10 +86,13 @@
     "message": "请勿重复添加"
   },
   "optionTipsAddWhiteListSuccess": {
-    "message": "添加白名单成功"
+    "message": "添加云安全白名单成功"
+  },
+  "optionTipsAddWhiteListAdsSuccess": {
+    "message": "添加广告拦截白名单成功"
   },
   "optionTipsAddBlackListSuccess": {
-    "message": "添加黑名单成功"
+    "message": "添加云安全黑名单成功"
   },
   "optionTipsInputUrlisNull": {
     "message": "您输入的域名为空，请检查后输入"
@@ -167,7 +161,10 @@
     "message": "帮助您在网络不好的情况下也能拦截恶意广告"
   },
   "optionClassifyWhiteList": {
-    "message": "白名单"
+    "message": "云安全白名单"
+  },
+  "optionClassifyAdsWhiteList": {
+    "message": "广告拦截白名单"
   },
   "optionWhiteListAdd": {
     "message": "增加"
@@ -182,7 +179,7 @@
     "message": "操作"
   },
   "optionClassifyBlackList": {
-    "message": "黑名单"
+    "message": "云安全黑名单"
   },
   "optionStatistics": {
     "message": "数据统计"
@@ -332,7 +329,7 @@
     "message": "配置更新失败"
   },
   "contextMenus1": {
-    "message": "加入白名单"
+    "message": "加入云安全白名单"
   },
   "contextMenus2": {
     "message": "查看安全报告"
@@ -341,7 +338,7 @@
     "message": "手动拦截恶意广告(BETA)"
   },
   "contextMenus4": {
-    "message": "加入黑名单"
+    "message": "加入云安全黑名单"
   },
   "manualTips": {
     "message": "鼠标左键选取想要屏蔽的元素，鼠标右键退出手动模式"
@@ -438,12 +435,6 @@
   },
   "optionCleanCacheBrowserNotSupported": {
     "message": "该浏览器暂不支持自动缓存清理"
-  },
-  "optionFiltersLastUpdatedAt": {
-    "message": "广告拦截规则库更新于"
-  },
-  "filterNotUpdated": {
-    "message": "广告拦截规则库未更新"
   },
   "memoryOptimizedIcon": {
     "message": "⏸"
