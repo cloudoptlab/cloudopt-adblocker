@@ -29,10 +29,10 @@
     "message": "Detecting that you are downloading files from a dangerous website, Cloudopt has blocked that for you."
   },
   "popupAddWhiteList": {
-    "message": "Add to whitelist"
+    "message": "Add to cloud security whitelist"
   },
   "popupAddBlackList": {
-    "message": "Add to blacklist"
+    "message": "Add to cloud security blacklist"
   },
   "popupCleanCache": {
     "message": "Clean up cache"
@@ -92,10 +92,13 @@
     "message": "You have already added this"
   },
   "optionTipsAddWhiteListSuccess": {
-    "message": "Whitelist added successfully"
+    "message": "Cloud security whitelist added successfully"
+  },
+  "optionTipsAddWhiteListAdsSuccess": {
+    "message": "Whitelist-ads added successfully"
   },
   "optionTipsAddBlackListSuccess": {
-    "message": "Blacklist added successfully"
+    "message": "Cloud security blacklist added successfully"
   },
   "optionTipsInputUrlisNull": {
     "message": "Empty domain name, please check and enter"
@@ -164,7 +167,10 @@
     "message": "Helps adblocking even when in bad networking"
   },
   "optionClassifyWhiteList": {
-    "message": "White List"
+    "message": "Cloud security whitelist"
+  },
+  "optionClassifyAdsWhiteList": {
+    "message": "AD blocking whitelist"
   },
   "optionWhiteListAdd": {
     "message": "ADD"
@@ -179,7 +185,7 @@
     "message": "Operation"
   },
   "optionClassifyBlackList": {
-    "message": "Black List"
+    "message": "Cloud security blacklist"
   },
   "optionStatistics": {
     "message": "Statistics"
@@ -329,7 +335,7 @@
     "message": "Configuration update failed"
   },
   "contextMenus1": {
-    "message": "Add to the white list"
+    "message": "Add to the cloud security whitelist"
   },
   "contextMenus2": {
     "message": "View reputation report"
@@ -338,7 +344,7 @@
     "message": "Manual ad blocking(BETA)"
   },
   "contextMenus4": {
-    "message": "Add to the black list"
+    "message": "Add to the cloud security blacklist"
   },
   "manualTips": {
     "message": "Left click to select elements to be blocked, right click to exit selection mode"

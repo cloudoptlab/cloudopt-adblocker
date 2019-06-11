@@ -18,7 +18,7 @@
               if (value == undefined || value == null) {
                   cloudopt.store.set("firstOpenoption2", "true");
                   new Noty({
-                      text: "根据您的ip所在地区的法律及相关政策，我们将自动把视频网站加入白名单。",
+                      text: "根据您的ip所在地区的法律及相关政策，我们将自动把视频网站加入云安全白名单。",
                       type: "warning",
                       theme: "mint"
                   }).show();
@@ -137,6 +137,32 @@
           })
       });
 
+      $("#whiteListAdsAdd").click(function() {
+        const text = $("#whiteListAdsInput").val();
+        const config = cloudopt.config.get();
+        console.log(config, 'config')
+        cloudopt.config.fastAddWhiteListAds(cloudopt.utils.getHost(text))(type => {
+            if (type === 'optionTipsDontDuplicate' || type === 'optionTipsInputUrlisNull' || type === 'optionTipsInputUrlisError') {
+                new Noty({
+                    text: cloudopt.i18n.get(type),
+                    type: "error",
+                    theme: "mint",
+                    timeout: 1000
+                }).show();
+            } else if (type === 'optionTipsAddWhiteListAdsSuccess') {
+                new Noty({
+                    text: cloudopt.i18n.get(type),
+                    type: "info",
+                    theme: "mint",
+                    timeout: 1000
+                }).show();
+                refresh();
+                cloudopt.message.send("refresh-config");
+                $("#whiteListAdsInput").val("");
+            }
+        })
+    });
+
       $("#blackListAdd").click(function () {
           const text = $("#blackListInput").val();
           const config = cloudopt.config.get();
@@ -170,6 +196,15 @@
               cloudopt.message.send("refresh-config");
           });
       });
+
+      $("#whiteListAdsDelete").click(function() {
+        var config = cloudopt.config.get();
+        config.whiteListAds = [];
+        cloudopt.config.set(config, function() {
+            refresh();
+            cloudopt.message.send("refresh-config");
+        });
+    });
 
       $("#blackListDelete").click(function() {
           var config = cloudopt.config.get();
@@ -292,6 +327,7 @@
               refreshWhiteList();
               refreshBlackList();
               refreshCustomRule();
+              refreshWhiteListAds();
               refreshCustomSubscription();
               refreshStatistics();
               refreshAnchorEvents();
@@ -325,6 +361,25 @@
           cloudopt.message.send("refresh-config");
       });
   }
+
+  function refreshWhiteListAds() {
+    $("#whiteListAdsVeiw").html("");
+    var config = cloudopt.config.get();
+    var template = "<tr><td  class='mdl-data-table__cell--non-numeric'>{{value}}</td><td><i class='material-icons mdl-list__item-avatar whiteListAdsDelete'>delete</i></td></tr>"
+    for (var i = 0; i < config.whiteListAds.length; i++) {
+        var html = cloudopt.template.compile(template, DOMPurify.sanitize(config.whiteListAds[i]));
+        $(html).appendTo("#whiteListAdsVeiw");
+    }
+    $(".whiteListAdsDelete").unbind();
+    $(".whiteListAdsDelete").click(function() {
+        var text = $(this).parent().prev().html();
+        var config = cloudopt.config.get();
+        config.whiteListAds.removeByValue(text);
+        cloudopt.config.set(config);
+        $(this).parent().parent().css("display", "none");
+        cloudopt.message.send("refresh-config");
+    });
+}
 
   function refreshBlackList() {
       $("#blackListVeiw").html("");
@@ -428,16 +483,6 @@
               callback();
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {
-              cloudopt.config.refresh(function() {
-                  var config = cloudopt.config.get();
-                  config["dnsSpeed"] = true;
-                  config["webPrereading"] = true;
-                  config["memoryOptimize"] = false;
-                  cloudopt.config.set(config, function() {
-                      cloudopt.message.send("refresh-config");
-                      callback();
-                  });
-              });
 
           }
       });

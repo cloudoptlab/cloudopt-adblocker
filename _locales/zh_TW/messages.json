@@ -32,10 +32,10 @@
     "message": "檢測到您正在從危險的網站下載文件,Cloudopt已幫你攔截。"
   },
   "popupAddWhiteList": {
-    "message": "添加到白名單"
+    "message": "添加到雲安全白名單"
   },
   "popupAddBlackList": {
-    "message": "添加到黑名單"
+    "message": "添加到雲安全黑名單"
   },
   "popupCleanCache": {
     "message": "清理緩存"
@@ -95,10 +95,13 @@
     "message": "請勿重添加"
   },
   "optionTipsAddWhiteListSuccess": {
-    "message": "添加白名單成功"
+    "message": "添加雲安全白名單成功"
+  },
+  "optionTipsAddWhiteListAdsSuccess": {
+    "message": "添加廣告攔截白名單成功"
   },
   "optionTipsAddBlackListSuccess": {
-    "message": "添加黑名單成功"
+    "message": "添加雲安全黑名單成功"
   },
   "optionTipsInputUrlisNull": {
     "message": "您輸入的域名為空,請檢查後輸入"
@@ -167,7 +170,10 @@
     "message": "幫助你在網絡不好的情況下也能攔截惡意廣告"
   },
   "optionClassifyWhiteList": {
-    "message": "白名單"
+    "message": "雲安全白名單"
+  },
+  "optionClassifyAdsWhiteList": {
+    "message": "廣告攔截白名單"
   },
   "optionWhiteListAdd": {
     "message": "增加"
@@ -182,7 +188,7 @@
     "message": "操作"
   },
   "optionClassifyBlackList": {
-    "message": "黑名單"
+    "message": "雲安全黑名單"
   },
   "optionStatistics": {
     "message": "數據統計"
@@ -332,7 +338,7 @@
     "message": "配置更新失敗"
   },
   "contextMenus1": {
-    "message": "加入白名單"
+    "message": "加入雲安全白名單"
   },
   "contextMenus2": {
     "message": "查看安全報告"
@@ -341,7 +347,7 @@
     "message": "手動攔截惡意廣告(BETA)"
   },
   "contextMenus4": {
-    "message": "加入黑名單"
+    "message": "加入雲安全黑名單"
   },
   "manualTips": {
     "message": "滑鼠左鍵選取想要遮罩的元素，滑鼠右鍵退出手動模式"

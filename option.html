@@ -394,9 +394,9 @@
                     </div>
                 </div>
 
-                <div class="mdl-card mdl-shadow--2dp" id="white-list">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text" i18n="optionClassifyWhiteList">白名单</h2>
+                <div class="mdl-card mdl-shadow--2dp" id="white-lis">
+                        <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyWhiteList">云安全白名单</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 400px;">
@@ -433,7 +433,7 @@
 
                 <div class="mdl-card mdl-shadow--2dp" id="black-list">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text" i18n="optionClassifyBlackList">黑名单</h2>
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyBlackList">云安全黑名单</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 400px;">
@@ -459,6 +459,43 @@
                             </tr>
                         </thead>
                         <tbody id="blackListVeiw">
+                        </tbody>
+                    </table>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Help">
+                            <i class="material-icons">help</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-shadow--2dp" id="whitelist-ads">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" i18n="optionClassifyAdsWhiteList">广告拦截白名单</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 400px;">
+                            <input class="mdl-textfield__input" type="text" id="whiteListAdsInput">
+                            <label class="mdl-textfield__label" for="whiteListAdsInput">Please enter the domain name, www.example.com</label>
+                        </div>
+                        <div class="row">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="whiteListAdsAdd" i18n="optionWhiteListAdd">
+                                增加
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="whiteListAdsDelete" i18n="optionWhiteListDelete">
+                                一键清除
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" i18n="optionWhiteListHost">域名</th>
+                                <th i18n="optionWhiteListOperation">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="whiteListAdsVeiw">
                         </tbody>
                     </table>
                     <div class="mdl-card__menu">
