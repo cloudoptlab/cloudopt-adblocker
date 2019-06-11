@@ -483,16 +483,6 @@
               callback();
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {
-              cloudopt.config.refresh(function() {
-                  var config = cloudopt.config.get();
-                  config["dnsSpeed"] = true;
-                  config["webPrereading"] = true;
-                  config["memoryOptimize"] = false;
-                  cloudopt.config.set(config, function() {
-                      cloudopt.message.send("refresh-config");
-                      callback();
-                  });
-              });
 
           }
       });
