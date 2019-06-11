@@ -29,10 +29,10 @@
     "message": "Detecting that you are downloading files from a dangerous website, Cloudopt has blocked that for you."
   },
   "popupAddWhiteList": {
-    "message": "Add to cloud whitelist"
+    "message": "Add to cloud security whitelist"
   },
   "popupAddBlackList": {
-    "message": "Add to cloud blacklist"
+    "message": "Add to cloud security blacklist"
   },
   "popupCleanCache": {
     "message": "Clean up cache"
@@ -76,6 +76,15 @@
   "popupScoreButton": {
     "message": "View online comments"
   },
+  "popupEvaluateButton": {
+    "message": "Comment this site"
+  },
+  "popupEvaluateTipsTitle": {
+    "message": "Share your opinion"
+  },
+  "popupEvaluateTipsSubtitle": {
+    "message": "Your comments will help defend more people against dangerous, phishing sites."
+  },
   "popupMark": {
     "message": "mark"
   },
@@ -83,13 +92,13 @@
     "message": "You have already added this"
   },
   "optionTipsAddWhiteListSuccess": {
-    "message": "Cloud whitelist added successfully"
+    "message": "Cloud security whitelist added successfully"
   },
   "optionTipsAddWhiteListAdsSuccess": {
     "message": "Whitelist-ads added successfully"
   },
   "optionTipsAddBlackListSuccess": {
-    "message": "Cloud blacklist added successfully"
+    "message": "Cloud security blacklist added successfully"
   },
   "optionTipsInputUrlisNull": {
     "message": "Empty domain name, please check and enter"
@@ -158,7 +167,7 @@
     "message": "Helps adblocking even when in bad networking"
   },
   "optionClassifyWhiteList": {
-    "message": "Cloud white List"
+    "message": "Cloud security whitelist"
   },
   "optionClassifyAdsWhiteList": {
     "message": "AD blocking whitelist"
@@ -176,7 +185,7 @@
     "message": "Operation"
   },
   "optionClassifyBlackList": {
-    "message": "Cloud black List"
+    "message": "Cloud security blacklist"
   },
   "optionStatistics": {
     "message": "Statistics"
@@ -326,7 +335,7 @@
     "message": "Configuration update failed"
   },
   "contextMenus1": {
-    "message": "Add to the cloud white list"
+    "message": "Add to the cloud security whitelist"
   },
   "contextMenus2": {
     "message": "View reputation report"
@@ -335,7 +344,7 @@
     "message": "Manual ad blocking(BETA)"
   },
   "contextMenus4": {
-    "message": "Add to the cloud black list"
+    "message": "Add to the cloud security blacklist"
   },
   "manualTips": {
     "message": "Left click to select elements to be blocked, right click to exit selection mode"
@@ -432,6 +441,12 @@
   },
   "optionCleanCacheBrowserNotSupported": {
     "message": "The browser does not support automatic cache cleanup at this time."
+  },
+  "optionFiltersLastUpdatedAt": {
+    "message": "Filter rules updated at"
+  },
+  "filterNotUpdated": {
+    "message": "Filter rules has not been updated"
   },
   "memoryOptimizedIcon": {
     "message": "⏸"
