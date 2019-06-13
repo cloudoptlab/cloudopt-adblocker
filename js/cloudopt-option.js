@@ -130,9 +130,12 @@
                       theme: "mint",
                       timeout: 1000
                   }).show();
-                  refresh();
-                  cloudopt.message.send("refresh-config");
-                  $("#whiteListInput").val("");
+                  var config = cloudopt.config.get();
+                  cloudopt.config.set(config, function () {
+                      refresh();
+                      cloudopt.message.send("refresh-config");
+                      $("#whiteListInput").val("");   
+                  });
               }
           })
       });
@@ -156,9 +159,12 @@
                     theme: "mint",
                     timeout: 1000
                 }).show();
-                refresh();
-                cloudopt.message.send("refresh-config");
-                $("#whiteListAdsInput").val("");
+                var config = cloudopt.config.get();
+                cloudopt.config.set(config, function () {
+                    refresh();
+                    cloudopt.message.send("refresh-config");
+                    $("#whiteListAdsInput").val("");
+                });
             }
         })
     });
@@ -181,9 +187,12 @@
                       theme: "mint",
                       timeout: 1000
                   }).show();
-                  refresh();
-                  cloudopt.message.send("refresh-config");
-                  $("#blackListInput").val("");
+                  var config = cloudopt.config.get();
+                  cloudopt.config.set(config, function () {
+                      refresh();
+                      cloudopt.message.send("refresh-config");
+                      $("#blackListInput").val("");
+                  });
               }
           })
       });
