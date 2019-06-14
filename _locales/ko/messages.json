@@ -37,6 +37,9 @@
   "popupAddBlackList": {
     "message": "구름블랙리스트에 추가"
   },
+  "popupAddWhiteListAds": {
+    "message": "요격 광고에 추가"
+  },
   "popupCleanCache": {
     "message": "캐시를 지우"
   },

@@ -37,6 +37,9 @@
   "popupAddBlackList": {
     "message": "添加到云安全黑名单"
   },
+  "popupAddWhiteListAds": {
+    "message": "添加到广告拦截白名单"
+  },
   "popupCleanCache": {
     "message": "清理缓存"
   },

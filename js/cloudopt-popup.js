@@ -153,4 +153,19 @@ cloudopt.onFinish(function() {
         });
     })
 
+    $("#addWhiteListAds").click(function () {
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            const currentTab = tabs[0];
+            cloudopt.config.fastAddWhiteListAds(currentTab.url)(type => {
+                if (type === 'optionTipsDontDuplicate') {
+                    cloudopt.notification.info(cloudopt.i18n.get(type))
+                } else if (type === 'optionTipsAddWhiteListAdsSuccess') {
+                    cloudopt.notification.success(cloudopt.i18n.get(type))
+                } else if (type === 'optionTipsInputUrlisNull' || type === 'optionTipsInputUrlisError') {
+                    cloudopt.notification.error(cloudopt.i18n.get(type))
+                }
+            })
+        });
+    })
+
 });
