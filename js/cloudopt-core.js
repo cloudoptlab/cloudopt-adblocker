@@ -715,11 +715,11 @@ cloudopt.config = (function (cloudopt) {
     }
 
     /**
-     * Add whiteList for config
+     * Add whiteList-ads for config
      *
      * @param callback    callback when succeed
      */
-    function autoAddWhiteList(callback) {
+    function autoAddWhiteListAds(callback) {
         var fileName = "/whitelist/";
         switch (cloudopt.getLanguage()) {
             case "zh-CN":
@@ -730,15 +730,13 @@ cloudopt.config = (function (cloudopt) {
         $.getJSON(fileName, function (data) {
             var config = cloudopt.config.get();
             $.each(data, function (index, obj) {
-                config.whiteList[config.whiteList.length] = obj.host;
+                config.whiteListAds[config.whiteListAds.length] = obj.host;
             });
             cloudopt.config.set(config, function () {
                 cloudopt.message.send("refresh-config");
                 callback();
             });
         });
-
-
     }
 
     /**
@@ -802,7 +800,7 @@ cloudopt.config = (function (cloudopt) {
         set: set,
         refresh: refresh,
         activateEquipment: activateEquipment,
-        autoAddWhiteList: autoAddWhiteList,
+        autoAddWhiteListAds: autoAddWhiteListAds,
         fastAddWhiteList: fastAddWhiteList,
         fastAddWhiteListAds: fastAddWhiteListAds,
         fastAddBlackList: fastAddBlackList,

@@ -28,15 +28,19 @@ cloudopt.adblock = (function(cloudopt) {
 
     function getConfig() {
         var cloudoptConfig = cloudopt.config.get();
+
         var configuration = {
             filters: [101],
             whitelist: cloudoptConfig.whiteList.slice(),
+            whitelistAds: cloudoptConfig.whitelistAds ? cloudoptConfig.whitelistAds.slice() : [],
             rules: cloudoptConfig.customRule,
             filtersMetadataUrl: 'https://cdn.cloudopt.net/filters/chromium/filters.json',
             filterRulesUrl: 'https://cdn.cloudopt.net/filters/chromium/{filter_id}.txt'
         };
 
         configuration.whitelist[configuration.whitelist.length] = "*.cloudopt.net";
+        configuration.whitelistAds[configuration.whitelistAds.length] = "*.cloudopt.net";
+
         if (cloudoptConfig.safePrivacy) {
             configuration.filters[configuration.filters.length] = 3;
             //configuration.filters[configuration.filters.length] = 4;
@@ -150,8 +154,8 @@ cloudopt.adblock = (function(cloudopt) {
                     cloudopt.store.get("firstAutoAddWhiteList", function(value) {
                         if (value == undefined || value == null) {
                             cloudopt.store.set("firstAutoAddWhiteList", "true");
-                            cloudopt.config.autoAddWhiteList(function() {
-                                cloudopt.logger.debug('Add a white list.');
+                            cloudopt.config.autoAddWhiteListAds(function() {
+                                cloudopt.logger.debug('Add a whiteList-ads.');
                                 refreshConfig();
                             });
                         }
