@@ -978,6 +978,9 @@ cloudopt.grade = (function (cloudopt) {
                     if (config.whiteList.indexOf(item.host) > -1 && item.safe < 0) {
                         item.safe = 0;
                     }
+                    if (config.whiteListAds.indexOf(item.host) > -1 && item.safe < 0) {
+                        item.safe = 0;
+                    }
                     /*if in black list*/
                     if (config.blackList.some(e => e === item.host)) {
                         item.safe = -1;
@@ -1006,6 +1009,9 @@ cloudopt.grade = (function (cloudopt) {
                     result.score = data.result.score;
                     /*if in white list*/
                     if (config.whiteList.indexOf(result.host) > -1 && result.safe == -1) {
+                        result.safe = 0;
+                    }
+                    if (config.whiteListAds.indexOf(result.host) > -1 && result.safe == -1) {
                         result.safe = 0;
                     }
                     if (data.result.host != "") {
@@ -1060,7 +1066,7 @@ cloudopt.init = (function (cloudopt) {
                 url = tabArray[tabArray.length - 1].url;
                 host = cloudopt.utils.getHost(url);
                 // cloudopt.browserIconChange.normal();
-                if (tabArray[tabArray.length - 1].url.indexOf("file://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome-extension://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome://") == 0 || cloudopt.config.get().whiteList.indexOf(host) > -1) {
+                if (tabArray[tabArray.length - 1].url.indexOf("file://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome-extension://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome://") == 0 || cloudopt.config.get().whiteList.indexOf(host) > -1 || cloudopt.config.get().whiteListAds.indexOf(host) > -1) {
                     cloudopt.browserIconChange.gray();
                     return;
                 }
