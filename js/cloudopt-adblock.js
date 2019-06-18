@@ -31,14 +31,12 @@ cloudopt.adblock = (function(cloudopt) {
 
         var configuration = {
             filters: [101],
-            whitelist: cloudoptConfig.whiteList.slice(),
-            whitelistAds: cloudoptConfig.whitelistAds ? cloudoptConfig.whitelistAds.slice() : [],
+            whitelist: cloudoptConfig.whitelistAds.slice(),
             rules: cloudoptConfig.customRule,
             filtersMetadataUrl: 'https://cdn.cloudopt.net/filters/chromium/filters.json',
             filterRulesUrl: 'https://cdn.cloudopt.net/filters/chromium/{filter_id}.txt'
         };
 
-        configuration.whitelist[configuration.whitelist.length] = "*.cloudopt.net";
         configuration.whitelistAds[configuration.whitelistAds.length] = "*.cloudopt.net";
 
         if (cloudoptConfig.safePrivacy) {
