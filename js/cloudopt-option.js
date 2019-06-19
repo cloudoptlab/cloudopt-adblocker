@@ -143,7 +143,6 @@
       $("#whiteListAdsAdd").click(function() {
         const text = $("#whiteListAdsInput").val();
         const config = cloudopt.config.get();
-        console.log(config, 'config')
         cloudopt.config.fastAddWhiteListAds(cloudopt.utils.getHost(text))(type => {
             if (type === 'optionTipsDontDuplicate' || type === 'optionTipsInputUrlisNull' || type === 'optionTipsInputUrlisError') {
                 new Noty({
