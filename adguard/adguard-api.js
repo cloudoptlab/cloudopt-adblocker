@@ -11257,7 +11257,7 @@
             // Gets tab metadata
             var getTabMetadata = function (tabId, key) {
                 var tab = tabs[tabId];
-                if (tab.url != undefined && tab.url.startWith(cloudopt.getExtUrl()) && key == "frameWhiteListRule") {
+                if (tab != undefined && tab.url != undefined && tab.url.startWith(cloudopt.getExtUrl()) && key == "frameWhiteListRule") {
                     return {
                         filterId: 100,
                         isRegexRule: false,
@@ -17125,7 +17125,7 @@
          * @param loadCallback
          */
         var processAbpSubscriptionUrl = function (subscriptionUrl, loadCallback) {
-          
+
             var filterMetadata = findFilterMetadataBySubscriptionUrl(subscriptionUrl);
 
             if (filterMetadata) {
