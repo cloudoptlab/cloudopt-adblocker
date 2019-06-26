@@ -3,6 +3,6 @@ if(chrome.omnibox != undefined){
 	    "description": cloudopt.i18n.get("ominiboxTips"),
 	});
 	chrome.omnibox.onInputEntered.addListener(function(text) {
-	    cloudopt.tab.open("https://www.cloudopt.net/support?q=" + text);
+	    cloudopt.tab.open("https://www.cloudopt.net/report/" + text);
 	});
 }
