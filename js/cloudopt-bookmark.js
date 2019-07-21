@@ -76,6 +76,21 @@ $(document).ready(function () {
 
             });
 
+        } else if (host.startWith("s.cloudopt.net")) {
+
+            keyword = $("#q").val();
+
+            insertClass = ".default-container";
+
+            sendSearch();
+
+            $("#q").bind('input propertychange', function () {
+
+                keyword = $("#q").val();
+
+                sendSearch();
+
+            });
         }
 
     });
