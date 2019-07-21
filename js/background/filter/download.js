@@ -7,7 +7,7 @@ if (chrome.downloads != undefined) {
         cloudopt.config.refresh(function() {
             cloudopt.grade.website(url, function(result) {
                 var config = cloudopt.config.get();
-                if (result.safe < 0 && config.safeDownload) {
+                if (result.safe === false && config.safeDownload) {
                     cloudopt.notification.error(cloudopt.i18n.get("dangDownTitle"));
                     chrome.downloads.cancel(downloadItem.id, function (url) { });
                 };
