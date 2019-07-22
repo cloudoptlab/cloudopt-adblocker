@@ -44,7 +44,7 @@ cloudopt.onFinish(function() {
 
             $(".score h1").text(result.score);
 
-            if (result.score == 0 && result.safe == 0) {
+            if (result.score == 0 && result.safe) {
 
                 $(".score h1").text("?");
                 $('#popupScoreButton').text(cloudopt.i18n.get("popupEvaluateButton"));

@@ -349,7 +349,7 @@ cloudopt.utils = (function (cloudopt) {
     function getRawUa() {
         return navigator.userAgent;
     }
-   
+
 
     return {
         getQueryString: getQueryString,
@@ -594,7 +594,7 @@ cloudopt.config = (function (cloudopt) {
     /** Local update time */
     var update_time = new Date().getTime();
 
-    /** 
+    /**
      * async save config
      */
     function asyncSaveConfig(config) {
@@ -943,18 +943,56 @@ cloudopt.grade = (function (cloudopt) {
     }
 
     /**
+     * Decide the secure level of a website
+     * 
+     * @param result result of website() 
+     */
+    function classify(result) {
+        var level = 0; /* no level */
+        if (result.score >= 65) {
+            level = 1; /* safe */
+        } else if (result.score >= 60) {
+            level = 2; /* normal */
+        } else if (result.score >= 40) {
+            level = 3; /* potential threat */
+        } else {
+            level = 4; /* dangerous */
+        }
+        return level;
+    }
+
+    function isSafe(result) {
+        var level = classify(result);
+        var config = cloudopt.config.get();
+        var safe = false;
+        if (level <= 2) {
+            safe = true;
+        }
+        if (level === 3 && config.safePotential) {
+            safe = false;
+        }
+        if (config.whiteList.indexOf(result.host) > -1 || config.whiteListAds.indexOf(result.host) > -1) {
+            safe = true;
+        }
+        if (config.blackList.some(e => e === result.host)) {
+            safe == false;
+        }
+
+        return safe;
+    }
+
+    /**
      * Check the url and get the web data. Such as score ,type, host
      *
      * @param  website  url
      * @param  callback callback function
      */
     function website(website, callback) {
-        cloudopt.browserIconChange.normal();
         var cacheSuffix = "_grade_1.0";
         website = cloudopt.utils.getHost(website);
         website = website + cacheSuffix;
         var result = {
-            safe: 0,
+            safe: true,
             type: "",
             date: new Date(),
             score: 0,
@@ -964,30 +1002,12 @@ cloudopt.grade = (function (cloudopt) {
             return result;
         }
         result.host = website.replace(cacheSuffix, "");
+
         cloudopt.store.get(website, function (item) {
             if (item != undefined && JSON.stringify(item) != "{}" && cloudopt.utils.comparisonDate(item.date, defaultExpireTime.safeWebsite)) {
                 cloudopt.config.refresh(function () {
-                    var config = cloudopt.config.get();
-                    if (item.score < 60 && config.safePotential == true) {
-                        item.safe = -1;
-                    }
-                    if (item.score > 30 && config.safePotential == false) {
-                        item.safe = 0;
-                    }
-                    /*if in white list*/
-                    if (config.whiteList.indexOf(item.host) > -1 && item.safe < 0) {
-                        item.safe = 0;
-                    }
-                    if (config.whiteListAds.indexOf(item.host) > -1 && item.safe < 0) {
-                        item.safe = 0;
-                    }
-                    /*if in black list*/
-                    if (config.blackList.some(e => e === item.host)) {
-                        item.safe = -1;
-                    }
+                    item.safe = isSafe(item);
                     callback(item);
-                    if (item.score < 60) cloudopt.browserIconChange.danger();
-                    labSafeTipsNoty(item.type)
                 });
                 return;
             } else {
@@ -995,44 +1015,27 @@ cloudopt.grade = (function (cloudopt) {
                 cloudopt.http.get(cloudopt.host + 'grade/website/' + website.replace(cacheSuffix, ''),{
                     timeout: 30000
                 }).carryApiKey().then(data=>{
-                    var config = cloudopt.config.get();
-                    if (data.result.score >= 60) {
-                        result.safe = 1;
-                    } else if (data.result.score < 60 && data.result.score >= 40 && config.safePotential == true) {
-                        result.safe = -1;
-                    } else if (data.result.score < 40) {
-                        result.safe = -2;
-                    } else {
-                        result.safe = 0;
-                    }
+                    result.safe = isSafe(data.result);
                     result.type = data.result.type;
                     result.score = data.result.score;
-                    /*if in white list*/
-                    if (config.whiteList.indexOf(result.host) > -1 && result.safe == -1) {
-                        result.safe = 0;
-                    }
-                    if (config.whiteListAds.indexOf(result.host) > -1 && result.safe == -1) {
-                        result.safe = 0;
-                    }
+                    
                     if (data.result.host != "") {
                         result.date = new Date().getTime();
                         cloudopt.store.set(website, result);
                     }
                     callback(result);
-                    if (result.score < 60) cloudopt.browserIconChange.danger();
-                    labSafeTipsNoty(result.type)
                 },error=>{
-                    result.safe = 0;
+                    result.safe = true;
                     callback(result);
-                    labSafeTipsNoty(result.type)
                 })
             }
         });
-
     }
 
     return {
-        website: website
+        website: website,
+        classify: classify,
+        labSafeTipsNoty: labSafeTipsNoty
     };
 
 })(cloudopt);
@@ -1063,21 +1066,19 @@ cloudopt.init = (function (cloudopt) {
 
         chrome.tabs.onActivated.addListener(function (activeInfo) {
             chrome.tabs.query({ active: true, currentWindow: true }, function(tabArray) {
-                url = tabArray[tabArray.length - 1].url;
-                host = cloudopt.utils.getHost(url);
-                // cloudopt.browserIconChange.normal();
-                if (tabArray[tabArray.length - 1].url.indexOf("file://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome-extension://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome://") == 0 || cloudopt.config.get().whiteList.indexOf(host) > -1 || cloudopt.config.get().whiteListAds.indexOf(host) > -1) {
-                    cloudopt.browserIconChange.gray();
-                    return;
-                }
-                cloudopt.grade.website(url, function(result) {
-                    if (result.score == 0 && result.safe == 0) {
-                        cloudopt.browserIconChange.normal()
-                    } else if (result.score < 60) {
-                        cloudopt.browserIconChange.danger()
-                    }
-                });
+                cloudopt.browserIconChange.auto(tabArray[tabArray.length - 1].url);
             });
+        });
+
+        chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+            if (changeInfo.status != "loading") {
+                chrome.tabs.query({ active: true, currentWindow: true }, function(tabArray) {
+                    cloudopt.browserIconChange.auto(tabArray[tabArray.length - 1].url);
+                    cloudopt.grade.website(tabArray[tabArray.length - 1].url, function(result) {
+                        cloudopt.grade.labSafeTipsNoty(result.type);
+                    });
+                });
+            }
         });
 
         cloudopt.config.asyncAcquireConfig()
@@ -1155,11 +1156,34 @@ cloudopt.browserIconChange = (function (cloudopt) {
         })
     }
 
+    function auto(url) {
+        cloudopt.grade.website(url, function(result) {
+            if (url.indexOf("file://") == 0 
+                || url.indexOf("chrome-extension://") == 0 
+                || url.indexOf("chrome://") == 0) {
+                gray();
+                return;
+            }
+            
+            var level = cloudopt.grade.classify(result);
+            if (result.safe === false) {
+                danger();
+            } else if (level == 3) {
+                gray();
+            } else if (level == 2) {
+                normal();
+            } else {
+                green();
+            }
+        });
+    }
+
     return {
         normal: normal,
         gray: gray,
         green: green,
-        danger: danger
+        danger: danger,
+        auto: auto
     }
 })(cloudopt);
 
