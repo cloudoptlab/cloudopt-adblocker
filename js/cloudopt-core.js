@@ -1243,7 +1243,9 @@ cloudopt.http = (function (cloudopt) {
                     const _result = await $.ajax(this.option);
                     resolve(_result)
                 } catch (error) {
-                    const _response = (error && (typeof error.responseText === 'string')) ? JSON.parse(error.responseText) : {}
+                    var _response = {};
+                    if (error && error.status && error.status >= 400 && error.status < 500 && (typeof error.responseText === 'string'))
+                        _response = JSON.parse(error.responseText)
                     if (isResolveErr) this.handleHttpErrorStatus(_response);
                     reject(_response)
                     cloudopt.logger.debug(error.responseText)
