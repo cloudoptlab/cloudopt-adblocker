@@ -968,8 +968,11 @@ cloudopt.grade = (function (cloudopt) {
         if (level <= 2) {
             safe = true;
         }
-        if (level === 3 && config.safePotential) {
+        if (level === 3) {
+          if (config.safePotential)
             safe = false;
+          else
+            safe = true;
         }
         if (config.whiteList.indexOf(result.host) > -1 || config.whiteListAds.indexOf(result.host) > -1) {
             safe = true;
