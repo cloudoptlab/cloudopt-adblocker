@@ -944,8 +944,8 @@ cloudopt.grade = (function (cloudopt) {
 
     /**
      * Decide the secure level of a website
-     * 
-     * @param result result of website() 
+     *
+     * @param result result of website()
      */
     function classify(result) {
         var level = 0; /* no level */
@@ -955,6 +955,8 @@ cloudopt.grade = (function (cloudopt) {
             level = 2; /* normal */
         } else if (result.score >= 40) {
             level = 3; /* potential threat */
+        } else if (result.score === 0 && result.safe) {
+            level = 5; /* unknown */
         } else {
             level = 4; /* dangerous */
         }
@@ -969,9 +971,12 @@ cloudopt.grade = (function (cloudopt) {
             safe = true;
         }
         if (level === 3) {
-          if (config.safePotential)
-            safe = false;
-          else
+            if (config.safePotential)
+                safe = false;
+            else
+                safe = true;
+        }
+        if (level === 5) {
             safe = true;
         }
         if (config.whiteList.indexOf(result.host) > -1 || config.whiteListAds.indexOf(result.host) > -1) {
@@ -984,6 +989,19 @@ cloudopt.grade = (function (cloudopt) {
         return safe;
     }
 
+    function couldGrade(url) {
+      if (!url.startsWith("http://") && !url.startsWith("https://")) {
+          return false;
+      }
+      var host = cloudopt.utils.getHost(url);
+      if (/^([0-9]{1,3}\.){3}[0-9]{1,3}$/.test(host)
+        || "localhost" === host) {
+          return false;
+      }
+
+      return true;
+    }
+
     /**
      * Check the url and get the web data. Such as score ,type, host
      *
@@ -991,9 +1009,7 @@ cloudopt.grade = (function (cloudopt) {
      * @param  callback callback function
      */
     function website(website, callback) {
-        var cacheSuffix = "_grade_1.0";
-        website = cloudopt.utils.getHost(website);
-        website = website + cacheSuffix;
+        // safe=true and score=0 represent that this site has no grade
         var result = {
             safe: true,
             type: "",
@@ -1001,12 +1017,17 @@ cloudopt.grade = (function (cloudopt) {
             score: 0,
             host: ""
         };
-        if (website.startsWith("192.") || website.startsWith("localhost") || website.startsWith("127.")) {
-            return result;
+        if (!couldGrade(website)) {
+            callback(result);
+            return;
         }
-        result.host = website.replace(cacheSuffix, "");
 
-        cloudopt.store.get(website, function (item) {
+        var cacheSuffix = "_grade_1.0";
+        website = cloudopt.utils.getHost(website);
+        result.host = website;
+        cacheKey = website + cacheSuffix;
+
+        cloudopt.store.get(cacheKey, function (item) {
             if (item != undefined && JSON.stringify(item) != "{}" && cloudopt.utils.comparisonDate(item.date, defaultExpireTime.safeWebsite)) {
                 cloudopt.config.refresh(function () {
                     item.safe = isSafe(item);
@@ -1014,17 +1035,17 @@ cloudopt.grade = (function (cloudopt) {
                 });
                 return;
             } else {
-                cloudopt.store.remove(website);
-                cloudopt.http.get(cloudopt.host + 'grade/website/' + website.replace(cacheSuffix, ''),{
+                cloudopt.store.remove(cacheKey);
+                cloudopt.http.get(cloudopt.host + 'grade/website/' + website, {
                     timeout: 30000
                 }).carryApiKey().then(data=>{
                     result.safe = isSafe(data.result);
                     result.type = data.result.type;
                     result.score = data.result.score;
-                    
+
                     if (data.result.host != "") {
                         result.date = new Date().getTime();
-                        cloudopt.store.set(website, result);
+                        cloudopt.store.set(cacheKey, result);
                     }
                     callback(result);
                 },error=>{
@@ -1161,17 +1182,10 @@ cloudopt.browserIconChange = (function (cloudopt) {
 
     function auto(url) {
         cloudopt.grade.website(url, function(result) {
-            if (url.indexOf("file://") == 0 
-                || url.indexOf("chrome-extension://") == 0 
-                || url.indexOf("chrome://") == 0) {
-                gray();
-                return;
-            }
-            
             var level = cloudopt.grade.classify(result);
             if (result.safe === false) {
                 danger();
-            } else if (level == 3) {
+            } else if (level == 3 || level == 5) {
                 gray();
             } else if (level == 2) {
                 normal();
