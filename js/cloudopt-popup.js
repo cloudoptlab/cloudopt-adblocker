@@ -1,5 +1,5 @@
 cloudopt.onFinish(function() {
-    
+
     function _checkEvaluateTips(url) {
         const key = "evaluate_tip_"+url;
         cloudopt.store.get(key, function(lastShown) {
@@ -33,10 +33,6 @@ cloudopt.onFinish(function() {
         active: true,
         currentWindow: true
     }, function(tabArray) {
-        if (tabArray[tabArray.length - 1].url.indexOf("file://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome-extension://") == 0 || tabArray[tabArray.length - 1].url.indexOf("chrome://") == 0) {
-            $(".score h1").text("?");
-            return;
-        }
 
         url = tabArray[tabArray.length - 1].url;
 
