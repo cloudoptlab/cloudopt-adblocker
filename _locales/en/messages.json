@@ -19,7 +19,7 @@
   "hospitalSafeTips": {
     "message": "You are visiting a hospital website, Cloudopt is guarding you!"
   },
-  "OminiboxTips": {
+  "ominiboxTips": {
     "message": "Enter a phone number or a URL to Check security"
   },
   "dangDownTitle": {
