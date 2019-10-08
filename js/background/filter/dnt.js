@@ -3,7 +3,7 @@ cloudopt.config.refresh(function () {
     if (chrome.privacy && chrome.privacy.websites.doNotTrackEnabled) {
         chrome.privacy.websites.doNotTrackEnabled.get({}, function (details) {
             var config = cloudopt.config.get();
-            if (details.levelOfControl === 'controlled_by_this_extension' && config.safePrivacy) {
+            if (details.levelOfControl === 'controllable_by_this_extension' && config.safePrivacy) {
                 chrome.privacy.websites.doNotTrackEnabled.set({ value: true }, function () {
                     if (chrome.runtime.lastError) cloudopt.debug.debug(chrome.runtime.lastError);
                 })
