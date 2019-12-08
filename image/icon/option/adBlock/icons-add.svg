@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #767c8c;
+      }
+    </style>
+  </defs>
+  <path id="icons8-add" class="cls-1" d="M19.5,2A17.5,17.5,0,1,0,37,19.5,17.52,17.52,0,0,0,19.5,2Zm0,3.5a14,14,0,1,1-14,14A14.016,14.016,0,0,1,19.5,5.5Zm-1.75,7v5.25H12.5v3.5h5.25V26.5h3.5V21.25H26.5v-3.5H21.25V12.5Z" transform="translate(-2 -2)"/>
+</svg>

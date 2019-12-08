@@ -1,0 +1,84 @@
+#aboutUsPages {
+    padding-top: 50px;
+    &>.title {
+        font-size: 40px;
+        font-weight: 400;
+        color: rgba(38, 38, 38, 1);
+        margin-bottom: 38px;
+    }
+    &>.description {
+        display: flex;
+        flex-direction: column;
+        .content {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(38, 38, 38, 1);
+        }
+        .detaile {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(89, 98, 106, 1);
+            margin: 20px 0;
+            max-width: 610px;
+            line-height: 21px;
+        }
+        .link-info {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(175, 175, 175, 1);
+            text-decoration: underline;
+        }
+    }
+    &>.table-info-container {
+        .table-item {
+            margin: 10px 0 30px 0;
+            .title {
+                font-size: 20px;
+                font-weight: 500;
+                color: rgba(23, 43, 77, 1);
+                margin-bottom: 12px;
+                display: inline-block;
+            }
+            .table {
+                max-width: 623px;
+                background: rgba(255, 255, 255, 1);
+                box-shadow: 0px 2px 3px rgba(44, 40, 40, 0.11);
+                border-radius: 5px;
+                .hard {
+                    width: 623px;
+                    height: 45px;
+                    background: #f1f3f9;
+                    line-height: 45px;
+                    padding: 0 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    .text {
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: rgba(136, 152, 170, 1);
+                    }
+                }
+                .body-list {
+                    ul li:nth-child(2n) {
+                        background: rgba(247, 250, 252, 1);
+                    }
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 14px 20px;
+                        .left {
+                            span,
+                            a {
+                                font-size: 10px;
+                                font-weight: 400;
+                                color: rgba(23, 43, 77, 1) !important;
+                                text-decoration-line: none !important;
+                            }
+                        }
+                        .right {}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+#safePages {
+    padding-top: 50px;
+    &>.title {
+        font-size: 40px;
+        font-weight: 400;
+        color: rgba(38, 38, 38, 1);
+        margin-bottom: 38px;
+    }
+    &>.description {
+        display: flex;
+        flex-direction: column;
+        .content {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(38, 38, 38, 1);
+        }
+        .detaile {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(89, 98, 106, 1);
+            margin: 20px 0;
+            max-width: 610px;
+            line-height: 21px;
+        }
+        .link-info {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(22, 142, 234, 1);
+        }
+    }
+    &>.card {
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(245, 246, 247, 1);
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.11);
+        max-width: 638px;
+        width: 638px;
+        margin: 20px 0;
+        .card-head {
+            height: 84px;
+            border-bottom: 1px solid rgba(222, 236, 255, 1);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            .left-column {
+                display: flex;
+                align-items: center;
+                .icon-info {
+                    margin-right: 13px;
+                    .ring-block {
+                        position: relative;
+                        display: inline-block;
+                        width: 53px;
+                        height: 53px;
+                        border: 1px solid rgba(229, 233, 255, 1);
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 46px;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 41px;
+                            height: 41px;
+                            background: rgba(30, 111, 255, 0.3);
+                            border-radius: 50%;
+                            opacity: 0.44;
+                        }
+                    }
+                }
+                .title {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: rgba(19, 116, 255, 1);
+                }
+            }
+            .right-column {
+                display: flex;
+                align-items: center;
+                span.count {
+                    font-size: 35px;
+                    font-weight: 200;
+                    color: rgba(19, 116, 255, 1);
+                }
+                span.people {
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: rgba(19, 116, 255, 1);
+                    opacity: 0.6;
+                    display: inline-block;
+                    margin-bottom: -50px;
+                }
+            }
+        }
+        .card-body {
+            height: 42px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            .connect-status {
+                display: flex;
+                align-items: center;
+                color: #42b72a;
+                .text.connected {
+                    margin-left: 8px;
+                    font-size: 9px;
+                    font-weight: 400;
+                    color: rgba(66, 183, 42, 1);
+                }
+                .text.disconnected {
+                    margin-left: 8px;
+                    font-size: 9px;
+                    font-weight: 400;
+                    color: rgba(219, 70, 76, 1);
+                }
+            }
+            &>span {
+                font-size: 9px;
+                font-weight: 400;
+                color: rgba(138, 145, 153, 1);
+            }
+        }
+    }
+}

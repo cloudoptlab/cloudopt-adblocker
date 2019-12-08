@@ -1,0 +1,473 @@
+{
+    "infoName": {
+        "message": "Cloudopt  AdBlocker",
+        "description": "Extension Name"
+    },
+    "infoDescription": {
+        "message": "可能是东半球最强安全插件，实时保护您的安全、防止追迹、恶意域名，过滤横幅广告、弹窗广告以及视频广告。",
+        "description": "Extension Description"
+    },
+    "bankSafeTips": {
+        "message": "检测到您正在访问银行网站，Cloudopt将为您保驾护航！"
+    },
+    "gameSafeTips": {
+        "message": "检测到您正在访问游戏网站，Cloudopt将为您保驾护航！"
+    },
+    "shopSafeTips": {
+        "message": "检测到您正在访问购物网站，Cloudopt将为您保驾护航！"
+    },
+    "hospitalSafeTips": {
+        "message": "检测到您正在访问医院网站，Cloudopt将为您保驾护航！"
+    },
+    "ominiboxTips": {
+        "message": "输入手机号或者网址快速鉴定安全"
+    },
+    "dangWebsiteTips": {
+        "message": "这个网站非常危险！Cloudopt为您保驾护航！"
+    },
+    "dangDownTitle": {
+        "message": "已拦截您的下载"
+    },
+    "dangDownTips": {
+        "message": "检测到您正在从危险的网站下载文件，Cloudopt已帮您拦截。"
+    },
+    "popupCleanCache": {
+        "message": "清理缓存"
+    },
+    "popupCleanPrivacy": {
+        "message": "清理隐私"
+    },
+    "popupReport": {
+        "message": "举报危险网站"
+    },
+    "popupEvaluation": {
+        "message": "评价扩展"
+    },
+    "popupLogout": {
+        "message": "退出登录"
+    },
+    "popupRealTimeProtection": {
+        "message": "安全保护"
+    },
+    "popupRealTimeProtectionSpan": {
+        "message": "实时保护您的上网安全"
+    },
+    "popupAdBlocking": {
+        "message": "广告拦截"
+    },
+    "popupAdBlockingSpan": {
+        "message": "强力拦截骚扰广告"
+    },
+    "popupLab": {
+        "message": "实验室"
+    },
+    "popupLabSpan": {
+        "message": "体验最新最有趣的功能"
+    },
+    "popupFeedback": {
+        "message": "建议反馈"
+    },
+    "popupFeedbackSpan": {
+        "message": "帮助我们更好地改进"
+    },
+    "popupScoreButton": {
+        "message": "查看网友评价"
+    },
+    "popupEvaluateButton": {
+        "message": "评价此网站"
+    },
+    "popupEvaluateTipsTitle": {
+        "message": "分享您的反馈"
+    },
+    "popupEvaluateTipsSubtitle": {
+        "message": "您的反馈将帮助更多人抵御危险、钓鱼网站。"
+    },
+    "popupMark": {
+        "message": "分"
+    },
+    "optionTipsDontDuplicate": {
+        "message": "请勿重复添加"
+    },
+    "optionTipsAddAllowListSuccess": {
+        "message": "添加云安全白名单成功"
+    },
+    "optionTipsAddAllowListAdsSuccess": {
+        "message": "添加广告拦截白名单成功"
+    },
+    "optionTipsAddBlockListSuccess": {
+        "message": "添加云安全黑名单成功"
+    },
+    "optionTipsInputUrlisNull": {
+        "message": "您输入的域名为空，请检查后输入"
+    },
+    "optionTipsInputUrlisError": {
+        "message": "您输入的域名有误，请检查后输入"
+    },
+    "optionClassifySafeProtect": {
+        "message": "安全保护"
+    },
+    "optionCloudReputation": {
+        "message": "云信誉评估"
+    },
+    "optionCloudReputationDetails": {
+        "message": "实时拦截危险网站，保护您不受钓鱼、恶意网址的威胁"
+    },
+    "optionFileDownload": {
+        "message": "下载保护"
+    },
+    "optionFileDownloadDetails": {
+        "message": "自动阻止从危险网站上的下载"
+    },
+    "optionSafeCoin": {
+        "message": "挖矿脚本拦截"
+    },
+    "optionSafeCoinDetails": {
+        "message": "帮助您避免电脑被恶意网站用于挖矿（比特币）"
+    },
+    "optionSafePrivacy": {
+        "message": "隐私保护"
+    },
+    "optionSafePrivacyDetails": {
+        "message": "阻止分析网站对您的网络活动进行跟踪或记录"
+    },
+    "optionSafePotential": {
+        "message": "潜在威胁"
+    },
+    "optionSafePotentialDetails": {
+        "message": "开启后将阻止不受欢迎的网站、信誉评估较低的网站"
+    },
+    "optionAdblockActivating": {
+        "message": "自动激活"
+    },
+    "optionAdblockActivatingDetails": {
+        "message": "自动阻止页面上的广告的显示"
+    },
+    "optionAdblockDisplay": {
+        "message": "显示数量"
+    },
+    "optionAdblockDisplayDetails": {
+        "message": "在浏览器扩展图标上显示已拦截广告的数量"
+    },
+    "optionAdblockHeuristic": {
+        "message": "启发引擎（BETA）"
+    },
+    "optionAdblockHeuristicDetails": {
+        "message": "能够有效拦截一些潜在的广告，建议普通用户不要开启"
+    },
+    "optionAdblockLight": {
+        "message": "Cloudopt Light技术"
+    },
+    "optionAdblockLightDetails": {
+        "message": "帮助您在网络不好的情况下也能拦截恶意广告"
+    },
+    "optionClassifyAllowList": {
+        "message": "云安全白名单"
+    },
+    "optionClassifyAdsAllowList": {
+        "message": "广告拦截白名单"
+    },
+    "optionAllowListAdd": {
+        "message": "增加"
+    },
+    "optionAllowListDelete": {
+        "message": "一键清除"
+    },
+    "optionAllowListHost": {
+        "message": "域名"
+    },
+    "optionAllowListOperation": {
+        "message": "操作"
+    },
+    "optionClassifyBlockList": {
+        "message": "云安全黑名单"
+    },
+    "optionStatistics": {
+        "message": "数据统计"
+    },
+    "optionStatisticalName": {
+        "message": "统计名称"
+    },
+    "optionTotalAdBlockCount": {
+        "message": "恶意广告和挖矿脚本拦截总数"
+    },
+    "optionTotalSiteBlockCount": {
+        "message": "恶意网站拦截总数"
+    },
+    "optionTotalPrerender": {
+        "message": "网页加速总数"
+    },
+    "optionTodayAdBlockCount": {
+        "message": "今日恶意广告和挖矿脚本拦截次数"
+    },
+    "optionTodaySiteBlockCount": {
+        "message": "今日恶意网站拦截次数"
+    },
+    "optionblockListAdd": {
+        "message": "增加"
+    },
+    "optionblockListDelete": {
+        "message": "一键清除"
+    },
+    "optionBlockListHost": {
+        "message": "域名"
+    },
+    "optionBlockListOperation": {
+        "message": "操作"
+    },
+    "optionClassifySync": {
+        "message": "云同步"
+    },
+    "optionSyncLockinTime": {
+        "message": "最近同步时间"
+    },
+    "optionSyncLockinTimeDetails": {
+        "message": "您最近一次同步的时间"
+    },
+    "optionSyncBookmark": {
+        "message": "书签同步"
+    },
+    "optionSyncBookmarkDetails": {
+        "message": "同步浏览器书签到云端"
+    },
+    "optionSyncHistory": {
+        "message": "浏览历史同步"
+    },
+    "optionSyncHistoryDetails": {
+        "message": "同步浏览器历史记录到云端"
+    },
+    "optionSyncPriority": {
+        "message": "同步优先"
+    },
+    "optionSyncPriorityDetails": {
+        "message": "您可以选择在同步的时候以本地还是云端的版本为优先"
+    },
+    "optionSyncCloud": {
+        "message": "云端"
+    },
+    "optionSyncLocal": {
+        "message": "本地"
+    },
+    "optionClickView": {
+        "message": "点击查看"
+    },
+    "optionClickFeedback": {
+        "message": "反馈问题"
+    },
+    "optionSyncSavedContent": {
+        "message": "已同步内容"
+    },
+    "optionSyncSavedContentDetails": {
+        "message": "点击按钮查看您已经同步到云端的内容"
+    },
+    "optionClassifyLab": {
+        "message": "实验室"
+    },
+    "optionBookmarkSerch": {
+        "message": "书签搜索"
+    },
+    "optionBookmarkSerchDetails": {
+        "message": "您在搜索引擎搜索时自动帮助您检索书签"
+    },
+    "optionSafeTips": {
+        "message": "安全提示"
+    },
+    "optionSafeTipsDetails": {
+        "message": "在访问银行、电商等容易被冒充的网站时弹出安全提示"
+    },
+    "optionKeyboard": {
+        "message": "安全键盘"
+    },
+    "optionKeyboardDetails": {
+        "message": "在输入密码时自动弹出虚拟键盘，保护您的输入不被监听"
+    },
+    "optionMemoryOptimization": {
+        "message": "内存优化"
+    },
+    "optionMemoryOptimizationDetails": {
+        "message": "内存占用高于 80% 时，自动对长时间不访问的标签页进行内存优化"
+    },
+    "optionClassifyHelp": {
+        "message": "帮助我们改进"
+    },
+    "optionClassifyHelpText": {
+        "message": "当您开启云信誉评估的时候，将默认允许提交匿名的安全相关信息以帮助我们保护更多的人。当然您可以放心，这些数据不会包含您的隐私信息，它们可以帮助我们打造一个更好的云。您可以查看隐私保护协议了解更多。"
+    },
+    "optionDataCollection": {
+        "message": "加入用户体验计划"
+    },
+    "optionDataCollectionDetails": {
+        "message": "为了更好的给您提供服务，将允许向Cloudopt提供一些技术信息及交互数据。<a href='https://www.cloudopt.net/policy/privacy' target='_blank'>隐私声明</a>"
+    },
+    "bookmarkSearch": {
+        "message": "书签搜索"
+    },
+    "optionClassifyManual": {
+        "message": "自定义过滤器"
+    },
+    "optionManualAdd": {
+        "message": "增加"
+    },
+    "optionManualName": {
+        "message": "预览"
+    },
+    "optionManualOperation": {
+        "message": "操作"
+    },
+    "optionManualTips": {
+        "message": "向Cloudopt云安全中心提交样本"
+    },
+    "updateTipsTitle": {
+        "message": "自动更新成功"
+    },
+    "updateTips1": {
+        "message": "Cloudopt已升级到"
+    },
+    "updateTips2": {
+        "message": "，更新历史可以访问官方博客查看。"
+    },
+    "updateConfigFailure": {
+        "message": "配置更新失败"
+    },
+    "contextMenus1": {
+        "message": "加入云安全白名单"
+    },
+    "contextMenus2": {
+        "message": "查看安全报告"
+    },
+    "contextMenus3": {
+        "message": "手动拦截恶意广告(BETA)"
+    },
+    "contextMenus4": {
+        "message": "加入云安全黑名单"
+    },
+    "manualTips": {
+        "message": "鼠标左键选取想要屏蔽的元素，鼠标右键退出手动模式"
+    },
+    "optionManualSave": {
+        "message": "保存"
+    },
+    "manualSaveTips1": {
+        "message": "保存失败，请确认格式正确"
+    },
+    "adblockInitTitle": {
+        "message": "正在初始化"
+    },
+    "adblockInitTips": {
+        "message": "恶意广告拦截引擎正在初始化，仅需几分钟，初始化过程中请勿关闭浏览器。"
+    },
+    "optionFollowUs": {
+        "message": "关注我们"
+    },
+    "optionFollowUsText": {
+        "message": "关注我们的推特或者微信公众号，可以实时获取Cloudopt产品最新动态，同时还能看到业界最新的安全资讯。"
+    },
+    "optionFollowUsTwitter": {
+        "message": "Twitter"
+    },
+    "optionFollowUsWeixin": {
+        "message": "微信"
+    },
+    "weixinDialogText": {
+        "message": "请使用微信扫描二维码。"
+    },
+    "optionCustomRule": {
+        "message": "自定义订阅规则<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+    },
+    "optionTipsAddCustomRuleSuccess": {
+        "message": "自定义订阅规则添加成功"
+    },
+    "optionTipsAddCustomRuleFailure": {
+        "message": "自定义订阅规则添加失败"
+    },
+    "optionCustomRuleUrl": {
+        "message": "订阅地址"
+    },
+    "optionCustomRuleUpdateTime": {
+        "message": "最近更新时间"
+    },
+    "optionAccount": {
+        "message": "账户"
+    },
+    "optionAccountWeixin": {
+        "message": "微信登录"
+    },
+    "optionAccountFacebook": {
+        "message": "Facebook登录"
+    },
+    "optionAccountLogin": {
+        "message": "立即登录"
+    },
+    "optionAccountLogedTips": {
+        "message": "欢迎您使用Cloudopt，##"
+    },
+    "optionAccountProfile": {
+        "message": "个人中心"
+    },
+    "optionAccountLogout": {
+        "message": "退出登录"
+    },
+    "mustLogedTips": {
+        "message": "请先登录再继续使用"
+    },
+    "urlErrorTips": {
+        "message": "请输入正确的地址"
+    },
+    "waitSubscribe": {
+        "message": "正在下载规则文件，请稍后"
+    },
+    "optionClassifySpeedup": {
+        "message": "优化加速<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+    },
+    "optionDnsSpeed": {
+        "message": "DNS预加载"
+    },
+    "optionDnsSpeedDetails": {
+        "message": "提前对可能会访问的网站进行DNS解析，加速连接网站的速度"
+    },
+    "optionWebPrereading": {
+        "message": "网页预加载"
+    },
+    "optionWebPrereadingDetails": {
+        "message": "提前加载可能会访问的页面，提高网页打开速度"
+    },
+    "optionFiltersLastUpdatedAt": {
+        "message": "广告拦截规则库更新于"
+    },
+    "optionFiltersLastUpdatedAt1": {
+        "message": "，点击手动更新。"
+    },
+    "filterNotUpdated": {
+        "message": "广告拦截规则库未更新"
+    },
+    "memoryOptimizedIcon": {
+        "message": "⏸"
+    },
+    "memoryOptimized": {
+        "message": "内存占用已被优化"
+    },
+
+    "optionsWelcome": {
+        "message": "欢迎您"
+    },
+    "optionLoginTips": {
+        "message": "登录以保持同步"
+    },
+    "optionsIntelligentSecurity": {
+        "message": "智能安全"
+    },
+    "optionsAdblock": {
+        "message": "广告拦截"
+    },
+    "optionsSpeedup": {
+        "message": "优化加速"
+    },
+    "optionsOtherSettings": {
+        "message": "其他设置"
+    },
+    "optionsMisc": {
+        "message": "辅助功能"
+    },
+    "optionsAboutUs": {
+        "message": "关于我们"
+    }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" viewBox="0 0 48 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #767c8c;
+      }
+    </style>
+  </defs>
+  <path id="icons8-book" class="cls-1" d="M10,2A6,6,0,0,0,4,8V56a6,6,0,0,0,6,6H46a6,6,0,0,0,6-6V8a6,6,0,0,0-6-6H10Zm0,6h6V32l9-4.5L34,32V8H46V56H10ZM22,8h6V22.291l-.316-.158L25,20.791l-2.684,1.342L22,22.291Z" transform="translate(-4 -2)"/>
+</svg>

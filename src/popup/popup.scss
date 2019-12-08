@@ -1,0 +1,9 @@
+main {
+    .mdl-list {
+        li {
+            * {
+                pointer-events: none
+            }
+        }
+    }
+}

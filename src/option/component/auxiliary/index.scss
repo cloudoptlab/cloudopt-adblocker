@@ -1,0 +1,26 @@
+#auxiliaryPages {
+    padding-top: 50px;
+    & > .title {
+        font-size: 40px;
+        font-weight: 400;
+        color: rgba(38, 38, 38, 1);
+        margin-bottom: 38px;
+    }
+    & > .description {
+        display: flex;
+        flex-direction: column;
+        .content {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(38, 38, 38, 1);
+        }
+        .detaile {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(89, 98, 106, 1);
+            margin: 20px 0;
+            max-width: 610px;
+            line-height: 21px;
+        }
+    }
+}

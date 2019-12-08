@@ -1,0 +1,473 @@
+{
+    "infoName": {
+        "message": "Cloudopt  AdBlocker",
+        "description": "Extension Name"
+    },
+    "infoDescription": {
+        "message": "Protects you from tracing and malicious domain names, filters banner ads, pop-up ads and video ads, all in real-time.",
+        "description": "Extension Description"
+    },
+    "bankSafeTips": {
+        "message": "You are visiting a bank website, Cloudopt is guarding you!"
+    },
+    "gameSafeTips": {
+        "message": "You are visiting a game website, Cloudopt is guarding you!"
+    },
+    "shopSafeTips": {
+        "message": "You are visiting a shopping website, Cloudopt is guarding you!"
+    },
+    "hospitalSafeTips": {
+        "message": "You are visiting a hospital website, Cloudopt is guarding you!"
+    },
+    "ominiboxTips": {
+        "message": "Enter a phone number or a URL to Check security"
+    },
+    "dangDownTitle": {
+        "message": "You download has been blocked"
+    },
+    "dangDownTips": {
+        "message": "Detecting that you are downloading files from a dangerous website, Cloudopt has blocked that for you."
+    },
+    "popupCleanCache": {
+        "message": "Clean up cache"
+    },
+    "popupCleanPrivacy": {
+        "message": "Clean up private data"
+    },
+    "popupReport": {
+        "message": "Report a site"
+    },
+    "popupEvaluation": {
+        "message": "Evaluate extensions"
+    },
+    "popupLogout": {
+        "message": "Logout"
+    },
+    "popupRealTimeProtection": {
+        "message": "Real-Time Protection"
+    },
+    "popupRealTimeProtectionSpan": {
+        "message": "Protecting while you are browsing"
+    },
+    "popupAdBlocking": {
+        "message": "AdBlocking"
+    },
+    "popupAdBlockingSpan": {
+        "message": "Filters advitisements out"
+    },
+    "popupLab": {
+        "message": "Lab"
+    },
+    "popupLabSpan": {
+        "message": "Some interesting tricks"
+    },
+    "popupFeedback": {
+        "message": "Feedback"
+    },
+    "popupFeedbackSpan": {
+        "message": "Help us to improve"
+    },
+    "popupScoreButton": {
+        "message": "View online comments"
+    },
+    "popupEvaluateButton": {
+        "message": "Comment this site"
+    },
+    "popupEvaluateTipsTitle": {
+        "message": "Share your opinion"
+    },
+    "popupEvaluateTipsSubtitle": {
+        "message": "Your comments will help defend more people against dangerous, phishing sites."
+    },
+    "popupMark": {
+        "message": "mark"
+    },
+    "optionTipsDontDuplicate": {
+        "message": "You have already added this"
+    },
+    "optionTipsAddAllowListSuccess": {
+        "message": "Cloud security allowlist added successfully"
+    },
+    "optionTipsAddAllowListAdsSuccess": {
+        "message": "allowlist-ads added successfully"
+    },
+    "optionTipsAddBlockListSuccess": {
+        "message": "Cloud security blocklist added successfully"
+    },
+    "optionTipsInputUrlisNull": {
+        "message": "Empty domain name, please check and enter"
+    },
+    "optionTipsInputUrlisError": {
+        "message": "Invalid domain name, please check and enter"
+    },
+    "optionClassifySafeProtect": {
+        "message": "Security"
+    },
+    "optionCloudReputation": {
+        "message": "Cloud Reputation Assessment"
+    },
+    "optionCloudReputationDetails": {
+        "message": "Blocks dangerous sites, protect you from threats from phishing, malicious websites"
+    },
+    "optionFileDownload": {
+        "message": "Download Protection"
+    },
+    "optionFileDownloadDetails": {
+        "message": "Automatically blocks downloads from dangerous websites"
+    },
+    "optionSafeCoin": {
+        "message": "Miner Blocking"
+    },
+    "optionSafeCoinDetails": {
+        "message": "Helps to avoid your computers to be used by malicious websites for (bitcoins) mining"
+    },
+    "optionSafePrivacy": {
+        "message": "Privacy Protection"
+    },
+    "optionSafePrivacyDetails": {
+        "message": "Prevents the analysis sites to track or to record you browsing activity"
+    },
+    "optionSafePotential": {
+        "message": "Potential Threat"
+    },
+    "optionSafePotentialDetails": {
+        "message": "Blocks low reputation sites"
+    },
+    "optionClassifyAdblock": {
+        "message": "Adblock"
+    },
+    "optionAdblockActivating": {
+        "message": "Actived automatically"
+    },
+    "optionAdblockActivatingDetails": {
+        "message": "Automatically prevents displaying of ads on the page"
+    },
+    "optionAdblockDisplay": {
+        "message": "Display Counts"
+    },
+    "optionAdblockDisplayDetails": {
+        "message": "Shows the number of blocked ads on the extension icon"
+    },
+    "optionAdblockHeuristic": {
+        "message": "Heuristic Detection (BETA)"
+    },
+    "optionAdblockHeuristicDetails": {
+        "message": "Heuristic detection can effectively intercept some of the potential advertisement, ordinary users are not recommanded to open"
+    },
+    "optionAdblockLight": {
+        "message": "Cloudopt Light Technology"
+    },
+    "optionAdblockLightDetails": {
+        "message": "Helps adblocking even when in bad networking"
+    },
+    "optionClassifyAllowList": {
+        "message": "Cloud security allowlist"
+    },
+    "optionClassifyAdsAllowList": {
+        "message": "AD blocking allowlist"
+    },
+    "optionAllowListAdd": {
+        "message": "ADD"
+    },
+    "optionAllowListDelete": {
+        "message": "CLEAR ALL"
+    },
+    "optionAllowListHost": {
+        "message": "Domain Name"
+    },
+    "optionAllowListOperation": {
+        "message": "Operation"
+    },
+    "optionClassifyBlockList": {
+        "message": "Cloud security blocklist"
+    },
+    "optionStatistics": {
+        "message": "Statistics"
+    },
+    "optionStatisticalName": {
+        "message": "Statistical Name"
+    },
+    "optionTotalAdBlockCount": {
+        "message": "Malicious ads and mining script intercepts"
+    },
+    "optionTotalSiteBlockCount": {
+        "message": "Malicious website intercepts"
+    },
+    "optionTotalPrerender": {
+        "message": "Page accelerations"
+    },
+    "optionTodayAdBlockCount": {
+        "message": "Malicious ads and mining script intercepts today"
+    },
+    "optionTodaySiteBlockCount": {
+        "message": "Malicious website intercepts today"
+    },
+    "optionblockListAdd": {
+        "message": "ADD"
+    },
+    "optionblockListDelete": {
+        "message": "CLEAR ALL"
+    },
+    "optionBlockListHost": {
+        "message": "Domain Name"
+    },
+    "optionBlockListOperation": {
+        "message": "Operation"
+    },
+    "optionClassifySync": {
+        "message": "Cloud Synchronize"
+    },
+    "optionSyncLockinTime": {
+        "message": "Recent syncing time"
+    },
+    "optionSyncLockinTimeDetails": {
+        "message": "Last time you sync"
+    },
+    "optionSyncBookmark": {
+        "message": "Sync Bookmarks"
+    },
+    "optionSyncBookmarkDetails": {
+        "message": "Sync browser bookmarks to the cloud"
+    },
+    "optionSyncHistory": {
+        "message": "Sync Browsing History"
+    },
+    "optionSyncHistoryDetails": {
+        "message": "Sync browser history to the cloud"
+    },
+    "optionSyncPriority": {
+        "message": "Sync priority"
+    },
+    "optionSyncPriorityDetails": {
+        "message": "Choose local or cloud data to have precedence when syncing"
+    },
+    "optionSyncCloud": {
+        "message": "Cloud"
+    },
+    "optionSyncLocal": {
+        "message": "Local"
+    },
+    "optionClickView": {
+        "message": "CLICK TO VIEW"
+    },
+    "optionClickFeedback": {
+        "message": "FEEDBACK"
+    },
+    "optionSyncSavedContent": {
+        "message": "Synced Content"
+    },
+    "optionSyncSavedContentDetails": {
+        "message": "Click the button to see what you have synced to the cloud"
+    },
+    "optionClassifyLab": {
+        "message": "Lab"
+    },
+    "optionBookmarkSerch": {
+        "message": "Bookmark search"
+    },
+    "optionBookmarkSerchDetails": {
+        "message": "Will also search you bookmarks when you are using the search engine"
+    },
+    "optionSafeTips": {
+        "message": "Security Tips"
+    },
+    "optionSafeTipsDetails": {
+        "message": "Security tips pop up when you are browsing sites that would be imitated sites like bank sites and e-commerce sites"
+    },
+    "optionKeyboard": {
+        "message": "Safe Keyboard"
+    },
+    "optionKeyboardDetails": {
+        "message": "Automatically pops up a virtual keyboard when you enter a password to protect your input from being monitored"
+    },
+    "optionMemoryOptimization": {
+        "message": "Memory Optimization"
+    },
+    "optionMemoryOptimizationDetails": {
+        "message": "Automatically optimizes memory of tabs when system memory usage is higher than 80%"
+    },
+    "optionClassifyHelp": {
+        "message": "Help Us"
+    },
+    "optionClassifyHelpText": {
+        "message": "When you submit a cloud reputation assessment, your anonymous security-related information will also be submitted to help protecting people. This also helps to improve our cloud. You certainly need not to worry about privacy. More informations in our Privacy Protection Agreement."
+    },
+    "bookmarkSearch": {
+        "message": "Bookmark Search"
+    },
+    "optionDataCollection": {
+        "message": "Join the user experience plan"
+    },
+    "optionDataCollectionDetails": {
+        "message": "In order to provide you with better services, Cloudopt will be allowed to submit some technical information and interactive data. <a href='https://www.cloudopt.net/policy/privacy' target='_blank'>Privacy Policy</a>"
+    },
+    "optionClassifyManual": {
+        "message": "Custom Filter"
+    },
+    "optionManualAdd": {
+        "message": "ADD"
+    },
+    "optionManualName": {
+        "message": "Preview"
+    },
+    "optionManualOperation": {
+        "message": "Operations"
+    },
+    "optionManualTips": {
+        "message": "Submit samples to Cloudopt Cloud Security Center"
+    },
+    "updateTipsTitle": {
+        "message": "Auto updated successfully"
+    },
+    "updateTips1": {
+        "message": "Cloudopt is successfully upgraded to "
+    },
+    "updateTips2": {
+        "message": ", update history is accessible on the official blog."
+    },
+    "updateConfigFailure": {
+        "message": "Configuration update failed"
+    },
+    "contextMenus1": {
+        "message": "Add to the cloud security allowlist"
+    },
+    "contextMenus2": {
+        "message": "View reputation report"
+    },
+    "contextMenus3": {
+        "message": "Manual ad blocking(BETA)"
+    },
+    "contextMenus4": {
+        "message": "Add to the cloud security blocklist"
+    },
+    "manualTips": {
+        "message": "Left click to select elements to be blocked, right click to exit selection mode"
+    },
+    "optionManualSave": {
+        "message": "SAVE"
+    },
+    "manualSaveTips1": {
+        "message": "Save failed. Please make sure the format is correct"
+    },
+    "adblockInitTitle": {
+        "message": "Initializing"
+    },
+    "adblockInitTips": {
+        "message": "Ad blocking engine is initializing, takes a few minutes, please do not close the browser during initialization."
+    },
+    "optionFollowUs": {
+        "message": "Follow us"
+    },
+    "optionFollowUsText": {
+        "message": "Follow our Twitter or WeChat account to get updates on Cloudopt products and see the latest security news in the industry."
+    },
+    "optionFollowUsTwitter": {
+        "message": "Twitter"
+    },
+    "optionFollowUsWeixin": {
+        "message": "Wechat"
+    },
+    "weixinDialogText": {
+        "message": "Please use Wechat to scan the QR code."
+    },
+    "optionCustomRule": {
+        "message": "Custom subscription rules<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+    },
+    "optionTipsAddCustomRuleSuccess": {
+        "message": "Added successfully"
+    },
+    "optionTipsAddCustomRuleFailure": {
+        "message": "Added Failure"
+    },
+    "optionCustomRuleUrl": {
+        "message": "URL"
+    },
+    "optionCustomRuleUpdateTime": {
+        "message": "LAST UPDATE TIME"
+    },
+    "optionAccount": {
+        "message": "Account"
+    },
+    "optionAccountWeixin": {
+        "message": "WECHAT"
+    },
+    "optionAccountFacebook": {
+        "message": "FACEBOOK"
+    },
+    "optionAccountLogin": {
+        "message": "SIGNIN"
+    },
+    "optionAccountLogedTips": {
+        "message": "Welcome to use Cloudopt, ##"
+    },
+    "optionAccountProfile": {
+        "message": "Personal Center"
+    },
+    "optionAccountLogout": {
+        "message": "Sign Out"
+    },
+    "mustLogedTips": {
+        "message": "Please login to continue using"
+    },
+    "urlErrorTips": {
+        "message": "Please enter a valid URL"
+    },
+    "waitSubscribe": {
+        "message": "Downloading rule files, please wait"
+    },
+    "optionClassifySpeedup": {
+        "message": "Browsing Accelerating<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+    },
+    "optionDnsSpeed": {
+        "message": "DNS Preload"
+    },
+    "optionDnsSpeedDetails": {
+        "message": "Parses DNS for potential sites in advance to speed up the connection to the site."
+    },
+    "optionWebPrereading": {
+        "message": "Page Preloading"
+    },
+    "optionWebPrereadingDetails": {
+        "message": "Reads pages that may be accessed in advance to speed up page loading."
+    },
+    "optionFiltersLastUpdatedAt": {
+        "message": "Filter rules updated at"
+    },
+    "optionFiltersLastUpdatedAt1": {
+        "message": ", click to update now."
+    },
+    "filterNotUpdated": {
+        "message": "Filter rules has not been updated"
+    },
+    "memoryOptimizedIcon": {
+        "message": "⏸"
+    },
+    "memoryOptimized": {
+        "message": "This tab was optimized out"
+    },
+
+    "optionsWelcome": {
+        "message": "Welcome"
+    },
+    "optionLoginTips": {
+        "message": "Sign in to stay in sync"
+    },
+    "optionsIntelligentSecurity": {
+        "message": "Intelligent Security"
+    },
+    "optionsAdblock": {
+        "message": "Adblocking"
+    },
+    "optionsSpeedup": {
+        "message": "Optimization & Acceleration"
+    },
+    "optionsOtherSettings": {
+        "message": "Other Settings"
+    },
+    "optionsMisc": {
+        "message": "Accessibility"
+    },
+    "optionsAboutUs": {
+        "message": "About Us"
+    }
+}

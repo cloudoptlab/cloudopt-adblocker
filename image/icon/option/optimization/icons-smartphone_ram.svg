@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" viewBox="0 0 60 54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #767c8c;
+      }
+    </style>
+  </defs>
+  <path id="icons8-smartphone_ram" class="cls-1" d="M11,3V9h6V3ZM23,3V9h6V3ZM35,3V9h6V3ZM47,3V9h6V3ZM8,12a6.045,6.045,0,0,0-6,6V42a6.045,6.045,0,0,0,6,6H56a6.045,6.045,0,0,0,6-6V18a6.045,6.045,0,0,0-6-6Zm0,6H56V42H8Zm6,3a3,3,0,1,0,3,3A3,3,0,0,0,14,21ZM50,33a3,3,0,1,0,3,3A3,3,0,0,0,50,33ZM11,51v6h6V51Zm12,0v6h6V51Zm12,0v6h6V51Zm12,0v6h6V51Z" transform="translate(-2 -3)"/>
+</svg>

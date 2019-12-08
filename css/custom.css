@@ -1,0 +1,121 @@
+.mdl-card {
+    min-height: 0px;
+}
+
+.mdl-chip {
+    margin-left: 10px;
+}
+
+.mdl-list__item-avatar.material-icons {
+    font-size: 30px;
+    color: #757575;
+    background-color: inherit;
+}
+
+#material-card {
+    height: 500px;
+    width: 100%;
+    z-index: -1;
+    background-color: #3f51b5;
+    position: absolute;
+}
+
+.mdl-layout-title img {
+    width: 100px;
+}
+
+#option-main {
+    max-width: 800px;
+    margin: auto;
+}
+
+#option-main .logo {
+    margin-top: 20px;
+    width: 100px;
+}
+
+#option-main .mdl-card:first-of-type {
+    margin-top: 20px;
+}
+
+#option-main .mdl-card {
+    width: 100%;
+    margin-top: 50px;
+}
+
+#allow-list, #block-list {
+    width: 100%;
+}
+
+#allow-list .mdl-card__title-text, #block-list .mdl-card__title-text {
+    width: 100%;
+    padding: 0px;
+}
+
+.mdl-data-table {
+    width: 100%;
+    border: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.allowListDelete, .blockListDelete, .manualDelete, .customSubscriptionDelete {
+    cursor: pointer;
+}
+
+table .mdl-list__item-avatar.material-icons {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+    max-width: 600px;
+}
+
+.mdl-checkbox__tick-outline {
+    -webkit-mask: none;
+    mask: none;
+}
+
+.mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
+    text-align: left;
+    max-width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#follow .mdl-card__title {
+    min-height: 300px;
+    background-image: url('/image/followCard.jpg');
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mdl-dialog__content img {
+    width: 100%;
+}
+
+.account-card .mdl-chip {
+    padding: 16px;
+    background-color: inherit;
+}
+
+.account-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+        display: none;
+    }
+    #option-main .logo {
+        margin-left: 20px;
+    }
+    .mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
+        max-width: 100px;
+    }
+}

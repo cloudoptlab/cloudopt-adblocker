@@ -1,0 +1,94 @@
+#guidePages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .btn {
+        outline: none;
+        border: none;
+        width: 200px;
+        height: 30px;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.02);
+        border-radius: 3px;
+        font-size: 13px;
+        font-family: Noto Sans;
+        font-weight: bold;
+        line-height: 0;
+        font-size: 13px;
+        font-family: Noto Sans;
+        font-weight: bold;
+        color: rgba(88, 143, 255, 1);
+        border: 1px solid rgba(30, 111, 255, 1);
+        &.btn-primary {
+            background: rgba(19, 116, 255, 1);
+            color: rgba(255, 255, 255, 1);
+            border: none;
+        }
+    }
+    .container {
+        width: 800px;
+        height: 558px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .switch-item {
+            width: 570px;
+        }
+        >span.title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 22px;
+            color: rgba(66, 80, 99, 1);
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+        .content-block {
+            text-align: center;
+            &#step1 {
+                max-width: 424px;
+                .footer {
+                    button {
+                        margin-top: 68px;
+                    }
+                }
+            }
+            &#step2 {
+                .footer {
+                    button {
+                        margin-top: 42px;
+                    }
+                }
+            }
+            &#step5 {
+                .description {
+                    max-width: 420px;
+                }
+            }
+            &#step6 {
+                max-width: 442px;
+                button {
+                    margin-top: 68px;
+                }
+            }
+            .body {
+                h3 {
+                    font-size: 18px;
+                    font-family: Noto Sans;
+                    font-weight: 400;
+                    color: rgba(38, 38, 38, 1);
+                    margin: 25px 0 8px 0;
+                }
+                span.text {
+                    font-size: 13px;
+                    font-family: Noto Sans;
+                    font-weight: 400;
+                    color: rgba(89, 98, 106, 1);
+                }
+            }
+        }
+    }
+}

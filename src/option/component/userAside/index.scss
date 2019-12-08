@@ -1,0 +1,111 @@
+#userAside {
+    background-color: #fff;
+    margin-right: 54px;
+    .container {
+        margin: auto;
+        padding: 0;
+        position: relative;
+        height: 700px;
+        width: 233px;
+        .logo {
+            width: 233px;
+            padding-bottom: 20px;
+        }
+        .user-info {
+            .thumb {
+                margin-bottom: 15px;
+                img {
+                    width: 59px;
+                    height: 59px;
+                    background: rgba(0, 0, 0, 0);
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+                    border-radius: 50%;
+                }
+            }
+            .name {
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(36, 43, 51, 1);
+                margin-bottom: 4px;
+                display: inline-block;
+            }
+            .description {
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(138, 145, 153, 1);
+            }
+        }
+        .menu {
+            margin-top: 38px;
+            ul.menu-container {
+                li {
+                    min-width: 194px;
+                    &.other-title {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: rgba(138, 143, 156, 1);
+                        margin: 30px 0 10px 0;
+                    }
+                    &[data-key="safe"] {
+                        margin-bottom: 33px;
+                    }
+                    &.options {
+                        cursor: pointer;
+                        & * {
+                            pointer-events: none;
+                        }
+                        &.active {
+                            background: rgba(0, 120, 255, 1);
+                            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+                            span {
+                                color: #fff !important;
+                            }
+                            .cls-1 {
+                                fill: #fff;
+                            }
+                        }
+                        border-radius: 3px;
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 15px;
+                        & .icon {
+                            margin-right: 18px;
+                        }
+                        & .name {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: rgba(138, 145, 153, 1);
+                        }
+                    }
+                }
+            }
+        }
+        .logout {
+            width: 115px;
+            height: 38px;
+            border: 1px solid rgba(19, 116, 255, 1);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+            border-radius: 5px;
+            position: relative;
+            span {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                font-size: 14px;
+                font-family: Noto Sans;
+                font-weight: 400;
+                line-height: 29px;
+                color: rgba(19, 116, 255, 1);
+                opacity: 1;
+            }
+            position: absolute;
+            bottom: 0;
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi" />
+    <title>Cloudopt</title>
+    <link rel="stylesheet" type="text/css" href="lib/mdl/material.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/icon/icon.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/shardsUI/shards.min.css" />
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/g2/g2.min.js"></script>
+    <script src="lib/g2/data-set.min.js"></script>
+    <style>
+        @media screen and (max-width: 700px) {
+            .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <!--menu-->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="chart-wrapper">
+                    <img src="image/LOGO-SIM.svg" class="cloudopt-title"></img>
+                    <div id="g2mountNode"></div>
+                    <div class="chart-bottom-custom-container">
+                        <div class="time-range"></div>
+                    </div>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <ul class="mdl-list">
+                    <li id="safeProtect">
+                        <div class="icon-content">
+                            <embed src="image/icon/popup/icons8-security_checked.svg" />
+                        </div>
+                        <div class="text-content">
+                            <span class="title">实时安全保护</span>
+                            <span class="sub-title">关闭后将不再保护该网站的访问</span>
+                        </div>
+                        <div class="custom-content">
+                            <div class="custom-control custom-toggle my-2">
+                                <input type="checkbox" id="safeProtect-label" name="safeProtect-label" class="custom-control-input" />
+                                <label class="custom-control-label" for="safeProtect-label"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="adsIntercept">
+                        <div class="icon-content">
+                            <embed src="image/icon/popup/icons8-web_application_firewall.svg" />
+                        </div>
+                        <div class="text-content">
+                            <span class="title">恶意广告拦截</span>
+                            <span class="sub-title">关闭后将不再拦截该网站的广告</span>
+                        </div>
+                        <div class="custom-content">
+                            <div class="custom-control custom-toggle my-2">
+                                <input type="checkbox" id="adsIntercept-label" name="adsIntercept-label" class="custom-control-input" />
+                                <label class="custom-control-label" for="adsIntercept-label"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="credibilityScore">
+                        <div class="icon-content">
+                            <embed src="image/icon/popup/icons8-thumb_up.svg" />
+                        </div>
+                        <div class="text-content">
+                            <span class="title">网站信誉评估评分</span>
+                            <span class="sub-title">点击查看网站的信誉评估报告</span>
+                        </div>
+                        <div class="custom-content">
+                            <span class="score-count">?</span>
+                        </div>
+                    </li>
+                    <li id="manualIntercept">
+                        <div class="icon-content">
+                            <embed src="image/icon/popup/icons8-hand.svg" />
+                        </div>
+                        <div class="text-content">
+                            <span class="title">手动拦截此网站的广告</span>
+                            <span class="sub-title">点击打开手动拦截器</span>
+                        </div>
+                        <div class="custom-content">
+                            <embed src="image/icon/popup/right.svg" />
+                        </div>
+                    </li>
+                    <li id="moreSet">
+                        <div class="icon-content">
+                            <embed src="image/icon/popup/icons8-settings.svg" />
+                        </div>
+                        <div class="text-content">
+                            <span class="title">更多设置选项</span>
+                            <span class="sub-title">点击前往设置页面进行详细设置</span>
+                        </div>
+                        <div class="custom-content">
+                            <embed src="image/icon/popup/right.svg" />
+                        </div>
+                    </li>
+                </ul>
+            </main>
+        </div>
+    </div>
+    <div style="display:none" id="evaluateTipsTemplate">
+        <div>
+            <span class="title"><strong i18n="popupEvaluateTipsTitle">分享您的反馈</strong></span>
+            <br />
+            <span i18n="popupEvaluateTipsSubtitle">您的反馈将帮助更多人抵御危险、钓鱼网站。</span>
+        </div>
+    </div>
+</body>
+
+</html>
