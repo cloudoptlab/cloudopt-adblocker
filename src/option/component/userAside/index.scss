@@ -36,7 +36,7 @@
             }
         }
         .menu {
-            margin-top: 38px;
+            margin-top: 12px;
             ul.menu-container {
                 li {
                     min-width: 194px;
@@ -46,11 +46,9 @@
                         color: rgba(138, 143, 156, 1);
                         margin: 30px 0 10px 0;
                     }
-                    &[data-key="safe"] {
-                        margin-bottom: 33px;
-                    }
                     &.options {
                         cursor: pointer;
+                        transition:all 1s ease 0s;
                         & * {
                             pointer-events: none;
                         }
@@ -63,6 +61,8 @@
                             .cls-1 {
                                 fill: #fff;
                             }
+                            margin-top: 33px;
+                            margin-bottom: 33px;
                         }
                         border-radius: 3px;
                         display: flex;
