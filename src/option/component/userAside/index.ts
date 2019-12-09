@@ -29,7 +29,7 @@ export default class UserAside implements IBaseHTMLPages {
         this.mainDOM.id = UserAside.ID
         this.mainDOM.innerHTML = `
             <div class="container">
-                <img class="logo" src="image/LOGO.svg"></img>
+                <img class="logo" src="image/logo.svg"></img>
                 <div class="user-info"></div>
                 <div class="menu"></div>
                 <div class="bottom"></div>
