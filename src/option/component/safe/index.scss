@@ -66,6 +66,11 @@
                             background: rgba(30, 111, 255, 0.3);
                             border-radius: 50%;
                             opacity: 0.44;
+                            animation-timing-function: ease-in-out;
+                            animation-name: breathe;
+                            animation-duration: 1500ms;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
                         }
                     }
                 }
@@ -122,5 +127,14 @@
                 color: rgba(138, 145, 153, 1);
             }
         }
+    }
+}
+@keyframes breathe {
+    0% {
+        background: rgba(30, 111, 255, 0);
+    }
+
+    100% {
+        background: rgba(30, 111, 255, 0.3);
     }
 }
