@@ -1,8 +1,16 @@
-main {
+.popup {
     .mdl-list {
         li {
-            * {
-                pointer-events: none
+            .custom-toggle {
+                .custom-control-input:disabled {
+                    &~.custom-control-label {
+                        &::before,
+                        &::after {
+                            border-color: #becad6;
+                            background: #becad6;
+                        }
+                    }
+                }
             }
         }
     }
