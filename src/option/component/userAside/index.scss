@@ -48,7 +48,7 @@
                     }
                     &.options {
                         cursor: pointer;
-                        transition:all 1s ease 0s;
+                        transition:all 800ms ease 0s;
                         & * {
                             pointer-events: none;
                         }
