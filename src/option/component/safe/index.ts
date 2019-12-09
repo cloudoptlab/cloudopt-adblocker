@@ -79,8 +79,8 @@ export default class SafePages implements IBaseHTMLPages {
             <div class="description">
                 <p class="content">连接全球用户的安全网络</p>
                 <span class="detaile">
-                    Cloudopt®
-                    云安全网络是一个基于基于信誉评估机制的威胁分析系统，它连接着世界各地的用户，实时地保护着您网页安全。Cloudopt®
+                    Cloudopt<sup>&reg;</sup>
+                    云安全网络是一个基于基于信誉评估机制的威胁分析系统，它连接着世界各地的用户，实时地保护着您网页安全。Cloudopt<sup>&reg;</sup>
                     AI 能够 7x24 小时不间断地实时分析网络威胁。
                 </span>
                 <a class="link-info" href="https://cloudopt.net/" target="_blank">
