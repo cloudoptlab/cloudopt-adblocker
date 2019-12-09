@@ -2,53 +2,54 @@
 
 <img src="https://cdn.cloudopt.net/20190508140125.jpg" width="800" />
 
-Cloudopt AdBlocker is a browser extension based on AdguardBrowserExtension and Cloudopt's self-developed cloud reputation assessment technology to protect your security, prevent traces, malicious domain names, filter banner ads, pop-up ads, and more. can do:
+Cloudopt AdBlocker 是基于 AdguardBrowserExtension 以及 Cloudopt 自主研发的云信誉评估技术的浏览器扩展，实时保护您的安全、防止追迹、恶意域名，过滤横幅广告、弹窗广告等等。可以做到：
 
-1. Block common ads.
-2. Accelerate page loading, save bandwidth, block ads and pop-ups.
-3. Block various spyware, adware and dial-up installers.
-4. Protect your privacy by blocking common third-party tracking systems.
-5. Protect you against malicious and phishing attacks.
-6. Protect your computer from being targeted by mining scripts.
-7. Prevent scripts from downloading things from dangerous websites.
+1. 拦截常见广告。
+2. 加速页面载入，节省带宽，屏蔽广告和弹窗。
+3. 拦截各种间谍软件，广告软件和拨号安装程序。
+4. 通过拦截常见第三方跟踪系统保护您的隐私。
+5. 保护您对抗恶意和钓鱼攻击。
+6. 保护您的电脑不会被挖矿脚本针对。
+7. 阻止脚本从危险网站下载东西。
 
-[You can also go to the official website to download and use it directly.](https://www.cloudopt.net/)
+[您还可以直接前往官网下载体验。](https://www.cloudopt.net/)
 
-## Getting Involved
+## 如何参与
 
-We encourage you to participate in this open source project. We welcome any MR, submission of bugs, submission of suggestions, code review or any other positive contribution.
+我们鼓励您参与这个开源项目。我们欢迎任何MR、提交BUG、提交建议、代码审查或任何其他积极贡献。
 
-MR related specifications can refer to the relevant specifications of our other open source projects: https://next.cloudopt.net/#/contributing.
+MR相关的规范可以参考我们其它开源项目的相关规范：https://next.cloudopt.net/#/zh-cn/contributing。
 
-## Build Instructions
 
-Require [nodejs](https://nodejs.org/en/download/) and [yarn](https://yarnpkg.com/en/docs/install/#mac-stable)。
+## 如何构建
 
-1. Clone or Download the repository:
+本项目依赖于 [nodejs](https://nodejs.org/en/download/) 和 [yarn](https://yarnpkg.com/en/docs/install/#mac-stable)。
+
+1. 拉取或者下载源码：
 
   ```shell
   git clone https://github.com/cloudoptlab/cloudopt-adblocker/
   ```
 
-2. Install local dependencies by running:
+2. 到项目目录执行命令下载依赖：
 
   ```shell
   yarn install
   ```
 
-3. Build on the command line:
+3. 使用yarn构建：
   ```shell
   yarn build
   ```
 
-After the build is complete, the file will be stored in the dist directory, which can be loaded directly in the developer mode of the browser.
+构建完成后会将文件存放在dist目录下，可以直接使用浏览器的开发者模式加载。
 
-## License
+## 开源协议
 
 > This Source Code Form is subject to the terms of the GNU General Public License, v. 3.0. If a copy of the GPL was not distributed with this file, You can obtain one at https://www.gnu.org/licenses/gpl-3.0.en.html
 
 
-## Reference license
+## 引用许可
 
 ### AdguardBrowserExtension
 - Project: https://github.com/AdguardTeam/AdguardBrowserExtension
@@ -90,14 +91,10 @@ After the build is complete, the file will be stored in the dist directory, whic
 - Project: https://github.com/easylist/easylist
 - License: [GNU General Public License version 3](https://easylist.to/pages/licence.html)
 
-## Chinese Vesion
-
-[点击阅读中文版](https://github.com/cloudoptlab/cloudopt-adblocker/blob/master/README_ZH.md)
-
 ----
 
-QQ Group： 142574864
+开发者 QQ 群： 142574864
 
-Wechat：
+关注 Cloudopt 公众号获取最新资讯：
 
 ![](https://kol-cdn.cloudopt.net/kol/2018/12/qrcode_for_gh_cace0716c068_258.jpg)
