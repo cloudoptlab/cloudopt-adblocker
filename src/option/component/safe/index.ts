@@ -8,7 +8,7 @@ export default class SafePages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div");
     static ID: string = "safePages";
     private connected: boolean = false
-    private connectionCount: string = "???" 
+    private connectionCount: string = '' 
 
     constructor() {
         this.mainDOM.id = SafePages.ID
