@@ -11,7 +11,7 @@ export class GuideManager {
         this.mainDOM.id = GuideManager.ID;
         this.mainDOM.innerHTML = `
             <div class="container">
-                <span class="title">CLOUDOPT</span>
+                <span class="title"><img src="image/logo-d.svg" class="cloudopt-title" width="100px"/></span>
                 <div class="content-block" id="contentBlock">
                     <div class="header"></div>
                     <div class="body"></div>
@@ -70,6 +70,7 @@ export class GuideManager {
         this.setHeader(header)
 
         const body = document.createElement("div")
+        body.className = 'guide-content'
         body.innerHTML = `
             <h3>欢迎使用 Cloudopt AdBlocker</h3>
             <span class="text">
@@ -98,6 +99,7 @@ export class GuideManager {
         this.setHeader(header)
 
         const body = document.createElement("div")
+        body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
             title: '网页保护',
@@ -128,6 +130,7 @@ export class GuideManager {
         this.setHeader(header)
 
         const body = document.createElement("div")
+        body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
             title: '广告拦截',
@@ -158,6 +161,7 @@ export class GuideManager {
         this.setHeader(header)
 
         const body = document.createElement("div")
+        body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
             title: '隐私保护',
@@ -188,6 +192,7 @@ export class GuideManager {
         this.setHeader(header)
 
         const body = document.createElement("div")
+        body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
             title: '用户体验改进计划',
@@ -216,6 +221,7 @@ export class GuideManager {
         this.setHeader(header)
 
         const body = document.createElement("div")
+        body.className = 'guide-content'
         body.innerHTML = `
             <h3>祝贺您！完成初步设置</h3>
             <span class="text">

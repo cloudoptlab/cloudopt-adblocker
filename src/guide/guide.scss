@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: rgb(245,246,247);
     .btn {
         outline: none;
         border: none;
@@ -11,7 +12,6 @@
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.02);
         border-radius: 3px;
         font-size: 13px;
-        font-family: Noto Sans;
         font-weight: bold;
         line-height: 0;
         font-size: 13px;
@@ -87,6 +87,13 @@
                     font-family: Noto Sans;
                     font-weight: 400;
                     color: rgba(89, 98, 106, 1);
+                    max-width: 424px;
+                    margin-bottom: 60px;
+                    display: block;
+                }
+                .guide-content{
+                    width: 100%;
+                    margin-bottom: 40px;
                 }
             }
         }
