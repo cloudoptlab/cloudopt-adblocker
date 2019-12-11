@@ -74,6 +74,8 @@ export default class UserAside implements IBaseHTMLPages {
         }).catch((reason) => {
             // Not logged in
             this.userInfoDOM.addEventListener('click', (ev: MouseEvent) => {
+                this.userInfoDOM.querySelector('.name+p.description').setAttribute('i18n', 'optionLoginRefreshTips')
+                this.userInfoDOM.querySelector('.name+p.description').innerHTML = i18n.get('optionLoginRefreshTips')
                 window.open('https://www.cloudopt.net/account/login', '_blank')
             })
         });

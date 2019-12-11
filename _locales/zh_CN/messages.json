@@ -452,6 +452,9 @@
     "optionLoginTips": {
         "message": "登录以保持同步"
     },
+    "optionLoginRefreshTips": {
+        "message": "登录成功后请刷新页面"
+    },
     "optionsIntelligentSecurity": {
         "message": "智能安全"
     },

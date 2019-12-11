@@ -455,6 +455,9 @@
     "optionLoginTips": {
         "message": "동기화 상태로 로그인"
     },
+    "optionLoginRefreshTips": {
+        "message": "성공적으로 로그인 한 후이 페이지를 새로 고치십시오"
+    },
     "optionsIntelligentSecurity": {
         "메시지": "스마트 보안"
     },

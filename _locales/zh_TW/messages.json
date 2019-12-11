@@ -455,6 +455,9 @@
     "optionLoginTips": {
         "message": "登錄以保持同步"
     },
+    "optionLoginRefreshTips": {
+        "message": "登錄成功後請刷新頁面"
+    },
     "optionsIntelligentSecurity": {
         "message": "智能安全"
     },

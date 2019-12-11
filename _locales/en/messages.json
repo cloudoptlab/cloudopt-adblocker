@@ -452,6 +452,9 @@
     "optionLoginTips": {
         "message": "Sign in to stay in sync"
     },
+    "optionLoginRefreshTips": {
+        "message": "Refresh this page after successful login"
+    },
     "optionsIntelligentSecurity": {
         "message": "Intelligent Security"
     },
