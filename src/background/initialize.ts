@@ -6,7 +6,10 @@ import * as store from '../core/store'
 import * as logger from '../core/logger'
 import * as utils from '../core/utils'
 import { geoIp } from '../core/api'
+import IAdblockEngine from '../adblockEngine/adblockerEngine'
 import adguardEngine from './adguardEngine'
+
+let adblockEngine: IAdblockEngine
 
 async function activateEvent() {
     const activate = await store.get('activate')
@@ -52,9 +55,10 @@ export async function start() {
 
     activateEvent()
 
+    adblockEngine = new adguardEngine()
     config.get().then((cfg) => {
         if (cfg.adblockActivating) {
-            adguardEngine.start()
+            adblockEngine.start()
         }
     })
 }

@@ -259,4 +259,4 @@ console.log('adguard engine refreshing')
     }
 }
 
-export default new AdguardEngine()
+export default AdguardEngine
