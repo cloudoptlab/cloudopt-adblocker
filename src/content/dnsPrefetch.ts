@@ -9,8 +9,8 @@ coreConfig.get().then((config) => {
     }
 
     const hosts = new Array<string>()
-    $('a').each(() => {
-        const href = sanitize($(this).attr('href'))
+    $('a').each((index, element: HTMLElement) => {
+        const href = sanitize($(element).attr('href'))
         if (!href) {
             return
         }
@@ -28,7 +28,13 @@ coreConfig.get().then((config) => {
     })
 
     if (hosts.length > 0) {
-        const tags = hosts.map((host) => `<link rel="dns-prefetch" href="//${host}">`).join('')
-        $('head')[0].append(tags)
+        const tags = hosts.map((host) => {
+            const tag = document.createElement('link')
+            tag.rel = 'dns-prefetch'
+            tag.href = `//${host}`
+            return tag
+        })
+        
+        $('head')[0].append(...tags)
     }
 })
