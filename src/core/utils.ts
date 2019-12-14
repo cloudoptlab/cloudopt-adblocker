@@ -102,11 +102,7 @@ export function getVersion(): string {
 }
 
 export function language(): string {
-    if (navigator.language) {
-        return navigator.language
-    } else {
-        return navigator.browserLanguage
-    }
+    return chrome.i18n.getUILanguage()
 }
 
 /* tslint:disable:no-bitwise */
