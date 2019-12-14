@@ -8,8 +8,8 @@ const eventCounts: Map<string, number> = new Map<string, number>()
 let startOfToday: number
 let adblockCountsInDays: Map<number, number>
 let adblocksToday: number = 0
-let siteBlockCountsInDays: Map<number, number>
-let siteBlocksToday: number = 0
+let prerenderCountsInDays: Map<number, number>
+let prerendersToday: number = 0
 
 export function countEvent(event: string, count: number = 1) {
     if (!eventCounts.has(event)) {
@@ -21,8 +21,8 @@ export function countEvent(event: string, count: number = 1) {
     if (event === 'adblock') {
         adblockCountsInDays.set(startOfToday, ++adblocksToday)
     }
-    if (event === 'site-block') {
-        siteBlockCountsInDays.set(startOfToday, siteBlocksToday)
+    if (event === 'prerender') {
+        prerenderCountsInDays.set(startOfToday, prerendersToday)
     }
 
     logger.debug(`Statistics: count ${event} ${count} time(s).`)
@@ -48,7 +48,7 @@ function saveAll() {
     store.set('statisticFields', Array.from(eventCounts.keys()).join(','))
 
     store.set('adblock-counts-indays', utils.serializeMapNumNum(adblockCountsInDays))
-    store.set('site-block-counts-indays', utils.serializeMapNumNum(siteBlockCountsInDays))
+    store.set('prerender-counts-indays', utils.serializeMapNumNum(prerenderCountsInDays))
 }
 
 function refreshTodayTimeStamp() {
@@ -73,7 +73,7 @@ export async function start() {
         const oldData = utils.deserializeMapNumNum(recordString)
         adblockCountsInDays = new Map<number, number>()
         for (let i = 0, j = startOfToday; i < 7; i++, j -= 86400000) {
-            if (oldData.get(j) !== NaN) {
+            if (!isNaN(oldData.get(j))) {
                 adblockCountsInDays.set(j, oldData.get(j))
             } else {
                 adblockCountsInDays.set(j, 0)
@@ -86,20 +86,20 @@ export async function start() {
             }
         })
     })
-    store.get('site-block-counts-indays').then((recordString: string) => {
+    store.get('prerender-counts-indays').then((recordString: string) => {
         const oldData = utils.deserializeMapNumNum(recordString)
-        siteBlockCountsInDays = new Map<number, number>()
+        prerenderCountsInDays = new Map<number, number>()
         for (let i = 0, j = startOfToday; i < 7; i++, j -= 86400000) {
-            if (oldData.get(j) !== NaN) {
-                siteBlockCountsInDays.set(j, oldData.get(j))
+            if (!isNaN(oldData.get(j))) {
+                prerenderCountsInDays.set(j, oldData.get(j))
             } else {
-                siteBlockCountsInDays.set(j, 0)
+                prerenderCountsInDays.set(j, 0)
             }
         }
         message.addListener({
-            type: 'getSiteBlockCountsInDays',
+            type: 'getPrerenderCountsInDays',
             callback(message, sender, sendResponse) {
-                sendResponse(utils.serializeMapNumNum(siteBlockCountsInDays))
+                sendResponse(utils.serializeMapNumNum(prerenderCountsInDays))
             }
         })
     })

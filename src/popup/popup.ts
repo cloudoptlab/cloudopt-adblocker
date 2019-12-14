@@ -12,56 +12,104 @@ import './popup.scss'
 
 class G2Model {
     private container: string
-    private axis: number[] = []
+    private data: Array<{day: number, [propName: string]: number}> = []
+    private adblockName: string
+    private prerenderName: string
 
     constructor(container: string) {
         this.container = container
 
+        this.adblockName = '广告拦截'
+        this.prerenderName = '网页加速'
+    }
+
+    private async initalize(): Promise<void> {
+        const adblockCountsInDays = utils.deserializeMapNumNum(await message.send('getAdblockCountsInDays'))
+        const prerenderCountsInDays = utils.deserializeMapNumNum(await message.send('getPrerenderCountsInDays'))
+
         const now = Date.now()
-        let startOfDay = now - (now % 86400000);
+        const today = now - (now % 86400000)
+        let day = today - 518400000; // 00:00 of six days ago
+
+        let emptyStarting = true
         for (let i = 0; i < 7; i++) {
-            this.axis.unshift(startOfDay)
-            startOfDay = startOfDay - 86400000
+            let adblockCount = adblockCountsInDays.get(day)
+            let prerenderCount = prerenderCountsInDays.get(day)
+            if (isNaN(adblockCount)) {
+                adblockCount = 0
+            }
+            if (isNaN(prerenderCount)) {
+                prerenderCount = 0
+            }
+            if (adblockCount || prerenderCount || !emptyStarting) {
+                this.data.push({
+                    day,
+                    [this.adblockName]: adblockCount,
+                    [this.prerenderName]: prerenderCount,
+                })
+                emptyStarting = false
+            }
+            day += 86400000
+        }
+        if (this.data.length < 7) {
+            if (this.data[0]) {
+                this.data.unshift({
+                    day: this.data[0].day - 86400000,
+                    [this.adblockName]: 0,
+                    [this.prerenderName]: 0,
+                })
+            } else {
+                this.data.push({
+                    day: today - 86400000, // yesterday
+                    [this.adblockName]: 0,
+                    [this.prerenderName]: 0,
+                }, {
+                    day: today, // today
+                    [this.adblockName]: 0,
+                    [this.prerenderName]: 0,
+                })
+                day = today + 86400000
+            }
+        }
+        for (let i = this.data.length; i < 7; i++) {
+            this.data.push({
+                day,
+            })
+            day += 86400000
         }
     }
 
-    public renderAxis(): string {
-        return `<ul>
-        ${this.axis.map((time) => {
-            let day = (new Date(time)).getDate()
+    public async renderAxis(): Promise<void> {
+        if (!this.data.length) {
+            await this.initalize()
+        }
+        const html = `<ul>
+        ${this.data.map((data) => {
+            let day = (new Date(data.day)).getDate()
             return `<li>${day < 10 ? '0' + day : day}</li>`
         }).join('')}
             </ul>`
+
+        $('.time-range').html(html)
     }
 
     public async renderChart() {
-        const adblockName = '广告拦截'
-        const siteBlockName = '恶意网站拦截'
-        const adblockCountsInDays = utils.deserializeMapNumNum(await message.send('getAdblockCountsInDays'))
-        const siteBlockCountsInDays = utils.deserializeMapNumNum(await message.send('getSiteBlockCountsInDays'))
-        const data = this.axis.map((time) => {
-            const adblockCount = adblockCountsInDays.has(time) ? adblockCountsInDays.get(time) : 0
-            const siteBlockCount = siteBlockCountsInDays.has(time) ? siteBlockCountsInDays.get(time) : 0
-            const obj = {
-                day: (new Date(time)).getDate(),
-            }
-            obj[adblockName] = adblockCount
-            obj[siteBlockName] = siteBlockCount
-            return obj
-        })
-
-        const dv = new DataSet.View().source(data)
+        if (!this.data.length) {
+            await this.initalize()
+        }
+        const dv = new DataSet.View().source(this.data)
         dv.transform({
             type: 'fold',
-            fields: [adblockName, siteBlockName],
+            fields: [this.adblockName, this.prerenderName],
             key: 'type',
             value: 'value',
         })
         const chart = new G2.Chart({
             container: this.container,
-            width: 413,
-            height: 350,
+            width: 293,
+            height: 240,
             legend: false,
+            padding: 2,
         } as Partial<G2.ChartProps>)
         chart.axis('day', {
             tickLine: null,
@@ -70,11 +118,11 @@ class G2Model {
         })
         chart.source(dv, {
             day: {
-                type: 'linear',
+                type: 'time',
                 formatter: (val) => {
-                    return val < 10 ? '0' + val : val
+                    let date = (new Date(val)).getDate()
+                    return val < 10 ? '0' + date : date
                 },
-                range: [0.04, 0.96],
             },
         })
         chart.tooltip({
@@ -82,12 +130,12 @@ class G2Model {
         } as G2.HtmlTooltipConfig)
         chart.area().position('day*value').color('#f3f8fd').tooltip(null).shape('smooth')
         chart.line().position('day*value').color('type', (value) => {
-            if (value === adblockName) {
-                return '#2993F9'
-            } else if (value === siteBlockName) {
+            if (value === this.adblockName) {
                 return '#68D0B5'
+            } else if (value === this.prerenderName) {
+                return '#2993F9'
             }
-            return '#68D0B5'
+            return '#2993F9'
         }).size(1).shape('smooth')
         chart.render()
     }
@@ -111,14 +159,14 @@ async function initialize() {
     const config = await coreConfig.get()
     const url = (await currentActiveTab()).url
     const host = utils.getHost(url)
-    const isSystemPage = !utils.URL_REGEX.test(url)
+    const isSystemPage = !/^((https|http|ftp|rtsp|mms):\/\/)/.test(url)
 
     if (utils.getUa() === 'firefox') {
         $('.popup .mdl-list__item-avatar.material-icons').css('padding-top', '6px')
     }
 
     const g2Model = new G2Model('g2mountNode')
-    $('.time-range').html(g2Model.renderAxis())
+    g2Model.renderAxis()
     g2Model.renderChart()
 
     $('#moreSet').click(() => {

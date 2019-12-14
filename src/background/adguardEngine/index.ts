@@ -24,7 +24,8 @@ enum EngineState {
 }
 
 function getAdguardConfig(config: coreConfig.Config): any {
-    const allowList = config.allowListAds.slice().push('*.cloudopt.net')
+    const allowList = config.allowListAds.slice()
+    allowList.push('*.cloudopt.net')
     let filters = [101]
     if (config.safePrivacy) {
         filters.push(3)
@@ -64,17 +65,17 @@ function getAdguardConfig(config: coreConfig.Config): any {
     if (!config.adblockActivating) {
         filters = []
     }
-    if (!config.safeCoin) {
+    if (config.safeCoin) {
         filters.push(242)
     }
-    if (!config.safeCloud) {
+    if (config.safeCloud) {
         filters.push(208)
         filters.push(210)
     }
     logger.debug(`Adblock filter list: ${filters}`)
     return {
         filters,
-        allowList,
+        whitelist: allowList,
         rules: config.customRule,
         filtersMetadataUrl: 'https://cdn.cloudopt.net/filters/chromium/filters.json',
         filterRulesUrl: 'https://cdn.cloudopt.net/filters/chromium/{filter_id}.txt',
