@@ -88,6 +88,8 @@ export async function website(url: string): Promise<Result> {
             record = await api.gradeWebsite(host)
             record.safe = record.isSafe()
         } catch (error) {
+            record = new Result()
+            record.score = 60
             record.safe = true
         }
         store.set(cacheKey, record)
