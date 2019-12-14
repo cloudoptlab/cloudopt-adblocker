@@ -22,7 +22,7 @@ export class Config {
     public memoryOptimize: boolean
     public dataCollection: boolean
     public dnsSpeed: boolean
-    public webPrereading: boolean
+    public webPrerendering: boolean
     public customRule: string[]
     public customSubscription: string[]
 }
@@ -44,7 +44,7 @@ let configObject: Config = {
     memoryOptimize: false,
     dataCollection: true,
     dnsSpeed: true,
-    webPrereading: true,
+    webPrerendering: true,
     customRule: [],
     customSubscription: [],
 } as Config

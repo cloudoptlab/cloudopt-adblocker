@@ -427,10 +427,10 @@
     "optionDnsSpeedDetails": {
         "message": "提前對可能會訪問的網站進行DNS解析，加速連接網站的速度。"
     },
-    "optionWebPrereading": {
+    "optionWebPrerendering": {
         "message": "網頁預加載"
     },
-    "optionWebPrereadingDetails": {
+    "optionWebPrerenderingDetails": {
         "message": "提前加載可能會訪問的頁面，提高網頁打開速度。"
     },
     "optionFiltersLastUpdatedAt": {

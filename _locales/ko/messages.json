@@ -427,10 +427,10 @@
     "optionDnsSpeedDetails": {
         "message": "가능한 방문할 수 있는 사이트에 대해 DNS 해석, 연결연결 사이트의 속도를 미리 실시한다."
     },
-    "optionWebPrereading": {
+    "optionWebPrerendering": {
         "message": "웹 페이지를 미리 불러옵니다"
     },
-    "optionWebPrereadingDetails": {
+    "optionWebPrerenderingDetails": {
         "message": "우선 방문할 수 있는 페이지를 미리 불러옵니다, 웹 페이지를 높여 속도를 올립니다."
     },
     "optionFiltersLastUpdatedAt": {

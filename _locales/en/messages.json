@@ -424,10 +424,10 @@
     "optionDnsSpeedDetails": {
         "message": "Parses DNS for potential sites in advance to speed up the connection to the site."
     },
-    "optionWebPrereading": {
+    "optionWebPrerendering": {
         "message": "Page Preloading"
     },
-    "optionWebPrereadingDetails": {
+    "optionWebPrerenderingDetails": {
         "message": "Reads pages that may be accessed in advance to speed up page loading."
     },
     "optionFiltersLastUpdatedAt": {

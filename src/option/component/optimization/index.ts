@@ -23,10 +23,10 @@ export default class OptimizationPages implements IBaseHTMLPages {
             },
             {
                 title: "网页预加载",
-                key: "webPrereading",
+                key: "webPrerendering",
                 content: "提前加载可能会访问的页面，提高网页打开速度。",
                 icon: createIcon("icons-in_progress"),
-                on: config.webPrereading,
+                on: config.webPrerendering,
             },
             {
                 title: "内存优化",

@@ -5,12 +5,12 @@ import $ from 'jquery'
 import { sanitize } from 'dompurify'
 
 coreConfig.get().then((config) => {
-    if (!config.webPrereading) {
+    if (!config.webPrerendering) {
         return
     }
 
-    $('a').map(() => {
-        const href = sanitize($(this).attr('href'))
+    $('a').map((index, domElement: HTMLElement) => {
+        const href = sanitize($(domElement).attr('href'))
         if (!href) {
             return
         }
@@ -25,9 +25,11 @@ coreConfig.get().then((config) => {
         }
 
         let timer: NodeJS.Timeout
-        $(this).hover(() => {
+        $(domElement).hover(() => {
             timer = setTimeout(() => {
-                const linkTag = `<link rel="prerender" href="${href}" />`
+                const linkTag = document.createElement('link')
+                linkTag.rel = 'prerender'
+                linkTag.href= href
                 $('head')[0].append(linkTag)
                 message.send('countEvent', 'prerender')
             }, 2000)

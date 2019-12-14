@@ -424,10 +424,10 @@
     "optionDnsSpeedDetails": {
         "message": "提前对可能会访问的网站进行DNS解析，加速连接网站的速度"
     },
-    "optionWebPrereading": {
+    "optionWebPrerendering": {
         "message": "网页预加载"
     },
-    "optionWebPrereadingDetails": {
+    "optionWebPrerenderingDetails": {
         "message": "提前加载可能会访问的页面，提高网页打开速度"
     },
     "optionFiltersLastUpdatedAt": {
