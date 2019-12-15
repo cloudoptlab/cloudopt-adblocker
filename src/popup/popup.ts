@@ -25,7 +25,7 @@ class G2Model {
 
     private async initalize(): Promise<void> {
         const adblockCountsInDays = utils.deserializeMapNumNum(await message.send('getAdblockCountsInDays'))
-        const prerenderCountsInDays = utils.deserializeMapNumNum(await message.send('getPrerenderCountsInDays'))
+        const prerenderCountsInDays = utils.deserializeMapNumNum(await message.send('getAccelerationCountsInDays'))
 
         const now = Date.now()
         const today = now - (now % 86400000)
@@ -165,10 +165,6 @@ async function initialize() {
         $('.popup .mdl-list__item-avatar.material-icons').css('padding-top', '6px')
     }
 
-    const g2Model = new G2Model('g2mountNode')
-    g2Model.renderAxis()
-    g2Model.renderChart()
-
     $('#moreSet').click(() => {
         openTab('option.html')
     })
@@ -178,13 +174,21 @@ async function initialize() {
     if (isSystemPage) {
         console.log('中文国际化需要修改')
         $('#safeProtect input').prop('disabled', true).prop('checked', true)
-        $('#safeProtect .sub-title').text('安全防护在此页面无需启动')
         $('#adsIntercept input').prop('disabled', true).prop('checked', true)
-        $('#adsIntercept .sub-title').text('广告拦截在此页面无需启动')
         $('#credibilityScore .sub-title').text('此页面无需评分')
-        $('#manualIntercept .sub-title').text('广告拦截在此页面无需启动')
+        $('#g2mountNode').replaceWith('<img src="image/icon/popup/undraw_heatmap_uyye.png" class="system-page cover">')
+        const html = `
+            <div style="text-align: center;" class="system-page">
+                <div class="title">无法在该页面生效</div>
+                <div class="content">这个页面可能是浏览器自带页面，我们仍然在实时保护着您。</div>
+            </div>`
+        $('.chart-bottom-custom-container').replaceWith(html)
         return
     }
+
+    const g2Model = new G2Model('g2mountNode')
+    g2Model.renderAxis()
+    g2Model.renderChart()
 
     $('#safeProtect').click(async (event) => {
         if (event.target.tagName === 'LABEL' || event.target.tagName === 'INPUT') {

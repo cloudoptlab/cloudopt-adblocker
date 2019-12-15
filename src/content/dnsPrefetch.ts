@@ -1,5 +1,6 @@
 import * as coreConfig from '../core/config'
 import * as utils from '../core/utils'
+import * as message from '../core/message'
 import $ from 'jquery'
 import {sanitize} from 'dompurify'
 
@@ -36,5 +37,6 @@ coreConfig.get().then((config) => {
         })
         
         $('head')[0].append(...tags)
+        message.send('countEvent', 'dns-prefetch')
     }
 })

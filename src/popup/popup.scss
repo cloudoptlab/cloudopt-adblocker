@@ -111,10 +111,13 @@
                     }
                     &:disabled {
                         &~.custom-control-label {
-                            &::before,
+                            &::before {
+                                border-color: #C0CAD5;
+                                background-color: #FFFFFF;
+                            }
                             &::after {
-                                border-color: #becad6;
-                                background: #becad6;
+                                border-color: #C0CAD5;
+                                background: #C0CAD5;
                             }
                         }
                     }
@@ -262,6 +265,26 @@
     #g2mountNode {
         >div {
             left: 10px;
+        }
+    }
+    .system-page {
+        &.cover {
+            display: block;
+            margin: 25px auto 15px auto;
+            width: 230px;
+        }
+        div.title {
+            max-width: 203px;
+            margin-bottom: 3px;
+            font-size: 16px;
+            color: #242B33;
+            margin: auto;
+        }
+        div.content {
+            max-width: 203px;
+            font-size: 13px;
+            color: #8A9199;
+            margin: auto;
         }
     }
 }

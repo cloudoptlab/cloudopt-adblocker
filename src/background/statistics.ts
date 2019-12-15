@@ -8,8 +8,8 @@ const eventCounts: Map<string, number> = new Map<string, number>()
 let startOfToday: number
 let adblockCountsInDays: Map<number, number>
 let adblocksToday: number = 0
-let prerenderCountsInDays: Map<number, number>
-let prerendersToday: number = 0
+let accelerationCountsInDays: Map<number, number>
+let accelerationsToday: number = 0
 
 export function countEvent(event: string, count: number = 1) {
     if (!eventCounts.has(event)) {
@@ -18,11 +18,14 @@ export function countEvent(event: string, count: number = 1) {
         eventCounts.set(event, eventCounts.get(event) + count)
     }
 
-    if (event === 'adblock') {
-        adblockCountsInDays.set(startOfToday, ++adblocksToday)
-    }
-    if (event === 'prerender') {
-        prerenderCountsInDays.set(startOfToday, prerendersToday)
+    switch (event) {
+        case 'adblock':
+            adblockCountsInDays.set(startOfToday, ++adblocksToday)
+            break
+        case 'prerender':
+        case 'dns-prefetch':
+            accelerationCountsInDays.set(startOfToday, accelerationsToday)
+            break
     }
 
     logger.debug(`Statistics: count ${event} ${count} time(s).`)
@@ -48,7 +51,7 @@ function saveAll() {
     store.set('statisticFields', Array.from(eventCounts.keys()).join(','))
 
     store.set('adblock-counts-indays', utils.serializeMapNumNum(adblockCountsInDays))
-    store.set('prerender-counts-indays', utils.serializeMapNumNum(prerenderCountsInDays))
+    store.set('acceleration-counts-indays', utils.serializeMapNumNum(accelerationCountsInDays))
 }
 
 function refreshTodayTimeStamp() {
@@ -86,20 +89,20 @@ export async function start() {
             }
         })
     })
-    store.get('prerender-counts-indays').then((recordString: string) => {
+    store.get('acceleration-counts-indays').then((recordString: string) => {
         const oldData = utils.deserializeMapNumNum(recordString)
-        prerenderCountsInDays = new Map<number, number>()
+        accelerationCountsInDays = new Map<number, number>()
         for (let i = 0, j = startOfToday; i < 7; i++, j -= 86400000) {
             if (!isNaN(oldData.get(j))) {
-                prerenderCountsInDays.set(j, oldData.get(j))
+                accelerationCountsInDays.set(j, oldData.get(j))
             } else {
-                prerenderCountsInDays.set(j, 0)
+                accelerationCountsInDays.set(j, 0)
             }
         }
         message.addListener({
-            type: 'getPrerenderCountsInDays',
+            type: 'getAccelerationCountsInDays',
             callback(message, sender, sendResponse) {
-                sendResponse(utils.serializeMapNumNum(prerenderCountsInDays))
+                sendResponse(utils.serializeMapNumNum(accelerationCountsInDays))
             }
         })
     })
