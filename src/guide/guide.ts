@@ -235,7 +235,7 @@ export class GuideManager {
         button.className = 'btn btn-primary'
         button.innerHTML = '登录'
         button.addEventListener("click", (ev: MouseEvent) => {
-            window.location.href = 'https://www.cloudopt.net/account/login'
+            window.open('https://www.cloudopt.net/account/login')
         })
         this.setFooter(button)
     }
