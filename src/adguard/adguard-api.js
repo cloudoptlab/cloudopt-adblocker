@@ -8799,6 +8799,8 @@
                     errorCallback(response, "empty response");
                 }
             };
+            var url = settings.filtersMetadataUrl;
+            url = url + (/\?/.test(url) ? "&" : "?") + (new Date()).getTime();
             executeRequestAsync(url, "application/json", success, errorCallback);
         };
 
