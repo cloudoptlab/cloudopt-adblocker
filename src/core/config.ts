@@ -33,7 +33,7 @@ let configObject: Config = {
     safeCoin: true,
     safePrivacy: true,
     safePotential: false,
-    adblockActivating: true,
+    adblockActivating: false,
     adblockDisplay: true,
     allowList: [],
     blockList: [],
