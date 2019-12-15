@@ -159,7 +159,6 @@ class AdguardEngine implements IAdblockEngine {
     }
 
     public async refresh(): Promise<boolean> {
-console.log('adguard engine refreshing')
         this.config = await coreConfig.get()
         if (!this.config.adblockActivating && this.state === EngineState.STARTED) {
             return this.stop()
@@ -192,7 +191,7 @@ console.log('adguard engine refreshing')
     }
 
     private updateBadgeText(tabId: number): void {
-        if (this.config.adblockActivating && this.config.adblockDisplay) {
+        if (this.config && this.config.adblockActivating && this.config.adblockDisplay) {
             try {
                 chrome.browserAction.setBadgeText({
                     text: this.tabsBlockCount.get(tabId).count.toString(),
