@@ -18012,6 +18012,11 @@
         var DEFAULT_BLOCK_CSP_DIRECTIVE = 'connect-src http: https:; frame-src http: https:; child-src http: https:';
 
         /**
+         * Initialize localStorage in advance of issues happening
+         */
+        adguard.localStorage.init(function() {});
+
+        /**
          * Retrieve referrer url from request details.
          * Extract referrer by priority:
          * 1. referrerUrl in requestDetails
