@@ -147,6 +147,8 @@ export async function sendGA(eventName: string) {
         sd: '24-bit',
         sr: getViewportSize(),
         vp: '0x0',
+    }).catch((reason) => {
+        // do nothing
     })
 }
 
