@@ -8799,7 +8799,7 @@
                     errorCallback(response, "empty response");
                 }
             };
-            executeRequestAsync(settings.filtersMetadataUrl, "application/json", success, errorCallback);
+            executeRequestAsync(url, "application/json", success, errorCallback);
         };
 
         /**

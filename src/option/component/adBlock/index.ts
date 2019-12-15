@@ -19,15 +19,14 @@ export default class AdBlockPages implements IBaseHTMLPages {
         this.generateLastUpdatedString()
     }
 
-    private generateLastUpdatedString() {
-        store.get('latest_filters_updated_at').then((timestamp: any) => {
-            timestamp = parseInt(timestamp)
-            if (!!timestamp) {
-                this.lastUpdatedString = `${i18n.get('optionFiltersLastUpdatedAt')} ${(new Date(timestamp)).toLocaleString()}${i18n.get('optionFiltersLastUpdatedAt1')}`
-            } else {
-                this.lastUpdatedString = i18n.get('filterNotUpdated')
-            }
-        })
+    private async generateLastUpdatedString(): Promise<void> {
+        let timestamp = await store.get('latest_filters_updated_at')
+        timestamp = parseInt(timestamp)
+        if (!!timestamp) {
+            this.lastUpdatedString = `${i18n.get('optionFiltersLastUpdatedAt')} ${(new Date(timestamp)).toLocaleString()}${i18n.get('optionFiltersLastUpdatedAt1')}`
+        } else {
+            this.lastUpdatedString = i18n.get('filterNotUpdated')
+        }
     }
 
     private createIcon = (i: string) => `image/icon/option/adBlock/${i}.svg`
@@ -192,9 +191,16 @@ export default class AdBlockPages implements IBaseHTMLPages {
         const lastUpdatedAtElement = this.mainDOM.querySelector('#lastUpdatedAt')
         lastUpdatedAtElement.addEventListener('click', (ev: MouseEvent) => {
             lastUpdatedAtElement.innerHTML = '正在更新……'
-            message.send('check-filters-update').then(() => {
-                this.generateLastUpdatedString()
-                this.render()
+            message.send('check-filters-update').then((result) => {
+                if (result === 'true') {
+                    lastUpdatedAtElement.innerHTML = '广告拦截规则库更新成功！点击可再次更新。'
+                    setTimeout(async () => {
+                        await this.generateLastUpdatedString()
+                        lastUpdatedAtElement.innerHTML = this.lastUpdatedString
+                    }, 2000);
+                } else {
+                    lastUpdatedAtElement.innerHTML = '广告拦截规则库更新失败，请检查网络连接后，再次点击尝试更新。'
+                }
             })
         })
         return this.mainDOM;

@@ -132,7 +132,9 @@ class AdguardEngine implements IAdblockEngine {
                 callback(msg, sender, sendResponse) {
                     window.adguardApi.checkFiltersUpdates(() => {
                         store.set('latest_filters_updated_at', Date.now())
-                        sendResponse('')
+                        sendResponse('true')
+                    }, () => {
+                        sendResponse('false')
                     })
                 },
             })
