@@ -1,8 +1,8 @@
 import "./index.scss";
 import { IBaseHTMLPages } from "../types";
-import { auth } from '../../../core/api'
 import { logout } from '../../../core/api'
 import * as i18n from '../../../core/i18n'
+import * as loginState from '../../../core/loginState'
 
 interface ISelectOptions {
     icon: string;
@@ -52,12 +52,12 @@ export default class UserAside implements IBaseHTMLPages {
         `
         i18n.translateComponent(this.userInfoDOM)
         this.mainDOM.querySelector('.user-info').replaceWith(this.userInfoDOM)
-        auth().then((data) => {
+        loginState.getLoginData().then((data) => {
             this.userInfoDOM.innerHTML = `
             <div class="thumb">
-                <img src="${data.result.head.startsWith('http') ? data.result.head : `https://cdn.cloudopt.net/image/${data.result.head}-head`}" alt="" srcset="" />
+                <img src="${data.head.startsWith('http') ? data.head : `https://cdn.cloudopt.net/image/${data.head}-head`}" alt="" srcset="" />
             </div>
-            <span class="name">${data.result.nickname}</span>
+            <span class="name">${data.nickname}</span>
             <p class="description">实时保护您的隐私安全</p>
             `
 
@@ -65,7 +65,9 @@ export default class UserAside implements IBaseHTMLPages {
             logoutDiv.className = 'logout'
             logoutDiv.innerHTML = '<span i18n="popupLogout">退出登录</span>'
             logoutDiv.addEventListener('click', (ev: MouseEvent) => {
-                logout().then(() => window.location.reload())
+                logout().then(() => {
+                    window.location.reload()
+                })
             })
             i18n.translateComponent(logoutDiv)
             const bottom = this.mainDOM.querySelector('.bottom')

@@ -4,6 +4,7 @@ import * as api from './api'
 import * as notification from './notification'
 import * as i18n from './i18n'
 import * as message from './message'
+import * as loginState from './loginState'
 
 export class Config {
     public safeCloud: boolean
@@ -76,7 +77,7 @@ export let country: string = 'us'
 
 export async function set(config: Config): Promise<void> {
     await store.set('config', config)
-    await store.set('config_update-time', new Date())
+    await store.set('config_update-time', new Date().getTime())
     saveToCloud()
 }
 
@@ -153,6 +154,9 @@ export async function fastAddBlockList(url: string) {
 }
 
 async function saveToCloud() {
+    if (!loginState.loggedIn()) {
+        return
+    }
     api.saveConfig(configObject).catch((rej) => {
         if (rej && rej.error !== 401) {
             notification.error(i18n.get('updateConfigFailure'))
@@ -161,6 +165,9 @@ async function saveToCloud() {
 }
 
 export function loadFromCloud(): Promise<void> {
+    if (!loginState.loggedIn()) {
+        return
+    }
     return api.downloadConfig().then(async (res) => {
         const localUpdateTime = new Date(await store.get('config_update-time')).getTime()
         if (new Date(res.result.update).getTime() > localUpdateTime) {

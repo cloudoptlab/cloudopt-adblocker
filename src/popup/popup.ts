@@ -5,6 +5,7 @@ import { open as openTab } from '../core/tab'
 import { debug as debugLog } from '../core/logger'
 import { website as gradeWebsite } from '../core/grade'
 import { translateCurrentPage } from '../core/i18n'
+import { updateLoginStatus } from '../core/loginState'
 import DataSet from '@antv/data-set'
 import G2 from '@antv/g2'
 import $ from 'jquery'
@@ -185,6 +186,8 @@ async function initialize() {
         $('.chart-bottom-custom-container').replaceWith(html)
         return
     }
+
+    updateLoginStatus()
 
     const g2Model = new G2Model('g2mountNode')
     g2Model.renderAxis()
