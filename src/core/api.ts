@@ -8,10 +8,11 @@ export const APIKEY = '11N9M530M667ZYW9KZHB0100JAX3XRGJ'
 export function gradeWebsite(website: string): Promise<GradeResult> {
     return http.get(`${HOST}grade/website/${website}`, {timeout: 3000, data: {apikey: APIKEY}}).then((data) => {
         const result = new GradeResult()
+        result.host = website
         result.type = data.result.type
         result.score = data.result.score
         if (data.result.host !== '') {
-            result.date = new Date()
+            result.date = new Date().getTime()
         }
         return result
     })

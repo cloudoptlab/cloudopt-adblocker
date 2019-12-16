@@ -3,12 +3,12 @@ import * as store from './store'
 import * as coreConfig from './config'
 import * as api from './api'
 
-const DEFAULT_EXPIREDAYS = '1'
+const DEFAULT_EXPIREDAYS = 1
 
 export class Result {
     public safe: boolean = true
     public type: string = ''
-    public date: Date = new Date()
+    public date: number = new Date().getTime()
     public score: number = 0
     public host: string = ''
 
@@ -54,6 +54,27 @@ export class Result {
         }
         return level
     }
+
+    public toString(): string {
+        return `${this.host}_${this.score}_${this.date}_${this.type}`
+    }
+
+    public fromString(str: string): Result {
+        let host: string, type: string, score: string, date: string
+        try {
+            [host, score, date, type] = str.split('_')
+            if (!host || !type) {
+                throw new Error('invalid cache format')
+            }
+            this.host = host
+            this.score = parseInt(score, 10)
+            this.date = parseInt(date, 10)
+            this.type = type
+        } catch (error) {
+            return this
+        }
+        return this
+    }
 }
 
 function couldGrade(url: string): boolean {
@@ -80,19 +101,20 @@ export async function website(url: string): Promise<Result> {
     result.host = host
     const cacheKey = host + cacheSuffix
 
-    let record = await store.get(cacheKey)
-    if (record !== undefined && JSON.stringify(record) !== '{}' && utils.compareDate(record.date, DEFAULT_EXPIREDAYS)) {
+    const recordStr = await store.get(cacheKey)
+    let record = (new Result()).fromString(recordStr)
+    if (recordStr && utils.compareDate(record.date, DEFAULT_EXPIREDAYS)) {
         record.safe = await record.isSafe()
     } else {
         try {
             record = await api.gradeWebsite(host)
-            record.safe = record.isSafe()
+            record.safe = await record.isSafe()
         } catch (error) {
             record = new Result()
             record.score = 60
             record.safe = true
         }
-        store.set(cacheKey, record)
+        store.set(cacheKey, record.toString())
     }
 
     return record

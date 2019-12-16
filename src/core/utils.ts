@@ -52,8 +52,8 @@ export function getQueryString(name: string): string {
     return null
 }
 
-export function compareDate(a: string, b: string): boolean {
-    return Math.abs((new Date().valueOf() - new Date(a).valueOf()) / (1000 * 60 * 60 * 24)) <= parseInt(b, 10)
+export function compareDate(a: number, b: number): boolean {
+    return Math.abs((new Date().valueOf() - new Date(a).valueOf()) / 86400000) <= b
 }
 
 export function getHost(website: string): string {
