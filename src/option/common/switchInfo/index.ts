@@ -24,10 +24,10 @@ export class SwitchInfo {
         this.divElement.innerHTML = `
             <div class="left">
                 ${
-                    this.options.icon 
-                    ? `<div class="icon"><img src=${this.options.icon} /></div>`   
-                    : ''
-                }
+            this.options.icon
+                ? `<div class="icon"><img src=${this.options.icon} /></div>`
+                : ''
+            }
                 <div class="description">
                     <span class="title">${this.options.title}</span>
                     <span class="content">${this.options.content}</span>
@@ -46,11 +46,10 @@ export class SwitchInfo {
                 </div>
             </div>
         `;
-        this.divElement.querySelector('.right').addEventListener('click', async (ev: MouseEvent) => {
+        this.divElement.querySelector('.right input').addEventListener('click', async (ev: MouseEvent) => {
             const newConfig = await getCoreConfig()
             newConfig[this.options.key] = !this.options.on
-            setCoreConfig(newConfig)
-            message.send('refresh-config')
+            setCoreConfig(newConfig).then(() => message.send('refresh-config'))
         })
     }
 }

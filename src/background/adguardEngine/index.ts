@@ -122,8 +122,10 @@ class AdguardEngine implements IAdblockEngine {
 
             message.addListener({
                 type: 'refresh-config',
-                callback: () => {
+                callback: (msg, sender, sendResponse) => {
                     this.refresh()
+                    sendResponse({})
+                    return true
                 },
             })
 
@@ -166,17 +168,15 @@ class AdguardEngine implements IAdblockEngine {
         if (this.state === EngineState.NOT_STARTED) {
             return this.start()
         }
-        window.adguardApi.stop()
-        const adguardConfig = getAdguardConfig(this.config)
-        if (adguardConfig.filters.length > 0) {
-            window.adguardApi.start(adguardConfig, () => {
-                logger.debug('Adguard api started.')
-                window.adguardApi.configure(adguardConfig, () => {
-                    logger.debug('Adguard re-configurationed.')
+        window.adguardApi.stop(() => {
+            const adguardConfig = getAdguardConfig(this.config)
+            if (adguardConfig.filters.length > 0) {
+                window.adguardApi.start(adguardConfig, () => {
+                    logger.debug('Adguard api started.')
                     this.customSubscription()
                 })
-            })
-        }
+            }
+        })
         this.state = EngineState.STARTED
         return true
     }
