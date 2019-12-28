@@ -24,7 +24,7 @@ export function countEvent(event: string, count: number = 1) {
             break
         case 'prerender':
         case 'dns-prefetch':
-            accelerationCountsInDays.set(startOfToday, accelerationsToday)
+            accelerationCountsInDays.set(startOfToday, ++accelerationsToday)
             break
     }
 
