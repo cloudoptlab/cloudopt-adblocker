@@ -19,7 +19,7 @@ export function gradeWebsite(website: string): Promise<GradeResult> {
 }
 
 export function saveConfig(config: coreConfig.Config): Promise<any> {
-    let dataObject: any = config
+    let dataObject: any = Object.assign({}, config)
     dataObject.whiteList = dataObject.allowList
     dataObject.whiteListAds = dataObject.allowListAds
     dataObject.blackList = dataObject.blockList
