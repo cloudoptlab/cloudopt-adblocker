@@ -1,8 +1,8 @@
 import * as message from './message'
 
-function search(text: string, sender: any, sendResponse: (something: any) => void) {
+function search(text: any, sender: any, sendResponse: (something: any) => void) {
     try {
-        chrome.bookmarks.search(text, (results) => {
+        chrome.bookmarks.search(text.text, (results) => {
             sendResponse(results)
         })
     } catch (e) {

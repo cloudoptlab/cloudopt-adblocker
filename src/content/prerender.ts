@@ -31,7 +31,10 @@ coreConfig.get().then((config) => {
                 linkTag.rel = 'prerender'
                 linkTag.href= href
                 $('head')[0].append(linkTag)
-                message.send('countEvent', 'prerender')
+                if (!window._cloudopt_accelerated) {
+                    message.send('countEvent', 'web-accelerate')
+                    window._cloudopt_accelerated = true
+                }
             }, 2000)
         }, () => {
             window.clearTimeout(timer)

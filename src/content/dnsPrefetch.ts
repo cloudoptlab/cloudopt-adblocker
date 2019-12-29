@@ -37,6 +37,9 @@ coreConfig.get().then((config) => {
         })
         
         $('head')[0].append(...tags)
-        message.send('countEvent', 'dns-prefetch')
+        if (!window._cloudopt_accelerated) {
+            message.send('countEvent', 'web-accelerate')
+            window._cloudopt_accelerated = true
+        }
     }
 })

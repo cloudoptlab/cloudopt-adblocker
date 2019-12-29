@@ -7,7 +7,7 @@ export default class AboutUsPages implements IBaseHTMLPages {
     static ID: string = "aboutUsPages";
     private adBlockCount: String = '0'
     private siteBlockCount: String = '0'
-    private prerenderCount: String = '0'
+    private AccelerationCount: String = '0'
 
     constructor() {
         this.mainDOM.id = AboutUsPages.ID
@@ -18,7 +18,7 @@ export default class AboutUsPages implements IBaseHTMLPages {
         Promise.all([
         queryBackground('getEventCount', 'adblock').then((count: String) => { this.adBlockCount = count }),
         queryBackground('getEventCount', 'site-block').then((count: String) => { this.siteBlockCount = count }),
-        queryBackground('getEventCount', 'prerender').then((count: String) => { this.prerenderCount = count }),
+        queryBackground('getEventCount', 'web-accelerate').then((count: String) => { this.AccelerationCount = count }),
         ]).then(() => {
             this.render()
         })
@@ -71,7 +71,7 @@ export default class AboutUsPages implements IBaseHTMLPages {
                                         <span>网页加速总数</span>
                                     </div>
                                     <div class="right">
-                                        <span>${this.prerenderCount}</span>
+                                        <span>${this.AccelerationCount}</span>
                                     </div>
                                 </li>
                             </ul>

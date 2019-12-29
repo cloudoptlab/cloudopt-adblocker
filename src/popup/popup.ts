@@ -26,7 +26,7 @@ class G2Model {
 
     private async initalize(): Promise<void> {
         const adblockCountsInDays = utils.deserializeMapNumNum(await message.send('getAdblockCountsInDays'))
-        const prerenderCountsInDays = utils.deserializeMapNumNum(await message.send('getAccelerationCountsInDays'))
+        const AccelerationCountsInDays = utils.deserializeMapNumNum(await message.send('getAccelerationCountsInDays'))
 
         const now = Date.now()
         const today = now - (now % 86400000)
@@ -35,18 +35,18 @@ class G2Model {
         let emptyStarting = true
         for (let i = 0; i < 7; i++) {
             let adblockCount = adblockCountsInDays.get(day)
-            let prerenderCount = prerenderCountsInDays.get(day)
+            let AccelerationCount = AccelerationCountsInDays.get(day)
             if (isNaN(adblockCount)) {
                 adblockCount = 0
             }
-            if (isNaN(prerenderCount)) {
-                prerenderCount = 0
+            if (isNaN(AccelerationCount)) {
+                AccelerationCount = 0
             }
-            if (adblockCount || prerenderCount || !emptyStarting) {
+            if (adblockCount || AccelerationCount || !emptyStarting) {
                 this.data.push({
                     day,
                     [this.adblockName]: adblockCount,
-                    [this.prerenderName]: prerenderCount,
+                    [this.prerenderName]: AccelerationCount,
                 })
                 emptyStarting = false
             }

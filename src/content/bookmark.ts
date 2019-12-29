@@ -69,13 +69,6 @@ class BookmarkSearch {
     }
 }
 
-async function bookmarksearchOnReady() {
-    const config = await refreshConfig()
-    if (!config.labBookmarkSearch) {
-        return
-    }
-}
-
 let bookmarkSearch: BookmarkSearch
 $.when($.ready).then(async () => {
     const config = await refreshConfig()

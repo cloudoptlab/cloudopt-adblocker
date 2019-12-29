@@ -18,6 +18,9 @@ export async function changeBrowserIcon(result: grade.Result) {
 export function start() {
     chrome.tabs.onActivated.addListener((activeInfo) => {
         chrome.tabs.query({ active: true, currentWindow: true }, async (tabArray) => {
+            if (!tabArray) {
+                return
+            }
             const result = await grade.website(tabArray.last().url)
             changeBrowserIcon(result)
         })
@@ -26,6 +29,9 @@ export function start() {
     chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         if (changeInfo.status !== 'loading') {
             chrome.tabs.query({ active: true, currentWindow: true }, async (tabArray) => {
+                if (!tabArray) {
+                    return
+                }
                 const result = await grade.website(tabArray.last().url)
                 changeBrowserIcon(result)
                 notification.labSafeTipsNoty(result.type)
