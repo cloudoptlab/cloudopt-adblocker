@@ -30,7 +30,6 @@ coreConfig.get().then((config) => {
 
     if (hosts.length > 0) {
         const tags = hosts.map((host) => {
-            message.send('countEvent', 'dns-prefetch')
             const tag = document.createElement('link')
             tag.rel = 'dns-prefetch'
             tag.href = `//${host}`
@@ -38,5 +37,9 @@ coreConfig.get().then((config) => {
         })
         
         $('head')[0].append(...tags)
+        if (!window._cloudopt_accelerated) {
+            message.send('countEvent', 'web-accelerate')
+            window._cloudopt_accelerated = true
+        }
     }
 })

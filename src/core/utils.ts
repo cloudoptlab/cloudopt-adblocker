@@ -14,6 +14,7 @@ declare global {
     }
     interface Window {
         adguardApi?: any
+        _cloudopt_accelerated?: boolean
     }
     interface Navigator {
         browserLanguage?: string

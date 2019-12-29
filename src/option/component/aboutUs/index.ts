@@ -18,7 +18,7 @@ export default class AboutUsPages implements IBaseHTMLPages {
         Promise.all([
         queryBackground('getEventCount', 'adblock').then((count: String) => { this.adBlockCount = count }),
         queryBackground('getEventCount', 'site-block').then((count: String) => { this.siteBlockCount = count }),
-        queryBackground('getEventCount', 'prerender').then((count: String) => { this.AccelerationCount = count }),
+        queryBackground('getEventCount', 'web-accelerate').then((count: String) => { this.AccelerationCount = count }),
         ]).then(() => {
             this.render()
         })

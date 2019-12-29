@@ -22,8 +22,7 @@ export function countEvent(event: string, count: number = 1) {
         case 'adblock':
             adblockCountsInDays.set(startOfToday, ++adblocksToday)
             break
-        case 'prerender':
-        case 'dns-prefetch':
+        case 'web-accelerate':
             accelerationCountsInDays.set(startOfToday, ++accelerationsToday)
             break
     }
