@@ -19,7 +19,14 @@ export function gradeWebsite(website: string): Promise<GradeResult> {
 }
 
 export function saveConfig(config: coreConfig.Config): Promise<any> {
-    return http.put(`${HOST}adblocker/config`, {data: JSON.stringify(config)})
+    let dataObject: any = config
+    dataObject.whiteList = dataObject.allowList
+    dataObject.whiteListAds = dataObject.allowListAds
+    dataObject.blackList = dataObject.blockList
+    delete dataObject.allowList
+    delete dataObject.allowListAds
+    delete dataObject.blockList
+    return http.put(`${HOST}adblocker/config`, {data: JSON.stringify(dataObject)})
 }
 
 export function downloadConfig() {

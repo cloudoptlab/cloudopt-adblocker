@@ -5,7 +5,7 @@ import $ from 'jquery'
 import { sanitize } from 'dompurify'
 
 coreConfig.get().then((config) => {
-    if (!config.webPrerendering) {
+    if (!config.webPrereading) {
         return
     }
 

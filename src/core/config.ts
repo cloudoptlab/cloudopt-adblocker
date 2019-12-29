@@ -23,7 +23,7 @@ export class Config {
     public memoryOptimize: boolean
     public dataCollection: boolean
     public dnsSpeed: boolean
-    public webPrerendering: boolean
+    public webPrereading: boolean
     public customRule: string[]
     public customSubscription: string[]
 }
@@ -45,7 +45,7 @@ let configObject: Config = {
     memoryOptimize: false,
     dataCollection: true,
     dnsSpeed: true,
-    webPrerendering: true,
+    webPrereading: true,
     customRule: [],
     customSubscription: [],
 } as Config
@@ -177,6 +177,15 @@ export function loadFromCloud(): Promise<void> {
                     configObject[key] = resConfig[key]
                 }
             })
+            if (resConfig.hasOwnProperty('whiteList')) {
+                configObject.allowList = resConfig['whiteList']
+            }
+            if (resConfig.hasOwnProperty('whiteListAds')) {
+                configObject.allowListAds = resConfig['allowListAds']
+            }
+            if (resConfig.hasOwnProperty('blackList')) {
+                configObject.blockList = resConfig['blackList']
+            }
         }
         message.send('refresh-config')
     }).catch((rej) => {
