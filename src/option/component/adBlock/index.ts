@@ -140,10 +140,13 @@ export default class AdBlockPages implements IBaseHTMLPages {
 
         this.mainDOM.querySelector('#buttonAddCustomSubscription').addEventListener('click', async (ev: MouseEvent) => {
             const inputElement = this.mainDOM.querySelector('#inputCustomSubscribeUrl') as HTMLInputElement
-            const inputValue = inputElement.value
+            let inputValue = inputElement.value
             if (!utils.URL_REGEX.test(inputValue)) {
                 notification.error(i18n.get('urlErrorTips'))
                 return
+            }
+            if (!inputValue.startsWith('http')) {
+                inputValue = `http://${inputValue}`
             }
             const config = await getCoreConfig()
             if (config.customSubscription.indexOf(inputValue) > -1) {
