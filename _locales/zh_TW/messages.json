@@ -7,330 +7,6 @@
         "message": "可能是東半球最強安全插件，實時保護您的安全、防止追跡、惡意域名，過濾橫幅廣告、彈窗廣告以及視頻廣告。",
         "description": "擴展名說明"
     },
-    "bankSafeTips": {
-        "message": "檢測到您正在訪問銀行網站,Cloudopt將為您保駕護航！"
-    },
-    "gameSafeTips": {
-        "message": "檢測到您正在訪問遊戲網站,Cloudopt將為您保駕護航！"
-    },
-    "shopSafeTips": {
-        "message": "檢測到您正在訪問購物網站,Cloudopt將為您保駕護航！"
-    },
-    "hospitalSafeTips": {
-        "message": "檢測到您正在訪問醫院網站,Cloudopt將為您保駕護航！"
-    },
-    "ominiboxTips": {
-        "message": "輸入手機號或者網址快速鑑定安全"
-    },
-    "dangWebsiteTips": {
-        "message": "這個網站非常危險！Cloudopt為您保駕護航！"
-    },
-    "dangDownTitle": {
-        "message": "已攔截您的下載"
-    },
-    "dangDownTips": {
-        "message": "檢測到您正在從危險的網站下載文件,Cloudopt已幫你攔截。"
-    },
-    "popupCleanCache": {
-        "message": "清理緩存"
-    },
-    "popupCleanPrivacy": {
-        "message": "清理隱私"
-    },
-    "popupReport": {
-        "message": "舉報危險網站"
-    },
-    "popupEvaluation": {
-        "message": "評價擴展"
-    },
-    "popupLogout": {
-        "message": "退出登錄"
-    },
-    "popupRealTimeProtection": {
-        "message": "安全保護"
-    },
-    "popupRealTimeProtectionSpan": {
-        "message": "實時保護您的上網安全"
-    },
-    "popupAdBlocking": {
-        "message": "廣告攔截"
-    },
-    "popupAdBlockingSpan": {
-        "message": "強力攔截騷擾廣告"
-    },
-    "popupLab": {
-        "message": "實驗室"
-    },
-    "popupLabSpan": {
-        "message": "體驗最新最有趣的功能"
-    },
-    "popupFeedback": {
-        "message": "建議反饋"
-    },
-    "popupFeedbackSpan": {
-        "message": "幫助我們更好地改進"
-    },
-    "popupScoreButton": {
-        "message": "查看網友評價"
-    },
-    "popupEvaluateButton": {
-        "message": "評價此網站"
-    },
-    "popupEvaluateTipsTitle": {
-        "message": "分享您的反饋"
-    },
-    "popupEvaluateTipsSubtitle": {
-        "message": "您的反饋將幫助更多人抵禦危險，釣魚網站。"
-    },
-    "popupMark": {
-        "message": "分"
-    },
-    "optionTipsDontDuplicate": {
-        "message": "請勿重添加"
-    },
-    "optionTipsAddAllowListSuccess": {
-        "message": "添加雲安全白名單成功"
-    },
-    "optionTipsAddAllowListAdsSuccess": {
-        "message": "添加廣告攔截白名單成功"
-    },
-    "optionTipsAddBlockListSuccess": {
-        "message": "添加雲安全黑名單成功"
-    },
-    "optionTipsInputUrlisNull": {
-        "message": "您輸入的域名為空,請檢查後輸入"
-    },
-    "optionTipsInputUrlisError": {
-        "message": "您輸入的域名有誤,請檢查後輸入"
-    },
-    "optionClassifySafeProtect": {
-        "message": "安全保護"
-    },
-    "optionCloudReputation": {
-        "message": "雲信譽評估"
-    },
-    "optionCloudReputationDetails": {
-        "message": "實時攔截危險網站,保護你不受釣魚,惡意網址的威脅"
-    },
-    "optionFileDownload": {
-        "message": "下載保護"
-    },
-    "optionFileDownloadDetails": {
-        "message": "自動阻止從危險網站上的下載"
-    },
-    "optionSafeCoin": {
-        "message": "挖礦腳本攔截"
-    },
-    "optionSafeCoinDetails": {
-        "message": "幫助您避免電腦被惡意網站用於挖礦（比特幣）"
-    },
-    "optionSafePrivacy": {
-        "message": "隱私保護"
-    },
-    "optionSafePrivacyDetails": {
-        "message": "阻止分析網站對您的網絡活動進行跟踪或記錄"
-    },
-    "optionSafePotential": {
-        "message": "潛在威脅"
-    },
-    "optionSafePotentialDetails": {
-        "message": "開啟後將阻止不受歡迎的網站,信譽評估較低的網站"
-    },
-    "optionClassifyAdblock": {
-        "message": "廣告攔截"
-    },
-    "optionAdblockActivating": {
-        "message": "自動激活"
-    },
-    "optionAdblockActivatingDetails": {
-        "message": "自動阻止頁面上的廣告的顯示"
-    },
-    "optionAdblockDisplay": {
-        "message": "顯示數量"
-    },
-    "optionAdblockDisplayDetails": {
-        "message": "在瀏覽器擴展圖標上顯示已攔截廣告的數量"
-    },
-    "optionAdblockHeuristic": {
-        "message": "啟發引擎（BETA）"
-    },
-    "optionAdblockHeuristicDetails": {
-        "message": "能够有效攔截一些潜在的廣告，建議普通用戶不要開啟"
-    },
-    "optionAdblockLight": {
-        "message": "Cloudpt Light技術"
-    },
-    "optionAdblockLightDetails": {
-        "message": "幫助你在網絡不好的情況下也能攔截惡意廣告"
-    },
-    "optionClassifyAllowList": {
-        "message": "雲安全白名單"
-    },
-    "optionClassifyAdsAllowList": {
-        "message": "廣告攔截白名單"
-    },
-    "optionAllowListAdd": {
-        "message": "增加"
-    },
-    "optionAllowListDelete": {
-        "message": "一鍵清除"
-    },
-    "optionAllowListHost": {
-        "message": "域名"
-    },
-    "optionAllowListOperation": {
-        "message": "操作"
-    },
-    "optionClassifyBlockList": {
-        "message": "雲安全黑名單"
-    },
-    "optionStatistics": {
-        "message": "數據統計"
-    },
-    "optionStatisticalName": {
-        "message": "統計名稱"
-    },
-    "optionTotalAdBlockCount": {
-        "message": "惡意廣告和挖礦腳本攔截次數"
-    },
-    "optionTotalSiteBlockCount": {
-        "message": "惡意網站攔截次數"
-    },
-    "optionTotalPrerender": {
-        "message": "網頁加速次數"
-    },
-    "optionTodayAdBlockCount": {
-        "message": "今日惡意廣告和挖礦腳本攔截次數"
-    },
-    "optionTodaySiteBlockCount": {
-        "message": "今日惡意網站攔截次數"
-    },
-    "optionblockListAdd": {
-        "message": "增加"
-    },
-    "optionblockListDelete": {
-        "message": "一鍵清除"
-    },
-    "optionBlockListHost": {
-        "message": "域名"
-    },
-    "optionBlockListOperation": {
-        "message": "操作"
-    },
-    "optionClassifySync": {
-        "message": "云同步"
-    },
-    "optionSyncLockinTime": {
-        "message": "最近同步時間"
-    },
-    "optionSyncLockinTimeDetails": {
-        "message": "你最近一次同步的時間"
-    },
-    "optionSyncBookmark": {
-        "message": "書籤同步"
-    },
-    "optionSyncBookmarkDetails": {
-        "message": "同步瀏覽器書籤到雲端"
-    },
-    "optionSyncHistory": {
-        "message": "瀏覽歷史同步"
-    },
-    "optionSyncHistoryDetails": {
-        "message": "同步瀏覽器歷史記錄到雲端"
-    },
-    "optionSyncPriority": {
-        "message": "同步優先"
-    },
-    "optionSyncPriorityDetails": {
-        "message": "您可以選擇在同步的時候以本地還是雲端的版本為優先"
-    },
-    "optionSyncCloud": {
-        "message": "雲端"
-    },
-    "optionSyncLocal": {
-        "message": "本地"
-    },
-    "optionClickView": {
-        "message": "點擊查看"
-    },
-    "optionClickFeedback": {
-        "message": "反饋問題"
-    },
-    "optionSyncSavedContent": {
-        "message": "已同步內容"
-    },
-    "optionSyncSavedContentDetails": {
-        "message": "點擊按鈕查看已經同步到雲端的內容"
-    },
-    "optionClassifyLab": {
-        "message": "實驗室"
-    },
-    "optionBookmarkSerch": {
-        "message": "書籤搜索"
-    },
-    "optionBookmarkSerchDetails": {
-        "message": "您在搜索引擎搜索時自動幫助您檢索書籤"
-    },
-    "optionSafeTips": {
-        "message": "安全提示"
-    },
-    "optionSafeTipsDetails": {
-        "message": "在訪問銀行,電商等容易被冒充的網站時彈出安全提示"
-    },
-    "optionKeyboard": {
-        "message": "安全鍵盤"
-    },
-    "optionKeyboardDetails": {
-        "message": "在輸入密碼時自動彈出虛擬鍵盤，保護您的輸入不被監聽"
-    },
-    "optionMemoryOptimization": {
-        "message": "內存優化"
-    },
-    "optionMemoryOptimizationDetails": {
-        "message": "內存佔用高於 80% 時，自動對長時間不訪問的標籤頁進行內存優化"
-    },
-    "optionClassifyHelp": {
-        "message": "幫助我們改進"
-    },
-    "optionClassifyHelpText": {
-        "message": "當您開啟雲信譽評估的時候，將默認允許提交匿名的安全相關資訊以幫助我們保護更多的人。當然您可以放心，這些數據不會包含您的隱私資訊，它們可以幫助我們打造一個更好的雲。您可以查看隱私保護協定瞭解更多。"
-    },
-    "optionDataCollection": {
-        "message": "加入用戶體驗計劃"
-    },
-    "optionDataCollectionDetails": {
-        "message": "為了更好的給您提供服務，將允許向Cloudopt提供一些技術信息及交互數據。 <a href='https://www.cloudopt.net/policy/privacy' target='_blank'>隱私聲明</a>"
-    },
-    "bookmarkSearch": {
-        "message": "書簽檢索"
-    },
-    "optionClassifyManual": {
-        "message": "自定義規則"
-    },
-    "optionManualAdd": {
-        "message": "新增"
-    },
-    "optionManualName": {
-        "message": "預覽"
-    },
-    "optionManualOperation": {
-        "message": "操作"
-    },
-    "optionManualTips": {
-        "message": "向Cloudopt雲安全中心提交樣本"
-    },
-    "updateTipsTitle": {
-        "message": "自動更新成功"
-    },
-    "updateTips1": {
-        "message": "Cloudopt已陞級到"
-    },
-    "updateTips2": {
-        "message": "，更新歷史可以訪問官方部落格查看。"
-    },
-    "updateConfigFailure": {
-        "message": "配置更新失敗"
-    },
     "contextMenus1": {
         "message": "加入雲安全白名單"
     },
@@ -343,95 +19,152 @@
     "contextMenus4": {
         "message": "加入雲安全黑名單"
     },
-    "manualTips": {
-        "message": "滑鼠左鍵選取想要遮罩的元素，滑鼠右鍵退出手動模式"
+    "ominiboxTips": {
+        "message": "輸入手機號或者網址快速鑑定安全"
     },
-    "optionManualSave": {
-        "message": "保存"
+    "dangDownTitle": {
+        "message": "已攔截您的下載"
     },
-    "manualSaveTips1": {
-        "message": "保存失敗，請確認格式正確"
+    "updateTipsTitle": {
+        "message": "自動更新成功"
+    },
+    "updateTips1": {
+        "message": "Cloudopt已升級到"
+    },
+    "updateTips2": {
+        "message": "，更新歷史可以訪問官方博客查看。"
     },
     "adblockInitTitle": {
-        "message": "正在更新"
+        "message": "正在初始化"
     },
     "adblockInitTips": {
         "message": "惡意廣告攔截引擎正在初始化，僅需幾分鐘，初始化過程中請勿關閉瀏覽器。"
     },
-    "optionFollowUs": {
-        "message": "關注我們"
+    "memoryOptimizedIcon": {
+        "message": "⏸"
     },
-    "optionFollowUsText": {
-        "message": "關注我們的推特或者微信公眾號，可以實時獲取Cloudopt產品最新動態，同時還能看到業界最新的安全資訊。"
+    "optionTipsDontDuplicate": {
+        "message": "請勿重複添加"
     },
-    "optionFollowUsTwitter": {
-        "message": "Twitter"
+    "optionTipsInputUrlisNull": {
+        "message": "您輸入的域名為空，請檢查後輸入"
     },
-    "optionFollowUsWeixin": {
-        "message": "Weixin"
+    "optionTipsInputUrlisError": {
+        "message": "您輸入的域名有誤，請檢查後輸入"
     },
-    "weixinDialogText": {
-        "message": "請使用微信掃描二維碼。"
+    "updateConfigFailure": {
+        "message": "配置更新失敗"
     },
-    "optionCustomRule": {
-        "message": "自定義訂閱規則<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+    "bankSafeTips": {
+        "message": "檢測到您正在訪問銀行網站，Cloudopt將為您保駕護航！"
     },
-    "optionTipsAddCustomRuleSuccess": {
-        "message": "自定義訂閱規則添加成功"
+    "gameSafeTips": {
+        "message": "檢測到您正在訪問遊戲網站，Cloudopt將為您保駕護航！"
     },
-    "optionTipsAddCustomRuleFailure": {
-        "message": "自定義訂閱規則添加失敗"
+    "shopSafeTips": {
+        "message": "檢測到您正在訪問購物網站，Cloudopt將為您保駕護航！"
     },
-    "optionCustomRuleUrl": {
-        "message": "訂閱地址"
+    "hospitalSafeTips": {
+        "message": "檢測到您正在訪問醫院網站，Cloudopt將為您保駕護航！"
     },
-    "optionCustomRuleUpdateTime": {
-        "message": "最近更新時間"
+    "guideStep1Title": {
+        "message": "歡迎使用 Cloudopt AdBlocker"
     },
-    "optionAccount": {
-        "message": "帳戶"
+    "guideStep1Content": {
+        "message": "Cloudopt AdBlocker 可以實時保護您的安全、防止追跡、惡意域名，過濾橫幅廣告、彈窗廣告以及視頻廣告。我們將引導您進行初步的設置。"
     },
-    "optionAccountWeixin": {
-        "message": "WEIXIN"
+    "guideNext": {
+        "message": "下一步"
     },
-    "optionAccountFacebook": {
-        "message": "FACEBOOK"
+    "guideSafeCloudSwitchTitle": {
+        "message": "網頁保護"
     },
-    "optionAccountLogin": {
-        "message": "立即登入"
+    "guideSafeCloudSwitchContent": {
+        "message": "實時攔截危險網站，保護您不受釣魚、惡意網址的威脅。"
     },
-    "optionAccountLogedTips": {
-        "message": "歡迎您使用Cloudopt，##"
+    "guideStep2Title": {
+        "message": "保護您不受惡意網站的威脅"
     },
-    "optionAccountProfile": {
-        "message": "個人中心"
+    "guideStep3Title": {
+        "message": "攔截惡意廣告及煩人彈窗"
     },
-    "optionAccountLogout": {
-        "message": "登出"
+    "guideAdblockActivateSwitchTitle": {
+        "message": "廣告攔截"
     },
-    "mustLogedTips": {
-        "message": "請先登錄再繼續使用"
+    "guideAdblockActivateSwitchContent": {
+        "message": "有效加速頁面載入、節省帶寬、屏蔽惡意廣告和彈窗。"
     },
-    "urlErrorTips": {
-        "message": "請輸入正確的地址"
+    "guideStep4Title": {
+        "message": "保護您的隱私安全不受窺探"
     },
-    "waitSubscribe": {
-        "message": "正在下載規則檔案，請稍後"
+    "guideSafePrivacySwitchTitle": {
+        "message": "隱私保護"
     },
-    "optionClassifySpeedup": {
-        "message": "優化加速<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
+    "guideSafePrivacySwitchContent": {
+        "message": "阻止網站、廣告公司等追踪您瀏覽行為，保護您的隱私。"
     },
-    "optionDnsSpeed": {
-        "message": "DNS預加載"
+    "guideStep5Title": {
+        "message": "加入用戶體驗改進計劃"
     },
-    "optionDnsSpeedDetails": {
-        "message": "提前對可能會訪問的網站進行DNS解析，加速連接網站的速度。"
+    "guideDataCollectionSwitchTitle": {
+        "message": "用戶體驗改進計劃"
     },
-    "optionWebPrerendering": {
-        "message": "網頁預加載"
+    "guideDataCollectionSwitchContent": {
+        "message": "為了更好的給您提供服務，將允許向Cloudopt提供一些技術信息及交互數據。<a href='https://www.cloudopt.net/policy/privacy' target='_blank'>隱私聲明</a>"
     },
-    "optionWebPrerenderingDetails": {
-        "message": "提前加載可能會訪問的頁面，提高網頁打開速度。"
+    "guideStep6Title": {
+        "message": "祝賀您！完成初步設置"
+    },
+    "guideStep6Content": {
+        "message": "您已經完成基本的設置，您還可以隨時在瀏覽器的右上角找到我們修改設置。您還可以登錄您的 Cloudopt 賬戶或者直接關閉本頁面。"
+    },
+    "guideLogin": {
+        "message": "登錄"
+    },
+    "optionAboutTitle": {
+        "message": "關於我們"
+    },
+    "optionAboutDescriptionContent": {
+        "message": "我們提供了多種反饋渠道"
+    },
+    "optionAboutDescriptionDetail": {
+        "message": "您可以通過在線聊天、郵箱、推特等方式與我們取得聯繫。您還可以加入我們的用戶群第一時間獲取更新信息，還有很多福利等著您。 © 2015-2019 Cloudopt<sup>&reg;</sup> 保留所有版權。"
+    },
+    "optionAboutStatisticsTitle": {
+        "message": "數據統計"
+    },
+    "optionAboutStatisticsName": {
+        "message": "統計名稱"
+    },
+    "optionAboutVersion": {
+        "message": "版本信息"
+    },
+    "optionAboutAdBlockCount": {
+        "message": "惡意廣告和挖礦腳本攔截總數"
+    },
+    "optionAboutSiteBlockCount": {
+        "message": "惡意網站攔截總數"
+    },
+    "optionAboutAccelerationCount": {
+        "message": "網頁加速總數"
+    },
+    "optionAboutContectTitle": {
+        "message": "加入用戶小組"
+    },
+    "optionAboutContectMeans": {
+        "message": "社交渠道"
+    },
+    "optionAboutContectWechat": {
+        "message": "關注微信公眾號"
+    },
+    "optionAboutContectQQ": {
+        "message": "加入QQ用戶群"
+    },
+    "optionAboutContectMessager": {
+        "message": "加入Messager用戶群"
+    },
+    "optionAboutContectTwitter": {
+        "message": "關注Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "廣告攔截規則庫更新於"
@@ -442,38 +175,256 @@
     "filterNotUpdated": {
         "message": "廣告攔截規則庫未更新"
     },
-    "memoryOptimizedIcon": {
-        "message": "⏸"
+    "optionAdblockActivatingTitle": {
+        "message": "廣告攔截"
     },
-    "memoryOptimized": {
-        "message": "內存佔用已被優化"
+    "optionAdblockActivatingContent": {
+        "message": "智能根據您的實際情況，阻止網頁上的廣告、惡意的彈窗。"
     },
-
-    "optionsWelcome": {
-        "message": "歡迎您"
+    "optionAdblockDisplayTitle": {
+        "message": "顯示數量"
     },
-    "optionLoginTips": {
-        "message": "登錄以保持同步"
+    "optionAdblockDisplayContent": {
+        "message": "在瀏覽器擴展圖標上顯示已攔截廣告的數量。"
     },
-    "optionLoginRefreshTips": {
-        "message": "登錄成功後請刷新頁面"
+    "optionAdblockTitle": {
+        "message": "廣告攔截"
+    },
+    "optionAdblockDescriptionContent": {
+        "message": "攔截惡意廣告及彈窗"
+    },
+    "optionAdblockDescriptionDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker 可以阻止彈出廣告，更快加載網頁，您還可以訂閱自己喜歡的廣告攔截規則列表或是在網頁上進行手動攔截。"
+    },
+    "optionAdblockCustomSubsTitle": {
+        "message": "自定義訂閱規則列表"
+    },
+    "optionAdblockCustomSubsAddresses": {
+        "message": "訂閱地址"
+    },
+    "optionAdblockManualTitle": {
+        "message": "手動攔截元素列表"
+    },
+    "optionAdblockManualSelectors": {
+        "message": "元素選擇器"
+    },
+    "modalAddCustomSubscriptionTitle": {
+        "message": "添加自定義訂閱規則"
+    },
+    "buttonCloseCustomSubscription": {
+        "message": "關閉"
+    },
+    "buttonAddCustomSubscription": {
+        "message": "保存"
+    },
+    "urlErrorTips": {
+        "message": "請輸入正確的地址"
+    },
+    "optionTipsAddCustomRuleSuccess": {
+        "message": "自定義訂閱規則添加成功"
+    },
+    "optionTipsAddCustomRuleFailure": {
+        "message": "自定義訂閱規則添加失敗"
+    },
+    "ruleListUpdating": {
+        "message": "正在更新……"
+    },
+    "ruleListUpdateSuccess": {
+        "message": "廣告攔截規則庫更新成功！點擊可再次更新。"
+    },
+    "ruleListUpdateFail": {
+        "message": "廣告攔截規則庫更新失敗，請檢查網絡連接後，再次點擊嘗試更新。"
+    },
+    "optionBookmarkSearchTitle": {
+        "message": "書籤搜索"
+    },
+    "optionBookmarkSearchContent": {
+        "message": "您在搜索引擎搜索時自動幫助您檢索書籤並嵌入搜索結果中。"
+    },
+    "optionDataCollectionTitle": {
+        "message": "用戶體驗改進計劃"
+    },
+    "optionDataCollectionContent": {
+        "message": "為了更好的給您提供服務，將允許向Cloudopt提供一些技術信息及交互數據。<a href='https://www.cloudopt.net/policy/privacy' target='_blank'>隱私聲明</a>"
+    },
+    "optionMiscTitle": {
+        "message": "輔助功能"
+    },
+    "optionMiscDescriptionContent": {
+        "message": "提供一些額外的設置"
+    },
+    "optionMiscDescriptionDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker還將給您提供一些強大好用的輔助功能，來提升您在瀏覽網頁過程中的用戶體驗。如果您有想要的功能也可以隨時發送郵件到 support@cloudopt.net。"
+    },
+    "optionDNSSpeedTitle": {
+        "message": "DNS預加載"
+    },
+    "optionDNSSpeedContent": {
+        "message": "提前對可能會訪問的網站進行DNS解析，加速連接網站的速度。"
+    },
+    "optionWebPrereadingTitle": {
+        "message": "網頁預加載"
+    },
+    "optionWebPrereadingContent": {
+        "message": "提前加載可能會訪問的頁面，提高網頁打開速度。"
+    },
+    "optionMemoryOptimizeTitle": {
+        "message": "內存優化"
+    },
+    "optionMemoryOptimizeContent": {
+        "message": "內存佔用高於 80% 時，自動對長時間不訪問的標籤頁進行內存優化。"
+    },
+    "optionOptimizationTitle": {
+        "message": "優化加速"
+    },
+    "optionOptimizationContent": {
+        "message": "加速您的網頁訪問，提升用戶體驗"
+    },
+    "optionOptimizationDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> Speed 技術可以利用瀏覽器的一些特性幫助您更快加載網頁，提升您的網頁訪問速度。還可以幫助您減少瀏覽器的資源佔用。"
+    },
+    "optionSafeCloudTitle": {
+        "message": "網頁保護"
+    },
+    "optionSafeCloudContent": {
+        "message": "實時攔截危險網站，保護您不受釣魚、惡意網址的威脅。"
+    },
+    "optionSafeDownloadTitle": {
+        "message": "下載保護"
+    },
+    "optionSafeDownloadContent": {
+        "message": "自動阻止從危險網站上的下載，避免惡意網站自動下載。"
+    },
+    "optionSafePrivacyTitle": {
+        "message": "隱私保護"
+    },
+    "optionSafePrivacyContent": {
+        "message": "有效阻止分析網站對您的網絡活動進行跟踪或記錄。"
+    },
+    "optionSafePotentialTitle": {
+        "message": "嚴格模式"
+    },
+    "optionSafePotentialContent": {
+        "message": "開啟後同時會攔截不受歡迎的網站、信譽評估較低的網站。"
+    },
+    "optionSafeCoinTitle": {
+        "message": "挖礦腳本攔截"
+    },
+    "optionSafeCoinContent": {
+        "message": "幫助您避免電腦被惡意網站用於挖礦（比特幣）。"
+    },
+    "optionSafeTipsTitle": {
+        "message": "安全提示"
+    },
+    "optionSafeTipsContent": {
+        "message": "在访问银行、电商等容易被冒充的网站时弹出安全提示。"
     },
     "optionsIntelligentSecurity": {
         "message": "智能安全"
     },
+    "optionSafeContent": {
+        "message": "连接全球用户的安全网络"
+    },
+    "optionSafeDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> 云安全网络是一个基于基于信誉评估机制的威胁分析系统，它连接着世界各地的用户，实时地保护着您网页安全。Cloudopt<sup>&reg;</sup> AI 能够 7x24 小时不间断地实时分析网络威胁。"
+    },
+    "optionSafeOfficalLink": {
+        "message": "了解详细信息请点击访问官方网站。"
+    },
+    "optionSafeUsersConnect": {
+        "message": "全球连接用户"
+    },
+    "optionsSafeConnections": {
+        "message": "人数"
+    },
+    "optionsSafeConnectionSuccess": {
+        "message": "连接成功"
+    },
+    "optionsSafeConnectionFail": {
+        "message": "无法连接到云安全中心，请检查您的网络后重试。"
+    },
+    "optionsSafeConnectionsIn24Hours": {
+        "message": "近24小时中受保护用户数"
+    },
+    "optionsWelcome": {
+        "message": "欢迎您"
+    },
+    "optionLoginTips": {
+        "message": "登录以保持同步"
+    },
+    "popupLogout": {
+        "message": "退出登录"
+    },
+    "optionLoggedInTips": {
+        "message": "實時保護您的隱私安全"
+    },
+    "optionLoginRefreshTips": {
+        "message": "登录成功后请刷新页面"
+    },
     "optionsAdblock": {
-        "message": "廣告攔截"
+        "message": "广告拦截"
     },
     "optionsSpeedup": {
-        "message": "優化加速"
+        "message": "优化加速"
     },
     "optionsOtherSettings": {
-        "message": "其他設置"
+        "message": "其他设置"
     },
     "optionsMisc": {
-        "message": "輔助功能"
+        "message": "辅助功能"
     },
     "optionsAboutUs": {
-        "message": "關於我們"
+        "message": "关于我们"
+    },
+    "popupAdblockName": {
+        "message": "广告拦截"
+    },
+    "popupPrerenderName": {
+        "message": "网页加速"
+    },
+    "popupNoNeedGrade": {
+        "message": "此页面无需评分"
+    },
+    "popupNotValid": {
+        "message": "无法在该页面生效"
+    },
+    "popupSystemPage": {
+        "message": "这个页面可能是浏览器自带页面，我们仍然在实时保护着您。"
+    },
+    "popupEvaluateTipsTitle": {
+        "message": "分享您的反馈"
+    },
+    "popupEvaluateTipsSubtitle": {
+        "message": "您的反馈将帮助更多人抵御危险、钓鱼网站。"
+    },
+    "popupSafeProtectTitle": {
+        "message": "实时安全保护"
+    },
+    "popupSafeProtectSubtitle": {
+        "message": "关闭后将不再保护该网站的访问"
+    },
+    "popupAdblockTitle": {
+        "message": "恶意广告拦截"
+    },
+    "popupAdblockSubtitle": {
+        "message": "关闭后将不再拦截该网站的广告"
+    },
+    "popupGradeTitle": {
+        "message": "网站信誉评估评分"
+    },
+    "popupGradeSubtitle": {
+        "message": "点击查看网站的信誉评估报告"
+    },
+    "popupManualTitle": {
+        "message": "手动拦截此网站的广告"
+    },
+    "popupManualSubtitle": {
+        "message": "点击打开手动拦截器"
+    },
+    "popupMoreTitle": {
+        "message": "更多设置选项"
+    },
+    "popupMoreSubtitle": {
+        "message": "点击前往设置页面进行详细设置"
     }
 }

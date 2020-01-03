@@ -47,8 +47,8 @@ export default class UserAside implements IBaseHTMLPages {
             <div class="thumb">
                 <img src="/image/avatar.jpg" alt="" srcset="" />
             </div>
-            <span class="name" i18n="optionsWelcome">欢迎您</span>
-            <p class="description" i18n="optionLoginTips">登录以保持同步</p>
+            <span class="name">${i18n.get('optionsWelcome')}</span>
+            <p class="description">${i18n.get('optionLoginTips')}</p>
         `
         i18n.translateComponent(this.userInfoDOM)
         this.mainDOM.querySelector('.user-info').replaceWith(this.userInfoDOM)
@@ -58,12 +58,12 @@ export default class UserAside implements IBaseHTMLPages {
                 <img src="${data.head.startsWith('http') ? data.head : `https://cdn.cloudopt.net/image/${data.head}-head`}" alt="" srcset="" />
             </div>
             <span class="name">${data.nickname}</span>
-            <p class="description">实时保护您的隐私安全</p>
+            <p class="description">${i18n.get('optionLoggedInTips')}</p>
             `
 
             const logoutDiv = document.createElement('div')
             logoutDiv.className = 'logout'
-            logoutDiv.innerHTML = '<span i18n="popupLogout">退出登录</span>'
+            logoutDiv.innerHTML = `<span>${i18n.get('popupLogout')}</span>`
             logoutDiv.addEventListener('click', (ev: MouseEvent) => {
                 logout().then(() => {
                     window.location.reload()

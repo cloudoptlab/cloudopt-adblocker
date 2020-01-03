@@ -34,16 +34,16 @@ export default class AdBlockPages implements IBaseHTMLPages {
     private renderSwitchInfoComponent(config: Config): HTMLElement[] {
         const list = [
             {
-                title: "广告拦截",
+                title: i18n.get('optionAdblockActivatingTitle'),
                 key: "adblockActivating",
-                content: "智能根据您的实际情况，阻止网页上的广告、恶意的弹窗。",
+                content: i18n.get('optionAdblockActivatingContent'),
                 icon: this.createIcon("icons-hand"),
                 on: config.adblockActivating,
             },
             {
-                title: "显示数量",
+                title: i18n.get('optionAdblockDisplayTitle'),
                 key: "adblockDisplay",
-                content: "在浏览器扩展图标上显示已拦截广告的数量。",
+                content: i18n.get('optionAdblockDisplayContent'),
                 icon: this.createIcon("icons-statistics"),
                 on: config.adblockDisplay,
             },
@@ -73,13 +73,10 @@ export default class AdBlockPages implements IBaseHTMLPages {
     public async render(): Promise<HTMLElement> {
         const config = await getCoreConfig()
         this.mainDOM.innerHTML = `
-            <div class="title">广告拦截</div>
+            <div class="title">${i18n.get('optionAdblockTitle')}</div>
             <div class="description">
-                <p class="content">拦截恶意广告及弹窗</p>
-                <span class="detaile">
-                    Cloudopt® AdBlocker
-                    可以阻止弹出广告，更快加载网页，您还可以订阅自己喜欢的广告拦截规则列表或是在网页上进行手动拦截。
-                </span>
+                <p class="content">${i18n.get('optionAdblockDescriptionContent')}</p>
+                <span class="detaile">${i18n.get('optionAdblockDescriptionDetail')}</span>
                 <a class="link-info" id="lastUpdatedAt">
                     ${this.lastUpdatedString}
                 </a>
@@ -89,11 +86,11 @@ export default class AdBlockPages implements IBaseHTMLPages {
             </div>
             <div class="table-info-container">
                 <div class="table-item">
-                    <span class="title">自定义订阅规则列表</span>
+                    <span class="title">${i18n.get('optionAdblockCustomSubsTitle')}</span>
                     <img class="add-item" src="${this.createIcon('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
                     <div class="table" id="customSubscriptionTable">
                         <div class="hard">
-                            <span class="text">订阅地址</span>
+                            <span class="text">${i18n.get('optionAdblockCustomSubsAddresses')}</span>
                         </div>
                         <div class="body-list">
                             <ul>
@@ -103,10 +100,10 @@ export default class AdBlockPages implements IBaseHTMLPages {
                     </div>
                 </div>
                 <div class="table-item">
-                    <span class="title">手动拦截元素列表</span>
+                    <span class="title">${i18n.get('optionAdblockManualTitle')}</span>
                     <div class="table" id="customRuleTable">
                         <div class="hard">
-                            <span class="text">元素选择器</span>
+                            <span class="text">${i18n.get('optionAdblockManualSelectors')}</span>
                         </div>
                         <div class="body-list">
                             <ul>
@@ -120,7 +117,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitle">添加自定义订阅规则</h5>
+                            <h5 class="modal-title" id="modalTitle">${i18n.get('modalAddCustomSubscriptionTitle')}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -129,8 +126,8 @@ export default class AdBlockPages implements IBaseHTMLPages {
                             <input type="text" id="inputCustomSubscribeUrl" class="form-control">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="buttonCloseCustomSubscription">Close</button>
-                            <button type="button" class="btn btn-primary" id="buttonAddCustomSubscription">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="buttonCloseCustomSubscription">${i18n.get('buttonCloseCustomSubscription')}</button>
+                            <button type="button" class="btn btn-primary" id="buttonAddCustomSubscription">${i18n.get('buttonAddCustomSubscription')}</button>
                         </div>
                     </div>
                 </div>
@@ -193,16 +190,16 @@ export default class AdBlockPages implements IBaseHTMLPages {
 
         const lastUpdatedAtElement = this.mainDOM.querySelector('#lastUpdatedAt')
         lastUpdatedAtElement.addEventListener('click', (ev: MouseEvent) => {
-            lastUpdatedAtElement.innerHTML = '正在更新……'
+            lastUpdatedAtElement.innerHTML = i18n.get('ruleListUpdating')
             message.send('check-filters-update').then((result) => {
                 if (result === 'true') {
-                    lastUpdatedAtElement.innerHTML = '广告拦截规则库更新成功！点击可再次更新。'
+                    lastUpdatedAtElement.innerHTML = i18n.get('ruleListUpdateSuccess')
                     setTimeout(async () => {
                         await this.generateLastUpdatedString()
                         lastUpdatedAtElement.innerHTML = this.lastUpdatedString
                     }, 2000);
                 } else {
-                    lastUpdatedAtElement.innerHTML = '广告拦截规则库更新失败，请检查网络连接后，再次点击尝试更新。'
+                    lastUpdatedAtElement.innerHTML = i18n.get('ruleListUpdateFail')
                 }
             })
         })

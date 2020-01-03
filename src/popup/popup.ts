@@ -4,7 +4,7 @@ import * as message from '../core/message'
 import { open as openTab } from '../core/tab'
 import { debug as debugLog } from '../core/logger'
 import { website as gradeWebsite } from '../core/grade'
-import { translateCurrentPage } from '../core/i18n'
+import * as i18n from '../core/i18n'
 import { updateLoginStatus } from '../core/loginState'
 import DataSet from '@antv/data-set'
 import G2 from '@antv/g2'
@@ -20,8 +20,8 @@ class G2Model {
     constructor(container: string) {
         this.container = container
 
-        this.adblockName = '广告拦截'
-        this.prerenderName = '网页加速'
+        this.adblockName = i18n.get('popupAdblockName')
+        this.prerenderName = i18n.get('popupPrerenderName')
     }
 
     private async initalize(): Promise<void> {
@@ -173,15 +173,14 @@ async function initialize() {
     utils.sendGA('Open Popup Page')
 
     if (isSystemPage) {
-        console.log('中文国际化需要修改')
         $('#safeProtect input').prop('disabled', true).prop('checked', true)
         $('#adsIntercept input').prop('disabled', true).prop('checked', true)
-        $('#credibilityScore .sub-title').text('此页面无需评分')
+        $('#credibilityScore .sub-title').text(i18n.get('popupNoNeedGrade'))
         $('#g2mountNode').replaceWith('<img src="image/icon/popup/undraw_heatmap_uyye.png" class="system-page cover">')
         const html = `
             <div style="text-align: center;" class="system-page">
-                <div class="title">无法在该页面生效</div>
-                <div class="content">这个页面可能是浏览器自带页面，我们仍然在实时保护着您。</div>
+                <div class="title">${i18n.get('popupNotValid')}</div>
+                <div class="content">${i18n.get('popupSystemPage')}</div>
             </div>`
         $('.chart-bottom-custom-container').replaceWith(html)
         return
@@ -283,5 +282,5 @@ async function initialize() {
 
 $.ready.then(() => {
     initialize()
-    translateCurrentPage()
+    i18n.translateCurrentPage()
 })
