@@ -1,6 +1,7 @@
 import './guide.scss'
 import { createSwitchInfoDom } from './common/switchInfo'
 import { get as getCoreConfig } from '../core/config'
+import * as i18n from '../core/i18n'
 
 export class GuideManager {
 
@@ -72,17 +73,14 @@ export class GuideManager {
         const body = document.createElement("div")
         body.className = 'guide-content'
         body.innerHTML = `
-            <h3>欢迎使用 Cloudopt AdBlocker</h3>
-            <span class="text">
-                Cloudopt AdBlocker 可以实时保护您的安全、防止追迹、恶意域名，过滤
-                横幅广告、弹窗广告以及视频广告。我们将引导您进行初步的设置。
-            </span>
+            <h3>${i18n.get('guideStep1Title')}</h3>
+            <span class="text">${i18n.get('guideStep1Content')}</span>
         `
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = '下一步'
+        button.innerHTML = i18n.get('guideNext')
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step2'
         })
@@ -102,18 +100,18 @@ export class GuideManager {
         body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
-            title: '网页保护',
-            content: '实时拦截危险网站，保护您不受钓鱼、恶意网址的威胁。',
+            title: i18n.get('guideSafeCloudSwitchTitle'),
+            content: i18n.get('guideSafeCloudSwitchContent'),
             key: 'safeCloud',
             on: config.safeCloud,
         }).divElement
-        body.innerHTML = '<h3>保护您不受恶意网站的威胁</h3>'
+        body.innerHTML = `<h3>${i18n.get('guideStep2Title')}</h3>`
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = '下一步'
+        button.innerHTML = i18n.get('guideNext')
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step3'
         })
@@ -133,18 +131,18 @@ export class GuideManager {
         body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
-            title: '广告拦截',
-            content: '有效加速页面载入、节省带宽、屏蔽恶意广告和弹窗。',
+            title: i18n.get('guideAdblockActivateSwitchTitle'),
+            content: i18n.get('guideAdblockActivateSwitchContent'),
             key: 'adblockActivating',
             on: config.adblockActivating
         }).divElement
-        body.innerHTML = '<h3>拦截恶意广告及烦人弹窗</h3>'
+        body.innerHTML = `<h3>${i18n.get('guideStep3Title')}</h3>`
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = '下一步'
+        button.innerHTML = i18n.get('guideNext')
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step4'
         })
@@ -164,18 +162,18 @@ export class GuideManager {
         body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
-            title: '隐私保护',
-            content: '阻止网站、广告公司等追踪您浏览行为，保护您的隐私。',
+            title: i18n.get('guideSafePrivacySwitchTitle'),
+            content: i18n.get('guideSafePrivacySwitchContent'),
             key: 'safePrivacy',
             on: config.safePrivacy
         }).divElement
-        body.innerHTML = '<h3>保护您的隐私安全不受窥探</h3>'
+        body.innerHTML = `<h3>${i18n.get('guideStep4Title')}</h3>`
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = '下一步'
+        button.innerHTML = i18n.get('guideNext')
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step5'
         })
@@ -195,18 +193,18 @@ export class GuideManager {
         body.className = 'guide-content'
         const switchElement = createSwitchInfoDom({
             icon: '',
-            title: '用户体验改进计划',
-            content: "为了更好的给您提供服务，将允许向Cloudopt提供一些技术信息及交互数据。<a href='https://www.cloudopt.net/policy/privacy' target='_blank'>隐私声明</a>",
+            title: i18n.get('guideDataCollectionSwitchTitle'),
+            content: i18n.get('guideDataCollectionSwitchContent'),
             key: 'dataCollection',
             on: config.dataCollection
         }).divElement
-        body.innerHTML = '<h3>加入用户体验改进计划</h3>'
+        body.innerHTML = `<h3>${i18n.get('guideStep5Title')}</h3>`
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = '下一步'
+        button.innerHTML = i18n.get('guideNext')
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step6'
         })
@@ -223,17 +221,14 @@ export class GuideManager {
         const body = document.createElement("div")
         body.className = 'guide-content'
         body.innerHTML = `
-            <h3>祝贺您！完成初步设置</h3>
-            <span class="text">
-                您已经完成基本的设置，您还可以随时在浏览器的右上角找到我们修改设置。
-                您还可以登录您的 Cloudopt 账户或者直接关闭本页面。
-            </span>
+            <h3>${i18n.get('guideStep6Title')}</h3>
+            <span class="text">${i18n.get('guideStep6Content')}</span>
         `
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = '登录'
+        button.innerHTML = i18n.get('guideLogin')
         button.addEventListener("click", (ev: MouseEvent) => {
             window.open('https://www.cloudopt.net/account/login')
         })

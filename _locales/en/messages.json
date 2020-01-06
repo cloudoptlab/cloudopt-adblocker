@@ -7,462 +7,365 @@
         "message": "Protects you from tracing and malicious domain names, filters banner ads, pop-up ads and video ads, all in real-time.",
         "description": "Extension Description"
     },
-    "bankSafeTips": {
-        "message": "You are visiting a bank website, Cloudopt is guarding you!"
-    },
-    "gameSafeTips": {
-        "message": "You are visiting a game website, Cloudopt is guarding you!"
-    },
-    "shopSafeTips": {
-        "message": "You are visiting a shopping website, Cloudopt is guarding you!"
-    },
-    "hospitalSafeTips": {
-        "message": "You are visiting a hospital website, Cloudopt is guarding you!"
-    },
-    "ominiboxTips": {
-        "message": "Enter a phone number or a URL to Check security"
-    },
-    "dangDownTitle": {
-        "message": "You download has been blocked"
-    },
-    "dangDownTips": {
-        "message": "Detecting that you are downloading files from a dangerous website, Cloudopt has blocked that for you."
-    },
-    "popupCleanCache": {
-        "message": "Clean up cache"
-    },
-    "popupCleanPrivacy": {
-        "message": "Clean up private data"
-    },
-    "popupReport": {
-        "message": "Report a site"
-    },
-    "popupEvaluation": {
-        "message": "Evaluate extensions"
-    },
-    "popupLogout": {
-        "message": "Logout"
-    },
-    "popupRealTimeProtection": {
-        "message": "Real-Time Protection"
-    },
-    "popupRealTimeProtectionSpan": {
-        "message": "Protecting while you are browsing"
-    },
-    "popupAdBlocking": {
-        "message": "AdBlocking"
-    },
-    "popupAdBlockingSpan": {
-        "message": "Filters advitisements out"
-    },
-    "popupLab": {
-        "message": "Lab"
-    },
-    "popupLabSpan": {
-        "message": "Some interesting tricks"
-    },
-    "popupFeedback": {
-        "message": "Feedback"
-    },
-    "popupFeedbackSpan": {
-        "message": "Help us to improve"
-    },
-    "popupScoreButton": {
-        "message": "View online comments"
-    },
-    "popupEvaluateButton": {
-        "message": "Comment this site"
-    },
-    "popupEvaluateTipsTitle": {
-        "message": "Share your opinion"
-    },
-    "popupEvaluateTipsSubtitle": {
-        "message": "Your comments will help defend more people against dangerous, phishing sites."
-    },
-    "popupMark": {
-        "message": "mark"
-    },
-    "optionTipsDontDuplicate": {
-        "message": "You have already added this"
-    },
-    "optionTipsAddAllowListSuccess": {
-        "message": "Cloud security allowlist added successfully"
-    },
-    "optionTipsAddAllowListAdsSuccess": {
-        "message": "allowlist-ads added successfully"
-    },
-    "optionTipsAddBlockListSuccess": {
-        "message": "Cloud security blocklist added successfully"
-    },
-    "optionTipsInputUrlisNull": {
-        "message": "Empty domain name, please check and enter"
-    },
-    "optionTipsInputUrlisError": {
-        "message": "Invalid domain name, please check and enter"
-    },
-    "optionClassifySafeProtect": {
-        "message": "Security"
-    },
-    "optionCloudReputation": {
-        "message": "Cloud Reputation Assessment"
-    },
-    "optionCloudReputationDetails": {
-        "message": "Blocks dangerous sites, protect you from threats from phishing, malicious websites"
-    },
-    "optionFileDownload": {
-        "message": "Download Protection"
-    },
-    "optionFileDownloadDetails": {
-        "message": "Automatically blocks downloads from dangerous websites"
-    },
-    "optionSafeCoin": {
-        "message": "Miner Blocking"
-    },
-    "optionSafeCoinDetails": {
-        "message": "Helps to avoid your computers to be used by malicious websites for (bitcoins) mining"
-    },
-    "optionSafePrivacy": {
-        "message": "Privacy Protection"
-    },
-    "optionSafePrivacyDetails": {
-        "message": "Prevents the analysis sites to track or to record you browsing activity"
-    },
-    "optionSafePotential": {
-        "message": "Potential Threat"
-    },
-    "optionSafePotentialDetails": {
-        "message": "Blocks low reputation sites"
-    },
-    "optionClassifyAdblock": {
-        "message": "Adblock"
-    },
-    "optionAdblockActivating": {
-        "message": "Actived automatically"
-    },
-    "optionAdblockActivatingDetails": {
-        "message": "Automatically prevents displaying of ads on the page"
-    },
-    "optionAdblockDisplay": {
-        "message": "Display Counts"
-    },
-    "optionAdblockDisplayDetails": {
-        "message": "Shows the number of blocked ads on the extension icon"
-    },
-    "optionAdblockHeuristic": {
-        "message": "Heuristic Detection (BETA)"
-    },
-    "optionAdblockHeuristicDetails": {
-        "message": "Heuristic detection can effectively intercept some of the potential advertisement, ordinary users are not recommanded to open"
-    },
-    "optionAdblockLight": {
-        "message": "Cloudopt Light Technology"
-    },
-    "optionAdblockLightDetails": {
-        "message": "Helps adblocking even when in bad networking"
-    },
-    "optionClassifyAllowList": {
-        "message": "Cloud security allowlist"
-    },
-    "optionClassifyAdsAllowList": {
-        "message": "AD blocking allowlist"
-    },
-    "optionAllowListAdd": {
-        "message": "ADD"
-    },
-    "optionAllowListDelete": {
-        "message": "CLEAR ALL"
-    },
-    "optionAllowListHost": {
-        "message": "Domain Name"
-    },
-    "optionAllowListOperation": {
-        "message": "Operation"
-    },
-    "optionClassifyBlockList": {
-        "message": "Cloud security blocklist"
-    },
-    "optionStatistics": {
-        "message": "Statistics"
-    },
-    "optionStatisticalName": {
-        "message": "Statistical Name"
-    },
-    "optionTotalAdBlockCount": {
-        "message": "Malicious ads and mining script intercepts"
-    },
-    "optionTotalSiteBlockCount": {
-        "message": "Malicious website intercepts"
-    },
-    "optionTotalPrerender": {
-        "message": "Page accelerations"
-    },
-    "optionTodayAdBlockCount": {
-        "message": "Malicious ads and mining script intercepts today"
-    },
-    "optionTodaySiteBlockCount": {
-        "message": "Malicious website intercepts today"
-    },
-    "optionblockListAdd": {
-        "message": "ADD"
-    },
-    "optionblockListDelete": {
-        "message": "CLEAR ALL"
-    },
-    "optionBlockListHost": {
-        "message": "Domain Name"
-    },
-    "optionBlockListOperation": {
-        "message": "Operation"
-    },
-    "optionClassifySync": {
-        "message": "Cloud Synchronize"
-    },
-    "optionSyncLockinTime": {
-        "message": "Recent syncing time"
-    },
-    "optionSyncLockinTimeDetails": {
-        "message": "Last time you sync"
-    },
-    "optionSyncBookmark": {
-        "message": "Sync Bookmarks"
-    },
-    "optionSyncBookmarkDetails": {
-        "message": "Sync browser bookmarks to the cloud"
-    },
-    "optionSyncHistory": {
-        "message": "Sync Browsing History"
-    },
-    "optionSyncHistoryDetails": {
-        "message": "Sync browser history to the cloud"
-    },
-    "optionSyncPriority": {
-        "message": "Sync priority"
-    },
-    "optionSyncPriorityDetails": {
-        "message": "Choose local or cloud data to have precedence when syncing"
-    },
-    "optionSyncCloud": {
-        "message": "Cloud"
-    },
-    "optionSyncLocal": {
-        "message": "Local"
-    },
-    "optionClickView": {
-        "message": "CLICK TO VIEW"
-    },
-    "optionClickFeedback": {
-        "message": "FEEDBACK"
-    },
-    "optionSyncSavedContent": {
-        "message": "Synced Content"
-    },
-    "optionSyncSavedContentDetails": {
-        "message": "Click the button to see what you have synced to the cloud"
-    },
-    "optionClassifyLab": {
-        "message": "Lab"
-    },
-    "optionBookmarkSerch": {
-        "message": "Bookmark search"
-    },
-    "optionBookmarkSerchDetails": {
-        "message": "Will also search you bookmarks when you are using the search engine"
-    },
-    "optionSafeTips": {
-        "message": "Security Tips"
-    },
-    "optionSafeTipsDetails": {
-        "message": "Security tips pop up when you are browsing sites that would be imitated sites like bank sites and e-commerce sites"
-    },
-    "optionKeyboard": {
-        "message": "Safe Keyboard"
-    },
-    "optionKeyboardDetails": {
-        "message": "Automatically pops up a virtual keyboard when you enter a password to protect your input from being monitored"
-    },
-    "optionMemoryOptimization": {
-        "message": "Memory Optimization"
-    },
-    "optionMemoryOptimizationDetails": {
-        "message": "Automatically optimizes memory of tabs when system memory usage is higher than 80%"
-    },
-    "optionClassifyHelp": {
-        "message": "Help Us"
-    },
-    "optionClassifyHelpText": {
-        "message": "When you submit a cloud reputation assessment, your anonymous security-related information will also be submitted to help protecting people. This also helps to improve our cloud. You certainly need not to worry about privacy. More informations in our Privacy Protection Agreement."
-    },
-    "bookmarkSearch": {
-        "message": "Bookmark Search"
-    },
-    "optionDataCollection": {
-        "message": "Join the user experience plan"
-    },
-    "optionDataCollectionDetails": {
-        "message": "In order to provide you with better services, Cloudopt will be allowed to submit some technical information and interactive data. <a href='https://www.cloudopt.net/policy/privacy' target='_blank'>Privacy Policy</a>"
-    },
-    "optionClassifyManual": {
-        "message": "Custom Filter"
-    },
-    "optionManualAdd": {
-        "message": "ADD"
-    },
-    "optionManualName": {
-        "message": "Preview"
-    },
-    "optionManualOperation": {
-        "message": "Operations"
-    },
-    "optionManualTips": {
-        "message": "Submit samples to Cloudopt Cloud Security Center"
-    },
-    "updateTipsTitle": {
-        "message": "Auto updated successfully"
-    },
-    "updateTips1": {
-        "message": "Cloudopt is successfully upgraded to "
-    },
-    "updateTips2": {
-        "message": ", update history is accessible on the official blog."
-    },
-    "updateConfigFailure": {
-        "message": "Configuration update failed"
-    },
     "contextMenus1": {
-        "message": "Add to the cloud security allowlist"
+        "message": "Cloud Security Whitelist"
     },
     "contextMenus2": {
-        "message": "View reputation report"
+        "message": "View Security Report"
     },
     "contextMenus3": {
-        "message": "Manual ad blocking(BETA)"
+        "message": "Manually blocking malicious ads (BETA)"
     },
     "contextMenus4": {
-        "message": "Add to the cloud security blocklist"
+        "message": "Cloud Security Blacklist"
     },
-    "manualTips": {
-        "message": "Left click to select elements to be blocked, right click to exit selection mode"
+    "ominiboxTips": {
+        "message": "Enter your phone number or URL for quick authentication security"
     },
-    "optionManualSave": {
-        "message": "SAVE"
+    "dangDownTitle": {
+        "message": "Your download has been blocked"
     },
-    "manualSaveTips1": {
-        "message": "Save failed. Please make sure the format is correct"
+    "updateTipsTitle": {
+        "message": "Automatic update succeeded"
+    },
+    "updateTips1": {
+        "message": "Cloudopt has been upgraded to"
+    },
+    "updateTips2": {
+        "message": ", the update history can be viewed on the official blog."
     },
     "adblockInitTitle": {
         "message": "Initializing"
     },
     "adblockInitTips": {
-        "message": "Ad blocking engine is initializing, takes a few minutes, please do not close the browser during initialization."
-    },
-    "optionFollowUs": {
-        "message": "Follow us"
-    },
-    "optionFollowUsText": {
-        "message": "Follow our Twitter or WeChat account to get updates on Cloudopt products and see the latest security news in the industry."
-    },
-    "optionFollowUsTwitter": {
-        "message": "Twitter"
-    },
-    "optionFollowUsWeixin": {
-        "message": "Wechat"
-    },
-    "weixinDialogText": {
-        "message": "Please use Wechat to scan the QR code."
-    },
-    "optionCustomRule": {
-        "message": "Custom subscription rules<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
-    },
-    "optionTipsAddCustomRuleSuccess": {
-        "message": "Added successfully"
-    },
-    "optionTipsAddCustomRuleFailure": {
-        "message": "Added Failure"
-    },
-    "optionCustomRuleUrl": {
-        "message": "URL"
-    },
-    "optionCustomRuleUpdateTime": {
-        "message": "LAST UPDATE TIME"
-    },
-    "optionAccount": {
-        "message": "Account"
-    },
-    "optionAccountWeixin": {
-        "message": "WECHAT"
-    },
-    "optionAccountFacebook": {
-        "message": "FACEBOOK"
-    },
-    "optionAccountLogin": {
-        "message": "SIGNIN"
-    },
-    "optionAccountLogedTips": {
-        "message": "Welcome to use Cloudopt, ##"
-    },
-    "optionAccountProfile": {
-        "message": "Personal Center"
-    },
-    "optionAccountLogout": {
-        "message": "Sign Out"
-    },
-    "mustLogedTips": {
-        "message": "Please login to continue using"
-    },
-    "urlErrorTips": {
-        "message": "Please enter a valid URL"
-    },
-    "waitSubscribe": {
-        "message": "Downloading rule files, please wait"
-    },
-    "optionClassifySpeedup": {
-        "message": "Browsing Accelerating<span class=\"mdl-chip\"><span class=\"mdl-chip__text\">BETA</span></span>"
-    },
-    "optionDnsSpeed": {
-        "message": "DNS Preload"
-    },
-    "optionDnsSpeedDetails": {
-        "message": "Parses DNS for potential sites in advance to speed up the connection to the site."
-    },
-    "optionWebPrerendering": {
-        "message": "Page Preloading"
-    },
-    "optionWebPrerenderingDetails": {
-        "message": "Reads pages that may be accessed in advance to speed up page loading."
-    },
-    "optionFiltersLastUpdatedAt": {
-        "message": "Filter rules updated at"
-    },
-    "optionFiltersLastUpdatedAt1": {
-        "message": ", click to update now."
-    },
-    "filterNotUpdated": {
-        "message": "Filter rules has not been updated"
+        "message": "The malicious ad blocking engine is initializing. It only takes a few minutes. Do not close the browser during the initialization process."
     },
     "memoryOptimizedIcon": {
         "message": "⏸"
     },
-    "memoryOptimized": {
-        "message": "This tab was optimized out"
+    "optionTipsInputUrlisNull": {
+        "message": "The domain name you entered is empty, please check and enter"
     },
-
-    "optionsWelcome": {
-        "message": "Welcome"
+    "optionTipsInputUrlisError": {
+        "message": "The domain name you entered is incorrect, please check and enter"
     },
-    "optionLoginTips": {
-        "message": "Sign in to stay in sync"
+    "updateConfigFailure": {
+        "message": "configuration update failed"
     },
-    "optionLoginRefreshTips": {
-        "message": "Refresh this page after successful login"
+    "bankSafeTips": {
+        "message": "Detected that you are visiting a bank website, Cloudopt will escort you!"
+    },
+    "gameSafeTips": {
+        "message": "Detected that you are visiting the game website, Cloudopt will escort you!"
+    },
+    "shopSafeTips": {
+        "message": "Detected that you are visiting a shopping site and Cloudopt will escort you!"
+    },
+    "hospitalSafeTips": {
+        "message": "Detected that you are visiting the hospital website, Cloudopt will escort you!"
+    },
+    "guideStep1Title": {
+        "message": "Welcome to Cloudopt AdBlocker"
+    },
+    "guideStep1Content": {
+        "message": "Cloudopt AdBlocker can protect your security in real time, prevent tracking, malicious domain names, filter banner ads, pop-up ads and video ads. We will guide you through the initial setup."
+    },
+    "guideNext": {
+        "message": "next step"
+    },
+    "guideSafeCloudSwitchTitle": {
+        "message": "Web Protection"
+    },
+    "guideSafeCloudSwitchContent": {
+        "message": "Block dangerous websites in real time and protect you from phishing and malicious URLs."
+    },
+    "guideStep2Title": {
+        "message": "Protecting you from malicious websites"
+    },
+    "guideStep3Title": {
+        "message": "Block malicious ads and annoying popups"
+    },
+    "guideAdblockActivateSwitchTitle": {
+        "message": "Ad Blocking"
+    },
+    "guideAdblockActivateSwitchContent": {
+        "message": "Speed ​​up page loading, save bandwidth, block malicious ads and pop-ups."
+    },
+    "guideStep4Title": {
+        "message": "Protect your privacy from prying eyes"
+    },
+    "guideSafePrivacySwitchTitle": {
+        "message": "Privacy Protection"
+    },
+    "guideSafePrivacySwitchContent": {
+        "message": "Prevent websites, advertising companies, etc. from tracking your browsing behavior and protect your privacy."
+    },
+    "guideStep5Title": {
+        "message": "Join User Experience Improvement Program"
+    },
+    "guideDataCollectionSwitchTitle": {
+        "message": "User Experience Improvement Program"
+    },
+    "guideDataCollectionSwitchContent": {
+        "message": "In order to better serve you, it will allow Cloudopt to provide some technical information and interactive data. <a href='https://www.cloudopt.net/policy/privacy' target='_blank'> Privacy Statement </a>"
+    },
+    "guideStep6Title": {
+        "message": "Congratulations! Complete initial setup"
+    },
+    "guideStep6Content": {
+        "message": "You have completed the basic settings, and you can always find us to modify the settings in the upper right corner of your browser. You can also log in to your Cloudopt account or close this page directly."
+    },
+    "guideLogin": {
+        "message": "login"
+    },
+    "optionAboutTitle": {
+        "message": "About us"
+    },
+    "optionAboutDescriptionContent": {
+        "message": "We provide multiple feedback channels"
+    },
+    "optionAboutDescriptionDetail": {
+        "message": "You can get in touch with us via online chat, email, Twitter, etc. You can also join our user base to get updated information the first time, and there are many benefits waiting for you. © 2015-2019 Cloudopt<sup>&reg;</sup>. All rights reserved."
+    },
+    "optionAboutStatisticsTitle": {
+        "message": "Statistics"
+    },
+    "optionAboutStatisticsName": {
+        "message": "statistics name"
+    },
+    "optionAboutVersion": {
+        "message": "version information"
+    },
+    "optionAboutAdBlockCount": {
+        "message": "Total number of malicious ads and mining script blocks"
+    },
+    "optionAboutSiteBlockCount": {
+        "message": "Total number of malicious website blocks"
+    },
+    "optionAboutAccelerationCount": {
+        "message": "total page acceleration"
+    },
+    "optionAboutContectTitle": {
+        "message": "Join User Group"
+    },
+    "optionAboutContectMeans": {
+        "message": "Social Channels"
+    },
+    "optionAboutContectWechat": {
+        "message": "Follow WeChat public account"
+    },
+    "optionAboutContectQQ": {
+        "message": "Join QQ User Group"
+    },
+    "optionAboutContectMessager": {
+        "message": "Join Messager User Group"
+    },
+    "optionAboutContectTwitter": {
+        "message": "Follow Twitter"
+    },
+    "optionFiltersLastUpdatedAt": {
+        "message": "Ad blocking rule base updated on"
+    },
+    "optionFiltersLastUpdatedAt1": {
+        "message": ", click Manual Update."
+    },
+    "filterNotUpdated": {
+        "message": "Ad blocking rule base not updated"
+    },
+    "optionAdblockActivatingTitle": {
+        "message": "Ad Blocking"
+    },
+    "optionAdblockActivatingContent": {
+        "message": "Intelligently block advertisements and malicious pop-ups on web pages based on your actual situation."
+    },
+    "optionAdblockDisplayTitle": {
+        "message": "Number of displays"
+    },
+    "optionAdblockDisplayContent": {
+        "message": "Shows the number of blocked ads on the browser extension icon."
+    },
+    "optionAdblockTitle": {
+        "message": "Ad Blocking"
+    },
+    "optionAdblockDescriptionContent": {
+        "message": "Block malicious ads and popups"
+    },
+    "optionAdblockDescriptionDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker can block pop-up ads and load web pages faster. You can also subscribe to your favorite list of ad blocking rules or manually block on web pages."
+    },
+    "optionAdblockCustomSubsTitle": {
+        "message": "Custom subscription rule list"
+    },
+    "optionAdblockCustomSubsAddresses": {
+        "message": "Subscription Addresses"
+    },
+    "optionAdblockManualTitle": {
+        "message": "Manually blocking element list"
+    },
+    "optionAdblockManualSelectors": {
+        "message": "Element Selectors"
+    },
+    "modalAddCustomSubscriptionTitle": {
+        "message": "Add custom subscription rule"
+    },
+    "ButtonCloseCustomSubscription": {
+        "message": "Close"
+    },
+    "buttonAddCustomSubscription": {
+        "message": "Save"
+    },
+    "urlErrorTips": {
+        "message": "Please enter the correct address"
+    },
+    "optionTipsDontDuplicate": {
+        "message": "Do not add repeatedly"
+    },
+    "optionTipsAddCustomRuleSuccess": {
+        "message": "Custom subscription rule added successfully"
+    },
+    "optionTipsAddCustomRuleFailure": {
+        "message": "Custom subscription rule addition failed"
+    },
+    "ruleListUpdating": {
+        "message": "Updating ..."
+    },
+    "ruleListUpdateSuccess": {
+        "message": "The ad blocking rule base was updated successfully! Click to update again."
+    },
+    "ruleListUpdateFail": {
+        "message": "The ad blocking rule base update failed. Please check the network connection and click to try to update again."
+    },
+    "optionBookmarkSearchTitle": {
+        "message": "Bookmark Search"
+    },
+    "optionBookmarkSearchContent": {
+        "message": "Automatically helps you retrieve bookmarks and embed them in search results when searching on a search engine."
+    },
+    "optionDataCollectionTitle": {
+        "message": "User Experience Improvement Program"
+    },
+    "optionDataCollectionContent": {
+        "message": "In order to better serve you, it will allow Cloudopt to provide some technical information and interactive data. <a href='https://www.cloudopt.net/policy/privacy' target='_blank'> Privacy Statement </a>"
+    },
+    "optionMiscTitle": {
+        "message": "Accessibility"
+    },
+    "optionMiscDescriptionContent": {
+        "message": "Provide some additional settings"
+    },
+    "optionMiscDescriptionDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker will also provide you with some powerful and useful accessibility features to enhance your user experience when browsing the web. If you have the features you want, you can send an email to support@cloudopt.net."
+    },
+    "optionDNSSpeedTitle": {
+        "message": "DNS Preloading"
+    },
+    "optionDNSSpeedContent": {
+        "message": "Perform DNS resolution on websites that may be visited in advance to speed up the speed of connecting websites."
+    },
+    "optionWebPrereadingTitle": {
+        "message": "Web Preloading"
+    },
+    "optionWebPrereadingContent": {
+        "message": "Loads pages that may be visited in advance to increase page opening speed."
+    },
+    "optionMemoryOptimizeTitle": {
+        "message": "Memory Optimization"
+    },
+    "optionMemoryOptimizeContent": {
+        "message": "When the memory usage is higher than 80%, memory optimization is automatically performed for tab pages that have not been accessed for a long time."
+    },
+    "optionOptimizationTitle": {
+        "message": "Optimization Acceleration"
+    },
+    "optionOptimizationContent": {
+        "message": "Speed ​​up your webpage visits and improve user experience"
+    },
+    "optionOptimizationDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> Speed ​​technology can take advantage of some browser features to help you load web pages faster and increase your web page access speed. It can also help you reduce your browser ’s resource footprint."
+    },
+    "optionSafeCloudTitle": {
+        "message": "Web Protection"
+    },
+    "optionSafeCloudContent": {
+        "message": "Block dangerous websites in real time to protect you from phishing and malicious URLs."
+    },
+    "optionSafeDownloadTitle": {
+        "message": "Download Protection"
+    },
+    "optionSafeDownloadContent": {
+        "message": "Automatically blocks downloads from dangerous websites and prevents malicious websites from downloading automatically."
+    },
+    "optionSafePrivacyTitle": {
+        "message": "Privacy Protection"
+    },
+    "optionSafePrivacyContent": {
+        "message": "Effectively prevents analytics sites from tracking or recording your web activity."
+    },
+    "optionSafePotentialTitle": {
+        "message": "Strict Mode"
+    },
+    "optionSafePotentialContent": {
+        "message": "When opened, it will also block unwanted websites and websites with low reputation."
+    },
+    "optionSafeCoinTitle": {
+        "message": "mining script interception"
+    },
+    "optionSafeCoinContent": {
+        "message": "Helps prevent your computer from being used for mining (Bitcoin) by malicious websites."
+    },
+    "optionSafeTipsTitle": {
+        "message": "Safety Tips"
+    },
+    "optionSafeTipsContent": {
+        "message": "Pop-up security tips when visiting websites that are easily impersonated, such as banks and e-commerce."
     },
     "optionsIntelligentSecurity": {
         "message": "Intelligent Security"
     },
+    "optionSafeContent": {
+        "message": "A secure network for users worldwide"
+    },
+    "optionSafeDetail": {
+        "message": "Cloudopt<sup>&reg;</sup> Cloud Security Network is a threat analysis system based on the reputation assessment mechanism. It connects users around the world and protects your web pages in real time. Cloudopt<sup>&reg;</sup> AI analyzes network threats in real-time, 7x24."
+    },
+    "optionSafeOfficalLink": {
+        "message": "For more information, please visit the official website."
+    },
+    "optionSafeUsersConnect": {
+        "message": "Global Connected Users"
+    },
+    "optionsSafeConnections": {
+        "message": "People"
+    },
+    "optionsSafeConnectionSuccess": {
+        "message": "Connection succeeded"
+    },
+    "optionsSafeConnectionFail": {
+        "message": "Unable to connect to the Cloud Security Center, please check your network and try again."
+    },
+    "optionsSafeConnectionsIn24Hours": {
+        "message": "Protected Users in Last 24 Hours"
+    },
+    "optionsWelcome": {
+        "message": "Welcome"
+    },
+    "optionLoginTips": {
+        "message": "Login to stay in sync"
+    },
+    "popupLogout": {
+        "message": "Logout"
+    },
+    "optionLoggedInTips": {
+        "message": "Protecting your privacy in real time"
+    },
+    "optionLoginRefreshTips": {
+        "message": "Please refresh the page after successful login"
+    },
     "optionsAdblock": {
-        "message": "Adblocking"
+        "message": "Ad Blocking"
     },
     "optionsSpeedup": {
-        "message": "Optimization & Acceleration"
+        "message": "optimization acceleration"
     },
     "optionsOtherSettings": {
         "message": "Other Settings"
@@ -471,6 +374,57 @@
         "message": "Accessibility"
     },
     "optionsAboutUs": {
-        "message": "About Us"
+        "message": "About us"
+    },
+    "popupAdblockName": {
+        "message": "Ad Blocking"
+    },
+    "popupPrerenderName": {
+        "message": "Web Acceleration"
+    },
+    "popupNoNeedGrade": {
+        "message": "This page does not require ratings"
+    },
+    "popupNotValid": {
+        "message": "Cannot take effect on this page"
+    },
+    "popupSystemPage": {
+        "message": "This page may be the browser's own page, we are still protecting you in real time."
+    },
+    "popupEvaluateTipsTitle": {
+        "message": "Share your feedback"
+    },
+    "popupEvaluateTipsSubtitle": {
+        "message": "Your feedback will help more people fight off dangerous, phishing sites."
+    },
+    "popupSafeProtectTitle": {
+        "message": "Real-time security protection"
+    },
+    "popupSafeProtectSubtitle": {
+        "message": "Access to this site will no longer be protected when closed"
+    },
+    "popupAdblockTitle": {
+        "message": "Malicious Ad Blocking"
+    },
+    "popupAdblockSubtitle": {
+        "message": "Ads on this site will no longer be blocked when closed"
+    },
+    "popupGradeTitle": {
+        "message": "Website Reputation Rating"
+    },
+    "popupGradeSubtitle": {
+        "message": "Click to view website reputation report"
+    },
+    "popupManualTitle": {
+        "message": "Manually block ads for this site"
+    },
+    "popupManualSubtitle": {
+        "message": "Click to open manual blocker"
+    },
+    "popupMoreTitle": {
+        "message": "More setting options"
+    },
+    "popupMoreSubtitle": {
+        "message": "Click to go to the settings page for detailed settings"
     }
 }

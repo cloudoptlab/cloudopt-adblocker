@@ -3,6 +3,7 @@ import "./index.scss";
 import { IBaseHTMLPages } from "../types";
 import { Config, get as getCoreConfig } from "../../../core/config"
 import { connectionCount } from "../../../core/api"
+import * as i18n from "../../../core/i18n"
 
 export default class SafePages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div");
@@ -27,44 +28,44 @@ export default class SafePages implements IBaseHTMLPages {
     private renderSwitchInfoComponent(config: Config): HTMLElement[] {
         const list = [
             {
-                title: "网页保护",
+                title: i18n.get('optionSafeCloudTitle'),
                 key: "safeCloud",
-                content: "实时拦截危险网站，保护您不受钓鱼、恶意网址的威胁。",
+                content: i18n.get('optionSafeCloudContent'),
                 icon: this.createIcon("icons-chrome"),
                 on: config.safeCloud,
             },
             {
-                title: "下载保护",
+                title: i18n.get('optionSafeDownloadTitle'),
                 key: "safeDownload",
-                content: "自动阻止从危险网站上的下载，避免恶意网站自动下载。",
+                content: i18n.get('optionSafeDownloadContent'),
                 icon: this.createIcon("icons-download"),
                 on: config.safeDownload,
             },
             {
-                title: "隐私保护",
+                title: i18n.get('optionSafePrivacyTitle'),
                 key: "safePrivacy",
-                content: "有效阻止分析网站对您的网络活动进行跟踪或记录。",
+                content: i18n.get('optionSafePrivacyContent'),
                 icon: this.createIcon("icons-user_shield"),
                 on: config.safePrivacy,
             },
             {
-                title: "严格模式",
+                title: i18n.get('optionSafePotentialTitle'),
                 key: "safePotential",
-                content: "开启后同时会拦截不受欢迎的网站、信誉评估较低的网站。",
+                content: i18n.get('optionSafePotentialContent'),
                 icon: this.createIcon("icons-warning_shield"),
                 on: config.safePotential,
             },
             {
-                title: "挖矿脚本拦截",
+                title: i18n.get('optionSafeCoinTitle'),
                 key: "safeCoin",
-                content: "帮助您避免电脑被恶意网站用于挖矿（比特币）。",
+                content: i18n.get('optionSafeCoinContent'),
                 icon: this.createIcon("icons-coins"),
                 on: config.safeCoin,
             },
             {
-                title: "安全提示",
+                title: i18n.get('optionSafeTipsTitle'),
                 key: "labSafeTips",
-                content: "在访问银行、电商等容易被冒充的网站时弹出安全提示。",
+                content: i18n.get('optionSafeTipsContent'),
                 icon: this.createIcon("icons-filled_topic"),
                 on: config.labSafeTips,
             },
@@ -75,17 +76,13 @@ export default class SafePages implements IBaseHTMLPages {
     public async render(): Promise<HTMLElement> {
         const config = await getCoreConfig()
         this.mainDOM.innerHTML = `
-            <div class="title" i18n="optionsIntelligentSecurity">智能安全</div>
+            <div class="title" i18n="optionsIntelligentSecurity">${i18n.get('optionsIntelligentSecurity')}</div>
             <div class="description">
-                <p class="content">连接全球用户的安全网络</p>
-                <span class="detaile">
-                    Cloudopt<sup>&reg;</sup>
-                    云安全网络是一个基于基于信誉评估机制的威胁分析系统，它连接着世界各地的用户，实时地保护着您网页安全。Cloudopt<sup>&reg;</sup>
-                    AI 能够 7x24 小时不间断地实时分析网络威胁。
-                </span>
+                <p class="content">${i18n.get('optionSafeContent')}</p>
+                <span class="detaile">${i18n.get('optionSafeDetail')}</span>
                 <a class="link-info" href="https://cloudopt.net/" target="_blank">
                     <img src="/image/icon/option/right.svg" alt="" srcset="" />
-                    了解详细信息请点击访问官方网站。
+                    ${i18n.get('optionSafeOfficalLink')}
                 </a>
             </div>
             <div class="card">
@@ -96,19 +93,19 @@ export default class SafePages implements IBaseHTMLPages {
                                 <img src="/image/icon/option/safe/icons-cloud_connection.svg" alt="" srcset="" />
                             </span>
                         </div>
-                        <span class="title">全球连接用户</span>
+                        <span class="title">${i18n.get('optionSafeUsersConnect')}</span>
                     </div>
                     <div class="right-column">
                         <span class="count">${this.connectionCount}</span>
-                        <span class="people">人数</span>
+                        <span class="people">${i18n.get('optionsSafeConnections')}</span>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="connect-status">
                         <img src="${this.connected ? this.createIcon('icons-checkmark') : this.createIcon('icons-sad_cloud')}" alt="" srcset="" />
-                        <span class="text ${this.connected ? "connected" : "disconnected"}">${this.connected ? "连接成功" : "无法连接到云安全中心，请检查您的网络后重试。"}</span>
+                        <span class="text ${this.connected ? "connected" : "disconnected"}">${this.connected ? i18n.get('optionsSafeConnectionSuccess') : i18n.get('optionsSafeConnectionFail')}</span>
                     </div>
-                    <span>近24小时中受保护用户数</span>
+                    <span>${i18n.get('optionsSafeConnectionsIn24Hours')}</span>
                 </div>
             </div>
             <div class="switch-info-container">

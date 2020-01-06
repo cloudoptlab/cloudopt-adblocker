@@ -2,6 +2,7 @@ import { createSwitchInfoDom } from "../../common/switchInfo";
 import "./index.scss";
 import { IBaseHTMLPages } from "../types";
 import { Config } from "../../../core/config"
+import * as i18n from '../../../core/i18n'
 
 export default class AuxiliaryPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")
@@ -15,16 +16,16 @@ export default class AuxiliaryPages implements IBaseHTMLPages {
         const createIcon = (i: string) => `image/icon/option/auxiliary/${i}.svg`;
         const list = [
             {
-                title: "书签搜索",
+                title: i18n.get('optionBookmarkSearchTitle'),
                 key: "labBookmarkSearch",
-                content: "您在搜索引擎搜索时自动帮助您检索书签并嵌入搜索结果中。",
+                content: i18n.get('optionBookmarkSearchContent'),
                 icon: createIcon("icons-book"),
                 on: config.labBookmarkSearch,
             },
             {
-                title: "用户体验改进计划",
+                title: i18n.get('optionDataCollectionTitle'),
                 key: "dataCollection",
-                content: "为了更好的给您提供服务，将允许向Cloudopt提供一些技术信息及交互数据。<a href='https://www.cloudopt.net/policy/privacy' target='_blank'>隐私声明</a>",
+                content: i18n.get('optionDataCollectionContent'),
                 icon: createIcon("icons-bug"),
                 on: config.dataCollection,
             }
@@ -34,12 +35,10 @@ export default class AuxiliaryPages implements IBaseHTMLPages {
 
     public render(config: Config): HTMLElement {
         this.mainDOM.innerHTML = `
-            <div class="title">辅助功能</div>
+            <div class="title">${i18n.get('optionMiscTitle')}</div>
             <div class="description">
-                <p class="content">提供一些额外的设置</p>
-                <span class="detaile">
-                    Cloudopt® AdBlocker还将给您提供一些强大好用的辅助功能，来提升您在浏览网页过程中的用户体验。如果您有想要的功能也可以随时发送邮件到 support@cloudopt.net。
-                </span>
+                <p class="content">${i18n.get('optionMiscDescriptionContent')}</p>
+                <span class="detaile">${i18n.get('optionMiscDescriptionDetail')}</span>
             </div>
             <div class="switch-info-container">
                 <div />
