@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgb(245,246,247);
+    background-color: rgb(245, 246, 247);
     .btn {
         outline: none;
         border: none;
@@ -35,7 +35,7 @@
         align-items: center;
         justify-content: center;
         .switch-item {
-            width: 570px;
+            max-width: 570px;
         }
         >span.title {
             font-size: 16px;
@@ -91,7 +91,7 @@
                     margin-bottom: 60px;
                     display: block;
                 }
-                .guide-content{
+                .guide-content {
                     width: 100%;
                     margin-bottom: 40px;
                 }
