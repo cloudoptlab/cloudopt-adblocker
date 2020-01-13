@@ -56,11 +56,7 @@ export async function start() {
     activateEvent()
 
     adblockEngine = new adguardEngine()
-    config.get().then((cfg) => {
-        if (cfg.adblockActivating) {
-            adblockEngine.start()
-        }
-    })
+    adblockEngine.refresh()
 }
 
 start()

@@ -106,47 +106,57 @@ class AdguardEngine implements IAdblockEngine {
     private config: coreConfig.Config
     private state: EngineState = EngineState.NOT_STARTED
 
-    public start(): boolean {
-        if (this.state === EngineState.STARTED) {
-            return true
-        } else if (this.state === EngineState.NOT_STARTED) {
-            message.addListener({
-                type: 'assistant-create-rule',
-                async callback(msg) {
-                    this.config = await coreConfig.get()
-                    this.config.customRule.push(msg.ruleText)
-                    await coreConfig.set(this.config)
-                    this.refresh()
-                },
-            })
-
-            message.addListener({
-                type: 'refresh-config',
-                callback: (msg, sender, sendResponse) => {
-                    this.refresh()
-                    sendResponse({})
-                    return true
-                },
-            })
-
-            message.addListener({
-                type: 'check-filters-update',
-                callback(msg, sender, sendResponse) {
-                    window.adguardApi.checkFiltersUpdates(() => {
-                        store.set('latest_filters_updated_at', Date.now())
-                        sendResponse('true')
-                    }, () => {
-                        sendResponse('false')
-                    })
-                },
-            })
-
-            this.startTabsBlockCount()
-        }
+    constructor() {
+        const _this = this
+        message.addListener({
+            type: 'refresh-config',
+            callback: (msg, sender, sendResponse) => {
+                _this.refresh()
+                sendResponse({})
+                return true
+            },
+        })
 
         window.adguardApi.onFilterDownloadSuccess.addListener(() => {
             store.set('latest_filters_updated_at', Date.now())
         })
+
+        message.addListener({
+            type: 'assistant-create-rule',
+            async callback(msg) {
+                _this.config = await coreConfig.get()
+                _this.config.customRule.push(msg.ruleText)
+                await coreConfig.set(_this.config)
+                _this.refresh()
+            },
+        })
+
+        message.addListener({
+            type: 'check-filters-update',
+            async callback(msg, sender, sendResponse) {
+                if (_this.state !== EngineState.NOT_STARTED) {
+                    _this.start()
+                }
+                _this.config = await coreConfig.get()
+                if (!_this.config.adblockActivating) {
+                    _this.stop()
+                }
+                window.adguardApi.checkFiltersUpdates(() => {
+                    store.set('latest_filters_updated_at', Date.now())
+                    sendResponse('true')
+                }, () => {
+                    sendResponse('false')
+                })
+            },
+        })
+    }
+
+    public start(): boolean {
+        if (this.state === EngineState.STARTED) {
+            return true
+        } else if (this.state === EngineState.NOT_STARTED) {
+            this.startTabsBlockCount()
+        }
 
         store.get('firstAutoAddAllowList').then((isFirst) => {
             if (!isFirst) {
@@ -162,21 +172,28 @@ class AdguardEngine implements IAdblockEngine {
 
     public async refresh(): Promise<boolean> {
         this.config = await coreConfig.get()
-        if (!this.config.adblockActivating && this.state === EngineState.STARTED) {
-            return this.stop()
-        }
-        if (this.state === EngineState.NOT_STARTED) {
-            return this.start()
-        }
-        window.adguardApi.stop(() => {
-            const adguardConfig = getAdguardConfig(this.config)
-            if (adguardConfig.filters.length > 0) {
-                window.adguardApi.start(adguardConfig, () => {
-                    logger.debug('Adguard api started.')
-                    this.customSubscription()
-                })
+        if (!this.config.adblockActivating) {
+            if (this.state === EngineState.STARTED) {
+                return this.stop()
+            } else {
+                return true
             }
-        })
+        }
+
+        if (this.state === EngineState.NOT_STARTED) {
+            this.start()
+        } else { // started, reconfigure adugard
+            window.adguardApi.stop(() => {
+                const adguardConfig = getAdguardConfig(this.config)
+                if (adguardConfig.filters.length > 0) {
+                    window.adguardApi.start(adguardConfig, () => {
+                        logger.debug('Adguard api started.')
+                        this.customSubscription()
+                    })
+                }
+            })
+        }
+
         this.state = EngineState.STARTED
         return true
     }
