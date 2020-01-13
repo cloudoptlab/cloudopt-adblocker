@@ -131,10 +131,10 @@
         "message": "Statistics"
     },
     "optionAboutStatisticsName": {
-        "message": "statistics name"
+        "message": "Statistics Name"
     },
     "optionAboutVersion": {
-        "message": "version information"
+        "message": "Version Information"
     },
     "optionAboutAdBlockCount": {
         "message": "Total number of malicious ads and mining script blocks"
@@ -143,7 +143,7 @@
         "message": "Total number of malicious website blocks"
     },
     "optionAboutAccelerationCount": {
-        "message": "total page acceleration"
+        "message": "Total Page Acceleration"
     },
     "optionAboutContectTitle": {
         "message": "Join User Group"
@@ -365,7 +365,7 @@
         "message": "Ad Blocking"
     },
     "optionsSpeedup": {
-        "message": "optimization acceleration"
+        "message": "Optimization Acceleration"
     },
     "optionsOtherSettings": {
         "message": "Other Settings"
@@ -374,7 +374,7 @@
         "message": "Accessibility"
     },
     "optionsAboutUs": {
-        "message": "About us"
+        "message": "About Us"
     },
     "popupAdblockName": {
         "message": "Ad Blocking"
@@ -401,13 +401,13 @@
         "message": "Real-time security protection"
     },
     "popupSafeProtectSubtitle": {
-        "message": "Access to this site will no longer be protected when closed"
+        "message": "Protection on this site"
     },
     "popupAdblockTitle": {
         "message": "Malicious Ad Blocking"
     },
     "popupAdblockSubtitle": {
-        "message": "Ads on this site will no longer be blocked when closed"
+        "message": "Block ads on this site"
     },
     "popupGradeTitle": {
         "message": "Website Reputation Rating"
@@ -425,6 +425,6 @@
         "message": "More setting options"
     },
     "popupMoreSubtitle": {
-        "message": "Click to go to the settings page for detailed settings"
+        "message": "Click to go to detailed settings"
     }
 }
