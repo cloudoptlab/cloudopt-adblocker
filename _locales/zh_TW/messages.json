@@ -426,5 +426,14 @@
     },
     "popupMoreSubtitle": {
         "message": "点击前往设置页面进行详细设置"
+    },
+    "memoryOptimized": {
+        "message": "內存佔用已被優化"
+    },
+    "memoryOptimizedSub": {
+        "message": "Cloudopt Adblocker 會智能優化長時間未被訪問的標籤頁並釋放內存"
+    },
+    "memoryOptimizedReturn": {
+        "message": "立即恢復"
     }
 }
