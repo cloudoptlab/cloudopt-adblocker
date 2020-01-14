@@ -15,6 +15,9 @@ declare global {
     interface Window {
         adguardApi?: any
         _cloudopt_accelerated?: boolean
+        scrollTop?: number
+        _co_cloudopt_formChanged?: boolean
+        _co_cloudopt_getExtUrl?: Function
     }
     interface Navigator {
         browserLanguage?: string
@@ -172,4 +175,8 @@ export function deserializeMapNumNum(recordString: string): Map<number, number> 
         records.set(k, v)
     })
     return records
+}
+
+export function getExtUrl() {
+    return chrome.runtime.getURL("popup.html").replace("/popup.html", "")
 }

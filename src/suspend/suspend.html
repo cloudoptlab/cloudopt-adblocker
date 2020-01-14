@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <text i18n="memoryOptimizedIcon" placeholder="⏸"></text>
+    <script src="lib/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="icon"></div>
+            <p class="content-text" i18n="memoryOptimized">内存占用已被优化</p>
+            <p class="content-subtext" i18n="memoryOptimizedSub">Cloudopt Adblocker 会智能优化长时间未被访问的标签页并释放内存</p>
+            <button id="return" class="btn" i18n="memoryOptimizedReturn">立即恢复</button>
+        </div>
+    </div>
+    <style type="text/css">
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .content {
+            align-self: center;
+        }
+        
+        .content-text {
+            color: #56616a;
+            font-size: 22px;
+            line-height: 20px;
+        }
+        
+        .content-subtext {
+            font-size: 13px;
+            color: #747f8e;
+            text-align: center;
+            line-height: 20px;
+            margin: 0;
+        }
+        
+        div.icon {
+            mask: url(image/md-icon-pause.svg) no-repeat;
+            -webkit-mask: url(image/md-icon-pause.svg) no-repeat;
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            background-color: #d9534f;
+            height: 60px;
+            width: 68px;
+            display: inline-block;
+        }
+        
+        .btn {
+            border: 0;
+            border-radius: 5rem;
+            color: white;
+            background-color: #3333CC;
+            width: 210px;
+            height: 45px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,8 +1,9 @@
 import * as utils from '../core/utils'
+import * as i18n from '../core/i18n'
 import $ from 'jquery'
 
 $(document).ready(() => {
-
+    i18n.translateCurrentPage()
     try {
         const paramStr = utils.getQueryString('p')
         const paramObj = JSON.parse(decodeURIComponent(atob(paramStr)))

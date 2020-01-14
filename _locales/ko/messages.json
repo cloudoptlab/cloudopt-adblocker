@@ -426,5 +426,14 @@
     },
     "popupMoreSubtitle": {
         "message": "자세한 설정을 보려면 설정 페이지로 이동하십시오."
+    },
+    "memoryOptimized": {
+        "message": "메모리 사용이 최적화되었습니다"
+    },
+    "memoryOptimizedSub": {
+        "message": "Cloudopt Adblocker는 오랫동안 액세스하지 않은 탭을 지능적으로 최적화하고 메모리를 해제합니다."
+    },
+    "memoryOptimizedReturn": {
+        "message": "지금 재개"
     }
 }

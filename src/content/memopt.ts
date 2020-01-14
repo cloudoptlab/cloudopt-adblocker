@@ -1,8 +1,4 @@
-/* tslint:disable:interface-name */
-interface Window {
-    _co_cloudopt_formChanged?: boolean
-}
-/* tslint:enable:interface-name */
+import * as utils from '../core/utils'
 
 window.addEventListener('keydown', (event) => {
     function isPrintable(keyCode: number) {
@@ -25,3 +21,5 @@ window.addEventListener('keydown', (event) => {
     }
     /* tslint:enable:no-string-literal */
 })
+
+window._co_cloudopt_getExtUrl = utils.getExtUrl

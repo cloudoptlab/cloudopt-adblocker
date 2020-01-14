@@ -426,5 +426,14 @@
     },
     "popupMoreSubtitle": {
         "message": "Click to go to detailed settings"
+    },
+    "memoryOptimized": {
+        "message": "Memory usage has been optimized"
+    },
+    "memoryOptimizedSub": {
+        "message": "Cloudopt Adblocker intelligently optimizes tabs that have not been accessed for a long time and releases memory"
+    },
+    "memoryOptimizedReturn": {
+        "message": "Resume Now"
     }
 }

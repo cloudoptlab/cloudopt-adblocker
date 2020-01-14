@@ -15,6 +15,7 @@ module.exports = {
         popup: "./src/popup/popup.ts",
         option: "./src/option/option.ts",
         guide: "./src/guide/guide.ts",
+        suspend: "./src/suspend/suspend.ts",
     },
     mode: process.env.NODE_ENV || "development",
     module: {
@@ -104,6 +105,12 @@ module.exports = {
             filename: "guide.html",
             template: "./src/guide/guide.html",
             chunks: ["guide"],
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: "suspend.html",
+            template: "./src/suspend/suspend.html",
+            chunks: ["suspend"],
             inject: true,
         }),
     ],

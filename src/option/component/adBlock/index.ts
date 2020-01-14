@@ -185,6 +185,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 const newConfig = await getCoreConfig()
                 newConfig.customRule = newConfig.customRule.removeByValue(rule)
                 setCoreConfig(newConfig)
+                this.render()
             })
         })
 
