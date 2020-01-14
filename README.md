@@ -1,6 +1,6 @@
 # Cloudopt AdBlocker
 
-<img src="https://cdn.cloudopt.net/20190508140125.jpg" width="800" />
+<img src="https://cdn.cloudopt.net/20200108140125.jpg" width="800" />
 
 Cloudopt AdBlocker is a browser extension based on AdguardBrowserExtension and Cloudopt's self-developed cloud reputation assessment technology to protect your security, prevent traces, malicious domain names, filter banner ads, pop-up ads, and more. can do:
 
