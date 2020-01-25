@@ -7,42 +7,38 @@ import {sanitize} from 'dompurify'
 class BookmarkSearch {
     private readonly host: string
     private readonly innerClass: string
-    private keyword: string
+    private getKeyword: () => string
     constructor() {
         this.host = getHost(window.location.href)
-        if (this.host === 'www.baidu.com') {
-            this.keyword = $('#kw').val() as string
+
+        if (this.host.endsWith('.baidu.com')) {
+            this.getKeyword = () => ($('#kw')[0]['value'] as string)
             this.innerClass = '#content_left'
             $('#kw').bind('input propertychange', () => {
-                this.keyword = $('#kw').val() as string
-                this.sendSearch(this.keyword)
+                this.sendSearch(this.getKeyword())
             })
-            this.sendSearch(this.keyword)
         } else if (this.host.startsWith('www.google.')) {
-            this.keyword = $('#lst-ib').val() as string
+            this.getKeyword = () => ($('input.gsfi')[0]['value'] as string)
             this.innerClass = '#res'
-            $('#lst-ib').bind('input propertychange', () => {
-                this.keyword = $('#lst-ib').val() as string
-                this.sendSearch(this.keyword)
+            $('input.gsfi').bind('input propertychange', () => {
+                this.sendSearch(this.getKeyword())
             })
-            this.sendSearch(this.keyword)
-        } else if (this.host.endsWith('.bind.com')) {
-            this.keyword = $('#sb_form_q').val() as string
-            this.innerClass = '#b_results'
+        } else if (this.host.endsWith('.bing.com')) {
+            $('li.b_algo:last').after('<div id="bookmarkCard"></div>')
+            this.getKeyword = () => ($('#sb_form_q')[0]['value'] as string)
+            this.innerClass = '#bookmarkCard'
             $('#sb_form_q').bind('input propertychange', () => {
-                this.keyword = $('#sb_form_q').val() as string
-                this.sendSearch(this.keyword)
+                this.sendSearch(this.getKeyword())
             })
-            this.sendSearch(this.keyword)
         } else if (this.host.endsWith('search.naver.com')) {
-            this.keyword = $('#nx_query').val() as string
+            this.getKeyword = () => ($('#nx_query').val() as string)
             this.innerClass = '#sub_pack'
             $('#nx_query').bind('input propertychange', () => {
-                this.keyword = $('#nx_query').val() as string
-                this.sendSearch(this.keyword)
+                this.sendSearch(this.getKeyword())
             })
-            this.sendSearch(this.keyword)
         }
+
+        this.sendSearch(this.getKeyword())
     }
 
     public sendSearch(keyword: string) {
