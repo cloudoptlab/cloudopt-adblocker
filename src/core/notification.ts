@@ -28,28 +28,54 @@ export function error(message: string) {
     notyFactory('/image/icon/red/icon512.png')(message)
 }
 
-let isCreateNoty = false
+let suppressBankNoty = false
+let suppressShopNoty = false
+let suppressGameNoty = false
+let suppressHospitalNoty = false
+
 const noRepeatNotyTime = 1000 * 60 * 5
 export async function labSafeTipsNoty(type: string) {
     const config = await coreConfig.get()
-    if (config.labSafeTips && isCreateNoty === false) {
-        switch (type) {
-            case 'BANK':
-                info(i18n.get('bankSafeTips'))
-                break
-            case 'SHOP':
-                info(i18n.get('shopSafeTips'))
-                break
-            case 'GAME':
-                info(i18n.get('gameSafeTips'))
-                break
-            case 'HOSPITAL':
-                info(i18n.get('hospitalSafeTips'))
-                break
-            default:
-                break
-        }
-        setTimeout(() => { isCreateNoty = false }, noRepeatNotyTime)
+    if (!config.labSafeTips) {
+        return
     }
-    isCreateNoty = true
+
+    switch (type) {
+        case 'BANK':
+            if (!suppressBankNoty) {
+                info(i18n.get('bankSafeTips'))
+                suppressBankNoty = true
+                setTimeout(() => {
+                    suppressBankNoty = false
+                }, noRepeatNotyTime);
+            }
+            break
+        case 'SHOP':
+            if (!suppressShopNoty) {
+                info(i18n.get('shopSafeTips'))
+                suppressShopNoty = true
+                setTimeout(() => {
+                    suppressShopNoty = false
+                }, noRepeatNotyTime);
+            }
+            break
+        case 'GAME':
+            if (!suppressGameNoty) {
+                info(i18n.get('gameSafeTips'))
+                suppressGameNoty = true
+                setTimeout(() => {
+                    suppressGameNoty = false
+                }, noRepeatNotyTime);
+            }
+            break
+        case 'HOSPITAL':
+            if (!suppressHospitalNoty) {
+                info(i18n.get('hospitalSafeTips'))
+                suppressHospitalNoty = true
+                setTimeout(() => {
+                    suppressHospitalNoty = false
+                }, noRepeatNotyTime);
+            }
+            break
+    }
 }
