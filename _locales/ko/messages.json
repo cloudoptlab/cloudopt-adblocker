@@ -295,7 +295,7 @@
     "optionSafeDownloadContent": {
         "message": "위험한 웹 사이트의 다운로드를 자동으로 차단하고 악의적 인 웹 사이트가 자동으로 다운로드되는 것을 방지합니다."
     },
-    "optionSafe 개인 정보 제목": {
+    "optionSafePrivacyTitle": {
         "message": "개인 정보 보호"
     },
     "optionSafePrivacyContent": {
