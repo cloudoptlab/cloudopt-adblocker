@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_infoName__",
     "short_name": "Cloudopt AdBlocker",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "__MSG_infoDescription__",
     "default_locale": "en",
     "update_url": "https://cdn.cloudopt.net/extensions/update/updates.xml",
