@@ -14,8 +14,20 @@ class BookmarkSearch {
         if (this.host.endsWith('.baidu.com')) {
             this.getKeyword = () => ($('#kw')[0]['value'] as string)
             this.innerClass = '#content_left'
+            let interval = null
             $('#kw').bind('input propertychange', () => {
-                this.sendSearch(this.getKeyword())
+                // Have to wait for the container to appear
+                if (interval !== null) {
+                    clearInterval(interval)
+                    interval = null
+                }
+                interval = setInterval(() => {
+                    if ($(this.innerClass).length > 0) {
+                        clearInterval(interval)
+                        interval = null
+                        this.sendSearch(this.getKeyword())
+                    }
+                }, 100)
             })
         } else if (this.host.startsWith('www.google.')) {
             this.getKeyword = () => ($('input.gsfi')[0]['value'] as string)
