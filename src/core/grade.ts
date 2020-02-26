@@ -43,9 +43,9 @@ export class Result {
         let level = 0 /* no level */
         if (this.score >= 65) {
             level = 1 /* safe */
-        } else if (this.score >= 60) {
+        } else if (this.score >= 50) {
             level = 2 /* normal */
-        } else if (this.score >= 40) {
+        } else if (this.score >= 30) {
             level = 3 /* potential threat */
         } else if (this.score === 0 && this.safe) {
             level = 5 /* unknown */
