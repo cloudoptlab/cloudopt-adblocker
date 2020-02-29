@@ -29,7 +29,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
         }
     }
 
-    private createIcon = (i: string) => `image/icon/option/adBlock/${i}.svg`
+    private getIconPath = (i: string) => `image/icon/option/${i}.svg`
 
     private renderSwitchInfoComponent(config: Config): HTMLElement[] {
         const list = [
@@ -37,14 +37,14 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 title: i18n.get('optionAdblockActivatingTitle'),
                 key: "adblockActivating",
                 content: i18n.get('optionAdblockActivatingContent'),
-                icon: this.createIcon("icons-hand"),
+                icon: this.getIconPath("icons-hand"),
                 on: config.adblockActivating,
             },
             {
                 title: i18n.get('optionAdblockDisplayTitle'),
                 key: "adblockDisplay",
                 content: i18n.get('optionAdblockDisplayContent'),
-                icon: this.createIcon("icons-statistics"),
+                icon: this.getIconPath("icons-statistics"),
                 on: config.adblockDisplay,
             },
         ];
@@ -61,7 +61,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 <div class="right" for="${rule}">
                     <div class="delete-icon">
                         <img
-                            src="${this.createIcon('icons-delete_trash')}"
+                            src="${this.getIconPath('icons-delete_trash')}"
                         />
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
             <div class="table-info-container">
                 <div class="table-item">
                     <span class="title">${i18n.get('optionAdblockCustomSubsTitle')}</span>
-                    <img class="add-item" src="${this.createIcon('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
+                    <img class="add-item" src="${this.getIconPath('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
                     <div class="table" id="customSubscriptionTable">
                         <div class="hard">
                             <span class="text">${i18n.get('optionAdblockCustomSubsAddresses')}</span>

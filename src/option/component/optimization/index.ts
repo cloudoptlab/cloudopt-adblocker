@@ -13,27 +13,27 @@ export default class OptimizationPages implements IBaseHTMLPages {
     }
 
     private renderSwitchInfoComponent(config: Config): HTMLElement[] {
-        const createIcon = (i: string) => `image/icon/option/optimization/${i}.svg`;
+        const getIconPath = (i: string) => `image/icon/option/${i}.svg`;
         const list = [
             {
                 title: i18n.get('optionDNSSpeedTitle'),
                 key: "dnsSpeed",
                 content: i18n.get('optionDNSSpeedContent'),
-                icon: createIcon("icons-dns"),
+                icon: getIconPath("icons-dns"),
                 on: config.dnsSpeed,
             },
             {
                 title: i18n.get('optionWebPrereadingTitle'),
                 key: "webPrereading",
                 content: i18n.get('optionWebPrereadingContent'),
-                icon: createIcon("icons-in_progress"),
+                icon: getIconPath("icons-in_progress"),
                 on: config.webPrereading,
             },
             {
                 title: i18n.get('optionMemoryOptimizeTitle'),
                 key: "memoryOptimize",
                 content: i18n.get('optionMemoryOptimizeContent'),
-                icon: createIcon("icons-smartphone_ram"),
+                icon: getIconPath("icons-smartphone_ram"),
                 on: config.memoryOptimize,
             }
         ];

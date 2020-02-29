@@ -24,49 +24,49 @@ export default class SafePages implements IBaseHTMLPages {
         })
     }
 
-    private createIcon = (i: string) => `image/icon/option/safe/${i}.svg`;
+    private getIconPath = (i: string) => `image/icon/option/${i}.svg`;
     private renderSwitchInfoComponent(config: Config): HTMLElement[] {
         const list = [
             {
                 title: i18n.get('optionSafeCloudTitle'),
                 key: "safeCloud",
                 content: i18n.get('optionSafeCloudContent'),
-                icon: this.createIcon("icons-chrome"),
+                icon: this.getIconPath("icons-chrome"),
                 on: config.safeCloud,
             },
             {
                 title: i18n.get('optionSafeDownloadTitle'),
                 key: "safeDownload",
                 content: i18n.get('optionSafeDownloadContent'),
-                icon: this.createIcon("icons-download"),
+                icon: this.getIconPath("icons-download"),
                 on: config.safeDownload,
             },
             {
                 title: i18n.get('optionSafePrivacyTitle'),
                 key: "safePrivacy",
                 content: i18n.get('optionSafePrivacyContent'),
-                icon: this.createIcon("icons-user_shield"),
+                icon: this.getIconPath("icons-user_shield"),
                 on: config.safePrivacy,
             },
             {
                 title: i18n.get('optionSafePotentialTitle'),
                 key: "safePotential",
                 content: i18n.get('optionSafePotentialContent'),
-                icon: this.createIcon("icons-warning_shield"),
+                icon: this.getIconPath("icons-warning_shield"),
                 on: config.safePotential,
             },
             {
                 title: i18n.get('optionSafeCoinTitle'),
                 key: "safeCoin",
                 content: i18n.get('optionSafeCoinContent'),
-                icon: this.createIcon("icons-coins"),
+                icon: this.getIconPath("icons-coins"),
                 on: config.safeCoin,
             },
             {
                 title: i18n.get('optionSafeTipsTitle'),
                 key: "labSafeTips",
                 content: i18n.get('optionSafeTipsContent'),
-                icon: this.createIcon("icons-filled_topic"),
+                icon: this.getIconPath("icons-filled_topic"),
                 on: config.labSafeTips,
             },
         ];
@@ -102,7 +102,7 @@ export default class SafePages implements IBaseHTMLPages {
                 </div>
                 <div class="card-body">
                     <div class="connect-status">
-                        <img src="${this.connected ? this.createIcon('icons-checkmark') : this.createIcon('icons-sad_cloud')}" alt="" srcset="" />
+                        <img src="${this.connected ? this.getIconPath('icons-checkmark') : this.getIconPath('icons-sad_cloud')}" alt="" srcset="" />
                         <span class="text ${this.connected ? "connected" : "disconnected"}">${this.connected ? i18n.get('optionsSafeConnectionSuccess') : i18n.get('optionsSafeConnectionFail')}</span>
                     </div>
                     <span>${i18n.get('optionsSafeConnectionsIn24Hours')}</span>
