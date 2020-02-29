@@ -319,6 +319,12 @@
     "optionSafeTipsContent": {
         "message": "在访问银行、电商等容易被冒充的网站时弹出安全提示。"
     },
+    "optionSafeAllowListTitle": {
+        "message": "白名單列表"
+    },
+    "optionSafeAllowListUrls": {
+        "message": "白名單地址"
+    },
     "optionsIntelligentSecurity": {
         "message": "智能安全"
     },

@@ -32,8 +32,8 @@
         background: rgba(255, 255, 255, 1);
         border: 1px solid rgba(245, 246, 247, 1);
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.11);
-        max-width: 638px;
-        width: 638px;
+        max-width: 623px;
+        width: 623px;
         margin: 20px 0;
         .card-head {
             height: 84px;
@@ -128,12 +128,78 @@
             }
         }
     }
+    &>.table-info-container {
+        .table-item {
+            margin: 10px 0 30px 0;
+            .title {
+                font-size: 20px;
+                font-weight: 500;
+                color: rgba(23, 43, 77, 1);
+                margin-bottom: 12px;
+                display: inline-block;
+            }
+            .add-item {
+                float: right;
+                margin-right: 10px;
+                width: 25px;
+                height: 25px;
+            }
+            .table {
+                max-width: 623px;
+                background: rgba(255, 255, 255, 1);
+                box-shadow: 0px 2px 3px rgba(44, 40, 40, 0.11);
+                border-radius: 5px;
+                .hard {
+                    width: 623px;
+                    height: 45px;
+                    background: rgba(241, 243, 249, 1);
+                    line-height: 45px;
+                    padding-left: 20px;
+                    .text {
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: rgba(136, 152, 170, 1);
+                    }
+                }
+                .body-list {
+                    ul li:nth-child(2n) {
+                        background: rgba(247, 250, 252, 1);
+                    }
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 14px 20px;
+                        .left {
+                            span {
+                                font-size: 10px;
+                                font-weight: 400;
+                                color: rgba(23, 43, 77, 1);
+                            }
+                        }
+                        .right {
+                            .delete-icon {
+                                width: 18px;
+                                height: 18px;
+                                background: rgba(247, 250, 252, 1);
+                                box-shadow: 0px 2px 3px rgba(44, 40, 40, 0.11);
+                                border-radius: 50%;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 @keyframes breathe {
     0% {
         background: rgba(30, 111, 255, 0);
     }
-
     100% {
         background: rgba(30, 111, 255, 0.3);
     }
