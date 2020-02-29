@@ -26,6 +26,7 @@ export function saveConfig(config: coreConfig.Config): Promise<any> {
     delete dataObject.allowList
     delete dataObject.allowListAds
     delete dataObject.blockList
+    delete dataObject.disabledCustomSubs
     return http.put(`${HOST}adblocker/config`, {data: JSON.stringify(dataObject)})
 }
 

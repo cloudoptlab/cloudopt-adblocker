@@ -231,6 +231,9 @@ class AdguardEngine implements IAdblockEngine {
     private customSubscription(): void {
         const adguardConfig = getAdguardConfig(this.config)
         this.config.customSubscription.forEach((url) => {
+            if (this.config.disabledCustomSubs.inArray(url)) {
+                return
+            }
             logger.info(`A custom rule file is being loaded: ${url}`)
             http.get(url).then((data) => {
                 let list = data.split('\n')

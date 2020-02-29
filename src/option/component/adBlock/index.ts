@@ -70,6 +70,27 @@ export default class AdBlockPages implements IBaseHTMLPages {
         )).join('')
     }
 
+    private renderSubscribeListBodyComponent(config: Config) {
+        return config.customSubscription.map((rule) => (
+            `
+            <li>
+                <div class="left" for="${rule}">
+                    ${config.disabledCustomSubs.inArray(rule) ? '' : 
+                    `<img class="enabled-rule" src="${this.getIconPath('icons-checked_thick')}">`}
+                    <span>${rule}</span>
+                </div>
+                <div class="right" for="${rule}">
+                    <div class="delete-icon">
+                        <img
+                            src="${this.getIconPath('icons-delete_trash')}"
+                        />
+                    </div>
+                </div>
+            </li>
+            `
+        )).join('')
+    }
+
     public async render(): Promise<HTMLElement> {
         const config = await getCoreConfig()
         this.mainDOM.innerHTML = `
@@ -94,7 +115,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                         </div>
                         <div class="body-list">
                             <ul>
-                                ${this.renderRuleListBodyComponent(config.customSubscription)}
+                                ${this.renderSubscribeListBodyComponent(config)}
                             </ul>
                         </div>
                     </div>
@@ -167,12 +188,28 @@ export default class AdBlockPages implements IBaseHTMLPages {
             }
         })
 
+        this.mainDOM.querySelectorAll('#customSubscriptionTable .left').forEach((el) => {
+            el.addEventListener("click", async (ev: MouseEvent) => {
+                ev.stopPropagation()
+                const subsLink = el.getAttribute('for')
+                const newConfig = await getCoreConfig()
+                if (newConfig.disabledCustomSubs.inArray(subsLink)) {
+                    newConfig.disabledCustomSubs = newConfig.disabledCustomSubs.removeByValue(subsLink)
+                } else {
+                    newConfig.disabledCustomSubs.push(subsLink)
+                }
+                setCoreConfig(newConfig)
+                this.render()
+            })
+        })
+
         this.mainDOM.querySelectorAll('#customSubscriptionTable .right').forEach((el) => {
             el.addEventListener("click", async (ev: MouseEvent) => {
                 ev.stopPropagation()
                 const subsLink = el.getAttribute('for')
                 const newConfig = await getCoreConfig()
                 newConfig.customSubscription = newConfig.customSubscription.removeByValue(subsLink)
+                newConfig.disabledCustomSubs = newConfig.disabledCustomSubs.removeByValue(subsLink)
                 setCoreConfig(newConfig)
                 this.render()
             })

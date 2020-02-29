@@ -26,6 +26,7 @@ export class Config {
     public webPrereading: boolean
     public customRule: string[]
     public customSubscription: string[]
+    public disabledCustomSubs: string[]
 }
 
 let configObject: Config = {
@@ -48,6 +49,7 @@ let configObject: Config = {
     webPrereading: true,
     customRule: [],
     customSubscription: [],
+    disabledCustomSubs: [],
 } as Config
 
 export enum AddListResult {
