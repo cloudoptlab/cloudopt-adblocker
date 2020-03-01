@@ -1,6 +1,6 @@
 import * as store from '../core/store'
 import * as logger from '../core/logger'
-import * as message from './message'
+import message from '../core/message'
 import * as utils from '../core/utils'
 
 const eventCounts: Map<string, number> = new Map<string, number>()

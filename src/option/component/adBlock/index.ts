@@ -7,7 +7,7 @@ import * as i18n from '../../../core/i18n'
 import * as notification from '../../../core/notification'
 import * as utils from '../../../core/utils'
 import * as http from '../../../core/http'
-import * as message from '../../../core/message'
+import message from '../../../core/message'
 
 export default class AdBlockPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")

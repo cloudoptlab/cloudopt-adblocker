@@ -3,7 +3,7 @@ import * as utils from './utils'
 import * as api from './api'
 import * as notification from './notification'
 import * as i18n from './i18n'
-import * as message from './message'
+import message from './message'
 import * as loginState from './loginState'
 
 export class Config {

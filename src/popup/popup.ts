@@ -1,6 +1,6 @@
 import * as coreConfig from '../core/config'
 import * as utils from '../core/utils'
-import * as message from '../core/message'
+import message from '../core/message'
 import { open as openTab } from '../core/tab'
 import { debug as debugLog } from '../core/logger'
 import { website as gradeWebsite } from '../core/grade'

@@ -1,4 +1,4 @@
-import * as message from './message'
+import message from '../core/message'
 
 function search(text: any, sender: any, sendResponse: (something: any) => void) {
     try {

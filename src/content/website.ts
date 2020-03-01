@@ -1,4 +1,4 @@
-import * as message from '../core/message'
+import message from '../core/message'
 import * as coreConfig from '../core/config'
 import * as utils from '../core/utils'
 import * as logger from '../core/logger'

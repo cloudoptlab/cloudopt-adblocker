@@ -1,6 +1,6 @@
 import * as coreConfig from '../core/config'
 import * as utils from '../core/utils'
-import * as message from '../core/message'
+import message from '../core/message'
 import $ from 'jquery'
 import {sanitize} from 'dompurify'
 

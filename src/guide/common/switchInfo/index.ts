@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import "./index.scss";
 import { get as getCoreConfig, set as setCoreConfig } from '../../../core/config'
-import * as message from '../../../core/message'
+import message from '../../../core/message'
 
 export interface ISwitchInfo {
     icon: string;

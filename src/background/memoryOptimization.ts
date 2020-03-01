@@ -1,6 +1,6 @@
 import * as logger from '../core/logger'
 import * as utils from '../core/utils'
-import * as message from './message'
+import message from '../core/message'
 import * as coreConfig from '../core/config'
 
 function memoryOptimization() {
@@ -126,7 +126,7 @@ function memoryOptimization() {
     }
 
     function enable() {
-        chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+        chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             if (changeInfo.status == "complete") {
                 if (!tab.active) {
                     idleSince[tabId] = Date.now();

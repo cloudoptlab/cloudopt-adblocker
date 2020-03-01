@@ -1,6 +1,6 @@
 import { getHost } from '../core/utils'
 import { refresh as refreshConfig } from '../core/config'
-import * as message from '../core/message'
+import message from '../core/message'
 import $ from 'jquery'
 import {sanitize} from 'dompurify'
 
