@@ -14,3 +14,7 @@ message.addListener({
     type: 'bookmark-search',
     callback: search,
 })
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    message.sendTab(tabId, 'load-complete')
+})

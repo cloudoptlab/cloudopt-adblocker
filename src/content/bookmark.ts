@@ -29,6 +29,16 @@ class BookmarkSearch {
                     }
                 }, 100)
             })
+
+            message.addListener({
+                type: 'load-complete',
+                callback: (message, sender, sendResponse) => {
+                    setTimeout(() => {
+                        this.sendSearch(this.getKeyword())
+                    }, 500);
+                    sendResponse('')
+                }
+            })
         } else if (this.host.startsWith('www.google.')) {
             this.getKeyword = () => ($('input.gsfi')[0]['value'] as string)
             this.innerClass = '#res'
