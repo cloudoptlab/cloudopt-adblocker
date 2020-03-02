@@ -1,7 +1,9 @@
 import { IBaseHTMLPages } from "../types";
 import "./index.scss";
-import { send as queryBackground } from '../../../core/message'
+import message from '../../../core/message'
 import * as i18n from '../../../core/i18n'
+
+const queryBackground = message.send
 
 export default class AboutUsPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")

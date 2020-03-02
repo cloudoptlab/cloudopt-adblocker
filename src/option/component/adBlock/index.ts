@@ -7,7 +7,7 @@ import * as i18n from '../../../core/i18n'
 import * as notification from '../../../core/notification'
 import * as utils from '../../../core/utils'
 import * as http from '../../../core/http'
-import * as message from '../../../core/message'
+import message from '../../../core/message'
 
 export default class AdBlockPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")
@@ -29,7 +29,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
         }
     }
 
-    private createIcon = (i: string) => `image/icon/option/adBlock/${i}.svg`
+    private getIconPath = (i: string) => `image/icon/option/${i}.svg`
 
     private renderSwitchInfoComponent(config: Config): HTMLElement[] {
         const list = [
@@ -37,14 +37,14 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 title: i18n.get('optionAdblockActivatingTitle'),
                 key: "adblockActivating",
                 content: i18n.get('optionAdblockActivatingContent'),
-                icon: this.createIcon("icons-hand"),
+                icon: this.getIconPath("icons-hand"),
                 on: config.adblockActivating,
             },
             {
                 title: i18n.get('optionAdblockDisplayTitle'),
                 key: "adblockDisplay",
                 content: i18n.get('optionAdblockDisplayContent'),
-                icon: this.createIcon("icons-statistics"),
+                icon: this.getIconPath("icons-statistics"),
                 on: config.adblockDisplay,
             },
         ];
@@ -61,7 +61,28 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 <div class="right" for="${rule}">
                     <div class="delete-icon">
                         <img
-                            src="${this.createIcon('icons-delete_trash')}"
+                            src="${this.getIconPath('icons-delete_trash')}"
+                        />
+                    </div>
+                </div>
+            </li>
+            `
+        )).join('')
+    }
+
+    private renderSubscribeListBodyComponent(config: Config) {
+        return config.customSubscription.map((rule) => (
+            `
+            <li>
+                <div class="left" for="${rule}">
+                    ${config.disabledCustomSubs.inArray(rule) ? '' : 
+                    `<img class="enabled-rule" src="${this.getIconPath('icons-checked_thick')}">`}
+                    <span>${rule}</span>
+                </div>
+                <div class="right" for="${rule}">
+                    <div class="delete-icon">
+                        <img
+                            src="${this.getIconPath('icons-delete_trash')}"
                         />
                     </div>
                 </div>
@@ -87,14 +108,14 @@ export default class AdBlockPages implements IBaseHTMLPages {
             <div class="table-info-container">
                 <div class="table-item">
                     <span class="title">${i18n.get('optionAdblockCustomSubsTitle')}</span>
-                    <img class="add-item" src="${this.createIcon('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
+                    <img class="add-item" src="${this.getIconPath('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
                     <div class="table" id="customSubscriptionTable">
                         <div class="hard">
                             <span class="text">${i18n.get('optionAdblockCustomSubsAddresses')}</span>
                         </div>
                         <div class="body-list">
                             <ul>
-                                ${this.renderRuleListBodyComponent(config.customSubscription)}
+                                ${this.renderSubscribeListBodyComponent(config)}
                             </ul>
                         </div>
                     </div>
@@ -167,12 +188,28 @@ export default class AdBlockPages implements IBaseHTMLPages {
             }
         })
 
+        this.mainDOM.querySelectorAll('#customSubscriptionTable .left').forEach((el) => {
+            el.addEventListener("click", async (ev: MouseEvent) => {
+                ev.stopPropagation()
+                const subsLink = el.getAttribute('for')
+                const newConfig = await getCoreConfig()
+                if (newConfig.disabledCustomSubs.inArray(subsLink)) {
+                    newConfig.disabledCustomSubs = newConfig.disabledCustomSubs.removeByValue(subsLink)
+                } else {
+                    newConfig.disabledCustomSubs.push(subsLink)
+                }
+                setCoreConfig(newConfig)
+                this.render()
+            })
+        })
+
         this.mainDOM.querySelectorAll('#customSubscriptionTable .right').forEach((el) => {
             el.addEventListener("click", async (ev: MouseEvent) => {
                 ev.stopPropagation()
                 const subsLink = el.getAttribute('for')
                 const newConfig = await getCoreConfig()
                 newConfig.customSubscription = newConfig.customSubscription.removeByValue(subsLink)
+                newConfig.disabledCustomSubs = newConfig.disabledCustomSubs.removeByValue(subsLink)
                 setCoreConfig(newConfig)
                 this.render()
             })

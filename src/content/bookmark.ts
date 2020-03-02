@@ -1,6 +1,6 @@
 import { getHost } from '../core/utils'
 import { refresh as refreshConfig } from '../core/config'
-import * as message from '../core/message'
+import message from '../core/message'
 import $ from 'jquery'
 import {sanitize} from 'dompurify'
 
@@ -28,6 +28,16 @@ class BookmarkSearch {
                         this.sendSearch(this.getKeyword())
                     }
                 }, 100)
+            })
+
+            message.addListener({
+                type: 'load-complete',
+                callback: (message, sender, sendResponse) => {
+                    setTimeout(() => {
+                        this.sendSearch(this.getKeyword())
+                    }, 500);
+                    sendResponse('')
+                }
             })
         } else if (this.host.startsWith('www.google.')) {
             this.getKeyword = () => ($('input.gsfi')[0]['value'] as string)

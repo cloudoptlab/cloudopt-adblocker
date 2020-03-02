@@ -3,7 +3,7 @@ import * as utils from '../../core/utils'
 import * as logger from '../../core/logger'
 import * as http from '../../core/http'
 import * as store from '../../core/store'
-import * as message from '../message'
+import message from '../../core/message'
 import * as statistics from '../statistics'
 import $ from 'jquery'
 import IAdblockEngine from '../../adblockEngine/adblockerEngine'
@@ -231,6 +231,9 @@ class AdguardEngine implements IAdblockEngine {
     private customSubscription(): void {
         const adguardConfig = getAdguardConfig(this.config)
         this.config.customSubscription.forEach((url) => {
+            if (this.config.disabledCustomSubs.inArray(url)) {
+                return
+            }
             logger.info(`A custom rule file is being loaded: ${url}`)
             http.get(url).then((data) => {
                 let list = data.split('\n')

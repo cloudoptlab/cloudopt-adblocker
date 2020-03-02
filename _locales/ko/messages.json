@@ -319,6 +319,12 @@
     "optionSafeTipsContent": {
         "message": "은행 및 전자 상거래와 같이 쉽게 가장하는 웹 사이트를 방문 할 때 나타나는 팝업 보안 팁."
     },
+    "optionSafeAllowListTitle": {
+        "메시지": "목록 허용"
+    },
+    "optionSafeAllowListUrls": {
+        "message": "허용 된 주소"
+    },
     "optionsIntelligentSecurity": {
         "message": "지능형 보안"
     },

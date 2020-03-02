@@ -319,6 +319,12 @@
     "optionSafeTipsContent": {
         "message": "Pop-up security tips when visiting websites that are easily impersonated, such as banks and e-commerce."
     },
+    "optionSafeAllowListTitle": {
+        "message": "Allow list"
+    },
+    "optionSafeAllowListUrls": {
+        "message": "Allowed addresses"
+    },
     "optionsIntelligentSecurity": {
         "message": "Intelligent Security"
     },

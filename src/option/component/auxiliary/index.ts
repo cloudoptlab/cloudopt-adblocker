@@ -13,20 +13,20 @@ export default class AuxiliaryPages implements IBaseHTMLPages {
     }
 
     private renderSwitchInfoComponent(config: Config): HTMLElement[] {
-        const createIcon = (i: string) => `image/icon/option/auxiliary/${i}.svg`;
+        const getIconPath = (i: string) => `image/icon/option/${i}.svg`;
         const list = [
             {
                 title: i18n.get('optionBookmarkSearchTitle'),
                 key: "labBookmarkSearch",
                 content: i18n.get('optionBookmarkSearchContent'),
-                icon: createIcon("icons-book"),
+                icon: getIconPath("icons-book"),
                 on: config.labBookmarkSearch,
             },
             {
                 title: i18n.get('optionDataCollectionTitle'),
                 key: "dataCollection",
                 content: i18n.get('optionDataCollectionContent'),
-                icon: createIcon("icons-bug"),
+                icon: getIconPath("icons-bug"),
                 on: config.dataCollection,
             }
         ];

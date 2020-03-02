@@ -1,4 +1,4 @@
-import * as message from './message'
+import message from '../core/message'
 
 function search(text: any, sender: any, sendResponse: (something: any) => void) {
     try {
@@ -13,4 +13,8 @@ function search(text: any, sender: any, sendResponse: (something: any) => void) 
 message.addListener({
     type: 'bookmark-search',
     callback: search,
+})
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    message.sendTab(tabId, 'load-complete')
 })

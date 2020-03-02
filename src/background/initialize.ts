@@ -1,4 +1,4 @@
-import * as message from './message'
+import message from '../core/message'
 import * as tabOp from '../core/tab'
 import * as grade from '../core/grade'
 import * as config from '../core/config'
