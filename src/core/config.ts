@@ -31,7 +31,7 @@ export class Config {
 
 let configObject: Config = {
     safeCloud: true,
-    safeDownload: true,
+    safeDownload: false,
     safeCoin: true,
     safePrivacy: true,
     safePotential: false,
