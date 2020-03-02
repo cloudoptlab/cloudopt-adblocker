@@ -272,7 +272,7 @@ async function initialize() {
         const countNode = $('#credibilityScore .score-count')
         countNode.text(result.score)
 
-        if (result.score === 0 && result.isSafe) {
+        if (result.score === 0 && result.isSafe()) {
             countNode.text('?')
         } else if (result.score < 60) {
             // $('.mdl-layout__header').css('background-color', '#e53935')
