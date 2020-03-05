@@ -109,12 +109,18 @@ export async function website(url: string): Promise<Result> {
         try {
             record = await api.gradeWebsite(host)
             record.safe = await record.isSafe()
+            store.set(cacheKey, record.toString())
         } catch (error) {
             record = new Result()
             record.score = 60
             record.safe = true
+            // When there is no record on cloudopt.net yet
+            if (error.error === 404) {
+                record.host = 'UNKNOWN'
+                record.type = 'UNKNOWN'
+                store.set(cacheKey, record.toString())
+            }
         }
-        store.set(cacheKey, record.toString())
     }
 
     return record
