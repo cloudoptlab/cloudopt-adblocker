@@ -102,4 +102,9 @@
             }
         }
     }
+    button {
+        &.close {
+            outline: none;
+        }
+    }
 }
