@@ -58,6 +58,8 @@ class BookmarkSearch {
             $('#nx_query').bind('input propertychange', () => {
                 this.sendSearch(this.getKeyword())
             })
+        } else {
+            return
         }
 
         this.sendSearch(this.getKeyword())
