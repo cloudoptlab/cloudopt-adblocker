@@ -3,6 +3,7 @@ import { IBaseHTMLPages } from "../types";
 import { logout } from '../../../core/api'
 import * as i18n from '../../../core/i18n'
 import * as loginState from '../../../core/loginState'
+import rtpl from 'art-template/lib/template-web.js'
 
 interface ISelectOptions {
     icon: string;
@@ -27,14 +28,14 @@ export default class UserAside implements IBaseHTMLPages {
 
     constructor() {
         this.mainDOM.id = UserAside.ID
-        this.mainDOM.innerHTML = `
+        this.mainDOM.innerHTML = rtpl.render(`
             <div class="container">
                 <img class="logo" src="image/logo.svg"></img>
                 <div class="user-info"></div>
                 <div class="menu"></div>
                 <div class="bottom"></div>
             </div>
-        `
+        `, null)
 
         this.initUserInfoDom();
         this.initMenuDom();
@@ -43,27 +44,34 @@ export default class UserAside implements IBaseHTMLPages {
 
     private initUserInfoDom(): void {
         this.userInfoDOM.className = 'user-info'
-        this.userInfoDOM.innerHTML = `
+        this.userInfoDOM.innerHTML = rtpl.render(`
             <div class="thumb">
                 <img src="/image/avatar.jpg" alt="" srcset="" />
             </div>
-            <span class="name">${i18n.get('optionsWelcome')}</span>
-            <p class="description">${i18n.get('optionLoginTips')}</p>
-        `
+            <span class="name">{{ name }}</span>
+            <p class="description">{{ description }}</p>
+        `, {
+            name: i18n.get('optionsWelcome'),
+            description: i18n.get('optionLoginTips')
+        })
         i18n.translateComponent(this.userInfoDOM)
         this.mainDOM.querySelector('.user-info').replaceWith(this.userInfoDOM)
         loginState.getLoginData().then((data) => {
-            this.userInfoDOM.innerHTML = `
+            this.userInfoDOM.innerHTML = rtpl.render(`
             <div class="thumb">
-                <img src="${data.head.startsWith('http') ? data.head : `https://cdn.cloudopt.net/image/${data.head}-head`}" alt="" srcset="" />
+                <img src="{{ src }}" alt="" srcset="" />
             </div>
-            <span class="name">${data.nickname}</span>
-            <p class="description">${i18n.get('optionLoggedInTips')}</p>
-            `
+            <span class="name">{{ name }}</span>
+            <p class="description">{{ description }}</p>
+            `, {
+                src: data.head.startsWith('http') ? data.head : `https://cdn.cloudopt.net/image/${data.head}-head`,
+                name: data.nickname,
+                description: i18n.get('optionLoggedInTips'),
+            })
 
             const logoutDiv = document.createElement('div')
             logoutDiv.className = 'logout'
-            logoutDiv.innerHTML = `<span>${i18n.get('popupLogout')}</span>`
+            logoutDiv.innerHTML = rtpl.render(`<span>{{ text }}</span>`, { text: i18n.get('popupLogout') })
             logoutDiv.addEventListener('click', (ev: MouseEvent) => {
                 logout().then(() => {
                     window.location.reload()
@@ -77,7 +85,7 @@ export default class UserAside implements IBaseHTMLPages {
             // Not logged in
             this.userInfoDOM.addEventListener('click', (ev: MouseEvent) => {
                 this.userInfoDOM.querySelector('.name+p.description').setAttribute('i18n', 'optionLoginRefreshTips')
-                this.userInfoDOM.querySelector('.name+p.description').innerHTML = i18n.get('optionLoginRefreshTips')
+                this.userInfoDOM.querySelector('.name+p.description').innerHTML = rtpl.render('{{ text }}', { text: i18n.get('optionLoginRefreshTips') })
                 window.open('https://www.cloudopt.net/account/login', '_blank')
             })
         });
@@ -90,18 +98,21 @@ export default class UserAside implements IBaseHTMLPages {
         ulDom.className = 'menu-container'
 
         const createLiDom = (data: ISelectOptions) => {
-            const { icon, name, key } = data;
+            const { icon, name, key } = data
             const li = document.createElement("li")
             li.className = optionLiDefaultClassName
-            li.setAttribute("data-key", key);
-            li.innerHTML = `
+            li.setAttribute("data-key", key)
+            li.innerHTML = rtpl.render(`
                 <div class="icon">
-                    <img src="image/icon/option/userInfo/${icon}" />
+                    <img src="image/icon/option/userInfo/{{ icon }}" />
                 </div>
-                <span class="name">${name}</span>
-            `;
-            return li;
-        };
+                <span class="name">{{ name }}</span>
+            `, {
+                icon,
+                name
+            })
+            return li
+        }
 
         const createSplitLiDom = (name: string) => {
             const li = document.createElement("li")

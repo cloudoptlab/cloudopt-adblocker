@@ -8,6 +8,7 @@ import * as notification from '../../../core/notification'
 import * as utils from '../../../core/utils'
 import * as http from '../../../core/http'
 import message from '../../../core/message'
+import rtpl from 'art-template/lib/template-web.js'
 
 export default class AdBlockPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")
@@ -93,13 +94,13 @@ export default class AdBlockPages implements IBaseHTMLPages {
 
     public async render(): Promise<HTMLElement> {
         const config = await getCoreConfig()
-        this.mainDOM.innerHTML = `
-            <div class="title">${i18n.get('optionAdblockTitle')}</div>
+        this.mainDOM.innerHTML = rtpl.render(`
+            <div class="title" i18n="optionAdblockTitle"> </div>
             <div class="description">
-                <p class="content">${i18n.get('optionAdblockDescriptionContent')}</p>
-                <span class="detaile">${i18n.get('optionAdblockDescriptionDetail')}</span>
+                <p class="content" i18n="optionAdblockDescriptionContent"> </p>
+                <span class="detaile" i18n="optionAdblockDescriptionDetail"> </span>
                 <a class="link-info" id="lastUpdatedAt">
-                    ${this.lastUpdatedString}
+                    {{ lastUpdatedString }}
                 </a>
             </div>
             <div class="switch-info-container">
@@ -107,11 +108,11 @@ export default class AdBlockPages implements IBaseHTMLPages {
             </div>
             <div class="table-info-container">
                 <div class="table-item">
-                    <span class="title">${i18n.get('optionAdblockCustomSubsTitle')}</span>
+                    <span class="title" i18n="optionAdblockCustomSubsTitle"> </span>
                     <img class="add-item" src="${this.getIconPath('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
                     <div class="table" id="customSubscriptionTable">
                         <div class="hard">
-                            <span class="text">${i18n.get('optionAdblockCustomSubsAddresses')}</span>
+                            <span class="text" i18n="optionAdblockCustomSubsAddresses"> </span>
                         </div>
                         <div class="body-list">
                             <ul>
@@ -121,10 +122,10 @@ export default class AdBlockPages implements IBaseHTMLPages {
                     </div>
                 </div>
                 <div class="table-item">
-                    <span class="title">${i18n.get('optionAdblockManualTitle')}</span>
+                    <span class="title" i18n="optionAdblockManualTitle"> </span>
                     <div class="table" id="customRuleTable">
                         <div class="hard">
-                            <span class="text">${i18n.get('optionAdblockManualSelectors')}</span>
+                            <span class="text" i18n="optionAdblockManualSelectors"> </span>
                         </div>
                         <div class="body-list">
                             <ul>
@@ -138,7 +139,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitle">${i18n.get('modalAddCustomSubscriptionTitle')}</h5>
+                            <h5 class="modal-title" id="modalTitle" i18n="modalAddCustomSubscriptionTitle"> </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -147,13 +148,15 @@ export default class AdBlockPages implements IBaseHTMLPages {
                             <input type="text" id="inputCustomSubscribeUrl" class="form-control">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="buttonCloseCustomSubscription">${i18n.get('buttonCloseCustomSubscription')}</button>
-                            <button type="button" class="btn btn-primary" id="buttonAddCustomSubscription">${i18n.get('buttonAddCustomSubscription')}</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="buttonCloseCustomSubscription" i18n="buttonCloseCustomSubscription"> </button>
+                            <button type="button" class="btn btn-primary" id="buttonAddCustomSubscription" i18n="buttonAddCustomSubscription"> </button>
                         </div>
                     </div>
                 </div>
             </div>
-        `
+        `, {
+            lastUpdatedString: this.lastUpdatedString,
+        })
         this.mainDOM.querySelector('.switch-info-container').children[0].replaceWith(...this.renderSwitchInfoComponent(config))
 
         this.mainDOM.querySelector('#buttonAddCustomSubscription').addEventListener('click', async (ev: MouseEvent) => {
@@ -228,19 +231,20 @@ export default class AdBlockPages implements IBaseHTMLPages {
 
         const lastUpdatedAtElement = this.mainDOM.querySelector('#lastUpdatedAt')
         lastUpdatedAtElement.addEventListener('click', (ev: MouseEvent) => {
-            lastUpdatedAtElement.innerHTML = i18n.get('ruleListUpdating')
+            lastUpdatedAtElement.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('ruleListUpdating') })
             message.send('check-filters-update').then((result) => {
                 if (result === 'true') {
-                    lastUpdatedAtElement.innerHTML = i18n.get('ruleListUpdateSuccess')
+                    lastUpdatedAtElement.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('ruleListUpdateSuccess') })
                     setTimeout(async () => {
                         await this.generateLastUpdatedString()
-                        lastUpdatedAtElement.innerHTML = this.lastUpdatedString
+                        lastUpdatedAtElement.innerHTML = rtpl.render(this.lastUpdatedString, null)
                     }, 2000);
                 } else {
-                    lastUpdatedAtElement.innerHTML = i18n.get('ruleListUpdateFail')
+                    lastUpdatedAtElement.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('ruleListUpdateFail') })
                 }
             })
         })
+        i18n.translateComponent(this.mainDOM)
         return this.mainDOM;
     }
 }
