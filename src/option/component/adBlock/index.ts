@@ -76,8 +76,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
             `
             <li>
                 <div class="left" for="${rule}">
-                    ${config.disabledCustomSubs.inArray(rule) ? '' : 
-                    `<img class="enabled-rule" src="${this.getIconPath('icons-checked_thick')}">`}
+                    <img class="rule-icon" src="${config.disabledCustomSubs.inArray(rule) ? this.getIconPath('icons-unchecked_thick') : this.getIconPath('icons-checked_thick')}">
                     <span>${rule}</span>
                 </div>
                 <div class="right" for="${rule}">
