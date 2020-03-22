@@ -12,9 +12,6 @@
         "256": "image/icon/default/icon256.png",
         "512": "image/icon/default/icon512.png"
     },
-    "omnibox": {
-        "keyword": "c"
-    },
     "permissions": [
         "<all_urls>",
         "privacy",
