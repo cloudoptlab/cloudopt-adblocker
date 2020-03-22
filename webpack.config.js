@@ -85,7 +85,7 @@ module.exports = {
         ]),
         new HtmlWebpackPlugin({
             filename: "background.html",
-            template: "background.html",
+            template: "./src/background/background.html",
             chunks: ["background"],
             inject: "body",
         }),
