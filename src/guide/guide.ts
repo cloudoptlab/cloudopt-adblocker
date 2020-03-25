@@ -2,6 +2,7 @@ import './guide.scss'
 import { createSwitchInfoDom } from './common/switchInfo'
 import { get as getCoreConfig } from '../core/config'
 import * as i18n from '../core/i18n'
+import rtpl from 'art-template/lib/template-web.js'
 
 export class GuideManager {
 
@@ -10,7 +11,7 @@ export class GuideManager {
 
     constructor() {
         this.mainDOM.id = GuideManager.ID;
-        this.mainDOM.innerHTML = `
+        this.mainDOM.innerHTML = rtpl.render(`
             <div class="container">
                 <span class="title"><img src="image/logo-d.svg" class="cloudopt-title" width="100px"/></span>
                 <div class="content-block" id="contentBlock">
@@ -19,7 +20,7 @@ export class GuideManager {
                     <div class="footer"></div>
                 </div>
             </div>
-        `
+        `, null)
         document.querySelector('body').appendChild(this.mainDOM)
         window.addEventListener('hashchange', this.route.bind(this))
         this.route()
@@ -72,15 +73,18 @@ export class GuideManager {
 
         const body = document.createElement("div")
         body.className = 'guide-content'
-        body.innerHTML = `
-            <h3>${i18n.get('guideStep1Title')}</h3>
-            <span class="text">${i18n.get('guideStep1Content')}</span>
-        `
+        body.innerHTML = rtpl.render(`
+            <h3>{{ title }}</h3>
+            <span class="text">{{ text }}</span>
+        `, {
+            title: i18n.get('guideStep1Title'),
+            text: i18n.get('guideStep1Content'),
+        })
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = i18n.get('guideNext')
+        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step2'
         })
@@ -105,13 +109,13 @@ export class GuideManager {
             key: 'safeCloud',
             on: config.safeCloud,
         }).divElement
-        body.innerHTML = `<h3>${i18n.get('guideStep2Title')}</h3>`
+        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep2Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = i18n.get('guideNext')
+        button.innerHTML =  rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step3'
         })
@@ -136,13 +140,13 @@ export class GuideManager {
             key: 'adblockActivating',
             on: config.adblockActivating
         }).divElement
-        body.innerHTML = `<h3>${i18n.get('guideStep3Title')}</h3>`
+        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep3Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = i18n.get('guideNext')
+        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step4'
         })
@@ -167,13 +171,13 @@ export class GuideManager {
             key: 'safePrivacy',
             on: config.safePrivacy
         }).divElement
-        body.innerHTML = `<h3>${i18n.get('guideStep4Title')}</h3>`
+        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep4Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = i18n.get('guideNext')
+        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step5'
         })
@@ -194,17 +198,19 @@ export class GuideManager {
         const switchElement = createSwitchInfoDom({
             icon: '',
             title: i18n.get('guideDataCollectionSwitchTitle'),
-            content: i18n.get('guideDataCollectionSwitchContent'),
+            content: ' ',
+            i18n: 'guideDataCollectionSwitchContent',
             key: 'dataCollection',
             on: config.dataCollection
         }).divElement
-        body.innerHTML = `<h3>${i18n.get('guideStep5Title')}</h3>`
+        i18n.translateComponent(switchElement)
+        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep5Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = i18n.get('guideNext')
+        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step6'
         })
@@ -220,15 +226,18 @@ export class GuideManager {
 
         const body = document.createElement("div")
         body.className = 'guide-content'
-        body.innerHTML = `
-            <h3>${i18n.get('guideStep6Title')}</h3>
-            <span class="text">${i18n.get('guideStep6Content')}</span>
-        `
+        body.innerHTML = rtpl.render(`
+            <h3>{{ title }}</h3>
+            <span class="text">{{ text }}</span>
+        `, {
+            title: i18n.get('guideStep6Title'),
+            text: i18n.get('guideStep6Content')
+        })
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = i18n.get('guideLogin')
+        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideLogin') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.open('https://www.cloudopt.net/account/login')
         })

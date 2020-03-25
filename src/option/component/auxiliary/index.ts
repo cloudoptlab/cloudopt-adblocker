@@ -3,6 +3,7 @@ import "./index.scss";
 import { IBaseHTMLPages } from "../types";
 import { Config } from "../../../core/config"
 import * as i18n from '../../../core/i18n'
+import rtpl from 'art-template/lib/template-web.js'
 
 export default class AuxiliaryPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")
@@ -34,17 +35,18 @@ export default class AuxiliaryPages implements IBaseHTMLPages {
     }
 
     public render(config: Config): HTMLElement {
-        this.mainDOM.innerHTML = `
-            <div class="title">${i18n.get('optionMiscTitle')}</div>
+        this.mainDOM.innerHTML = rtpl.render(`
+            <div class="title" i18n="optionMiscTitle"> </div>
             <div class="description">
-                <p class="content">${i18n.get('optionMiscDescriptionContent')}</p>
-                <span class="detaile">${i18n.get('optionMiscDescriptionDetail')}</span>
+                <p class="content" i18n="optionMiscDescriptionContent"> </p>
+                <span class="detaile" i18n="optionMiscDescriptionDetail"> </span>
             </div>
             <div class="switch-info-container">
                 <div />
             </div>
-        `;
+        `, null)
         this.mainDOM.querySelector('.switch-info-container').children[0].replaceWith(...this.renderSwitchInfoComponent(config))
+        i18n.translateComponent(this.mainDOM)
         return this.mainDOM;
     }
 }

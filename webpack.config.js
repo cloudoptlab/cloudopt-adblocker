@@ -1,8 +1,8 @@
 const path = require("path");
 const glob = require("glob");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const mode = process.env.NODE_ENV || 'development'
 
 module.exports = {
     entry: {
@@ -17,7 +17,7 @@ module.exports = {
         guide: "./src/guide/guide.ts",
         suspend: "./src/suspend/suspend.ts",
     },
-    mode: process.env.NODE_ENV || "development",
+    mode,
     module: {
         rules: [{
                 test: /\.ts$/,
@@ -58,8 +58,8 @@ module.exports = {
             commonjs: "lodash"
         }
     },
-    optimization: {
-        minimizer: [new UglifyJsPlugin({ uglifyOptions: { output: { comments: false } } })],
+    performance: {
+        hints: false
     },
     plugins: [
         new CopyWebpackPlugin([
@@ -76,7 +76,6 @@ module.exports = {
             { from: "node_modules/popper.js/dist/umd/popper.min.js", to: "lib/" },
             { from: "node_modules/@antv/g2/dist/g2.min.js", to: "lib/g2/" },
             { from: "node_modules/@antv/data-set/dist/data-set.min.js", to: "lib/g2/" },
-            { from: "node_modules/tippy.js/umd/index.all.min.js", to: "lib/tippy.all.min.js" },
             { from: "src/libs/icon", to: "lib/icon" },
             { from: "css", to: "css" },
             { from: "_locales", to: "_locales" },
@@ -85,7 +84,7 @@ module.exports = {
         ]),
         new HtmlWebpackPlugin({
             filename: "background.html",
-            template: "background.html",
+            template: "./src/background/background.html",
             chunks: ["background"],
             inject: "body",
         }),
@@ -114,4 +113,5 @@ module.exports = {
             inject: true,
         }),
     ],
+    devtool: mode === 'development' ? 'inline-source-map' : '',
 };

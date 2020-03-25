@@ -4,6 +4,7 @@ import { IBaseHTMLPages } from "../types";
 import { Config, get as getCoreConfig, set as setCoreConfig } from "../../../core/config"
 import { connectionCount } from "../../../core/api"
 import * as i18n from "../../../core/i18n"
+import rtpl from 'art-template/lib/template-web.js'
 
 export default class SafePages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div");
@@ -94,14 +95,14 @@ export default class SafePages implements IBaseHTMLPages {
 
     public async render(): Promise<HTMLElement> {
         const config = await getCoreConfig()
-        this.mainDOM.innerHTML = `
-            <div class="title" i18n="optionsIntelligentSecurity">${i18n.get('optionsIntelligentSecurity')}</div>
+        this.mainDOM.innerHTML = rtpl.render(`
+            <div class="title" i18n="optionsIntelligentSecurity" i18n="optionsIntelligentSecurity"> </div>
             <div class="description">
-                <p class="content">${i18n.get('optionSafeContent')}</p>
-                <span class="detaile">${i18n.get('optionSafeDetail')}</span>
+                <p class="content" i18n="optionSafeContent"> </p>
+                <span class="detaile" i18n="optionSafeDetail"> </span>
                 <a class="link-info" href="https://cloudopt.net/" target="_blank">
                     <img src="/image/icon/option/right.svg" alt="" srcset="" />
-                    ${i18n.get('optionSafeOfficalLink')}
+                    {{ optionSafeOfficalLink }}
                 </a>
             </div>
             <div class="card">
@@ -109,22 +110,22 @@ export default class SafePages implements IBaseHTMLPages {
                     <div class="left-column">
                         <div class="icon-info">
                             <span class="ring-block">
-                                <img src="/image/icon/option/safe/icons-cloud_connection.svg" alt="" srcset="" />
+                                <img src="/image/icon/option/icons-cloud_connection.svg" alt="" srcset="" />
                             </span>
                         </div>
-                        <span class="title">${i18n.get('optionSafeUsersConnect')}</span>
+                        <span class="title" i18n="optionSafeUsersConnect"> </span>
                     </div>
                     <div class="right-column">
-                        <span class="count">${this.connectionCount}</span>
-                        <span class="people">${i18n.get('optionsSafeConnections')}</span>
+                        <span class="count">{{ connectionCount }}</span>
+                        <span class="people" i18n="optionsSafeConnections"> </span>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="connect-status">
-                        <img src="${this.connected ? this.getIconPath('icons-checkmark') : this.getIconPath('icons-sad_cloud')}" alt="" srcset="" />
-                        <span class="text ${this.connected ? "connected" : "disconnected"}">${this.connected ? i18n.get('optionsSafeConnectionSuccess') : i18n.get('optionsSafeConnectionFail')}</span>
+                        <img src="{{ src }}" alt="" srcset="" />
+                        <span class="text {{ connected  ? "connected" : "disconnected" }}" i18n="{{ connected ? "optionsSafeConnectionSuccess" : "optionsSafeConnectionFail" }}"> </span>
                     </div>
-                    <span>${i18n.get('optionsSafeConnectionsIn24Hours')}</span>
+                    <span i18n="optionsSafeConnectionsIn24Hours"> </span>
                 </div>
             </div>
             <div class="switch-info-container">
@@ -132,10 +133,10 @@ export default class SafePages implements IBaseHTMLPages {
             </div>
             <div class="table-info-container">
                 <div class="table-item">
-                    <span class="title">${i18n.get('optionSafeAllowListTitle')}</span>
+                    <span class="title" i18n="optionSafeAllowListTitle"> </span>
                     <div class="table" id="customSubscriptionTable">
                         <div class="hard">
-                            <span class="text">${i18n.get('optionSafeAllowListUrls')}</span>
+                            <span class="text" i18n="optionSafeAllowListUrls"> </span>
                         </div>
                         <div class="body-list">
                             <ul>
@@ -145,7 +146,12 @@ export default class SafePages implements IBaseHTMLPages {
                     </div>
                 </div>
             </div>
-        `;
+        `, {
+            optionSafeOfficalLink: i18n.get('optionSafeOfficalLink'),
+            connectionCount: this.connectionCount,
+            src: this.connected ? this.getIconPath('icons-checkmark') : this.getIconPath('icons-sad_cloud'),
+            connected: this.connected,
+        })
         this.mainDOM.querySelector('.switch-info-container').children[0].replaceWith(...this.renderSwitchInfoComponent(config))
 
         this.mainDOM.querySelectorAll('#customSubscriptionTable .right').forEach((el) => {
@@ -159,6 +165,7 @@ export default class SafePages implements IBaseHTMLPages {
             })
         })
 
+        i18n.translateComponent(this.mainDOM)
         return this.mainDOM;
     }
 }
