@@ -140,7 +140,7 @@
         "message": "版本信息"
     },
     "optionAboutAdBlockCount": {
-        "message": "惡意廣告和挖礦腳本攔截總數"
+        "message": "惡意廣告和跟踪器攔截總數"
     },
     "optionAboutSiteBlockCount": {
         "message": "惡意網站攔截總數"
@@ -194,7 +194,7 @@
         "message": "攔截惡意廣告及彈窗"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt<sup>&reg;</sup> AdBlocker 可以阻止彈出廣告，更快加載網頁，您還可以訂閱自己喜歡的廣告攔截規則列表或是在網頁上進行手動攔截。"
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker 可以阻止彈出廣告，更快加載網頁。我們會自動根據您所在的國家訂閱合適的規則，您還可以訂閱自己喜歡的廣告攔截規則列表（自動去重）​​或是在網頁上進行手動攔截。"
     },
     "optionAdblockCustomSubsTitle": {
         "message": "自定義訂閱規則列表"

@@ -1,0 +1,445 @@
+{
+    "infoName": {
+        "message": "Cloudopt AdBlocker",
+        "description": "Extension Name"
+    },
+    "infoDescription": {
+        "message": "Probablement le plugin de sécurité le plus puissant de l'hémisphère oriental, vous protégeant en temps réel, empêchant les traces, les noms de domaine malveillants, filtrant les bannières publicitaires, les pop-up et les vidéos.",
+        "description": "Extension Description"
+    },
+    "contextMenus1": {
+        "message": "Ajouter à la liste blanche de sécurité Cloud"
+    },
+    "contextMenus2": {
+        "message": "Afficher le rapport de sécurité"
+    },
+    "contextMenus3": {
+        "message": "Bloquer manuellement les annonces malveillantes (BETA)"
+    },
+    "contextMenus4": {
+        "message": "Ajouter à la liste noire de sécurité cloud"
+    },
+    "ominiboxTips": {
+        "message": "Entrez votre numéro de mobile ou URL pour une sécurité d'authentification rapide"
+    },
+    "dangDownTitle": {
+        "message": "Votre téléchargement a été bloqué"
+    },
+    "updateTipsTitle": {
+        "message": "La mise à jour automatique a réussi"
+    },
+    "updateTips1": {
+        "message": "Cloudopt a été mis à niveau vers"
+    },
+    "updateTips2": {
+        "message": "L'historique des mises à jour peut être consulté sur le blog officiel."
+    },
+    "adblockInitTitle": {
+        "message": "Initialisation"
+    },
+    "adblockInitTips": {
+        "message": "Le moteur de blocage des publicités malveillantes est en cours d'initialisation. Cela ne prend que quelques minutes. Ne fermez pas le navigateur pendant le processus d'initialisation."
+    },
+    "memoryOptimizedIcon": {
+        "message": "⏸"
+    },
+    "optionTipsDontDuplicate": {
+        "message": "Ne pas ajouter à plusieurs reprises"
+    },
+    "optionTipsInputUrlisNull": {
+        "message": "Le nom de domaine que vous avez entré est vide, veuillez vérifier et saisir"
+    },
+    "optionTipsInputUrlisError": {
+        "message": "Le nom de domaine que vous avez entré est incorrect. Veuillez vérifier et saisir"
+    },
+    "updateConfigFailure": {
+        "message": "La mise à jour de la configuration a échoué"
+    },
+    "bankSafeTips": {
+        "message": "Il est détecté que vous visitez le site Web de la banque et Cloudopt vous accompagnera!"
+    },
+    "gameSafeTips": {
+        "message": "Il est détecté que vous visitez le site Web du jeu et Cloudopt vous accompagnera!"
+    },
+    "shopSafeTips": {
+        "message": "Il a été détecté que vous visitez un site d'achat et Cloudopt vous accompagnera!"
+    },
+    "hospitalSafeTips": {
+        "message": "Il est détecté que vous visitez le site Web de l'hôpital et Cloudopt vous accompagnera!"
+    },
+    "guideStep1Title": {
+        "message": "Bienvenue dans Cloudopt AdBlocker"
+    },
+    "guideStep1Content": {
+        "message": "Cloudopt AdBlocker peut protéger votre sécurité en temps réel, empêcher le suivi, les noms de domaine malveillants, filtrer les bannières publicitaires, les publicités instantanées et les publicités vidéo. Nous vous guiderons à travers les paramètres initiaux."
+    },
+    "guideNext": {
+        "message": "Suivant"
+    },
+    "guideSafeCloudSwitchTitle": {
+        "message": "Protection Web"
+    },
+    "guideSafeCloudSwitchContent": {
+        "message": "Blocage en temps réel des sites Web dangereux pour vous protéger contre le phishing et les URL malveillantes."
+    },
+    "guideStep2Title": {
+        "message": "Vous protéger des sites Web malveillants"
+    },
+    "guideStep3Title": {
+        "message": "Bloquer les publicités malveillantes et les pop-ups ennuyeux"
+    },
+    "guideAdblockActivateSwitchTitle": {
+        "message": "Blocage des publicités"
+    },
+    "guideAdblockActivateSwitchContent": {
+        "message": "Accélérez efficacement le chargement des pages, économisez de la bande passante, bloquez les publicités malveillantes et les pop-ups."
+    },
+    "guideStep4Title": {
+        "message": "Protégez votre vie privée des regards indiscrets"
+    },
+    "guideSafePrivacySwitchTitle": {
+        "message": "Confidentialité"
+    },
+    "guideSafePrivacySwitchContent": {
+        "message": "Empêchez les sites Web, les agences de publicité, etc. de suivre votre comportement de navigation et de protéger votre vie privée."
+    },
+    "guideStep5Title": {
+        "message": "Rejoignez le programme d'amélioration de l'expérience utilisateur"
+    },
+    "guideDataCollectionSwitchTitle": {
+        "message": "Programme d'amélioration de l'expérience utilisateur"
+    },
+    "guideDataCollectionSwitchContent": {
+        "message": "Afin de mieux vous servir, nous autoriserons Cloudopt à fournir des informations techniques et des données interactives. <A href = 'https: //www.cloudopt.net/policy/privacy' target = '_ blank' > Déclaration de confidentialité </a> "
+    },
+    "guideStep6Title": {
+        "message": "Félicitations! Configuration initiale terminée"
+    },
+    "guideStep6Content": {
+        "message": "Vous avez terminé les paramètres de base, vous pouvez également nous trouver pour modifier les paramètres dans le coin supérieur droit de votre navigateur à tout moment. Vous pouvez également vous connecter à votre compte Cloudopt ou fermer cette page directement."
+    },
+    "guideLogin": {
+        "message": "Connexion"
+    },
+    "optionAboutTitle": {
+        "message": "A propos de nous"
+    },
+    "optionAboutDescriptionContent": {
+        "message": "Nous fournissons plusieurs canaux de rétroaction"
+    },
+    "optionAboutDescriptionDetail": {
+        "message": "Vous pouvez nous contacter par chat en ligne, e-mail, Twitter, etc. Vous pouvez également rejoindre notre base d'utilisateurs pour obtenir des informations mises à jour la première fois, et de nombreux avantages vous attendent. © 2015-2019 Cloudopt < sup> & reg; </ sup> Tous droits réservés. "
+    },
+    "optionAboutStatisticsTitle": {
+        "message": "Statistiques"
+    },
+    "optionAboutStatisticsName": {
+        "message": "Nom des statistiques"
+    },
+    "optionAboutVersion": {
+        "message": "informations de version"
+    },
+    "optionAboutAdBlockCount": {
+        "message": "Nombre total d'annonces malveillantes et de blocs de suivi"
+    },
+    "optionAboutSiteBlockCount": {
+        "message": "Nombre total de blocs de sites Web malveillants"
+    },
+    "optionAboutAccelerationCount": {
+        "message": "Accélération totale de la page"
+    },
+    "optionAboutContectTitle": {
+        "message": "Rejoindre le groupe d'utilisateurs"
+    },
+    "optionAboutContectMeans": {
+        "message": "Chaîne sociale"
+    },
+    "optionAboutContectWechat": {
+        "message": "Suivez le compte public WeChat"
+    },
+    "optionAboutContectQQ": {
+        "message": "Rejoindre le groupe d'utilisateurs QQ"
+    },
+    "optionAboutContectMessager": {
+        "message": "Rejoindre le groupe d'utilisateurs Messager"
+    },
+    "optionAboutContectTwitter": {
+        "message": "Suivez Twitter"
+    },
+    "optionFiltersLastUpdatedAt": {
+        "message": "Base de règles de blocage des annonces mise à jour"
+    },
+    "optionFiltersLastUpdatedAt1": {
+        "message": "Cliquez sur Mettre à jour manuellement."
+    },
+    "filterNotUpdated": {
+        "message": "Base de règles de blocage des annonces non mise à jour"
+    },
+    "optionAdblockActivatingTitle": {
+        "message": "Blocage des publicités"
+    },
+    "optionAdblockActivatingContent": {
+        "message": "Bloquez intelligemment les publicités et les popups malveillants sur les pages Web en fonction de votre situation réelle."
+    },
+    "optionAdblockDisplayTitle": {
+        "message": "Afficher la quantité"
+    },
+    "optionAdblockDisplayContent": {
+        "message": "Afficher le nombre d'annonces bloquées sur l'icône d'extension du navigateur."
+    },
+    "optionAdblockTitle": {
+        "message": "Blocage des publicités"
+    },
+    "optionAdblockDescriptionContent": {
+        "message": "Bloquer les publicités et popups malveillants"
+    },
+    "optionAdblockDescriptionDetail": {
+        "message": "Cloudopt <sup> & reg; </ sup> AdBlocker Peut empêcher les publicités pop-up et charger les pages Web plus rapidement. Nous souscrirons automatiquement aux règles appropriées en fonction de votre pays. Vous pouvez également vous abonner à votre liste préférée de règles de blocage des annonces (déduplication automatique) ou bloquer manuellement sur la page Web."
+    },
+    "optionAdblockCustomSubsTitle": {
+        "message": "Liste des règles d'abonnement personnalisées"
+    },
+    "optionAdblockCustomSubsAddresses": {
+        "message": "Adresse d'abonnement"
+    },
+    "optionAdblockManualTitle": {
+        "message": "Bloquer manuellement la liste des éléments"
+    },
+    "optionAdblockManualSelectors": {
+        "message": "Sélecteur d'élément"
+    },
+    "modalAddCustomSubscriptionTitle": {
+        "message": "Ajouter une règle d'abonnement personnalisée"
+    },
+    "buttonCloseCustomSubscription": {
+        "message": "Fermer"
+    },
+    "buttonAddCustomSubscription": {
+        "message": "Enregistrer"
+    },
+    "urlErrorTips": {
+        "message": "Veuillez saisir la bonne adresse"
+    },
+    "optionTipsAddCustomRuleSuccess": {
+        "message": "Règle d'abonnement personnalisée ajoutée avec succès"
+    },
+    "optionTipsAddCustomRuleFailure": {
+        "message": "Échec de l'ajout d'une règle d'abonnement personnalisée"
+    },
+    "ruleListUpdating": {
+        "message": "Mise à jour ..."
+    },
+    "ruleListUpdateSuccess": {
+        "message": "Base de règles de blocage des publicités mise à jour avec succès! Cliquez pour mettre à jour à nouveau."
+    },
+    "ruleListUpdateFail": {
+        "message": "La mise à jour de la base de règles de blocage des annonces a échoué. Veuillez vérifier votre connexion réseau et cliquez pour réessayer."
+    },
+    "optionBookmarkSearchTitle": {
+        "message": "Recherche de signets"
+    },
+    "optionBookmarkSearchContent": {
+        "message": "Vous récupérez automatiquement les signets et les intégrez dans les résultats de recherche lorsque vous effectuez une recherche sur un moteur de recherche."
+    },
+    "optionDataCollectionTitle": {
+        "message": "Programme d'amélioration de l'expérience utilisateur"
+    },
+    "optionDataCollectionContent": {
+        "message": "Afin de mieux vous servir, nous autoriserons Cloudopt à fournir des informations techniques et des données interactives. <A href = 'https: //www.cloudopt.net/policy/privacy' target = '_ blank' > Déclaration de confidentialité </a> "
+    },
+    "optionMiscTitle": {
+        "message": "Accessibilité"
+    },
+    "optionMiscDescriptionContent": {
+        "message": "Fournir des paramètres supplémentaires"
+    },
+    "optionMiscDescriptionDetail": {
+        "message": "Cloudopt <sup> & reg; </ sup> AdBlocker vous fournira également des fonctionnalités d'accessibilité puissantes et utiles pour améliorer votre expérience utilisateur lors de la navigation sur le Web. Si vous disposez des fonctionnalités souhaitées, vous pouvez également Envoyez-nous un courriel à support@cloudopt.net. "
+    },
+    "optionDNSSpeedTitle": {
+        "message": "précharge DNS"
+    },
+    "optionDNSSpeedContent": {
+        "message": "Effectuez une résolution DNS des sites Web que vous pourriez visiter à l'avance pour accélérer la connexion au site Web."
+    },
+    "optionWebPrereadingTitle": {
+        "message": "Préchargement de la page"
+    },
+    "optionWebPrereadingContent": {
+        "message": "Chargez les pages qui peuvent être visitées à l'avance pour augmenter la vitesse d'ouverture des pages."
+    },
+    "optionMemoryOptimizeTitle": {
+        "message": "Optimisation de la mémoire"
+    },
+    "optionMemoryOptimizeContent": {
+        "message": "Lorsque l'utilisation de la mémoire est supérieure à 80%, l'optimisation de la mémoire est automatiquement effectuée pour les pages à onglet qui n'ont pas été consultées depuis longtemps."
+    },
+    "optionOptimizationTitle": {
+        "message": "Optimiser l'accélération"
+    },
+    "optionOptimizationContent": {
+        "message": "Accélérez votre accès Web et améliorez l'expérience utilisateur"
+    },
+    "optionOptimizationDetail": {
+        "message": "La technologie Cloudopt <sup> & reg; </ sup> Speed ​​peut tirer parti de certaines fonctionnalités du navigateur pour vous aider à charger les pages Web plus rapidement et à augmenter la vitesse d'accès à votre page Web. Elle peut également vous aider à réduire la consommation de ressources de votre navigateur."
+    },
+    "optionSafeCloudTitle": {
+        "message": "Protection Web"
+    },
+    "optionSafeCloudContent": {
+        "message": "Blocage en temps réel des sites Web dangereux pour vous protéger contre le phishing et les URL malveillantes."
+    },
+    "optionSafeDownloadTitle": {
+        "message": "Protection contre le téléchargement"
+    },
+    "optionSafeDownloadContent": {
+        "message": "Bloquer automatiquement les téléchargements à partir de sites Web dangereux et empêcher les sites Web malveillants de se télécharger automatiquement."
+    },
+    "optionSafePrivacyTitle": {
+        "message": "Confidentialité"
+    },
+    "optionSafePrivacyContent": {
+        "message": "Empêche efficacement les sites d'analyse de suivre ou d'enregistrer l'activité de votre réseau."
+    },
+    "optionSafePotentialTitle": {
+        "message": "mode strict"
+    },
+    "optionSafePotentialContent": {
+        "message": "Une fois ouvert, il bloquera également les sites indésirables et les sites de faible réputation."
+    },
+    "optionSafeCoinTitle": {
+        "message": "Interception de script d'exploration de données"
+    },
+    "optionSafeCoinContent": {
+        "message": "Vous aide à empêcher votre ordinateur d'être utilisé pour l'exploitation minière (Bitcoin) par des sites Web malveillants."
+    },
+    "optionSafeTipsTitle": {
+        "message": "Conseils de sécurité"
+    },
+    "optionSafeTipsContent": {
+        "message": "Une invite de sécurité apparaît lorsque vous visitez des sites Web facilement usurpés, tels que les banques et le commerce électronique."
+    },
+    "optionSafeAllowListTitle": {
+        "message": "Liste blanche"
+    },
+    "optionSafeAllowListUrls": {
+        "message": "Adresses en liste blanche"
+    },
+    "optionsIntelligentSecurity": {
+        "message": "Smart Security"
+    },
+    "optionSafeContent": {
+        "message": "Un réseau sécurisé connectant les utilisateurs du monde entier"
+    },
+    "optionSafeDetail": {
+        "message": "Cloudopt <sup> & reg; </ sup> Cloud Security Network est un système d'analyse des menaces basé sur un mécanisme d'évaluation de la réputation. Il connecte les utilisateurs du monde entier et protège vos pages Web en temps réel. Cloudopt <sup> & reg; </ sup> l'IA peut analyser les cybermenaces en temps réel, 7j / 7. "
+    },
+    "optionSafeOfficalLink": {
+        "message": "Pour plus d'informations, veuillez visiter le site officiel."
+    },
+    "optionSafeUsersConnect": {
+        "message": "Utilisateurs connectés mondiaux"
+    },
+    "optionsSafeConnections": {
+        "message": "Numéro"
+    },
+    "optionsSafeConnectionSuccess": {
+        "message": "Connexion réussie"
+    },
+    "optionsSafeConnectionFail": {
+        "message": "Impossible de se connecter à Smart Security Center, veuillez vérifier votre réseau et réessayer."
+    },
+    "optionsSafeConnectionsIn24Hours": {
+        "message": "Nombre d'utilisateurs protégés au cours des dernières 24 heures"
+    },
+    "optionsWelcome": {
+        "message": "Bienvenue à vous"
+    },
+    "optionLoginTips": {
+        "message": "Connectez-vous pour rester synchronisé"
+    },
+    "popupLogout": {
+        "message": "Déconnexion"
+    },
+    "optionLoggedInTips": {
+        "message": "Protégez votre vie privée en temps réel"
+    },
+    "optionLoginRefreshTips": {
+        "message": "Actualiser la page après une connexion réussie"
+    },
+    "optionsAdblock": {
+        "message": "Blocage des publicités"
+    },
+    "optionsSpeedup": {
+        "message": "Optimiser l'accélération"
+    },
+    "optionsOtherSettings": {
+        "message": "Autres paramètres"
+    },
+    "optionsMisc": {
+        "message": "Accessibilité"
+    },
+    "optionsAboutUs": {
+        "message": "A propos de nous"
+    },
+    "popupAdblockName": {
+        "message": "Blocage des publicités"
+    },
+    "popupPrerenderName": {
+        "message": "Accélération Web"
+    },
+    "popupNoNeedGrade": {
+        "message": "Aucune évaluation requise pour cette page"
+    },
+    "popupNotValid": {
+        "message": "Impossible de prendre effet sur cette page"
+    },
+    "popupSystemPage": {
+        "message": "Cette page peut être la propre page du navigateur, nous vous protégeons toujours en temps réel."
+    },
+    "popupEvaluateTipsTitle": {
+        "message": "Partagez vos commentaires"
+    },
+    "popupEvaluateTipsSubtitle": {
+        "message": "Vos commentaires aideront plus de personnes à combattre les sites de phishing dangereux."
+    },
+    "popupSafeProtectTitle": {
+        "message": "Protection de sécurité en temps réel"
+    },
+    "popupSafeProtectSubtitle": {
+        "message": "L'accès à ce site ne sera plus protégé après la fermeture"
+    },
+    "popupAdblockTitle": {
+        "message": "Blocage d'annonces malveillantes"
+    },
+    "popupAdblockSubtitle": {
+        "message": "La publicité sur ce site ne sera plus bloquée après la fermeture"
+    },
+    "popupGradeTitle": {
+        "message": "Évaluation de la réputation du site"
+    },
+    "popupGradeSubtitle": {
+        "message": "Cliquez pour afficher le rapport de réputation de sites Web"
+    },
+    "popupManualTitle": {
+        "message": "Bloquer manuellement les annonces pour ce site"
+    },
+    "popupManualSubtitle": {
+        "message": "Cliquez pour ouvrir le bloqueur manuel"
+    },
+    "popupMoreTitle": {
+        "message": "Plus d'options de paramétrage"
+    },
+    "popupMoreSubtitle": {
+        "message": "Cliquez pour accéder à la page des paramètres pour les paramètres détaillés"
+    },
+    "memoryOptimized": {
+        "message": "L'utilisation de la mémoire a été optimisée"
+    },
+    "memoryOptimizedSub": {
+        "message": "Cloudopt Adblocker optimise intelligemment les onglets auxquels on n'a pas accédé depuis longtemps et libère de la mémoire"
+    },
+    "memoryOptimizedReturn": {
+        "message": "Récupérer maintenant"
+    }
+}

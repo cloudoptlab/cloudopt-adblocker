@@ -1,0 +1,445 @@
+{
+    "infoName": {
+        "message": "Cloudopt AdBlocker",
+        "description": "プラグイン名"
+    },
+    "infoDescription": {
+        "message": "おそらく東半球で最も強力なセキュリティプラグインであり、リアルタイムでユーザーを保護し、トレース、悪意のあるドメイン名、バナー広告、ポップアップ広告、ビデオ広告のフィルタリングを防ぎます。",
+        "description": "プラグインの説明"
+    },
+    "contextMenus1": {
+        "message": "クラウドセキュリティホワイトリストに参加"
+    },
+    "contextMenus2": {
+        "message": "セキュリティレポートの表示"
+    },
+    "contextMenus3": {
+        "message": "悪意のある広告を手動でブロック（ベータ版）"
+    },
+    "contextMenus4": {
+        "message": "クラウドセキュリティブラックリストに参加"
+    },
+    "ominiboxTips": {
+        "message": "迅速な認証セキュリティのために携帯電話番号またはウェブサイトを入力してください"
+    },
+    "dangDownTitle": {
+        "message": "ダウンロードがブロックされました"
+    },
+    "updateTipsTitle": {
+        "message": "自動更新に成功しました"
+    },
+    "updateTips1": {
+        "message": "Cloudoptはにアップグレードされました"
+    },
+    "updateTips2": {
+        "message": "更新履歴は公式ブログで閲覧できます。"
+    },
+    "adblockInitTitle": {
+        "message": "初期化中"
+    },
+    "adblockInitTips": {
+        "message": "悪意のある広告ブロックエンジンを初期化しています。数分で完了します。初期化プロセス中にブラウザを閉じないでください。"
+    },
+    "memoryOptimizedIcon": {
+        "message": "⏸"
+    },
+    "optionTipsDontDuplicate": {
+        "message": "繰り返し追加しないでください"
+    },
+    "optionTipsInputUrlisNull": {
+        "message": "入力したドメイン名は空です。確認して入力してください"
+    },
+    "optionTipsInputUrlisError": {
+        "message": "入力したドメイン名が正しくありません。確認して入力してください"
+    },
+    "updateConfigFailure": {
+        "message": "構成の更新に失敗しました"
+    },
+    "bankSafeTips": {
+        "message": "銀行のWebサイトにアクセスしていることが検出され、Cloudoptがエスコートします！"
+    },
+    "gameSafeTips": {
+        "message": "ゲームのウェブサイトにアクセスしていることが検出されました。Cloudoptがあなたをエスコートします！"
+    },
+    "shopSafeTips": {
+        "message": "ショッピングサイトにアクセスしていることが検出され、Cloudoptがあなたをエスコートします！"
+    },
+    "hospitalSafeTips": {
+        "message": "病院のWebサイトにアクセスしていることが検出され、Cloudoptがあなたを護衛します！"
+    },
+    "guideStep1Title": {
+        "message": "Cloudopt AdBlockerへようこそ"
+    },
+    "guideStep1Content": {
+        "message": "Cloudopt AdBlockerは、リアルタイムでセキュリティを保護し、追跡、悪意のあるドメイン名の防止、バナー広告、ポップアップ広告、ビデオ広告のフィルタリングを行うことができます。初期設定をご案内します。"
+    },
+    "guideNext": {
+        "message": "次へ"
+    },
+    "guideSafeCloudSwitchTitle": {
+        "message": "ウェブ保護"
+    },
+    "guideSafeCloudSwitchContent": {
+        "message": "危険なWebサイトをリアルタイムでブロックして、フィッシングや悪意のあるURLからユーザーを保護します。"
+    },
+    "guideStep2Title": {
+        "message": "悪意のあるWebサイトからユーザーを保護します"
+    },
+    "guideStep3Title": {
+        "message": "悪意のある広告と迷惑なポップアップをブロックします"
+    },
+    "guideAdblockActivateSwitchTitle": {
+        "message": "広告のブロック"
+    },
+    "guideAdblockActivateSwitchContent": {
+        "message": "ページの読み込みを効果的に高速化し、帯域幅を節約し、悪意のある広告とポップアップをブロックします。"
+    },
+    "guideStep4Title": {
+        "message": "プライバシーを詮索好きな目から保護します"
+    },
+    "guideSafePrivacySwitchTitle": {
+        "message": "プライバシー"
+    },
+    "guideSafePrivacySwitchContent": {
+        "message": "ウェブサイト、広告会社などがあなたの閲覧行動を追跡することを防ぎ、あなたのプライバシーを保護します。"
+    },
+    "guideStep5Title": {
+        "message": "ユーザーエクスペリエンス向上プログラムに参加する"
+    },
+    "guideDataCollectionSwitchTitle": {
+        "message": "ユーザーエクスペリエンス向上プログラム"
+    },
+    "guideDataCollectionSwitchContent": {
+        "message": "より良いサービスを提供するために、Cloudoptがいくつかの技術情報とインタラクティブなデータを提供することを許可します。<A href = 'https：//www.cloudopt.net/policy/privacy' target = '_ blank' >プライバシーに関する声明</a> "
+    },
+    "guideStep6Title": {
+        "message": "おめでとうございます！初期設定が完了しました"
+    },
+    "guideStep6Content": {
+        "message": "基本設定が完了しました。ブラウザーの右上隅からいつでも設定を変更できます。Cloudoptアカウントにログインするか、このページを直接閉じることもできます。"
+    },
+    "guideLogin": {
+        "message": "ログイン"
+    },
+    "optionAboutTitle": {
+        "message": "私たちについて"
+    },
+    "optionAboutDescriptionContent": {
+        "message": "複数のフィードバックチャネルを提供します"
+    },
+    "optionAboutDescriptionDetail": {
+        "message": "オンラインチャット、メール、Twitterなどを介して当社に連絡することができます。また、初めてユーザー情報に参加して最新情報を入手することもできます。また、多くの特典が用意されています。©2015-2019 Cloudopt < sup>＆reg; </ sup> All rights reserved。 "
+    },
+    "optionAboutStatisticsTitle": {
+        "message": "統計"
+    },
+    "optionAboutStatisticsName": {
+        "message": "統計名"
+    },
+    "optionAboutVersion": {
+        "message": "バージョン情報"
+    },
+    "optionAboutAdBlockCount": {
+        "message": "悪意のある広告とトラッカーのブロックの合計"
+    },
+    "optionAboutSiteBlockCount": {
+        "message": "悪意のあるWebサイトブロックの総数"
+    },
+    "optionAboutAccelerationCount": {
+        "message": "総ページアクセラレーション"
+    },
+    "optionAboutContectTitle": {
+        "message": "ユーザーグループに参加"
+    },
+    "optionAboutContectMeans": {
+        "message": "ソーシャルチャネル"
+    },
+    "optionAboutContectWechat": {
+        "message": "WeChatパブリックアカウントをフォロー"
+    },
+    "optionAboutContectQQ": {
+        "message": "QQユーザーグループに参加"
+    },
+    "optionAboutContectMessager": {
+        "message": "メッセージユーザーグループに参加"
+    },
+    "optionAboutContectTwitter": {
+        "message": "Twitterをフォロー"
+    },
+    "optionFiltersLastUpdatedAt": {
+        "message": "広告ブロックルールベースが更新されました"
+    },
+    "optionFiltersLastUpdatedAt1": {
+        "message": "、手動更新をクリックします。"
+    },
+    "filterNotUpdated": {
+        "message": "更新されていない広告ブロックルールベース"
+    },
+    "optionAdblockActivatingTitle": {
+        "message": "広告のブロック"
+    },
+    "optionAdblockActivatingContent": {
+        "message": "実際の状況に基づいて、Webページ上の広告と悪意のあるポップアップをインテリジェントにブロックします"
+    },
+    "optionAdblockDisplayTitle": {
+        "message": "表示された数"
+    },
+    "optionAdblockDisplayContent": {
+        "message": "ブロックされた広告の数をブラウザー拡張アイコンに表示します。"
+    },
+    "optionAdblockTitle": {
+        "message": "広告のブロック"
+    },
+    "optionAdblockDescriptionContent": {
+        "message": "悪意のある広告とポップアップをブロックする"
+    },
+    "optionAdblockDescriptionDetail": {
+        "message": "Cloudopt <sup>＆reg; </ sup> AdBlocker ポップアップ広告を防ぎ、Webページをより速くロードできます。 お住まいの国に基づいて、適切なルールを自動的にサブスクライブします。また、広告ブロックルール（自動重複排除）のお気に入りのリストをサブスクライブしたり、Webページで手動でブロックしたりすることもできます。"
+    },
+    "optionAdblockCustomSubsTitle": {
+        "message": "カスタムサブスクリプションルールリスト"
+    },
+    "optionAdblockCustomSubsAddresses": {
+        "message": "サブスクリプションアドレス"
+    },
+    "optionAdblockManualTitle": {
+        "message": "手動で要素リストをブロックします"
+    },
+    "optionAdblockManualSelectors": {
+        "message": "要素セレクター"
+    },
+    "modalAddCustomSubscriptionTitle": {
+        "message": "カスタムサブスクリプションルールを追加"
+    },
+    "buttonCloseCustomSubscription": {
+        "message": "閉じる"
+    },
+    "buttonAddCustomSubscription": {
+        "message": "保存"
+    },
+    "urlErrorTips": {
+        "message": "正しい住所を入力してください"
+    },
+    "optionTipsAddCustomRuleSuccess": {
+        "message": "カスタムサブスクリプションルールが正常に追加されました"
+    },
+    "optionTipsAddCustomRuleFailure": {
+        "message": "カスタムサブスクリプションルールの追加に失敗しました"
+    },
+    "ruleListUpdating": {
+        "message": "更新中..."
+    },
+    "ruleListUpdateSuccess": {
+        "message": "広告ブロックルールベースが正常に更新されました！もう一度更新するにはクリックしてください。"
+    },
+    "ruleListUpdateFail": {
+        "message": "広告ブロックルールベースの更新に失敗しました。ネットワーク接続を確認し、クリックしてもう一度お試しください。"
+    },
+    "optionBookmarkSearchTitle": {
+        "message": "ブックマーク検索"
+    },
+    "optionBookmarkSearchContent": {
+        "message": "検索エンジンで検索すると、ブックマークを自動的に取得して検索結果に埋め込むことができます。"
+    },
+    "optionDataCollectionTitle": {
+        "message": "ユーザーエクスペリエンス向上プログラム"
+    },
+    "optionDataCollectionContent": {
+        "message": "より良いサービスを提供するために、Cloudoptがいくつかの技術情報とインタラクティブなデータを提供することを許可します。<A href = 'https：//www.cloudopt.net/policy/privacy' target = '_ blank' >プライバシーに関する声明</a> "
+    },
+    "optionMiscTitle": {
+        "message": "アクセシビリティ"
+    },
+    "optionMiscDescriptionContent": {
+        "message": "いくつかの追加設定を提供します"
+    },
+    "optionMiscDescriptionDetail": {
+        "message": "Cloudopt <sup>＆reg; </ sup> AdBlockerは、強力で便利なアクセシビリティ機能も提供し、Webブラウジング中のユーザーエクスペリエンスを向上させます。必要な機能がある場合support@cloudopt.netまでメールでお問い合わせください。 "
+    },
+    "optionDNSSpeedTitle": {
+        "message": "DNSプリロード"
+    },
+    "optionDNSSpeedContent": {
+        "message": "Webサイトの接続速度を上げるために、事前にアクセスする可能性のあるWebサイトのDNS解決を行います。"
+    },
+    "optionWebPrereadingTitle": {
+        "message": "ページのプリロード"
+    },
+    "optionWebPrereadingContent": {
+        "message": "ページを開く速度を上げるために事前にアクセスできるページをロードします。"
+    },
+    "optionMemoryOptimizeTitle": {
+        "message": "メモリの最適化"
+    },
+    "optionMemoryOptimizeContent": {
+        "message": "メモリ使用率が80％を超えると、長時間アクセスされていないタブページに対してメモリ最適化が自動的に実行されます。"
+    },
+    "optionOptimizationTitle": {
+        "message": "加速を最適化する"
+    },
+    "optionOptimizationContent": {
+        "message": "Webアクセスを加速してユーザーエクスペリエンスを向上させる"
+    },
+    "optionOptimizationDetail": {
+        "message": "Cloudopt <sup>＆reg; </ sup>スピードテクノロジーは、一部のブラウザー機能を利用して、Webページの読み込みを高速化し、Webページへのアクセス速度を上げることができます。また、ブラウザーのリソース消費を減らすのにも役立ちます。"
+    },
+    "optionSafeCloudTitle": {
+        "message": "ウェブ保護"
+    },
+    "optionSafeCloudContent": {
+        "message": "危険なWebサイトをリアルタイムでブロックして、フィッシングや悪意のあるURLからユーザーを保護します。"
+    },
+    "optionSafeDownloadTitle": {
+        "message": "ダウンロード保護"
+    },
+    "optionSafeDownloadContent": {
+        "message": "危険なWebサイトからのダウンロードを自動的にブロックし、悪意のあるWebサイトが自動的にダウンロードされるのを防ぎます。"
+    },
+    "optionSafePrivacyTitle": {
+        "message": "プライバシー"
+    },
+    "optionSafePrivacyContent": {
+        "message": "分析サイトがネットワークアクティビティを追跡または記録することを効果的に防ぎます。"
+    },
+    "optionSafePotentialTitle": {
+        "message": "厳密モード"
+    },
+    "optionSafePotentialContent": {
+        "message": "開くと、不要なサイトや評判の低いサイトをブロックします。"
+    },
+    "optionSafeCoinTitle": {
+        "message": "マイニングスクリプトのインターセプト"
+    },
+    "optionSafeCoinContent": {
+        "message": "悪意のあるWebサイトがコンピューターをマイニング（ビットコイン）に使用するのを防ぎます。"
+    },
+    "optionSafeTipsTitle": {
+        "message": "安全のヒント"
+    },
+    "optionSafeTipsContent": {
+        "message": "銀行やeコマースなど、なりすましが容易なWebサイトにアクセスすると、セキュリティプロンプトがポップアップ表示されます"
+    },
+    "optionSafeAllowListTitle": {
+        "message": "ホワイトリスト"
+    },
+    "optionSafeAllowListUrls": {
+        "message": "ホワイトリストに登録されたアドレス"
+    },
+    "optionsIntelligentSecurity": {
+        "message": "スマートセキュリティ"
+    },
+    "optionSafeContent": {
+        "message": "世界中のユーザーを接続する安全なネットワーク"
+    },
+    "optionSafeDetail": {
+        "message": "Cloudopt <sup>＆reg; </ sup> Cloud Security Networkは、評判評価メカニズムに基づく脅威分析システムです。世界中のユーザーを接続し、リアルタイムでWebページを保護します。Cloudopt<sup> ＆reg; </ sup> AIはサイバー脅威を24時間365日リアルタイムで分析できます。 "
+    },
+    "optionSafeOfficalLink": {
+        "message": "詳細については、公式Webサイトをご覧ください。"
+    },
+    "optionSafeUsersConnect": {
+        "message": "グローバル接続ユーザー"
+    },
+    "optionsSafeConnections": {
+        "message": "番号"
+    },
+    "optionsSafeConnectionSuccess": {
+        "message": "接続に成功しました"
+    },
+    "optionsSafeConnectionFail": {
+        "message": "Smart Security Centerに接続できません。ネットワークを確認して、もう一度お試しください。"
+    },
+    "optionsSafeConnectionsIn24Hours": {
+        "message": "過去24時間の保護されたユーザーの数"
+    },
+    "optionsWelcome": {
+        "message": "ようこそ"
+    },
+    "optionLoginTips": {
+        "message": "同期を保つにはサインインしてください"
+    },
+    "popupLogout": {
+        "message": "サインアウト"
+    },
+    "optionLoggedInTips": {
+        "message": "リアルタイムでプライバシーを保護します"
+    },
+    "optionLoginRefreshTips": {
+        "message": "ログイン成功後にページを更新"
+    },
+    "optionsAdblock": {
+        "message": "広告のブロック"
+    },
+    "optionsSpeedup": {
+        "message": "加速を最適化する"
+    },
+    "optionsOtherSettings": {
+        "message": "その他の設定"
+    },
+    "optionsMisc": {
+        "message": "アクセシビリティ"
+    },
+    "optionsAboutUs": {
+        "message": "私たちについて"
+    },
+    "popupAdblockName": {
+        "message": "広告のブロック"
+    },
+    "popupPrerenderName": {
+        "message": "Webアクセラレーション"
+    },
+    "popupNoNeedGrade": {
+        "message": "このページに評価は必要ありません"
+    },
+    "popupNotValid": {
+        "message": "このページでは有効にできません"
+    },
+    "popupSystemPage": {
+        "message": "このページはブラウザの独自のページである可能性がありますが、リアルタイムで保護されています。"
+    },
+    "popupEvaluateTipsTitle": {
+        "message": "フィードバックを共有してください"
+    },
+    "popupEvaluateTipsSubtitle": {
+        "message": "あなたのフィードバックは、より多くの人々が危険なフィッシングサイトを撃退するのに役立ちます。"
+    },
+    "popupSafeProtectTitle": {
+        "message": "リアルタイムのセキュリティ保護"
+    },
+    "popupSafeProtectSubtitle": {
+        "message": "このサイトへのアクセスは、終了後は保護されなくなります"
+    },
+    "popupAdblockTitle": {
+        "message": "悪意のある広告のブロック"
+    },
+    "popupAdblockSubtitle": {
+        "message": "このサイトからの広告は閉鎖後にブロックされなくなります"
+    },
+    "popupGradeTitle": {
+        "message": "サイトの評判"
+    },
+    "popupGradeSubtitle": {
+        "message": "ウェブサイトの評判評価レポートを表示するにはクリックしてください"
+    },
+    "popupManualTitle": {
+        "message": "このサイトの広告を手動でブロックします"
+    },
+    "popupManualSubtitle": {
+        "message": "クリックして手動ブロッカーを開く"
+    },
+    "popupMoreTitle": {
+        "message": "その他の設定オプション"
+    },
+    "popupMoreSubtitle": {
+        "message": "クリックして詳細設定の設定ページに移動"
+    },
+    "memoryOptimized": {
+        "message": "メモリ使用量が最適化されました"
+    },
+    "memoryOptimizedSub": {
+        "message": "Cloudopt Adblockerは、長期間アクセスされていないタブをインテリジェントに最適化し、メモリを解放します"
+    },
+    "memoryOptimizedReturn": {
+        "message": "今すぐ回復"
+    }
+}
