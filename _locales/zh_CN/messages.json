@@ -427,6 +427,9 @@
     "popupManualSubtitle": {
         "message": "点击打开手动拦截器"
     },
+    "popupNoNeedManual": {
+        "message": "此页面不需要拦截广告"
+    },
     "popupMoreTitle": {
         "message": "更多设置选项"
     },
