@@ -8,9 +8,10 @@ import rtpl from 'art-template/lib/template-web.js'
 export interface ISwitchInfo {
     icon: string;
     title: string;
-    content: string;
+    content?: string;
     key: string;
     on: boolean;
+    i18n?: string;
 }
 
 export class SwitchInfo {
@@ -29,7 +30,7 @@ export class SwitchInfo {
             {{ /if }}
                 <div class="description">
                     <span class="title">{{ title }}</span>
-                    <span class="content">{{ content }}</span>
+                    <span class="content" {{ if i18n }} i18n="{{ i18n }}" {{ /if }}>{{ content || ' ' }}</span>
                 </div>
             </div>
             <div class="right" key="{{ key }}">
