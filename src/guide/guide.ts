@@ -198,7 +198,6 @@ export class GuideManager {
         const switchElement = createSwitchInfoDom({
             icon: '',
             title: i18n.get('guideDataCollectionSwitchTitle'),
-            content: ' ',
             i18n: 'guideDataCollectionSwitchContent',
             key: 'dataCollection',
             on: config.dataCollection
