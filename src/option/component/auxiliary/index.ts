@@ -26,7 +26,7 @@ export default class AuxiliaryPages implements IBaseHTMLPages {
             {
                 title: i18n.get('optionDataCollectionTitle'),
                 key: "dataCollection",
-                content: i18n.get('optionDataCollectionContent'),
+                i18n: 'optionDataCollectionContent',
                 icon: getIconPath("icons-bug"),
                 on: config.dataCollection,
             }

@@ -427,6 +427,9 @@
     "popupManualSubtitle": {
         "message": "Click to open manual blocker"
     },
+    "popupNoNeedManual": {
+        "message": "No ads to be blocked in this page"
+    },
     "popupMoreTitle": {
         "message": "More setting options"
     },

@@ -427,6 +427,9 @@
     "popupManualSubtitle": {
         "message": "수동 차단기를 열려면 클릭하십시오"
     },
+    "popupNoNeedManual": {
+        "message": "이 페이지에서 차단할 광고가 없습니다"
+    },
     "popupMoreTitle": {
         "message": "추가 설정 옵션"
     },

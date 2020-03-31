@@ -6,7 +6,6 @@
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "description": "__MSG_infoDescription__",
     "default_locale": "en",
-    "update_url": "https://cdn.cloudopt.net/extensions/update/updates.xml",
     "icons": {
         "64": "image/icon/default/icon64.png",
         "128": "image/icon/default/icon128.png",
