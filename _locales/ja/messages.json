@@ -227,7 +227,7 @@
         "message": "カスタムサブスクリプションルールの追加に失敗しました"
     },
     "ruleListUpdating": {
-        "message": "更新中..."
+        "message": "更新しています..."
     },
     "ruleListUpdateSuccess": {
         "message": "広告ブロックルールベースが正常に更新されました！もう一度更新するにはクリックしてください。"
@@ -426,6 +426,9 @@
     },
     "popupManualSubtitle": {
         "message": "クリックして手動ブロッカーを開く"
+    },
+    "popupNoNeedManual": {
+        "message": "このページは広告をブロックする必要はありません"
     },
     "popupMoreTitle": {
         "message": "その他の設定オプション"

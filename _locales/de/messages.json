@@ -427,6 +427,9 @@
     "popupManualSubtitle": {
         "message": "Klicken, um den manuellen Blocker zu öffnen"
     },
+    "popupNoNeedManual": {
+        "message": "Diese Seite muss keine Anzeigen blockieren"
+    },
     "popupMoreTitle": {
         "message": "Weitere Einstellungsmöglichkeiten"
     },
