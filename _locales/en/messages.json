@@ -140,7 +140,7 @@
         "message": "Total number of malicious ads and mining script blocks"
     },
     "optionAboutSiteBlockCount": {
-        "message": "Total number of malicious website blocks"
+        "message": "Total malicious ads and tracker blocks"
     },
     "optionAboutAccelerationCount": {
         "message": "Total Page Acceleration"
@@ -191,7 +191,7 @@
         "message": "Block malicious ads and popups"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt<sup>&reg;</sup> AdBlocker can block pop-up ads and load web pages faster. You can also subscribe to your favorite list of ad blocking rules or manually block on web pages."
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker Can prevent pop-up ads and load web pages faster. We will automatically subscribe to the appropriate rules based on your country. You can also subscribe to your favorite list of ad blocking rules (automatic deduplication) or manually block on the webpage."
     },
     "optionAdblockCustomSubsTitle": {
         "message": "Custom subscription rule list"
