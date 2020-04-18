@@ -6,6 +6,7 @@ import AboutUsPages from './component/aboutUs'
 import { TOptionsType } from './component/userAside'
 import { IBaseHTMLPages } from './component/types'
 import { get as getCoreConfig, set as setCoreConfig } from '../core/config'
+import rtpl from 'art-template/lib/template-web.js'
 
 export default class RouterManager {
     private static ID: string = 'routerAside'
@@ -18,7 +19,7 @@ export default class RouterManager {
 
     constructor() {
         this.mainDOM.id = RouterManager.ID
-        this.mainDOM.innerHTML = '<div />'
+        this.mainDOM.innerHTML = rtpl.render('<div />')
     }
 
     public async renderByType(type: TOptionsType): Promise<void> {

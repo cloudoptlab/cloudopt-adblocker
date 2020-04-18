@@ -50,17 +50,17 @@ export class GuideManager {
     }
 
     private setHeader(headerElement: HTMLElement) {
-        this.mainDOM.querySelector('#contentBlock .header').innerHTML = ''
+        this.mainDOM.querySelector('#contentBlock .header').innerHTML = rtpl.render(' ', null)
         this.mainDOM.querySelector('#contentBlock .header').appendChild(headerElement)
     }
 
     private setFooter(footerElement: HTMLElement) {
-        this.mainDOM.querySelector('#contentBlock .footer').innerHTML = ''
+        this.mainDOM.querySelector('#contentBlock .footer').innerHTML = rtpl.render(' ', null)
         this.mainDOM.querySelector('#contentBlock .footer').appendChild(footerElement)
     }
 
     private setBody(bodyElement: HTMLElement) {
-        this.mainDOM.querySelector('#contentBlock .body').innerHTML = ''
+        this.mainDOM.querySelector('#contentBlock .body').innerHTML = rtpl.render(' ', null)
         this.mainDOM.querySelector('#contentBlock .body').appendChild(bodyElement)
     }
 
