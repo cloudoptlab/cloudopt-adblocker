@@ -69,7 +69,10 @@
         },
         {
             "all_frames": true,
-            "js": ["adguard/adguard-content.js"],
+            "js": [
+                "lib/purify.min.js",
+                "adguard/adguard-content.js"
+            ],
             "matches": [
                 "http://*/*",
                 "https://*/*"
@@ -82,7 +85,10 @@
             "css": [
                 "adguard/assistant/css/selector.css"
             ],
-            "js": ["adguard/adguard-assistant.js"],
+            "js": [
+                "lib/purify.min.js",
+                "adguard/adguard-assistant.js"
+            ],
             "matches": [
                 "http://*/*",
                 "https://*/*"
