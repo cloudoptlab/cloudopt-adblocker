@@ -28,7 +28,6 @@
     "@types/dompurify": "^0.0.33",
     "@types/lodash": "^4.14.138",
     "art-template": "^4.13.2",
-    "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.3.1",
     "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
