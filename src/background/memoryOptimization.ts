@@ -103,11 +103,15 @@ function memoryOptimization() {
     };
 
     function preCheckForMemOpt() {
-        chrome.system.memory.getInfo(function (info) {
-            if (info.availableCapacity / info.capacity < 0.2) {
-                checkForMemOpt();
-            }
-        });
+        if (utils.getUa() === 'firefox') {
+            checkForMemOpt();
+        } else {
+            chrome.system.memory.getInfo(function (info) {
+                if (info.availableCapacity / info.capacity < 0.2) {
+                    checkForMemOpt();
+                }
+            });
+        }
     }
 
     function saveSuspendUrl(tab) {
