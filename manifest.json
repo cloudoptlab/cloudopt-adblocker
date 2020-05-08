@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_infoName__",
     "short_name": "Cloudopt AdBlocker",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "description": "__MSG_infoDescription__",
     "default_locale": "en",
