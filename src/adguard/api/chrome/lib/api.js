@@ -225,7 +225,7 @@
     const openAssistant = (tabId) => {
         if (adguard.tabs.executeScriptFile) {
             // Load Assistant code to the activate tab immediately
-            adguard.tabs.executeScriptFile(null, { file: '/adguard/assistant/assistant.js' }, () => {
+            adguard.tabs.executeScriptFile(tabId, { file: '/adguard/assistant/assistant.js' }, () => {
                 initAssistant(tabId);
             });
         } else {

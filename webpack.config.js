@@ -80,7 +80,7 @@ module.exports = {
             { from: "node_modules/dompurify/dist/purify.min.js", to: "lib/purify.min.js" },
             { from: "src/background/defaultAllowAds.cn.json", to: "lib/" },
             { from: "src/libs/icon", to: "lib/icon" },
-            { from: "src/adg/assistant.js", to: "adguard" },
+            { from: "src/adguard/lib/content-script/assistant/js/assistant.js", to: "adguard/assistant/" },
             { from: "css", to: "css" },
             { from: "_locales", to: "_locales" },
             { from: "image", to: "image" },

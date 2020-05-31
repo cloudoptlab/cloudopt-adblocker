@@ -94,8 +94,7 @@
         }
     ],
     "web_accessible_resources": [
-        "adguard/assistant/css/assistant.css",
-        "adguard/assistant/i/close.svg",
+        "adguard/assistant/assistant.js",
         "suspend.html"
     ]
 }
