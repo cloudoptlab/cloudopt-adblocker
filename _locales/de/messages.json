@@ -211,6 +211,12 @@
     "modalAddCustomSubscriptionTitle": {
         "message": "Benutzerdefinierte Abonnementregel hinzufügen"
     },
+    "optionAdblockAllowList": {
+        "message": "Witte lijst met advertentieblokkering"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "Domeinnamen"
+    },
     "buttonCloseCustomSubscription": {
         "message": "Schließen"
     },

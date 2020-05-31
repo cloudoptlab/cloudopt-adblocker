@@ -211,6 +211,12 @@
     "modalAddCustomSubscriptionTitle": {
         "message": "添加自定义订阅规则"
     },
+    "optionAdblockAllowList": {
+        "message": "广告拦截白名单"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "网站域名"
+    },
     "buttonCloseCustomSubscription": {
         "message": "关闭"
     },

@@ -211,6 +211,12 @@
     "modalAddCustomSubscriptionTitle": {
         "message": "カスタムサブスクリプションルールを追加"
     },
+    "optionAdblockAllowList": {
+        "message": "広告ブロックホワイトリスト"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "ウェブサイトドメイン"
+    },
     "buttonCloseCustomSubscription": {
         "message": "閉じる"
     },

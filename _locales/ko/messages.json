@@ -211,6 +211,12 @@
     "modalAddCustomSubscriptionTitle": {
         "message": "사용자 정의 구독 규칙 추가"
     },
+    "optionAdblockAllowList": {
+        "message": "광고 차단 화이트리스트"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "웹 사이트 도메인"
+    },
     "ButtonCloseCustomSubscription": {
         "message": "닫기"
     },

@@ -211,6 +211,12 @@
     "modalAddCustomSubscriptionTitle": {
         "message": "Ajouter une règle d'abonnement personnalisée"
     },
+    "optionAdblockAllowList": {
+        "message": "Liste blanche de blocs d'annonces"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "Domaine"
+    },
     "buttonCloseCustomSubscription": {
         "message": "Fermer"
     },

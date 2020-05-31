@@ -211,6 +211,12 @@
     "modalAddCustomSubscriptionTitle": {
         "message": "添加自定義訂閱規則"
     },
+    "optionAdblockAllowList": {
+        "message": "廣告攔截白名單"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "網站域名"
+    },
     "buttonCloseCustomSubscription": {
         "message": "關閉"
     },

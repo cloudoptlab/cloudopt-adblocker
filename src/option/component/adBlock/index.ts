@@ -137,6 +137,35 @@ export default class AdBlockPages implements IBaseHTMLPages {
                     </div>
                 </div>
             </div>
+            <div class="table-info-container">
+                <div class="table-item">
+                    <span class="title" i18n="optionAdblockCustomSubsTitle"> </span>
+                    <img class="add-item" src="${this.getIconPath('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
+                    <div class="table" id="customSubscriptionTable">
+                        <div class="hard">
+                            <span class="text" i18n="optionAdblockCustomSubsAddresses"> </span>
+                        </div>
+                        <div class="body-list">
+                            <ul>
+                                ${this.renderSubscribeListBodyComponent(config)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-item">
+                    <span class="title" i18n="optionAdblockAllowList"> </span>
+                    <div class="table" id="allowListAdsTable">
+                        <div class="hard">
+                            <span class="text" i18n="optionAdblockAllowListDomain"> </span>
+                        </div>
+                        <div class="body-list">
+                            <ul>
+                                ${this.renderRuleListBodyComponent(config.allowListAds)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="modal fade" id="modalAddCustomSubscription" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -215,6 +244,17 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 const newConfig = await getCoreConfig()
                 newConfig.customSubscription = newConfig.customSubscription.removeByValue(subsLink)
                 newConfig.disabledCustomSubs = newConfig.disabledCustomSubs.removeByValue(subsLink)
+                setCoreConfig(newConfig)
+                this.render()
+            })
+        })
+
+        this.mainDOM.querySelectorAll('#allowListAdsTable .right').forEach((el) => {
+            el.addEventListener("click", async (ev: MouseEvent) => {
+                ev.stopPropagation()
+                const url = el.getAttribute('for')
+                const newConfig = await getCoreConfig()
+                newConfig.allowListAds = newConfig.allowListAds.removeByValue(url)
                 setCoreConfig(newConfig)
                 this.render()
             })

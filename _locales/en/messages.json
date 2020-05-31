@@ -208,6 +208,12 @@
     "modalAddCustomSubscriptionTitle": {
         "message": "Add custom subscription rule"
     },
+    "optionAdblockAllowList": {
+        "message": "Ad Block Whitelist"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "Domains"
+    },
     "ButtonCloseCustomSubscription": {
         "message": "Close"
     },
