@@ -93,7 +93,9 @@ async function autoAddallowListAds() {
         const config = await coreConfig.get()
         $.getJSON(fileName, (data) => {
             $.each(data, (index, obj) => {
-                config.allowListAds.push(obj.host)
+                if (!config.allowListAds.inArray(obj.host)) {
+                    config.allowListAds.push(obj.host)
+                }
             })
             coreConfig.set(config).then(() => message.send('refresh-config'))
         })
@@ -158,10 +160,10 @@ class AdguardEngine implements IAdblockEngine {
             this.startTabsBlockCount()
         }
 
-        store.get('firstAutoAddAllowList').then((isFirst) => {
-            if (!isFirst) {
+        store.get('autoAddedAllowList').then((autoAdded) => {
+            if (!autoAdded) {
                 autoAddallowListAds()
-                store.set('firstAutoAddAllowList', 'true')
+                store.set('autoAddedAllowList', 'true')
             }
         })
 
