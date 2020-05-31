@@ -86,7 +86,7 @@ async function autoAddallowListAds() {
     let fileName = null
     switch (utils.language()) {
         case 'zh-CN':
-            fileName = '/allowlist/cn.json'
+            fileName = '/lib/defaultAllowAds.cn.json'
             break
     }
     if (fileName) {
@@ -117,9 +117,9 @@ class AdguardEngine implements IAdblockEngine {
             },
         })
 
-        window.adguardApi.onFilterDownloadSuccess.addListener(() => {
-            store.set('latest_filters_updated_at', Date.now())
-        })
+        // window.adguardApi.onFilterDownloadSuccess.addListener(() => {
+        //    store.set('latest_filters_updated_at', Date.now())
+        // })
 
         message.addListener({
             type: 'assistant-create-rule',

@@ -77,6 +77,7 @@ module.exports = {
             { from: "node_modules/@antv/g2/dist/g2.min.js", to: "lib/g2/" },
             { from: "node_modules/@antv/data-set/dist/data-set.min.js", to: "lib/g2/" },
             { from: "node_modules/dompurify/dist/purify.min.js", to: "lib/purify.min.js" },
+            { from: "src/background/defaultAllowAds.cn.json", to: "lib/" },
             { from: "src/libs/icon", to: "lib/icon" },
             { from: "css", to: "css" },
             { from: "_locales", to: "_locales" },
