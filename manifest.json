@@ -82,9 +82,6 @@
         },
         {
             "all_frames": false,
-            "css": [
-                "adguard/assistant/css/selector.css"
-            ],
             "js": [
                 "lib/purify.min.js",
                 "adguard/adguard-assistant.js"
