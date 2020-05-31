@@ -41,15 +41,8 @@ adguard.backend = (function (adguard) {
 
         // Url for load filters metadata and rules
         get filtersUrl() {
-            return adguard.lazyGet(this, 'filtersUrl', () => {
-                if (adguard.utils.browser.isFirefoxBrowser()) {
-                    return 'https://filters.adtidy.org/extension/firefox';
-                } if (adguard.utils.browser.isEdgeBrowser()) {
-                    return 'https://filters.adtidy.org/extension/edge';
-                } if (adguard.utils.browser.isOperaBrowser()) {
-                    return 'https://filters.adtidy.org/extension/opera';
-                }
-                return 'https://filters.adtidy.org/extension/chromium';
+            return adguard.lazyGet(this, 'filtersUrl', function () {
+                return 'https://cdn.cloudopt.net/filters/chromium';
             });
         },
 
@@ -311,7 +304,7 @@ adguard.backend = (function (adguard) {
      * Loads filter groups metadata
      */
     const loadLocalFiltersMetadata = () => new Promise((resolve, reject) => {
-        const url = adguard.getURL(`${settings.localFiltersFolder}/filters.json`);
+        const url = settings.filtersUrl + '/filters.json';
         const success = function (response) {
             if (response && response.responseText) {
                 const metadata = parseJson(response.responseText);
@@ -338,7 +331,7 @@ adguard.backend = (function (adguard) {
      * @returns {Promise}
      */
     const loadLocalFiltersI18Metadata = () => new Promise((resolve, reject) => {
-        const url = adguard.getURL(`${settings.localFiltersFolder}/filters_i18n.json`);
+        const url = settings.filtersUrl + '/filters_i18n.json';
         const success = function (response) {
             if (response && response.responseText) {
                 const metadata = parseJson(response.responseText);

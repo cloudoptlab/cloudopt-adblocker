@@ -731,7 +731,7 @@ adguard.subscriptions = (function (adguard) {
             await loadMetadata();
             await loadMetadataI18n();
             await loadLocalScriptRules();
-            await loadRedirectSources();
+            // await loadRedirectSources();
         } catch (e) {
             adguard.console.error(`Error loading metadata, cause: ${e.message}`);
         }

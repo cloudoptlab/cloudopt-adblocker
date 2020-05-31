@@ -778,6 +778,13 @@
                  * if onCompleted event fired with requestType DOCUMENT then we skip it, because we
                  * use onCompleted event only for SUBDOCUMENTS
                  */
+                if (!adguard.filters.isInitialized()) {
+                    /**
+                     * Cloudopt: we should not inject before filters are initialized,
+                     * just to avoid dead loop calling tryInject()
+                     */
+                    return true;
+                }
                 if (eventName === 'onCompleted' && requestType === adguard.RequestTypes.DOCUMENT) {
                     return true;
                 }
