@@ -23,7 +23,7 @@
         "message": "輸入手機號或者網址快速鑑定安全"
     },
     "dangDownTitle": {
-        "message": "已攔截您的下載"
+        "message": "Cloudopt Adblocker 已為您攔截危險下載，若您仍要下載，請手動點擊繼續"
     },
     "updateTipsTitle": {
         "message": "自動更新成功"

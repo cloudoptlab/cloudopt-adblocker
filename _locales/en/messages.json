@@ -23,7 +23,7 @@
         "message": "Enter your phone number or URL for quick authentication security"
     },
     "dangDownTitle": {
-        "message": "Your download has been blocked"
+        "message": "Cloudopt Adblocker has blocked a dangerous download, if you still want to download it, please continue manually"
     },
     "updateTipsTitle": {
         "message": "Automatic update succeeded"

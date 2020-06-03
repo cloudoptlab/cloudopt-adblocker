@@ -23,7 +23,7 @@
         "message": "Entrez votre numéro de mobile ou URL pour une sécurité d'authentification rapide"
     },
     "dangDownTitle": {
-        "message": "Votre téléchargement a été bloqué"
+        "message": "Cloudopt Adblocker a bloqué un téléchargement dangereux, si vous souhaitez toujours le télécharger, veuillez continuer manuellement"
     },
     "updateTipsTitle": {
         "message": "La mise à jour automatique a réussi"

@@ -23,7 +23,7 @@
         "message": "迅速な認証セキュリティのために携帯電話番号またはウェブサイトを入力してください"
     },
     "dangDownTitle": {
-        "message": "ダウンロードがブロックされました"
+        "message": "Cloudopt Adblockerが危険なダウンロードをブロックしました。それでもダウンロードしたい場合は、手動で続行してください"
     },
     "updateTipsTitle": {
         "message": "自動更新に成功しました"
