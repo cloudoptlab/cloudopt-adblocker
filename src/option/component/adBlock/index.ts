@@ -139,20 +139,6 @@ export default class AdBlockPages implements IBaseHTMLPages {
             </div>
             <div class="table-info-container">
                 <div class="table-item">
-                    <span class="title" i18n="optionAdblockCustomSubsTitle"> </span>
-                    <img class="add-item" src="${this.getIconPath('icons-add')}" data-toggle="modal" data-target="#modalAddCustomSubscription"/>
-                    <div class="table" id="customSubscriptionTable">
-                        <div class="hard">
-                            <span class="text" i18n="optionAdblockCustomSubsAddresses"> </span>
-                        </div>
-                        <div class="body-list">
-                            <ul>
-                                ${this.renderSubscribeListBodyComponent(config)}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-item">
                     <span class="title" i18n="optionAdblockAllowList"> </span>
                     <div class="table" id="allowListAdsTable">
                         <div class="hard">
