@@ -1391,15 +1391,12 @@ adguard.filtersState = (function (adguard) {
         adguard.localStorage.setItem(GROUPS_STATE_PROP, JSON.stringify(groups));
     };
 
-    const successEventChannel = adguard.utils.channels.newChannel();
-
     // Add event listener to persist filter metadata to local storage
     adguard.listeners.addListener((event, payload) => {
         switch (event) {
             case adguard.listeners.SUCCESS_DOWNLOAD_FILTER:
                 updateFilterState(payload);
                 updateFilterVersion(payload);
-                successEventChannel.notify();
                 break;
             case adguard.listeners.FILTER_ADD_REMOVE:
             case adguard.listeners.FILTER_ENABLE_DISABLE:
@@ -1417,7 +1414,6 @@ adguard.filtersState = (function (adguard) {
         getFiltersVersion,
         getFiltersState,
         getGroupsState,
-        onDownloadSuccess: successEventChannel,
         // These methods are used only for migrate from old versions
         updateFilterVersion,
         updateFilterState,

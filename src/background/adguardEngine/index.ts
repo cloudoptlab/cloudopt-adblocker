@@ -23,58 +23,57 @@ enum EngineState {
     STOPPED,
 }
 
-function getAdguardConfig(config: coreConfig.Config): any {
+function getAdguardConfig(config: coreConfig.Config) {
     const allowList = config.allowListAds.slice()
     allowList.push('*.cloudopt.net')
-    let filters = [101]
+    let filterUrls: string[] = ['https://cdn.cloudopt.net/filters/chromium/easylist.txt']
     if (config.safePrivacy) {
-        filters.push(3)
+        filterUrls.push('https://cdn.cloudopt.net/filters/chromium/3.txt')
     }
     switch (utils.language()) {
         case 'zh-CN':
-            filters.push(104)
-            break
         case 'zh-TW':
-            filters.push(104)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/easylistchina.txt')
             break
         case 'ru':
-            filters.push(1)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/1.txt')
             break
         case 'ja':
-            filters.push(7)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/7.txt')
             break
         case 'de':
-            filters.push(6)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/6.txt')
             break
         case 'fr':
-            filters.push(16)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/16.txt')
             break
         case 'nl':
-            filters.push(8)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/8.txt')
             break
         case 'et':
-            filters.push(9)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/9.txt')
             break
         case 'tr':
-            filters.push(13)
+            filterUrls.push('https://cdn.cloudopt.net/filters/chromium/13.txt')
             break
         case 'ko':
-            filters.push(227)
+            filterUrls.push('https://github.com/List-KR/List-KR/raw/master/filter.txt')
             break
     }
     if (!config.adblockActivating) {
-        filters = []
+        filterUrls = []
     }
     if (config.safeCoin) {
-        filters.push(242)
+        filterUrls.push('https://cdn.cloudopt.net/filters/chromium/nocoin.txt')
     }
     if (config.safeCloud) {
-        filters.push(208)
-        filters.push(210)
+        filterUrls.push('https://cdn.cloudopt.net/filters/chromium/malwaredomains_full.txt')
+        filterUrls.push('https://cdn.cloudopt.net/filters/chromium/adblock-list.txt')
     }
-    logger.debug(`Adblock filter list: ${filters}`)
+    logger.debug(`Adblock filter list: ${filterUrls}`)
     return {
-        filters,
+        filterUrls,
+        filters: [],
         whitelist: allowList,
         rules: config.customRule,
         filtersMetadataUrl: 'https://cdn.cloudopt.net/filters/chromium/filters.json',
@@ -119,10 +118,6 @@ class AdguardEngine implements IAdblockEngine {
             },
         })
 
-        // window.adguardApi.onFilterDownloadSuccess.addListener(() => {
-        //    store.set('latest_filters_updated_at', Date.now())
-        // })
-
         message.addListener({
             type: 'assistant-create-rule',
             async callback(msg) {
@@ -136,19 +131,14 @@ class AdguardEngine implements IAdblockEngine {
         message.addListener({
             type: 'check-filters-update',
             async callback(msg, sender, sendResponse) {
-                if (_this.state !== EngineState.NOT_STARTED) {
-                    _this.start()
-                }
-                _this.config = await coreConfig.get()
-                if (!_this.config.adblockActivating) {
-                    _this.stop()
-                }
-                window.adguardApi.checkFiltersUpdates(() => {
-                    store.set('latest_filters_updated_at', Date.now())
-                    sendResponse('true')
-                }, () => {
-                    sendResponse('false')
-                })
+                _this.startAdguardApi((succeeded: boolean) => {
+                    if (succeeded) {
+                        sendResponse('true')
+                    } else {
+                        sendResponse('false')
+                    }
+                }, false)
+                _this.refresh()
             },
         })
     }
@@ -172,6 +162,27 @@ class AdguardEngine implements IAdblockEngine {
         return true
     }
 
+    private startAdguardApi(loadRulesCallback = (str) => {}, useCache: boolean = true): void {
+        const adguardConfig = getAdguardConfig(this.config)
+        window.adguardApi.start(adguardConfig, () => {
+            logger.debug('Adguard api started.')
+
+            // load all default and custom rule files
+            let promises = adguardConfig.filterUrls.map(url => {
+                logger.info(`A default rule file is being loaded: ${url}`)
+                return this.loadRulesFromUrl(url, adguardConfig, useCache)
+            }).concat(this.config.customSubscription.map((url) => {
+                if (this.config.disabledCustomSubs.inArray(url)) {
+                    return
+                }
+                logger.info(`A custom rule file is being loaded: ${url}`)
+                return this.loadRulesFromUrl(url, adguardConfig, useCache)
+            }))
+
+            Promise.all(promises).then(() => loadRulesCallback(true)).catch(() => loadRulesCallback(false))
+        })
+    }
+
     public async refresh(): Promise<boolean> {
         this.config = await coreConfig.get()
         if (!this.config.adblockActivating) {
@@ -186,13 +197,7 @@ class AdguardEngine implements IAdblockEngine {
             this.start()
         } else { // started, reconfigure adugard
             window.adguardApi.stop(() => {
-                const adguardConfig = getAdguardConfig(this.config)
-                if (adguardConfig.filters.length > 0) {
-                    window.adguardApi.start(adguardConfig, () => {
-                        logger.debug('Adguard api started.')
-                        this.customSubscription()
-                    })
-                }
+                this.startAdguardApi()
             })
         }
 
@@ -230,14 +235,8 @@ class AdguardEngine implements IAdblockEngine {
         }
     }
 
-    private customSubscription(): void {
-        const adguardConfig = getAdguardConfig(this.config)
-        this.config.customSubscription.forEach((url) => {
-            if (this.config.disabledCustomSubs.inArray(url)) {
-                return
-            }
-            logger.info(`A custom rule file is being loaded: ${url}`)
-            http.get(url).then((data) => {
+    private async loadRulesFromUrl(url: string, adguardConfig: any, useCache: boolean = true): Promise<void> {
+        return http.get(url, {cache: useCache}).then((data) => {
                 let list = data.split('\n')
                 if (list.length <= 1) {
                     list = data.split('\r\n')
@@ -248,11 +247,11 @@ class AdguardEngine implements IAdblockEngine {
                     }
                 })
                 window.adguardApi.configure(adguardConfig, () => {
-                    logger.debug(`Custom rules from ${url} configured`)
+                    logger.debug(`Rules from ${url} configured`)
                 })
+            }).then(() => {
                 store.set('latest_filters_updated_at', Date.now())
             })
-        })
     }
 
     private startTabsBlockCount() {

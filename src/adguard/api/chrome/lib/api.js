@@ -271,8 +271,6 @@
         onRequestBlocked: adguard.webRequestService.onRequestBlocked,
         openAssistant: openAssistant,
         closeAssistant: closeAssistant,
-        checkFiltersUpdates: adguard.filters.checkFiltersUpdates,
-        onFilterDownloadSuccess: adguard.filtersState.onDownloadSuccess,
     };
 
 })(adguard, window);
