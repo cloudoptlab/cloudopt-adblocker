@@ -140,6 +140,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
             <div class="table-info-container">
                 <div class="table-item">
                     <span class="title" i18n="optionAdblockAllowList"> </span>
+                    <img class="add-item" src="${this.getIconPath('icons-clear')}" id="clearAllowListAds"/>
                     <div class="table" id="allowListAdsTable">
                         <div class="hard">
                             <span class="text" i18n="optionAdblockAllowListDomain"> </span>
@@ -255,6 +256,17 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 const rule = el.getAttribute('for')
                 const newConfig = await getCoreConfig()
                 newConfig.customRule = newConfig.customRule.removeByValue(rule)
+                await setCoreConfig(newConfig)
+                message.send('refresh-config')
+                this.render()
+            })
+        })
+
+        this.mainDOM.querySelectorAll('#clearAllowListAds').forEach((el) => {
+            el.addEventListener('click', async (ev: MouseEvent) => {
+                ev.stopPropagation()
+                const newConfig = await getCoreConfig()
+                newConfig.allowListAds = []
                 await setCoreConfig(newConfig)
                 message.send('refresh-config')
                 this.render()
