@@ -75,14 +75,14 @@ class BookmarkSearch {
     }
 
     private createCard(response: any[]) {
-        const card = '<div id="cloudopt-bookmark"><div class="cloudopt-bookmark-head">BookMark Search<a id="cloudopt-bookmark-close" href="#"><img class="cloudopt-icon" src="https://cdn.cloudopt.net/extensions/resource/close.png" /></a><a href="https://www.cloudopt.net" target="_blank"><img src="https://cdn.cloudopt.net/extensions/resource/logo.png"></a></div></div>'
+        const card = '<div id="cloudopt-bookmark"><div class="cloudopt-bookmark-head">BookMark Search<a id="cloudopt-bookmark-close" href="#"><img class="cloudopt-icon" src="https://cdn.cloudopt.net/extensions/resource/close.png" /></a><a href="https://www.cloudopt.net" target="_blank"><img src="https://cdn.cloudopt.net/extensions/resource/logo.png"></a></div><div id="cloudopt-bookmark-content" style="max-height: 1200px; overflow: auto"></div></div>'
         if (response.length > 0) {
             $(card).appendTo(this.innerClass)
             response.forEach((item) => {
                 if (item.url && item.url.indexOf('place:') < 0) {
                     const a = [item.url, item.title, item.url].map<string>(sanitize)
                     const html = `<div class="cloudopt-bookmark-li"><a href="${a[0]}" target="_blank">${a[1]}</a><p>${a[2]}</p></div>`
-                    $(html).appendTo('#cloudopt-bookmark')
+                    $(html).appendTo('#cloudopt-bookmark-content')
                 }
             })
         }
