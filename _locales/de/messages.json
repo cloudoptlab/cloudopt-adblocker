@@ -188,13 +188,13 @@
         "message": "Zeigt die Anzahl der blockierten Anzeigen auf dem Browsererweiterungssymbol an."
     },
     "optionAdblockTitle": {
-        "message": "Anzeigenblockierung"
+        "message": "Malvertising Blocking"
     },
     "optionAdblockDescriptionContent": {
         "message": "Blockieren Sie schädliche Anzeigen und Popups"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt <sup> & reg; </ sup> AdBlocker Kann Popup-Anzeigen verhindern und Webseiten schneller laden. Wir abonnieren automatisch die entsprechenden Regeln, die auf Ihrem Land basieren. Sie können auch Ihre Favoritenliste mit Regeln zum Blockieren von Anzeigen (automatische Deduplizierung) abonnieren oder manuell auf der Webseite blockieren."
+        "message": "Cloudopt<sup>&reg;</ sup> AdBlocker kann böswillige Popup-Anzeigen verhindern und Webseiten schneller laden. Wir abonnieren automatisch die entsprechenden Open Source-Community-Regeln für Ihr Land. Sie können auch die Liste Ihrer bevorzugten Regeln zum Blockieren von Anzeigen abonnieren (automatische Deduplizierung) oder manuell auf der Webseite blockieren."
     },
     "optionAdblockCustomSubsTitle": {
         "message": "Liste der benutzerdefinierten Abonnementregeln"

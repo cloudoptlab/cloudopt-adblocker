@@ -185,13 +185,13 @@
         "message": "Shows the number of blocked ads on the browser extension icon."
     },
     "optionAdblockTitle": {
-        "message": "Ad Blocking"
+        "message": "Malvertising Blocking"
     },
     "optionAdblockDescriptionContent": {
         "message": "Block malicious ads and popups"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt<sup>&reg;</sup> AdBlocker Can prevent pop-up ads and load web pages faster. We will automatically subscribe to the appropriate rules based on your country. You can also subscribe to your favorite list of ad blocking rules (automatic deduplication) or manually block on the webpage."
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker can prevent malicious pop-up ads and load web pages faster. We will automatically subscribe to the appropriate open source community rules according to your country. You can also subscribe to a list of your favorite ad blocking rules (automatic deduplication) or manually block them on the web."
     },
     "optionAdblockCustomSubsTitle": {
         "message": "Custom subscription rule list"

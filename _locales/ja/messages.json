@@ -188,13 +188,13 @@
         "message": "ブロックされた広告の数をブラウザー拡張アイコンに表示します。"
     },
     "optionAdblockTitle": {
-        "message": "広告のブロック"
+        "message": "マルバタイジングブロッキング"
     },
     "optionAdblockDescriptionContent": {
         "message": "悪意のある広告とポップアップをブロックする"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt <sup>＆reg; </ sup> AdBlocker ポップアップ広告を防ぎ、Webページをより速くロードできます。 お住まいの国に基づいて、適切なルールを自動的にサブスクライブします。また、広告ブロックルール（自動重複排除）のお気に入りのリストをサブスクライブしたり、Webページで手動でブロックしたりすることもできます。"
+        "message": "Cloudopt<sup>&reg;</sup> AdBlockerは、悪意のあるポップアップ広告を防ぎ、Webページをより速くロードできます。国に応じて、適切なオープンソースコミュニティルールを自動的にサブスクライブします。また、お気に入りの広告ブロックルール（自動重複排除）のリストをサブスクライブしたり、Webで手動でブロックしたりすることもできます。"
     },
     "optionAdblockCustomSubsTitle": {
         "message": "カスタムサブスクリプションルールリスト"
