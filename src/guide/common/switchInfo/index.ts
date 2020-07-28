@@ -46,11 +46,11 @@ export class SwitchInfo {
                 </div>
             </div>
         `, this.options)
-        this.divElement.querySelector('.right').addEventListener('click', async (ev: MouseEvent) => {
+        this.divElement.querySelector('.right input').addEventListener('click', async (ev: MouseEvent) => {
             this.options.on = !this.options.on
             const newConfig = await getCoreConfig()
             newConfig[this.options.key] = this.options.on
-            setCoreConfig(newConfig).then(() => { message.send('refresh-config') })
+            setCoreConfig(newConfig).then(() => message.send('refresh-config'))
         })
     }
 }

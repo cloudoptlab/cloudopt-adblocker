@@ -137,6 +137,22 @@ export default class AdBlockPages implements IBaseHTMLPages {
                     </div>
                 </div>
             </div>
+            <div class="table-info-container">
+                <div class="table-item">
+                    <span class="title" i18n="optionAdblockAllowList"> </span>
+                    <img class="add-item" src="${this.getIconPath('icons-clear')}" id="clearAllowListAds"/>
+                    <div class="table" id="allowListAdsTable">
+                        <div class="hard">
+                            <span class="text" i18n="optionAdblockAllowListDomain"> </span>
+                        </div>
+                        <div class="body-list">
+                            <ul>
+                                ${this.renderRuleListBodyComponent(config.allowListAds)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="modal fade" id="modalAddCustomSubscription" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -203,7 +219,8 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 } else {
                     newConfig.disabledCustomSubs.push(subsLink)
                 }
-                setCoreConfig(newConfig)
+                await setCoreConfig(newConfig)
+                message.send('refresh-config')
                 this.render()
             })
         })
@@ -215,7 +232,20 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 const newConfig = await getCoreConfig()
                 newConfig.customSubscription = newConfig.customSubscription.removeByValue(subsLink)
                 newConfig.disabledCustomSubs = newConfig.disabledCustomSubs.removeByValue(subsLink)
-                setCoreConfig(newConfig)
+                await setCoreConfig(newConfig)
+                message.send('refresh-config')
+                this.render()
+            })
+        })
+
+        this.mainDOM.querySelectorAll('#allowListAdsTable .right').forEach((el) => {
+            el.addEventListener("click", async (ev: MouseEvent) => {
+                ev.stopPropagation()
+                const url = el.getAttribute('for')
+                const newConfig = await getCoreConfig()
+                newConfig.allowListAds = newConfig.allowListAds.removeByValue(url)
+                await setCoreConfig(newConfig)
+                message.send('refresh-config')
                 this.render()
             })
         })
@@ -226,7 +256,19 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 const rule = el.getAttribute('for')
                 const newConfig = await getCoreConfig()
                 newConfig.customRule = newConfig.customRule.removeByValue(rule)
-                setCoreConfig(newConfig)
+                await setCoreConfig(newConfig)
+                message.send('refresh-config')
+                this.render()
+            })
+        })
+
+        this.mainDOM.querySelectorAll('#clearAllowListAds').forEach((el) => {
+            el.addEventListener('click', async (ev: MouseEvent) => {
+                ev.stopPropagation()
+                const newConfig = await getCoreConfig()
+                newConfig.allowListAds = []
+                await setCoreConfig(newConfig)
+                message.send('refresh-config')
                 this.render()
             })
         })

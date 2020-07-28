@@ -36,7 +36,7 @@ export async function initialize() {
             const result = await grade.website(url)
             if (!result.safe) {
                 notification.error(i18n.get('dangDownTitle'))
-                chrome.downloads.cancel(downloadItem.id)
+                chrome.downloads.pause(downloadItem.id)
             }
         })
     }

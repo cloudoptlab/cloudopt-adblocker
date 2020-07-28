@@ -23,7 +23,7 @@
         "message": "Entrez votre numéro de mobile ou URL pour une sécurité d'authentification rapide"
     },
     "dangDownTitle": {
-        "message": "Votre téléchargement a été bloqué"
+        "message": "Cloudopt Adblocker a bloqué un téléchargement dangereux, si vous souhaitez toujours le télécharger, veuillez continuer manuellement"
     },
     "updateTipsTitle": {
         "message": "La mise à jour automatique a réussi"
@@ -188,13 +188,13 @@
         "message": "Afficher le nombre d'annonces bloquées sur l'icône d'extension du navigateur."
     },
     "optionAdblockTitle": {
-        "message": "Blocage des publicités"
+        "message": "Blocage de la publicité malveillante"
     },
     "optionAdblockDescriptionContent": {
         "message": "Bloquer les publicités et popups malveillants"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt <sup> & reg; </ sup> AdBlocker Peut empêcher les publicités pop-up et charger les pages Web plus rapidement. Nous souscrirons automatiquement aux règles appropriées en fonction de votre pays. Vous pouvez également vous abonner à votre liste préférée de règles de blocage des annonces (déduplication automatique) ou bloquer manuellement sur la page Web."
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker peut empêcher les publicités pop-up malveillantes et charger les pages Web plus rapidement. Nous nous abonnerons automatiquement aux règles de la communauté Open Source appropriées en fonction de votre pays. Vous pouvez également vous abonner à la liste de vos règles de blocage des publicités préférées (déduplication automatique) ou les bloquer manuellement sur le Web."
     },
     "optionAdblockCustomSubsTitle": {
         "message": "Liste des règles d'abonnement personnalisées"
@@ -210,6 +210,12 @@
     },
     "modalAddCustomSubscriptionTitle": {
         "message": "Ajouter une règle d'abonnement personnalisée"
+    },
+    "optionAdblockAllowList": {
+        "message": "Liste blanche de blocs d'annonces"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "Domaine"
     },
     "buttonCloseCustomSubscription": {
         "message": "Fermer"

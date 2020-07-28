@@ -23,7 +23,7 @@
         "message": "빠른 인증 보안을 위해 전화 번호 또는 URL을 입력하십시오"
     },
     "dangDownTitle": {
-        "message": "다운로드가 차단되었습니다"
+        "message": "Cloudopt Adblocker가 위험한 다운로드를 차단했습니다. 계속 다운로드하려면 수동으로 계속 진행하십시오."
     },
     "updateTipsTitle": {
         "message": "자동 업데이트 성공"
@@ -188,13 +188,13 @@
         "message": "브라우저 확장 프로그램 아이콘에 차단 된 광고 수를 표시합니다."
     },
     "optionAdblockTitle": {
-        "message": "광고 차단"
+        "message": "악성 광고 차단"
     },
     "optionAdblockDescriptionContent": {
         "message": "악성 광고 및 팝업 차단"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt<sup>&reg;</sup> AdBlocker 팝업 광고를 방지하고 웹 페이지를 더 빨리로드 할 수 있습니다. 귀하의 국가에 따라 적절한 규칙을 자동으로 구독하며 즐겨 찾는 광고 차단 규칙 목록 (자동 중복 제거)을 구독하거나 웹 페이지에서 수동으로 차단할 수도 있습니다."
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker는 악성 팝업 광고를 방지하고 웹 페이지를 더 빠르게로드 할 수 있습니다. 귀하의 국가에 따라 적절한 오픈 소스 커뮤니티 규칙을 자동으로 구독하며 즐겨 찾는 광고 차단 규칙 (자동 중복 제거) 목록을 구독하거나 웹에서 수동으로 차단할 수도 있습니다."
     },
     "optionAdblockCustomSubsTitle": {
         "message": "사용자 정의 구독 규칙 목록"
@@ -210,6 +210,12 @@
     },
     "modalAddCustomSubscriptionTitle": {
         "message": "사용자 정의 구독 규칙 추가"
+    },
+    "optionAdblockAllowList": {
+        "message": "광고 차단 화이트리스트"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "웹 사이트 도메인"
     },
     "ButtonCloseCustomSubscription": {
         "message": "닫기"

@@ -4,6 +4,7 @@ import { IBaseHTMLPages } from "../types";
 import { Config, get as getCoreConfig, set as setCoreConfig } from "../../../core/config"
 import { connectionCount } from "../../../core/api"
 import * as i18n from "../../../core/i18n"
+import message from '../../../core/message'
 import rtpl from 'art-template/lib/template-web.js'
 
 export default class SafePages implements IBaseHTMLPages {
@@ -160,7 +161,8 @@ export default class SafePages implements IBaseHTMLPages {
                 const url = el.getAttribute('for')
                 const newConfig = await getCoreConfig()
                 newConfig.allowList = newConfig.allowList.removeByValue(url)
-                setCoreConfig(newConfig)
+                await setCoreConfig(newConfig)
+                message.send('refresh-config')
                 this.render()
             })
         })

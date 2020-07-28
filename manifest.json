@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_infoName__",
     "short_name": "Cloudopt AdBlocker",
-    "version": "2.1.2",
+    "version": "2.2.0",
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "description": "__MSG_infoDescription__",
     "default_locale": "en",
@@ -82,9 +82,6 @@
         },
         {
             "all_frames": false,
-            "css": [
-                "adguard/assistant/css/selector.css"
-            ],
             "js": [
                 "lib/purify.min.js",
                 "adguard/adguard-assistant.js"
@@ -97,8 +94,7 @@
         }
     ],
     "web_accessible_resources": [
-        "adguard/assistant/css/assistant.css",
-        "adguard/assistant/i/close.svg",
+        "adguard/assistant/assistant.js",
         "suspend.html"
     ]
 }

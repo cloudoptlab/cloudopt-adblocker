@@ -23,7 +23,7 @@
         "message": "输入手机号或者网址快速鉴定安全"
     },
     "dangDownTitle": {
-        "message": "已拦截您的下载"
+        "message": "Cloudopt Adblocker 已为您拦截危险下载，若您仍要下载，请手动点击继续"
     },
     "updateTipsTitle": {
         "message": "自动更新成功"
@@ -188,13 +188,13 @@
         "message": "在浏览器扩展图标上显示已拦截广告的数量。"
     },
     "optionAdblockTitle": {
-        "message": "广告拦截"
+        "message": "恶意广告拦截"
     },
     "optionAdblockDescriptionContent": {
         "message": "拦截恶意广告及弹窗"
     },
     "optionAdblockDescriptionDetail": {
-        "message": "Cloudopt<sup>&reg;</sup> AdBlocker 可以阻止弹出广告，更快加载网页。我们会自动根据您所在的国家订阅合适的规则，您还可以订阅自己喜欢的广告拦截规则列表（自动去重）或是在网页上进行手动拦截。"
+        "message": "Cloudopt<sup>&reg;</sup> AdBlocker 可以阻止恶意弹出广告，更快加载网页。我们会自动根据您所在的国家订阅合适的开源社区规则，您还可以订阅自己喜欢的广告拦截规则列表（自动去重）或是在网页上进行手动拦截。"
     },
     "optionAdblockCustomSubsTitle": {
         "message": "自定义订阅规则列表"
@@ -210,6 +210,12 @@
     },
     "modalAddCustomSubscriptionTitle": {
         "message": "添加自定义订阅规则"
+    },
+    "optionAdblockAllowList": {
+        "message": "广告拦截白名单"
+    },
+    "optionAdblockAllowListDomain": {
+        "message": "网站域名"
     },
     "buttonCloseCustomSubscription": {
         "message": "关闭"
