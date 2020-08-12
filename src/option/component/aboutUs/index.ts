@@ -43,7 +43,7 @@ export default class AboutUsPages implements IBaseHTMLPages {
                             <span class="text" i18n="optionAboutStatisticsName"> </span>
                         </div>
                         <div class="body-list">
-                            <ul>
+                            <ul class="scroll-auto">
                                 <li>
                                     <div class="left">
                                         <span i18n="optionAboutVersion"> </span>

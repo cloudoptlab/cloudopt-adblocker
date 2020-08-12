@@ -140,7 +140,7 @@ export default class SafePages implements IBaseHTMLPages {
                             <span class="text" i18n="optionSafeAllowListUrls"> </span>
                         </div>
                         <div class="body-list">
-                            <ul>
+                            <ul class="scroll-auto">
                                 ${this.renderAllowList(config)}
                             </ul>
                         </div>
