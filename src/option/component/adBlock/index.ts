@@ -117,7 +117,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                             <span class="text" i18n="optionAdblockCustomSubsAddresses"> </span>
                         </div>
                         <div class="body-list">
-                            <ul>
+                            <ul class="scroll-auto">
                                 ${this.renderSubscribeListBodyComponent(config)}
                             </ul>
                         </div>
@@ -130,7 +130,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                             <span class="text" i18n="optionAdblockManualSelectors"> </span>
                         </div>
                         <div class="body-list">
-                            <ul>
+                            <ul class="scroll-auto">
                                 ${this.renderRuleListBodyComponent(config.customRule)}
                             </ul>
                         </div>
@@ -146,7 +146,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                             <span class="text" i18n="optionAdblockAllowListDomain"> </span>
                         </div>
                         <div class="body-list">
-                            <ul>
+                            <ul class="scroll-auto">
                                 ${this.renderRuleListBodyComponent(config.allowListAds)}
                             </ul>
                         </div>

@@ -3,4 +3,8 @@
     padding-top: 27px;
     width: 886px;
     margin: 0 auto;
+    ul.scroll-auto {
+        max-height: 1200px;
+        overflow-y: auto;
+    }
 }
