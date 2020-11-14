@@ -43,5 +43,29 @@
   },
   {
     "host":"tv.le.com"
+  },
+  {
+    "host":"www.ku6.com"
+  },
+  {
+    "host":"www.acfun.cn"
+  },
+  {
+    "host":"www.bilibili.com"
+  },
+  {
+    "host":"www.pearvideo.com"
+  },
+  {
+    "host":"tv.cctv.com"
+  },
+  {
+    "host":"www.cctv.cn"
+  },
+  {
+    "host":"tv.people.com.cn"
+  },
+  {
+    "host":"www.news.cn"
   }
 ]
