@@ -8,7 +8,7 @@ import * as notification from '../../../core/notification'
 import * as utils from '../../../core/utils'
 import * as http from '../../../core/http'
 import message from '../../../core/message'
-import rtpl from 'art-template/lib/template-web.js'
+import { renderTemplate } from '../../../core/utils'
 
 export default class AdBlockPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")
@@ -77,9 +77,9 @@ export default class AdBlockPages implements IBaseHTMLPages {
             <li>
                 <div class="left" for="${rule}">
                     <img class="rule-icon ${config.disabledCustomSubs.inArray(rule) && "disabled"}" 
-                        src="${config.disabledCustomSubs.inArray(rule) ? 
-                            this.getIconPath('icons-unchecked_thick') : 
-                            this.getIconPath('icons-checked_thick')}">
+                        src="${config.disabledCustomSubs.inArray(rule) ?
+                this.getIconPath('icons-unchecked_thick') :
+                this.getIconPath('icons-checked_thick')}">
                     <span>${rule}</span>
                 </div>
                 <div class="right" for="${rule}">
@@ -96,7 +96,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
 
     public async render(): Promise<HTMLElement> {
         const config = await getCoreConfig()
-        this.mainDOM.innerHTML = rtpl.render(`
+        this.mainDOM.innerHTML = renderTemplate(`
             <div class="title" i18n="optionAdblockTitle"> </div>
             <div class="description">
                 <p class="content" i18n="optionAdblockDescriptionContent"> </p>
@@ -204,7 +204,7 @@ export default class AdBlockPages implements IBaseHTMLPages {
                 inputElement.value = ''
                 this.mainDOM.querySelector('#buttonCloseCustomSubscription')['click']()
                 this.render()
-            } catch(response) {
+            } catch (response) {
                 notification.error(i18n.get('optionTipsAddCustomRuleFailure'))
             }
         })
@@ -275,16 +275,16 @@ export default class AdBlockPages implements IBaseHTMLPages {
 
         const lastUpdatedAtElement = this.mainDOM.querySelector('#lastUpdatedAt')
         lastUpdatedAtElement.addEventListener('click', (ev: MouseEvent) => {
-            lastUpdatedAtElement.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('ruleListUpdating') })
+            lastUpdatedAtElement.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('ruleListUpdating') })
             message.send('check-filters-update').then((result) => {
                 if (result === 'true') {
-                    lastUpdatedAtElement.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('ruleListUpdateSuccess') })
+                    lastUpdatedAtElement.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('ruleListUpdateSuccess') })
                     setTimeout(async () => {
                         await this.generateLastUpdatedString()
-                        lastUpdatedAtElement.innerHTML = rtpl.render(this.lastUpdatedString, null)
+                        lastUpdatedAtElement.innerHTML = renderTemplate(this.lastUpdatedString, null)
                     }, 2000);
                 } else {
-                    lastUpdatedAtElement.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('ruleListUpdateFail') })
+                    lastUpdatedAtElement.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('ruleListUpdateFail') })
                 }
             })
         })

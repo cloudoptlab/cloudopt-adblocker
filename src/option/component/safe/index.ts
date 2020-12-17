@@ -5,13 +5,13 @@ import { Config, get as getCoreConfig, set as setCoreConfig } from "../../../cor
 import { connectionCount } from "../../../core/api"
 import * as i18n from "../../../core/i18n"
 import message from '../../../core/message'
-import rtpl from 'art-template/lib/template-web.js'
+import { renderTemplate } from '../../../core/utils'
 
 export default class SafePages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div");
     static ID: string = "safePages";
     private connected: boolean = false
-    private connectionCount: string = '' 
+    private connectionCount: string = ''
 
     constructor() {
         this.mainDOM.id = SafePages.ID
@@ -19,7 +19,7 @@ export default class SafePages implements IBaseHTMLPages {
     }
 
     private updateConnectStatus() {
-        connectionCount().then((result) =>{
+        connectionCount().then((result) => {
             this.connected = true
             this.connectionCount = Number(result.result).toLocaleString()
             this.render()
@@ -90,13 +90,14 @@ export default class SafePages implements IBaseHTMLPages {
                         </div>
                     </div>
                 </li>
-            `}}
+            `}
+        }
         ).join('')
     }
 
     public async render(): Promise<HTMLElement> {
         const config = await getCoreConfig()
-        this.mainDOM.innerHTML = rtpl.render(`
+        this.mainDOM.innerHTML = renderTemplate(`
             <div class="title" i18n="optionsIntelligentSecurity" i18n="optionsIntelligentSecurity"> </div>
             <div class="description">
                 <p class="content" i18n="optionSafeContent"> </p>

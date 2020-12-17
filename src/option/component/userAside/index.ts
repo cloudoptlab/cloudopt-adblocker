@@ -3,7 +3,7 @@ import { IBaseHTMLPages } from "../types";
 import { logout } from '../../../core/api'
 import * as i18n from '../../../core/i18n'
 import * as loginState from '../../../core/loginState'
-import rtpl from 'art-template/lib/template-web.js'
+import { renderTemplate } from '../../../core/utils'
 
 interface ISelectOptions {
     icon: string;
@@ -28,14 +28,14 @@ export default class UserAside implements IBaseHTMLPages {
 
     constructor() {
         this.mainDOM.id = UserAside.ID
-        this.mainDOM.innerHTML = rtpl.render(`
+        this.mainDOM.innerHTML = renderTemplate(`
             <div class="container">
                 <img class="logo" src="image/logo.svg"></img>
                 <div class="user-info"></div>
                 <div class="menu"></div>
                 <div class="bottom"></div>
             </div>
-        `, null)
+        `)
 
         this.initUserInfoDom();
         this.initMenuDom();
@@ -44,7 +44,7 @@ export default class UserAside implements IBaseHTMLPages {
 
     private initUserInfoDom(): void {
         this.userInfoDOM.className = 'user-info'
-        this.userInfoDOM.innerHTML = rtpl.render(`
+        this.userInfoDOM.innerHTML = renderTemplate(`
             <div class="thumb">
                 <img src="/image/avatar.jpg" alt="" srcset="" />
             </div>
@@ -57,7 +57,7 @@ export default class UserAside implements IBaseHTMLPages {
         i18n.translateComponent(this.userInfoDOM)
         this.mainDOM.querySelector('.user-info').replaceWith(this.userInfoDOM)
         loginState.getLoginData().then((data) => {
-            this.userInfoDOM.innerHTML = rtpl.render(`
+            this.userInfoDOM.innerHTML = renderTemplate(`
             <div class="thumb">
                 <img src="{{ src }}" alt="" srcset="" />
             </div>
@@ -71,7 +71,7 @@ export default class UserAside implements IBaseHTMLPages {
 
             const logoutDiv = document.createElement('div')
             logoutDiv.className = 'logout'
-            logoutDiv.innerHTML = rtpl.render(`<span>{{ text }}</span>`, { text: i18n.get('popupLogout') })
+            logoutDiv.innerHTML = renderTemplate(`<span>{{ text }}</span>`, { text: i18n.get('popupLogout') })
             logoutDiv.addEventListener('click', (ev: MouseEvent) => {
                 logout().then(() => {
                     window.location.reload()
@@ -85,7 +85,7 @@ export default class UserAside implements IBaseHTMLPages {
             // Not logged in
             this.userInfoDOM.addEventListener('click', (ev: MouseEvent) => {
                 this.userInfoDOM.querySelector('.name+p.description').setAttribute('i18n', 'optionLoginRefreshTips')
-                this.userInfoDOM.querySelector('.name+p.description').innerHTML = rtpl.render('{{ text }}', { text: i18n.get('optionLoginRefreshTips') })
+                this.userInfoDOM.querySelector('.name+p.description').innerHTML = renderTemplate('{{ text }}', { text: i18n.get('optionLoginRefreshTips') })
                 window.open('https://www.cloudopt.net/account/login', '_blank')
             })
         });
@@ -102,14 +102,14 @@ export default class UserAside implements IBaseHTMLPages {
             const li = document.createElement("li")
             li.className = optionLiDefaultClassName
             li.setAttribute("data-key", key)
-            li.innerHTML = rtpl.render(`
+            li.innerHTML = renderTemplate(`
                 <div class="icon">
                     <img src="image/icon/option/userInfo/{{ icon }}" />
                 </div>
                 <span class="name">{{ name }}</span>
             `, {
-                icon,
-                name
+                icon: icon,
+                name: name
             })
             return li
         }

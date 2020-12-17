@@ -2,7 +2,7 @@ import { IBaseHTMLPages } from "../types";
 import "./index.scss";
 import message from '../../../core/message'
 import * as i18n from '../../../core/i18n'
-import rtpl from 'art-template/lib/template-web.js'
+import { renderTemplate } from '../../../core/utils'
 
 const queryBackground = message.send
 
@@ -20,16 +20,16 @@ export default class AboutUsPages implements IBaseHTMLPages {
 
     private getCounts() {
         Promise.all([
-        queryBackground('getEventCount', 'adblock').then((count: String) => { this.adBlockCount = count }),
-        queryBackground('getEventCount', 'site-block').then((count: String) => { this.siteBlockCount = count }),
-        queryBackground('getEventCount', 'web-accelerate').then((count: String) => { this.AccelerationCount = count }),
+            queryBackground('getEventCount', 'adblock').then((count: String) => { this.adBlockCount = count }),
+            queryBackground('getEventCount', 'site-block').then((count: String) => { this.siteBlockCount = count }),
+            queryBackground('getEventCount', 'web-accelerate').then((count: String) => { this.AccelerationCount = count }),
         ]).then(() => {
             this.render()
         })
     }
 
     public render(): HTMLElement {
-        this.mainDOM.innerHTML = rtpl.render(`
+        this.mainDOM.innerHTML = renderTemplate(`
             <div class="title" i18n="optionAboutTitle"> </div>
             <div class="description">
                 <p class="content" i18n="optionAboutDescriptionContent"> </p>

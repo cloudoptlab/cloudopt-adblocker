@@ -3,7 +3,7 @@ import "shards-ui/dist/css/shards.min.css";
 import "./index.scss";
 import { get as getCoreConfig, set as setCoreConfig } from '../../../core/config'
 import message from '../../../core/message'
-import rtpl from 'art-template/lib/template-web.js'
+import { renderTemplate } from '../../../core/utils'
 
 export interface ISwitchInfo {
     icon: string;
@@ -23,14 +23,18 @@ export class SwitchInfo {
 
     private init(): void {
         this.divElement.className = "switch-item"
-        this.divElement.innerHTML = rtpl.render(`
+        let data = this.options
+        if (data.on) {
+            data["checked"] = "checked"
+        } else {
+            data["checked"] = ""
+        }
+        this.divElement.innerHTML = renderTemplate(`
             <div class="left">
-                {{ if icon }}
-                    <div class="icon"><img src="{{ icon }}" /></div>
-                {{ /if }}
+                <div class="icon"><img src="{{ icon }}" /></div>
                 <div class="description">
                     <span class="title">{{ title }}</span>
-                    <span class="content" {{ if i18n }} i18n="{{ i18n }}" {{ /if }}>{{ content || ' ' }}</span>
+                    <span class="content" i18n="{{ i18n }}">{{ content }}</span>
                 </div>
             </div>
             <div class="right" key="{{ key }}">
@@ -40,12 +44,12 @@ export class SwitchInfo {
                         id="{{ key }}"
                         name="{{ key }}"
                         class="custom-control-input"
-                        {{on ? "checked" : ""}}
+                        {{ checked }}
                     />
                     <label class="custom-control-label" for="{{ key }}"></label>
                 </div>
             </div>
-        `, this.options)
+        `, data)
         this.divElement.querySelector('.right input').addEventListener('click', async (ev: MouseEvent) => {
             this.options.on = !this.options.on
             const newConfig = await getCoreConfig()

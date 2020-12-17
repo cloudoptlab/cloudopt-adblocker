@@ -26,13 +26,13 @@ declare global {
 }
 
 if (!Array.prototype.removeByValue) {
-    Array.prototype.removeByValue = function<T> (val: T): T[] {
+    Array.prototype.removeByValue = function <T>(val: T): T[] {
         return this.filter((elem) => elem !== val)
     }
 }
 
 if (!Array.prototype.inArray) {
-    Array.prototype.inArray = function<T> (val: T): boolean {
+    Array.prototype.inArray = function <T>(val: T): boolean {
         if (typeof val === 'string' || typeof val === 'number') {
             return this.some((elem) => val === elem)
         } else {
@@ -42,7 +42,7 @@ if (!Array.prototype.inArray) {
 }
 
 if (!Array.prototype.last) {
-    Array.prototype.last = function<T> (): T[] {
+    Array.prototype.last = function <T>(): T[] {
         return this[this.length - 1]
     }
 }
@@ -111,7 +111,7 @@ export function language(): string {
 
 /* tslint:disable:no-bitwise */
 function s4(): string {
-   return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
+    return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
 }
 /* tslint:enable:no-bitwise */
 
@@ -179,4 +179,13 @@ export function deserializeMapNumNum(recordString: string): Map<number, number> 
 
 export function getExtUrl() {
     return chrome.runtime.getURL("popup.html").replace("/popup.html", "")
+}
+
+export function renderTemplate(tpl: string, dataArray: object = {}) {
+    let keys = Object.keys(dataArray)
+    for (let i in keys) {
+        tpl = tpl.replace(`{{${keys[i]}}}`, dataArray[keys[i]])
+        tpl = tpl.replace(`{{ ${keys[i]} }}`, dataArray[keys[i]])
+    }
+    return tpl;
 }

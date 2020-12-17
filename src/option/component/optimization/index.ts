@@ -3,7 +3,7 @@ import "./index.scss";
 import { IBaseHTMLPages } from "../types";
 import { Config } from "../../../core/config"
 import * as i18n from '../../../core/i18n'
-import rtpl from 'art-template/lib/template-web.js'
+import { renderTemplate } from '../../../core/utils'
 
 export default class OptimizationPages implements IBaseHTMLPages {
     private mainDOM = document.createElement("div")
@@ -42,7 +42,7 @@ export default class OptimizationPages implements IBaseHTMLPages {
     }
 
     public render(config: Config): HTMLElement {
-        this.mainDOM.innerHTML = rtpl.render(`
+        this.mainDOM.innerHTML = renderTemplate(`
             <div class="title" i18n="optionOptimizationTitle"> </div>
             <div class="description">
                 <p class="content" i18n="optionOptimizationContent"> </p>
@@ -51,7 +51,7 @@ export default class OptimizationPages implements IBaseHTMLPages {
             <div class="switch-info-container">
                 <div />
             </div>
-        `, null)
+        `)
         this.mainDOM.querySelector('.switch-info-container').children[0].replaceWith(...this.renderSwitchInfoComponent(config))
         i18n.translateComponent(this.mainDOM)
         return this.mainDOM;

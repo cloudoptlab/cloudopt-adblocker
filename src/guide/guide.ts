@@ -2,7 +2,7 @@ import './guide.scss'
 import { createSwitchInfoDom } from './common/switchInfo'
 import { get as getCoreConfig } from '../core/config'
 import * as i18n from '../core/i18n'
-import rtpl from 'art-template/lib/template-web.js'
+import { renderTemplate } from '../core/utils'
 
 export class GuideManager {
 
@@ -11,7 +11,7 @@ export class GuideManager {
 
     constructor() {
         this.mainDOM.id = GuideManager.ID;
-        this.mainDOM.innerHTML = rtpl.render(`
+        this.mainDOM.innerHTML = renderTemplate(`
             <div class="container">
                 <span class="title"><img src="image/logo-d.svg" class="cloudopt-title" width="100px"/></span>
                 <div class="content-block" id="contentBlock">
@@ -20,7 +20,7 @@ export class GuideManager {
                     <div class="footer"></div>
                 </div>
             </div>
-        `, null)
+        `)
         document.querySelector('body').appendChild(this.mainDOM)
         window.addEventListener('hashchange', this.route.bind(this))
         this.route()
@@ -50,17 +50,17 @@ export class GuideManager {
     }
 
     private setHeader(headerElement: HTMLElement) {
-        this.mainDOM.querySelector('#contentBlock .header').innerHTML = rtpl.render(' ', null)
+        this.mainDOM.querySelector('#contentBlock .header').innerHTML = renderTemplate(' ')
         this.mainDOM.querySelector('#contentBlock .header').appendChild(headerElement)
     }
 
     private setFooter(footerElement: HTMLElement) {
-        this.mainDOM.querySelector('#contentBlock .footer').innerHTML = rtpl.render(' ', null)
+        this.mainDOM.querySelector('#contentBlock .footer').innerHTML = renderTemplate(' ')
         this.mainDOM.querySelector('#contentBlock .footer').appendChild(footerElement)
     }
 
     private setBody(bodyElement: HTMLElement) {
-        this.mainDOM.querySelector('#contentBlock .body').innerHTML = rtpl.render(' ', null)
+        this.mainDOM.querySelector('#contentBlock .body').innerHTML = renderTemplate(' ')
         this.mainDOM.querySelector('#contentBlock .body').appendChild(bodyElement)
     }
 
@@ -73,18 +73,18 @@ export class GuideManager {
 
         const body = document.createElement("div")
         body.className = 'guide-content'
-        body.innerHTML = rtpl.render(`
+        body.innerHTML = renderTemplate(`
             <h3>{{ title }}</h3>
             <span class="text">{{ text }}</span>
         `, {
             title: i18n.get('guideStep1Title'),
-            text: i18n.get('guideStep1Content'),
+            text: i18n.get('guideStep1Content')
         })
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
+        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step2'
         })
@@ -109,13 +109,13 @@ export class GuideManager {
             key: 'safeCloud',
             on: config.safeCloud,
         }).divElement
-        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep2Title') })
+        body.innerHTML = renderTemplate('<h3>{{ text }}</h3>', { text: i18n.get('guideStep2Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML =  rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
+        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step3'
         })
@@ -140,13 +140,13 @@ export class GuideManager {
             key: 'adblockActivating',
             on: config.adblockActivating
         }).divElement
-        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep3Title') })
+        body.innerHTML = renderTemplate('<h3>{{ text }}</h3>', { text: i18n.get('guideStep3Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
+        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step4'
         })
@@ -171,13 +171,13 @@ export class GuideManager {
             key: 'safePrivacy',
             on: config.safePrivacy
         }).divElement
-        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep4Title') })
+        body.innerHTML = renderTemplate('<h3>{{ text }}</h3>', { text: i18n.get('guideStep4Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
+        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step5'
         })
@@ -203,13 +203,13 @@ export class GuideManager {
             on: config.dataCollection
         }).divElement
         i18n.translateComponent(switchElement)
-        body.innerHTML = rtpl.render('<h3>{{ text }}</h3>', { text: i18n.get('guideStep5Title') })
+        body.innerHTML = renderTemplate('<h3>{{ text }}</h3>', { text: i18n.get('guideStep5Title') })
         body.appendChild(switchElement)
         this.setBody(body)
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideNext') })
+        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('guideNext') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.location.hash = '#step6'
         })
@@ -225,7 +225,7 @@ export class GuideManager {
 
         const body = document.createElement("div")
         body.className = 'guide-content'
-        body.innerHTML = rtpl.render(`
+        body.innerHTML = renderTemplate(`
             <h3>{{ title }}</h3>
             <span class="text">{{ text }}</span>
         `, {
@@ -236,7 +236,7 @@ export class GuideManager {
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = rtpl.render('{{ text }}', { text: i18n.get('guideLogin') })
+        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('guideLogin') })
         button.addEventListener("click", (ev: MouseEvent) => {
             window.open('https://www.cloudopt.net/account/login')
         })
