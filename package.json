@@ -8,9 +8,9 @@
     "devDependencies": {
         "@types/chrome": "^0.0.89",
         "@types/jquery": "^3.3.31",
-        "art-template-loader": "^1.4.3",
         "copy-webpack-plugin": "^5.0.4",
         "html-webpack-plugin": "^3.2.0",
+        "ini": ">=1.3.6",
         "ts-loader": "^6.1.0",
         "tslint": "^5.20.0",
         "typescript": "^3.6.2",
@@ -19,8 +19,8 @@
         "webpack-concat-plugin": "3.0.0"
     },
     "scripts": {
-        "build": "NODE_ENV=production webpack",
-        "start:options": "NODE_ENV=development node_modules/.bin/webpack-dev-server --mode development --progress --colors --public --config webpack.dev.options.config",
+        "build": "webpack",
+        "start": "node_modules/.bin/webpack-dev-server --mode development --progress --colors --public --config webpack.dev.options.config",
         "lint": "tslint -c tslint.json src/**/*.ts"
     },
     "dependencies": {
@@ -28,12 +28,12 @@
         "@antv/g2": "^3.5.9",
         "@types/dompurify": "^0.0.33",
         "@types/lodash": "^4.14.138",
-        "art-template": "^4.13.2",
         "bootstrap": "^4.3.1",
         "cross-env": "^6.0.3",
         "css-loader": "^3.2.0",
         "dompurify": "^2.0.5",
         "file-loader": "^4.2.0",
+        "ini": ">=1.3.6",
         "inquirer": "^7.0.0",
         "jquery": "^3.4.1",
         "lodash": "^4.17.15",
