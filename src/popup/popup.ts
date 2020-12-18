@@ -177,7 +177,7 @@ async function initialize() {
         $('#adsIntercept input').prop('disabled', true).prop('checked', true)
         $('#credibilityScore .sub-title').text(i18n.get('popupNoNeedGrade'))
         $('#manualIntercept .sub-title').text(i18n.get('popupNoNeedManual'))
-        $('#g2mountNode').replaceWith('<img src="image/icon/popup/undraw_heatmap_uyye.png" class="system-page cover">')
+        $('#g2mountNode').replaceWith('<img src="image/icon/popup/Illustrations_heatmap_uyye.png" class="system-page cover">')
         const html = `
             <div style="text-align: center;" class="system-page">
                 <div class="title">${i18n.get('popupNotValid')}</div>

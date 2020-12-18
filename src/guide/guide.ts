@@ -3,6 +3,7 @@ import { createSwitchInfoDom } from './common/switchInfo'
 import { get as getCoreConfig } from '../core/config'
 import * as i18n from '../core/i18n'
 import { renderTemplate } from '../core/utils'
+import * as tabs from '../core/tab'
 
 export class GuideManager {
 
@@ -66,7 +67,7 @@ export class GuideManager {
 
     private step1() {
         const header = document.createElement('img')
-        header.src = 'image/icon/option/guide/undraw_airport_2581@2x.png'
+        header.src = 'image/icon/option/guide/Illustrations_airport_2581@2x.png'
         header.width = 250
         header.height = 213
         this.setHeader(header)
@@ -95,7 +96,7 @@ export class GuideManager {
         const config = await getCoreConfig()
 
         const header = document.createElement('img')
-        header.src = 'image/icon/option/guide/undraw_privacy_protection_nlwy@2x.png'
+        header.src = 'image/icon/option/guide/Illustrations_privacy_protection_nlwy@2x.png'
         header.width = 250
         header.height = 225
         this.setHeader(header)
@@ -126,7 +127,7 @@ export class GuideManager {
         const config = await getCoreConfig()
 
         const header = document.createElement('img')
-        header.src = 'image/icon/option/guide/undraw_heatmap_uyye@2x.png'
+        header.src = 'image/icon/option/guide/Illustrations_heatmap_uyye@2x.png'
         header.width = 277
         header.height = 159
         this.setHeader(header)
@@ -157,7 +158,7 @@ export class GuideManager {
         const config = await getCoreConfig()
 
         const header = document.createElement('img')
-        header.src = 'image/icon/option/guide/undraw_fingerprint_swrc@2x.png'
+        header.src = 'image/icon/option/guide/Illustrations_fingerprint_swrc@2x.png'
         header.width = 250
         header.height = 220
         this.setHeader(header)
@@ -188,7 +189,7 @@ export class GuideManager {
         const config = await getCoreConfig()
 
         const header = document.createElement('img')
-        header.src = 'image/icon/option/guide/undraw_to_the_moon_v1mv@2x.png'
+        header.src = 'image/icon/option/guide/Illustrations_to_the_moon_v1mv@2x.png'
         header.width = 250
         header.height = 202
         this.setHeader(header)
@@ -218,7 +219,7 @@ export class GuideManager {
 
     private step6() {
         const header = document.createElement('img')
-        header.src = 'image/icon/option/guide/undraw_having_fun_iais@2x.png'
+        header.src = 'image/icon/option/guide/Illustrations_having_fun_iais@2x.png'
         header.width = 289
         header.height = 182
         this.setHeader(header)
@@ -236,9 +237,10 @@ export class GuideManager {
 
         const button = document.createElement('button')
         button.className = 'btn btn-primary'
-        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('guideLogin') })
+        button.innerHTML = renderTemplate('{{ text }}', { text: i18n.get('buttonCloseCustomSubscription') })
         button.addEventListener("click", (ev: MouseEvent) => {
-            window.open('https://www.cloudopt.net/account/login')
+            tabs.open('/option.html')
+            tabs.closeTabByTitle('Cloudopt AdBlocker Guidance')
         })
         this.setFooter(button)
     }

@@ -3,7 +3,7 @@
     "incremental": true,
     "outDir": "dist",
     "sourceMap": false,
-    "lib": ["esnext", "dom"],
+    "lib": ["es2015", "dom"],
     "esModuleInterop": true
   }
 }

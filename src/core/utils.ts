@@ -47,6 +47,7 @@ if (!Array.prototype.last) {
     }
 }
 
+
 export function getQueryString(name: string): string {
     const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`)
     const r = window.location.search.substr(1).match(reg)
@@ -184,8 +185,8 @@ export function getExtUrl() {
 export function renderTemplate(tpl: string, dataArray: object = {}) {
     let keys = Object.keys(dataArray)
     for (let i in keys) {
-        tpl = tpl.replaceAll(`{{${keys[i]}}}`, dataArray[keys[i]])
-        tpl = tpl.replaceAll(`{{ ${keys[i]} }}`, dataArray[keys[i]])
+        tpl = tpl.replace(new RegExp(`{{${keys[i]}}}`, "gm"), dataArray[keys[i]])
+        tpl = tpl.replace(new RegExp(`{{ ${keys[i]} }}`, "gm"), dataArray[keys[i]])
     }
     return tpl;
 }
