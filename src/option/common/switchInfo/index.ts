@@ -29,6 +29,9 @@ export class SwitchInfo {
         }else{
             data["checked"] = ""
         }
+        if(data.i18n && data.i18n != ""){
+            data.content = data.i18n
+        }
         this.divElement.innerHTML = renderTemplate(`
             <div class="left">
                 <div class="icon"><img src="{{ icon }}" /></div>
@@ -49,7 +52,7 @@ export class SwitchInfo {
                     <label class="custom-control-label" for="{{ key }}"></label>
                 </div>
             </div>
-        `, this.options)
+        `, data)
         this.divElement.querySelector('.right input').addEventListener('click', async (ev: MouseEvent) => {
             this.options.on = !this.options.on
             const newConfig = await getCoreConfig()
