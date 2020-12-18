@@ -184,8 +184,8 @@ export function getExtUrl() {
 export function renderTemplate(tpl: string, dataArray: object = {}) {
     let keys = Object.keys(dataArray)
     for (let i in keys) {
-        tpl = tpl.replace(`{{${keys[i]}}}`, dataArray[keys[i]])
-        tpl = tpl.replace(`{{ ${keys[i]} }}`, dataArray[keys[i]])
+        tpl = tpl.replaceAll(`{{${keys[i]}}}`, dataArray[keys[i]])
+        tpl = tpl.replaceAll(`{{ ${keys[i]} }}`, dataArray[keys[i]])
     }
     return tpl;
 }
