@@ -18,17 +18,23 @@ export function translateComponent(component: HTMLElement) {
         const i18nOnly = $(element).attr('i18n-only')
         if ($(element).val() != null && $(element).val() !== '') {
             if (i18nOnly == null || i18nOnly === '' || i18nOnly === 'value') {
-                $(element).val(get($(element).attr('i18n')))
+                if(get($(element).attr('i18n'))){
+                    $(element).val(get($(element).attr('i18n')))
+                }
             }
         }
         if ($(element).html() != null && $(element).html() !== '') {
             if (i18nOnly == null || i18nOnly === '' || i18nOnly === 'html') {
-                $(element).html(get($(element).attr('i18n')))
+                if(get($(element).attr('i18n'))){
+                    $(element).html(get($(element).attr('i18n')))
+                }
             }
         }
         if ($(element).attr('placeholder') != null && $(element).attr('placeholder') !== '') {
             if (i18nOnly == null || i18nOnly === '' || i18nOnly === 'placeholder') {
-                $(element).attr('placeholder', get($(element).attr('i18n')))
+                if(get($(element).attr('i18n'))){
+                    $(element).attr(get($(element).attr('i18n')))
+                }
             }
         }
     })
