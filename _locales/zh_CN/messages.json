@@ -212,7 +212,7 @@
         "message": "添加自定义订阅规则"
     },
     "optionAdblockAllowList": {
-        "message": "广告拦截白名单"
+        "message": "恶意广告拦截白名单"
     },
     "optionAdblockAllowListDomain": {
         "message": "网站域名"
@@ -236,10 +236,10 @@
         "message": "正在更新……"
     },
     "ruleListUpdateSuccess": {
-        "message": "广告拦截规则库更新成功！点击可再次更新。"
+        "message": "恶意广告拦截规则库更新成功！点击可再次更新。"
     },
     "ruleListUpdateFail": {
-        "message": "广告拦截规则库更新失败，请检查网络连接后，再次点击尝试更新。"
+        "message": "恶意广告拦截规则库更新失败，请检查网络连接后，再次点击尝试更新。"
     },
     "optionBookmarkSearchTitle": {
         "message": "书签搜索"
@@ -374,7 +374,7 @@
         "message": "登录成功后请刷新页面"
     },
     "optionsAdblock": {
-        "message": "广告拦截"
+        "message": "恶意广告拦截"
     },
     "optionsSpeedup": {
         "message": "优化加速"
@@ -389,7 +389,7 @@
         "message": "关于我们"
     },
     "popupAdblockName": {
-        "message": "广告拦截"
+        "message": "恶意广告拦截"
     },
     "popupPrerenderName": {
         "message": "网页加速"
