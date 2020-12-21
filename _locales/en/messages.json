@@ -152,16 +152,16 @@
         "message": "Social Channels"
     },
     "optionAboutContectWechat": {
-        "message": "Follow WeChat public account"
+        "message": "Wechat"
     },
     "optionAboutContectQQ": {
-        "message": "Join QQ User Group"
+        "message": "QQ"
     },
-    "optionAboutContectMessager": {
-        "message": "Join Messager User Group"
+    "optionAboutContectLine": {
+        "message": "Line"
     },
     "optionAboutContectTwitter": {
-        "message": "Follow Twitter"
+        "message": "Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "Ad blocking rule base updated on"

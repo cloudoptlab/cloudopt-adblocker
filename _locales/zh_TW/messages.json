@@ -158,13 +158,13 @@
         "message": "關注微信公眾號"
     },
     "optionAboutContectQQ": {
-        "message": "加入QQ用戶群"
+        "message": "加入 QQ 用戶群"
     },
-    "optionAboutContectMessager": {
-        "message": "加入Messager用戶群"
+    "optionAboutContectLine": {
+        "message": "加入 Line 用戶群"
     },
     "optionAboutContectTwitter": {
-        "message": "關注Twitter"
+        "message": "關注 Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "廣告攔截規則庫更新於"

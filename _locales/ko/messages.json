@@ -155,16 +155,16 @@
         "message": "소셜 채널"
     },
     "optionAboutContectWechat": {
-        "message": "WeChat 공개 계정"
+        "message": "WeChat"
     },
     "optionAboutContectQQ": {
-        "message": "QQ 사용자 그룹 가입"
+        "message": "QQ"
     },
-    "optionAboutContectMessager": {
-        "message": "메시지 사용자 그룹 가입"
+    "optionAboutContectLine": {
+        "message": "Line"
     },
     "optionAboutContectTwitter": {
-        "message": "트위터 팔로우"
+        "message": "Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "광고 차단 룰베이스 업데이트"

@@ -155,16 +155,16 @@
         "message": "Chaîne sociale"
     },
     "optionAboutContectWechat": {
-        "message": "Suivez le compte public WeChat"
+        "message": "WeChat"
     },
     "optionAboutContectQQ": {
-        "message": "Rejoindre le groupe d'utilisateurs QQ"
+        "message": "QQ"
     },
-    "optionAboutContectMessager": {
-        "message": "Rejoindre le groupe d'utilisateurs Messager"
+    "optionAboutContectLine": {
+        "message": "Line"
     },
     "optionAboutContectTwitter": {
-        "message": "Suivez Twitter"
+        "message": "Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "Base de règles de blocage des annonces mise à jour"

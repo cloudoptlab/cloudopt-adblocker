@@ -158,13 +158,13 @@
         "message": "关注微信公众号"
     },
     "optionAboutContectQQ": {
-        "message": "加入QQ用户群"
+        "message": "加入 QQ 用户群"
     },
-    "optionAboutContectMessager": {
-        "message": "加入Messager用户群"
+    "optionAboutContectLine": {
+        "message": "加入 Line 用户群"
     },
     "optionAboutContectTwitter": {
-        "message": "关注Twitter"
+        "message": "关注 Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "广告拦截规则库更新于"

@@ -155,16 +155,16 @@
         "message": "ソーシャルチャネル"
     },
     "optionAboutContectWechat": {
-        "message": "WeChatパブリックアカウントをフォロー"
+        "message": "WeChat"
     },
     "optionAboutContectQQ": {
-        "message": "QQユーザーグループに参加"
+        "message": "QQ"
     },
-    "optionAboutContectMessager": {
-        "message": "メッセージユーザーグループに参加"
+    "optionAboutContectLine": {
+        "message": "Line"
     },
     "optionAboutContectTwitter": {
-        "message": "Twitterをフォロー"
+        "message": "Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "広告ブロックルールベースが更新されました"

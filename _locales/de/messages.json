@@ -155,16 +155,16 @@
         "message": "Social Channel"
     },
     "optionAboutContectWechat": {
-        "message": "Folgen Sie dem öffentlichen WeChat-Konto"
+        "message": "Wechat"
     },
     "optionAboutContectQQ": {
-        "message": "QQ-Benutzergruppe beitreten"
+        "message": "QQ"
     },
-    "optionAboutContectMessager": {
-        "message": "Messager-Benutzergruppe beitreten"
+    "optionAboutContectLine": {
+        "message": "Line"
     },
     "optionAboutContectTwitter": {
-        "message": "Folgen Sie Twitter"
+        "message": "Twitter"
     },
     "optionFiltersLastUpdatedAt": {
         "message": "Regelbasis für Werbeblocker aktualisiert"

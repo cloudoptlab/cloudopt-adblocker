@@ -104,7 +104,7 @@ export default class AboutUsPages implements IBaseHTMLPages {
                                 </li>
                                 <li>
                                     <div class="left">
-                                        <a href="https://m.me/join/AbY0nj0LE7Es8FI8" target="_blank" i18n="optionAboutContectMessager"> </a>
+                                        <a href="https://line.me/R/ti/g/D2ESDGCBEC" target="_blank" i18n="optionAboutContectLine"> </a>
                                     </div>
                                     <div class="right">
                                     </div>
@@ -119,6 +119,11 @@ export default class AboutUsPages implements IBaseHTMLPages {
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div class="table-item">
+                    <small class="small" style="font-style: italic;">
+                        Cloudopt AdBlocker is a public service, open source on <a href="https://github.com/cloudoptlab/cloudopt-adblocker" target="_blank">GitHub</a>. 
+                    </small>
                 </div>
             </div>
         `, {
