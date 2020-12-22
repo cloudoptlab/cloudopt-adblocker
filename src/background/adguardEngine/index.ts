@@ -23,6 +23,30 @@ enum EngineState {
     STOPPED,
 }
 
+export var tabsBlockCount: Map<number, TabRecord> = new Map<number, TabRecord>()
+
+export async function updateBadgeText(tabId: number): Promise<void> {
+    const config = await coreConfig.get()
+    if (config && config.adblockActivating && config.adblockDisplay) {
+        try {
+            chrome.browserAction.setBadgeText({
+                text: tabsBlockCount.get(tabId).count.toString(),
+                tabId,
+            })
+        } catch (e) {
+            chrome.browserAction.setBadgeText({
+                text: '0',
+                tabId,
+            })
+        }
+    } else {
+        chrome.browserAction.setBadgeText({
+            text: '',
+            tabId,
+        })
+    }
+}
+
 function getAdguardConfig(config: coreConfig.Config) {
     const allowList = config.allowListAds.slice()
     allowList.push('*.cloudopt.net')
@@ -103,7 +127,6 @@ async function autoAddallowListAds() {
 
 class AdguardEngine implements IAdblockEngine {
     public name: string = 'adguard'
-    private tabsBlockCount: Map<number, TabRecord> = new Map<number, TabRecord>()
     private config: coreConfig.Config
     private state: EngineState = EngineState.NOT_STARTED
 
@@ -214,27 +237,6 @@ class AdguardEngine implements IAdblockEngine {
         return true
     }
 
-    private updateBadgeText(tabId: number): void {
-        if (this.config && this.config.adblockActivating && this.config.adblockDisplay) {
-            try {
-                chrome.browserAction.setBadgeText({
-                    text: this.tabsBlockCount.get(tabId).count.toString(),
-                    tabId,
-                })
-            } catch (e) {
-                chrome.browserAction.setBadgeText({
-                    text: '0',
-                    tabId,
-                })
-            }
-        } else {
-            chrome.browserAction.setBadgeText({
-                text: '',
-                tabId,
-            })
-        }
-    }
-
     private async loadRulesFromUrl(url: string, adguardConfig: any, useCache: boolean = true): Promise<void> {
         return http.get(url, {cache: useCache}).then((data) => {
                 let list = data.split('\n')
@@ -256,27 +258,27 @@ class AdguardEngine implements IAdblockEngine {
 
     private startTabsBlockCount() {
         chrome.tabs.onCreated.addListener((tab) => {
-            this.tabsBlockCount.set(tab.id, {url: tab.url, count: 0})
+            tabsBlockCount.set(tab.id, {url: tab.url, count: 0})
         })
         chrome.tabs.onRemoved.addListener((tabId) => {
-            this.tabsBlockCount.delete(tabId)
+            tabsBlockCount.delete(tabId)
         })
         chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-            if (!this.tabsBlockCount.get(tabId) || tab.url !== this.tabsBlockCount.get(tabId).url) {
-                this.tabsBlockCount.set(tabId, {url: tab.url, count: 0})
+            if (!tabsBlockCount.get(tabId) || tab.url !== tabsBlockCount.get(tabId).url) {
+                tabsBlockCount.set(tabId, {url: tab.url, count: 0})
             }
-            this.updateBadgeText(tabId)
+            updateBadgeText(tabId)
         })
         chrome.tabs.onActivated.addListener((activeInfo) => {
-            this.updateBadgeText(activeInfo.tabId)
+            updateBadgeText(activeInfo.tabId)
         })
 
         window.adguardApi.onRequestBlocked.addListener((details) => {
-            const tabRecord = this.tabsBlockCount.get(details.tabId)
+            const tabRecord = tabsBlockCount.get(details.tabId)
             if (tabRecord) {
                 tabRecord.count++
             }
-            this.updateBadgeText(details.tabId)
+            updateBadgeText(details.tabId)
             statistics.countEvent('adblock')
         })
     }

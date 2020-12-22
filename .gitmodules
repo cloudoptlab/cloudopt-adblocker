@@ -1,0 +1,3 @@
+[submodule "src/baize"]
+	path = src/baize
+	url = git@github.com:cloudoptlab/baize.git

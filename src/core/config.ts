@@ -8,7 +8,7 @@ import * as loginState from './loginState'
 
 export class Config {
     public safeCloud: boolean
-    public safeDownload: boolean
+    public safeHeuristics: boolean
     public safeCoin: boolean
     public safePrivacy: boolean
     public safePotential: boolean
@@ -31,7 +31,7 @@ export class Config {
 
 let configObject: Config = {
     safeCloud: true,
-    safeDownload: false,
+    safeHeuristics : false,
     safeCoin: true,
     safePrivacy: true,
     safePotential: false,

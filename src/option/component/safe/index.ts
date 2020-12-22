@@ -38,10 +38,10 @@ export default class SafePages implements IBaseHTMLPages {
             },
             {
                 title: i18n.get('optionSafeBaizeTitle'),
-                key: "safeDownload",
+                key: "safeHeuristics",
                 content: i18n.get('optionSafeBaizeContent'),
                 icon: this.getIconPath("icons-ai"),
-                on: config.safeDownload,
+                on: config.safeHeuristics,
             },
             {
                 title: i18n.get('optionSafePrivacyTitle'),
