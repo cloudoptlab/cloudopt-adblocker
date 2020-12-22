@@ -14,7 +14,7 @@
         "message": "View Security Report"
     },
     "contextMenus3": {
-        "message": "Manually blocking malicious ads (BETA)"
+        "message": "Manually blocking malicious ads"
     },
     "contextMenus4": {
         "message": "Cloud Security Blacklist"
@@ -295,11 +295,11 @@
     "optionSafeCloudContent": {
         "message": "Block dangerous websites in real time to protect you from phishing and malicious URLs."
     },
-    "optionSafeDownloadTitle": {
-        "message": "Download Protection"
+    "optionSafeBaizeTitle": {
+        "message": "Baize"
     },
-    "optionSafeDownloadContent": {
-        "message": "Automatically blocks downloads from dangerous websites and prevents malicious websites from downloading automatically."
+    "optionSafeBaizeContent": {
+        "message": "Baize is an artificial intelligence-based privacy protection inspired engine, <a href='https://github.com/cloudoptlab/baize' target='_blank'>details</a>."
     },
     "optionSafePrivacyTitle": {
         "message": "Privacy Protection"

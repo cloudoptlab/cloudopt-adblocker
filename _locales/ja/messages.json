@@ -295,11 +295,11 @@
     "optionSafeCloudContent": {
         "message": "危険なWebサイトをリアルタイムでブロックして、フィッシングや悪意のあるURLからユーザーを保護します。"
     },
-    "optionSafeDownloadTitle": {
-        "message": "ダウンロード保護"
+    "optionSafeBaizeTitle": {
+        "message": "Baize"
     },
-    "optionSafeDownloadContent": {
-        "message": "危険なWebサイトからのダウンロードを自動的にブロックし、悪意のあるWebサイトが自動的にダウンロードされるのを防ぎます。"
+    "optionSafeBaizeContent": {
+        "message": "BAIZEは、AIベースのプライバシー保護ヒューリスティックエンジンで、<a href='https://github.com/cloudoptlab/baize' target='_blank'>more</a>。"
     },
     "optionSafePrivacyTitle": {
         "message": "プライバシー"

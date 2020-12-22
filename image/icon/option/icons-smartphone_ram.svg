@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" viewBox="0 0 60 54">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #767c8c;
-      }
-    </style>
-  </defs>
-  <path id="icons8-smartphone_ram" class="cls-1" d="M11,3V9h6V3ZM23,3V9h6V3ZM35,3V9h6V3ZM47,3V9h6V3ZM8,12a6.045,6.045,0,0,0-6,6V42a6.045,6.045,0,0,0,6,6H56a6.045,6.045,0,0,0,6-6V18a6.045,6.045,0,0,0-6-6Zm0,6H56V42H8Zm6,3a3,3,0,1,0,3,3A3,3,0,0,0,14,21ZM50,33a3,3,0,1,0,3,3A3,3,0,0,0,50,33ZM11,51v6h6V51Zm12,0v6h6V51Zm12,0v6h6V51Zm12,0v6h6V51Z" transform="translate(-2 -3)"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="6" width="24" height="36" rx="2" fill="none" stroke="#767C8C" stroke-width="3"/><path d="M12 12H6" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 20H6" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 28H6" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 36H6" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 12H36" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 20H36" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 28H36" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 36H36" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>

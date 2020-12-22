@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 19.535 22">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #767c8c;
-      }
-    </style>
-  </defs>
-  <path id="icons8-delete_trash" class="cls-1" d="M10,2,9,3H4V5H5V20a2.015,2.015,0,0,0,2,2h8V20H7V5H17V15h2V5h1V3H15L14,2ZM9,7V18h2V7Zm4,0V18h2V7Zm4.879,9.93-1.414,1.414,2.121,2.121-2.121,2.121L17.879,24,20,21.879,22.121,24l1.414-1.414-2.121-2.121,2.121-2.121L22.121,16.93,20,19.051Z" transform="translate(-4 -2)"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"/><path d="M14 11L4 24L14 37H44V11H14Z" fill="none" stroke="#767C8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19L31 29" stroke="#767C8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 19L21 29" stroke="#767C8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

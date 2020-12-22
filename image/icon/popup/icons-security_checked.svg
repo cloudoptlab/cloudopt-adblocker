@@ -1,10 +1,1 @@
-<svg id="icons8-security_checked" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 18 22">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #0078ff;
-      }
-    </style>
-  </defs>
-  <path id="形状" class="cls-1" d="M9,22H9a11.883,11.883,0,0,1-5.46-3.256A12.188,12.188,0,0,1,0,10V4L9,0l9,4v6a12.188,12.188,0,0,1-3.539,8.743A11.883,11.883,0,0,1,9,22ZM9,2.19H9L2,5.3V10a10.3,10.3,0,0,0,2.67,7.013A10.424,10.424,0,0,0,9,19.938a10.424,10.424,0,0,0,4.331-2.925A10.3,10.3,0,0,0,16,10V5.3L9,2.19ZM8,15.414H8L3.814,11.228,5.228,9.815,8,12.586,13.793,6.8l1.412,1.412L8,15.414Z"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg width="18" height="18" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"/><path d="M48 1H0V49H48V1Z" fill="white" fill-opacity="0.01"/><path d="M6 9.25564L24.0086 4L42 9.25564V20.0337C42 31.3622 34.7502 41.4194 24.0026 45.0005C13.2521 41.4195 6 31.36 6 20.0287V9.25564Z" fill="none" stroke="#0078ff" stroke-width="3" stroke-linejoin="round"/><path d="M15 23L22 30L34 18" stroke="#0078ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>

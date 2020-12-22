@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #767c8c;
-      }
-    </style>
-  </defs>
-  <path id="icons8-add" class="cls-1" d="M19.5,2A17.5,17.5,0,1,0,37,19.5,17.52,17.52,0,0,0,19.5,2Zm0,3.5a14,14,0,1,1-14,14A14.016,14.016,0,0,1,19.5,5.5Zm-1.75,7v5.25H12.5v3.5h5.25V26.5h3.5V21.25H26.5v-3.5H21.25V12.5Z" transform="translate(-2 -2)"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"/><path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="none" stroke="#767C8C" stroke-width="2" stroke-linejoin="round"/><path d="M24 16V32" stroke="#767C8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 24L32 24" stroke="#767C8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

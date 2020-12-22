@@ -14,7 +14,7 @@
         "message": "Afficher le rapport de sécurité"
     },
     "contextMenus3": {
-        "message": "Bloquer manuellement les annonces malveillantes (BETA)"
+        "message": "Bloquer manuellement les annonces malveillantes"
     },
     "contextMenus4": {
         "message": "Ajouter à la liste noire de sécurité cloud"
@@ -295,11 +295,11 @@
     "optionSafeCloudContent": {
         "message": "Blocage en temps réel des sites Web dangereux pour vous protéger contre le phishing et les URL malveillantes."
     },
-    "optionSafeDownloadTitle": {
-        "message": "Protection contre le téléchargement"
+    "optionSafeBaizeTitle": {
+        "message": "Baize"
     },
-    "optionSafeDownloadContent": {
-        "message": "Bloquer automatiquement les téléchargements à partir de sites Web dangereux et empêcher les sites Web malveillants de se télécharger automatiquement."
+    "optionSafeBaizeContent": {
+        "message": "BAIZE est un moteur heuristique basé sur l'IA et préservant la vie privée, <a href='https://github.com/cloudoptlab/baize' target='_blank'>more</a>."
     },
     "optionSafePrivacyTitle": {
         "message": "Confidentialité"

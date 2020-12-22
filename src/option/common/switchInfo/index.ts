@@ -34,7 +34,7 @@ export class SwitchInfo {
         }
         this.divElement.innerHTML = renderTemplate(`
             <div class="left">
-                <div class="icon"><img src="{{ icon }}" /></div>
+                <div class="icon"><img src="{{ icon }}"/></div>
                 <div class="description">
                     <span class="title">{{ title }}</span>
                     <span class="content" i18n="{{ i18n }}">{{ content }}</span>

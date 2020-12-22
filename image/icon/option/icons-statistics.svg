@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 60 57">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #767c8c;
-      }
-    </style>
-  </defs>
-  <path id="icons8-statistics" class="cls-1" d="M29,2V5H2v6H5V41a6,6,0,0,0,6,6H24.8L20,59h6l4.8-12h2.4L38,59h6L39.2,47H53a6,6,0,0,0,6-6V11h3V5H35V2ZM11,11H53V41H11Zm18,7.758-6,6-3.879-3.879-4.242,4.242L23,33.242l6-6,9,9L49.121,25.121l-4.242-4.242L38,27.758Z" transform="translate(-2 -2)"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="4" width="32" height="40" rx="2" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="11" width="20" height="9" fill="none" stroke="#767C8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="26" r="2" fill="#767C8C"/><circle cx="17" cy="32" r="2" fill="#767C8C"/><circle cx="17" cy="38" r="2" fill="#767C8C"/><circle cx="24" cy="26" r="2" fill="#767C8C"/><circle cx="24" cy="32" r="2" fill="#767C8C"/><circle cx="24" cy="38" r="2" fill="#767C8C"/><circle cx="31" cy="26" r="2" fill="#767C8C"/><circle cx="31" cy="32" r="2" fill="#767C8C"/><circle cx="31" cy="38" r="2" fill="#767C8C"/></svg>

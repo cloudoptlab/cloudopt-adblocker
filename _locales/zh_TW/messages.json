@@ -14,7 +14,7 @@
         "message": "查看安全報告"
     },
     "contextMenus3": {
-        "message": "手動攔截惡意廣告(BETA)"
+        "message": "手動攔截惡意廣告"
     },
     "contextMenus4": {
         "message": "加入雲安全黑名單"
@@ -295,11 +295,11 @@
     "optionSafeCloudContent": {
         "message": "實時攔截危險網站，保護您不受釣魚、惡意網址的威脅。"
     },
-    "optionSafeDownloadTitle": {
-        "message": "下載保護"
+    "optionSafeBaizeTitle": {
+        "message": "BAIZE 啟發式引擎"
     },
-    "optionSafeDownloadContent": {
-        "message": "自動阻止從危險網站上的下載，避免惡意網站自動下載。"
+    "optionSafeBaizeContent": {
+        "message": "BAIZE 是基於人工智慧的隱私保護啟發式引擎，<a href='https://github.com/cloudoptlab/baize' target='_blank'>詳情</a>。"
     },
     "optionSafePrivacyTitle": {
         "message": "隱私保護"

@@ -14,7 +14,7 @@
         "message": "Sicherheitsbericht anzeigen"
     },
     "contextMenus3": {
-        "message": "Blockieren Sie böswillige Anzeigen manuell (BETA)"
+        "message": "Blockieren Sie böswillige Anzeigen manuell"
     },
     "contextMenus4": {
         "message": "Zur Blacklist für Cloud-Sicherheit hinzufügen"
@@ -295,11 +295,11 @@
     "optionSafeCloudContent": {
         "message": "Blockierung gefährlicher Websites in Echtzeit, um Sie vor Phishing und böswilligen URLs zu schützen."
     },
-    "optionSafeDownloadTitle": {
-        "message": "Download-Schutz"
+    "optionSafeBaizeTitle": {
+        "message": "Baize"
     },
-    "optionSafeDownloadContent": {
-        "message": "Blockiert automatisch Downloads von gefährlichen Websites und verhindert, dass böswillige Websites automatisch heruntergeladen werden."
+    "optionSafeBaizeContent": {
+        "message": "Baize ist eine KI-basierte Heuristik-Engine zur Wahrung der Privatsphäre, <a href='https://github.com/cloudoptlab/baize' target='_blank'>mehr</a>."
     },
     "optionSafePrivacyTitle": {
         "message": "Datenschutz"

@@ -14,7 +14,7 @@
         "message": "查看安全报告"
     },
     "contextMenus3": {
-        "message": "手动拦截恶意广告(BETA)"
+        "message": "手动拦截恶意广告"
     },
     "contextMenus4": {
         "message": "加入云安全黑名单"
@@ -295,11 +295,11 @@
     "optionSafeCloudContent": {
         "message": "实时拦截危险网站，保护您不受钓鱼、恶意网址的威胁。"
     },
-    "optionSafeDownloadTitle": {
-        "message": "下载保护"
+    "optionSafeBaizeTitle": {
+        "message": "BAIZE 启发式引擎"
     },
-    "optionSafeDownloadContent": {
-        "message": "自动阻止从危险网站上的下载，避免恶意网站自动下载。"
+    "optionSafeBaizeContent": {
+        "message": "BAIZE 是基于人工智能的隐私保护启发式引擎，<a href='https://github.com/cloudoptlab/baize' target='_blank'>详情</a>。"
     },
     "optionSafePrivacyTitle": {
         "message": "隐私保护"

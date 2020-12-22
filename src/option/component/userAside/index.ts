@@ -128,7 +128,7 @@ export default class UserAside implements IBaseHTMLPages {
             createLiDom({ name: i18n.get('optionsAdblock'), icon: "icons-hand.svg", key: "adBlock" }),
             createLiDom({ name: i18n.get('optionsSpeedup'), icon: "icons-speed.svg", key: "optimization" }),
             createSplitLiDom(i18n.get('optionsOtherSettings')),
-            createLiDom({ name: i18n.get('optionsMisc'), icon: "icons-leaf.svg", key: "auxiliary" }),
+            createLiDom({ name: i18n.get('optionsMisc'), icon: "icons-box.svg", key: "auxiliary" }),
             createLiDom({ name: i18n.get('optionsAboutUs'), icon: "icons-link.svg", key: "aboutUs" }),
         ].forEach((li: HTMLLIElement) => {
             ulDom.appendChild(li);

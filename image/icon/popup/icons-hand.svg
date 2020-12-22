@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 16.925 20">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #0078ff;
-      }
-    </style>
-  </defs>
-  <g id="icons8-hand" transform="translate(-0.074)">
-    <path id="形状" class="cls-1" d="M13.926,20H7.168a3.02,3.02,0,0,1-2.12-.878l-.035-.035L0,12.939l1.347-1.416a2.443,2.443,0,0,1,1.761-.75A2.4,2.4,0,0,1,4.131,11l.076.035,1.719,1.186V1h2V7l1,.166V0h2V7.5l1,.167V1h2V8l1,.166V3h2V17A3,3,0,0,1,13.926,20ZM3.088,12.779a.4.4,0,0,0-.293.125l-.13.137,3.809,4.672A.992.992,0,0,0,7.168,18h6.758a.989.989,0,0,0,1-1V10.2l-7-1.168v7L3.268,12.816A.472.472,0,0,0,3.088,12.779Z" transform="translate(0.074)"/>
-  </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"/><path d="M11 44V15C11 12.7909 12.7909 11 15 11C17.2091 11 19 12.7909 19 15V35L42 40V44" stroke="#0078ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 25.2501V25.2501C6.90264 23.65 4 19.664 4 15C4 8.92487 8.92487 4 15 4C21.0751 4 26 8.92487 26 15C26 19.664 23.0974 23.65 19 25.2501" stroke="#0078ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>

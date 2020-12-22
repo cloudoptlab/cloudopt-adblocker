@@ -37,10 +37,10 @@ export default class SafePages implements IBaseHTMLPages {
                 on: config.safeCloud,
             },
             {
-                title: i18n.get('optionSafeDownloadTitle'),
+                title: i18n.get('optionSafeBaizeTitle'),
                 key: "safeDownload",
-                content: i18n.get('optionSafeDownloadContent'),
-                icon: this.getIconPath("icons-download"),
+                content: i18n.get('optionSafeBaizeContent'),
+                icon: this.getIconPath("icons-ai"),
                 on: config.safeDownload,
             },
             {
@@ -68,7 +68,7 @@ export default class SafePages implements IBaseHTMLPages {
                 title: i18n.get('optionSafeTipsTitle'),
                 key: "labSafeTips",
                 content: i18n.get('optionSafeTipsContent'),
-                icon: this.getIconPath("icons-filled_topic"),
+                icon: this.getIconPath("icons-info"),
                 on: config.labSafeTips,
             },
         ];
@@ -151,7 +151,7 @@ export default class SafePages implements IBaseHTMLPages {
         `, {
             optionSafeOfficalLink: i18n.get('optionSafeOfficalLink'),
             connectionCount: this.connectionCount,
-            src: this.connected ? this.getIconPath('icons-checkmark') : this.getIconPath('icons-sad_cloud'),
+            src: this.connected ? this.getIconPath('icons-checkmark') : this.getIconPath('icons-error'),
             connected: this.connected,
         })
         this.mainDOM.querySelector('.switch-info-container').children[0].replaceWith(...this.renderSwitchInfoComponent(config))
