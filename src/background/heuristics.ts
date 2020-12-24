@@ -9,6 +9,7 @@ import { Baize } from '../baize/baize'
 import { getHost } from '../core/utils'
 import { UrlParse } from '../baize/lib/urlparse'
 import { tabsBlockCount, updateBadgeText } from '../background/adguardEngine'
+import * as statistics from '../background/statistics'
 
 let heuristicsEnabled: boolean = false
 
@@ -57,6 +58,7 @@ export async function initialize() {
                         logger.info(`BAIZE Blocked: ${requestUrl}`)
                         tabsBlockCount.get(details.tabId).count = tabsBlockCount.get(details.tabId).count + 1
                         updateBadgeText(details.tabId)
+                        statistics.countEvent('adblock')
                         return { cancel: true }
                     }
                 }
