@@ -267,6 +267,9 @@ class AdguardEngine implements IAdblockEngine {
             if (!tabsBlockCount.get(tabId) || tab.url !== tabsBlockCount.get(tabId).url) {
                 tabsBlockCount.set(tabId, {url: tab.url, count: 0})
             }
+            if(changeInfo.status && changeInfo.status == "loading"){
+                tabsBlockCount.set(tabId, {url: tab.url, count: 0})
+            }
             updateBadgeText(tabId)
         })
         chrome.tabs.onActivated.addListener((activeInfo) => {
