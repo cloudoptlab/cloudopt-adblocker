@@ -47,6 +47,9 @@ export async function initialize() {
                     if (urlparse.getRootDomain() == "cloudopt.net") {
                         return
                     }
+                    if(details.initiator && details.initiator.startsWith("chrome-extension://")){
+                        return
+                    }
                     let requestThirdParty = 1
                     if (details.initiator && new UrlParse(details.initiator).getDomain() != urlparse.getDomain()) {
                         requestThirdParty = 3
