@@ -410,13 +410,13 @@
         "message": "귀하의 의견은 더 많은 사람들이 위험한 피싱 사이트를 퇴치하는 데 도움이됩니다."
     },
     "popupSafeProtectTitle": {
-        "message": "실시간 보안 보호"
+        "message": "현재 웹 사이트 방문 보호"
     },
     "popupSafeProtectSubtitle": {
         "message": "닫을 때이 사이트에 대한 액세스가 더 이상 보호되지 않습니다"
     },
     "popupAdblockTitle": {
-        "message": "악성 광고 차단"
+        "message": "현재 사이트 광 고 를 차단 하 다"
     },
     "popupAdblockSubtitle": {
         "message": "닫을 때이 사이트의 광고가 더 이상 차단되지 않습니다"

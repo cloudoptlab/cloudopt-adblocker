@@ -410,13 +410,13 @@
         "message": "あなたのフィードバックは、より多くの人々が危険なフィッシングサイトを撃退するのに役立ちます。"
     },
     "popupSafeProtectTitle": {
-        "message": "リアルタイムのセキュリティ保護"
+        "message": "現在のサイトアクセスを守る"
     },
     "popupSafeProtectSubtitle": {
         "message": "このサイトへのアクセスは、終了後は保護されなくなります"
     },
     "popupAdblockTitle": {
-        "message": "悪意のある広告のブロック"
+        "message": "現在のウェブサイトからの広告をブロックする"
     },
     "popupAdblockSubtitle": {
         "message": "このサイトからの広告は閉鎖後にブロックされなくなります"

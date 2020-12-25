@@ -410,13 +410,13 @@
         "message": "您的反馈将帮助更多人抵御危险、钓鱼网站。"
     },
     "popupSafeProtectTitle": {
-        "message": "实时安全保护"
+        "message": "保护当前网站访问"
     },
     "popupSafeProtectSubtitle": {
         "message": "关闭后将不再保护该网站的访问"
     },
     "popupAdblockTitle": {
-        "message": "恶意广告拦截"
+        "message": "拦截当前网站恶意广告"
     },
     "popupAdblockSubtitle": {
         "message": "关闭后将不再拦截该网站的广告"

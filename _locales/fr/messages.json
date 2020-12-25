@@ -410,13 +410,13 @@
         "message": "Vos commentaires aideront plus de personnes à combattre les sites de phishing dangereux."
     },
     "popupSafeProtectTitle": {
-        "message": "Protection de sécurité en temps réel"
+        "message": "Protection de l'accès au site actuel"
     },
     "popupSafeProtectSubtitle": {
         "message": "L'accès à ce site ne sera plus protégé après la fermeture"
     },
     "popupAdblockTitle": {
-        "message": "Blocage d'annonces malveillantes"
+        "message": "Bloquer les annonces des sites web actuels"
     },
     "popupAdblockSubtitle": {
         "message": "La publicité sur ce site ne sera plus bloquée après la fermeture"

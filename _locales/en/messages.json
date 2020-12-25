@@ -410,13 +410,13 @@
         "message": "Your feedback will help more people fight off dangerous, phishing sites."
     },
     "popupSafeProtectTitle": {
-        "message": "Real-time security protection"
+        "message": "Protecting current site access"
     },
     "popupSafeProtectSubtitle": {
         "message": "Protection on this site"
     },
     "popupAdblockTitle": {
-        "message": "Malicious Ad Blocking"
+        "message": "Block ads from current websites"
     },
     "popupAdblockSubtitle": {
         "message": "Block ads on this site"
