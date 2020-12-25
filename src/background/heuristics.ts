@@ -1,17 +1,15 @@
 import * as coreConfig from '../core/config'
-import * as grade from '../core/grade'
-import * as notification from '../core/notification'
-import * as i18n from '../core/i18n'
 import message from '../core/message'
 import * as http from '../core/http'
 import * as logger from '../core/logger'
 import { Baize } from '../baize/baize'
-import { getHost } from '../core/utils'
 import { UrlParse } from '../baize/lib/urlparse'
 import { tabsBlockCount, updateBadgeText } from '../background/adguardEngine'
 import * as statistics from '../background/statistics'
 
 let heuristicsEnabled: boolean = false
+
+let allowList: string[] = []
 
 let modelVersion = "1.0.0"
 
@@ -21,6 +19,7 @@ let baize = new Baize()
 
 async function refreshConfig(): Promise<void> {
     const config = await coreConfig.get()
+    allowList = config.allowList
     heuristicsEnabled = config.safeHeuristics
 }
 
@@ -47,7 +46,10 @@ export async function initialize() {
                     if (urlparse.getRootDomain() == "cloudopt.net") {
                         return
                     }
-                    if(details.initiator && details.initiator.startsWith("chrome-extension://")){
+                    if (details.initiator && details.initiator.startsWith("chrome-extension://")) {
+                        return
+                    }
+                    if (allowList.indexOf(new UrlParse(details.initiator).getDomain()) > -1) {
                         return
                     }
                     let requestThirdParty = 1
